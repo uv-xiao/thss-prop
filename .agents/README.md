@@ -25,4 +25,5 @@ This harness is repo-local and optimized for iterative Chinese thesis proposal w
 - Curate bibliography entries: `.agents/skills/curate-bibliography/SKILL.md`.
 - Curate terminology: `.agents/skills/curate-terminology/SKILL.md`.
 - Evolve writing rules from feedback: `.agents/skills/evolve-writing-rules/SKILL.md`.
+- Stress-test report plans and resolve design choices with the user: `.agents/skills/grill-me/SKILL.md`.
 - Collaborate through GitHub: `.agents/skills/github-create-pr/SKILL.md`, `.agents/skills/github-review-pr/SKILL.md`, `.agents/skills/github-merge-pr/SKILL.md`.

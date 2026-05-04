@@ -7,3 +7,9 @@
   - Context: User requested a thesis proposal writing harness based on `resources/IntelliC/.agents`.
   - Related: `AGENTS.md`, `.agents/`, `docs/writing/`
   - Agent interpretation: Build a repo-local harness with GitHub skills, report-writing and review workflows, detailed Chinese academic writing rules, citation and terminology controls, and a mechanism to preserve and promote user feedback into durable rules.
+
+- 2026-05-05 00:00 Asia/Shanghai - Add grill-me for report quality improvement
+  > With the skills and harness ready, 我们需要开始详细的耐心的严肃的认真的报告质量提升。你需要在项目内添加https://github.com/mattpocock/skills/blob/main/skills/productivity/grill-me/SKILL.md 这个skill，并且在报告提升过程中反复使用来和我对齐。
+  - Context: User requested project-local installation of `grill-me` and repeated use during report improvement.
+  - Related: `.agents/skills/grill-me/SKILL.md`, `.agents/rules/report-argument.md`, `docs/writing/preferences.md`
+  - Agent interpretation: Add project-local `grill-me` and make it an alignment gate for major report design, structure, and drafting decisions.

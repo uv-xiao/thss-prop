@@ -20,6 +20,13 @@ Every full-report revision must preserve this arc:
 6. Targeted research approach: connect each future method, experiment, or system design decision to a stated challenge or research question.
 7. Feasibility and schedule: state available materials, skills, implementation basis, verification plan, risks, and dated milestones.
 
+## Alignment Gate
+
+- Before major restructuring, formal section drafting, or committing a new report argument, use `.agents/skills/grill-me/SKILL.md` to ask the user one decision question at a time.
+- If the question can be answered from `report/`, `resources/`, `docs/writing/`, or existing harness files, inspect those files first instead of asking.
+- Each grill-me round should resolve one branch of the report design tree, such as research object, industry framing, challenge taxonomy, research question wording, evidence priority, future-work scope, evaluation plan, or section length allocation.
+- Record durable decisions from grill-me rounds through `.agents/skills/evolve-writing-rules/SKILL.md` when they affect future writing.
+
 ## Section-Level Requirements
 
 - Each section must have one controlling claim. If a section only lists facts, revise it until the facts support a claim.

@@ -4,6 +4,7 @@ This file records project-specific preferences that are important but less unive
 
 ## Current Preferences
 
+- During serious report-quality improvement, use the project-local `grill-me` skill repeatedly to align on one writing or research-design decision at a time.
 - The report should foreground industrial background, engineering challenges, scientific question formation, systematic analysis, and targeted future research design.
 - Existing technical accumulation should be accurate and concrete, but it should support the opening-report argument rather than dominate it.
 - Future work should receive substantial space and should include research ideas, system design, validation route, feasibility, and risks.
