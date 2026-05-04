@@ -1,0 +1,16 @@
+[workspace]
+name = "kai-ti-report"
+version = "0.1.0"
+description = "Typst environment for the proposal report"
+authors = ["Youwei Xiao"]
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+
+[dependencies]
+typst = ">=0.14.2,<0.15"
+
+[tasks]
+typst-version = "typst --version"
+pdf = "sh -c 'cd report && if [ -d fonts ]; then typst compile main.typ main.pdf --font-path fonts; else typst compile main.typ main.pdf; fi'"
+watch = "sh -c 'cd report && if [ -d fonts ]; then typst watch main.typ main.pdf --font-path fonts; else typst watch main.typ main.pdf; fi'"
+clean = "rm -f report/main.pdf"

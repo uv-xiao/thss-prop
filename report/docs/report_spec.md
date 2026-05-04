@@ -1,0 +1,95 @@
+# 开题报告撰写思路与 Spec
+
+## 核心命题
+
+算力紧缺不是单纯的硬件峰值性能问题，而是“算力需求增长”和“芯片/编译/软件生态生产力不足”共同作用的系统问题。领域定制处理器、FPGA 加速器和 AI 辅助硬件设计都能提供新的能效空间，但它们只有被编译器、硬件描述、综合优化、验证证据和运行时生态连接起来，才能形成可迭代、可复用、可落地的系统能力。
+
+本报告的研究命题是：面向算力紧缺时代，构建以敏捷芯片设计和创新性编译技术为核心的软硬件协同方法体系，提升从应用需求到硬件实现再到软件适配的全链条生产力。
+
+## 总体叙事链
+
+```text
+算力紧缺与领域应用快速演进
+  -> 通用处理器难以兼顾性能、能效与迭代速度
+  -> 领域定制需要软硬件协同，但现有工具链割裂
+  -> 研究目标：把定制、综合、编译、验证、运行时工具链化
+  -> 已有基础：APS/Aquas + ISAMORE + Cement + SkyEgg + OriGen/HECTOR
+  -> 未来工作：IntelliC + Spine + EggMind + PTO distributed runtime
+```
+
+## 成果分类矩阵
+
+| 方向 | 代表工作 | 解决的核心挑战 | 报告中的定位 |
+| --- | --- | --- | --- |
+| 端到端协同与可重定向编译 | APS, Aquas | ISAX 接口碎片化、硬件生成与编译适配割裂、复杂 ISAX 难自动映射 | 系统主线的“协同框架层” |
+| 指令/微架构定制自动化 | ISAMORE, Cayman, Clay | 自定义指令复用性不足、微架构约束表达困难、人工经验依赖强 | 代表性工作重点展开 |
+| 硬件设计前端抽象 | Cement, OriGen | RTL 生产率低、HLS 不可预测、AI 生成 RTL 缺少高质量数据和反馈闭环 | 代表性工作重点展开，OriGen 概括 |
+| 综合方法学与优化质量 | SkyEgg, HECTOR | HLS 调度、映射、代数变换割裂，导致 QoR 损失 | 代表性工作重点展开 |
+| 生态与影响 | 开源框架、教程、专利、合作项目 | 方法难复用、难推广、难落地 | 支撑发展潜力和可持续影响 |
+| 未来工作 | IntelliC, Spine, EggMind, PTO Runtime distributed features | agentic 编译/硬件生成需要可验证边界，运行时需要跨层任务图协同 | 从已有工作自然延伸 |
+
+## 重点展开的代表性工作
+
+### ISAMORE
+
+定位：指令定制从“热点枚举”走向“跨程序可复用模式发现”。
+
+关键叙事：
+
+1. RISC-V 让自定义指令更可用，但定制指令面积昂贵，必须跨程序复用。
+2. 既有方法重热点、轻语义复用，只能做语法级合并。
+3. ISAMORE 用 e-graph anti-unification 在等价空间中发现可复用模式，并通过 phase-oriented flow、smart AU、pattern vectorization 和 hardware-aware selection 控制规模与质量。
+4. 结果：在多个 benchmark、开源库和实际 RoCC 加速器案例中验证，最高相对基线 2.69x，并在案例中展示 1.17x-2.73x 速度提升。
+5. 意义：把指令定制从人工经验和单程序热点迁移到可复用、可扩展的编译方法学。
+
+### Cement
+
+定位：硬件前端抽象从低层 RTL 手工状态机，提升到周期确定的事务/事件描述。
+
+关键叙事：
+
+1. FPGA 能提供高能效加速，但 HDL 生产率低，HLS 又难保证可预测微架构。
+2. Cement 的 CmtHDL 引入 event layer 和 control sub-language，既保留硬件时序控制，又提升控制逻辑表达能力。
+3. CmtC 提供 timing analysis 与 FSM synthesis，面向 FPGA 生成性能可预期的电路。
+4. 结果：PolyBench 上相对 HLS/DSL 获得 1.41x-3.49x 加速，并节省 23%-82% 资源；案例验证 systolic array 与 sparse accelerator。
+5. 意义：为“敏捷硬件设计”提供前端抽象基础。
+
+### SkyEgg
+
+定位：综合优化从顺序启发式走向等价空间中的联合优化。
+
+关键叙事：
+
+1. HLS 需要同时解决代数变换、硬件映射和调度，但传统工具将它们拆成顺序阶段。
+2. 这种割裂导致 scheduler 缺少映射信息，binding 又被固定 schedule 限制。
+3. SkyEgg 将 algebraic rewrites 与 FPGA mapping candidates 都编码为 e-graph rewrite rules，并把最终选择与调度表述为 ILP/ASAP 求解。
+4. 结果：相对 Vitis HLS 平均 3.01x/3.10x、最高 5.22x 加速，ASAP 能在较大规模上保持可扩展。
+5. 意义：补足“高层描述到高质量硬件实现”的综合优化层。
+
+### APS/Aquas
+
+定位：可重定向编译与端到端 ASIP/ISAX 协同框架。
+
+关键叙事：
+
+1. APS 解决接口分裂、ISAX-specific synthesis 和 compiler support 三个问题，提供统一接口、合成框架和编译支持。
+2. Aquas 进一步面向复杂数据密集 ISAX，建模 memory-interface attributes 和 cache effects，并用 MLIR/e-graph 做 robust mapping。
+3. 结果：APS 在 NTT、BitNet、DPLL 等案例中实现最高 10.16x/14.99x/8.43x；Aquas 在四类真实案例中最高 15.61x kernel speedup 和 1.95x end-to-end speedup。
+4. 意义：把单点定制方法连接成可复用的硬件-编译协同系统。
+
+## 未来工作逻辑
+
+未来工作不另起炉灶，而是对现有体系中仍未完全解决的问题做系统扩展：
+
+1. IntelliC：已有 MLIR/e-graph/编译经验显示，未来编译器不仅要能优化，还要能给人和 LLM agent 提供可读、可验证、可追踪的语义与证据。
+2. Spine：已有 AI 辅助 RTL 与硬件设计经验显示，agent 不能无约束生成，需要把设计意图、架构边界、RTL 证据和执行 oracle 串成验证闭环。
+3. EggMind：已有 e-graph 工作显示，优化质量受策略影响极大，未来要把策略本身作为可合成、可缓存、可迁移的对象。
+4. PTO Runtime distributed features：硬件和编译定制最终要落到异构设备与任务图执行，未来需要面向 distributed runtime 的任务调度、数据移动、设备协同与可观测性。
+
+## 当前缺口
+
+1. 需要用户确认哪些仓库对应“一作代表性工作”，尤其 APS/Aquas/SkyEgg/ISAMORE/Cement 的作者顺序。
+2. 需要补充 Cayman、Clay、HECTOR 的论文 PDF/仓库或准确 BibTeX，以便正文中引用和归类。
+3. 需要确认开题报告正式要求：学院、一级学科、专业、导师、页数、章节模板、是否需要中英文摘要。
+4. 需要安装 Typst CLI 后编译验证。
+

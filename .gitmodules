@@ -1,0 +1,33 @@
+[submodule "resources/IntelliC"]
+	path = resources/IntelliC
+	url = git@github.com:uv-xiao/IntelliC.git
+[submodule "resources/aps"]
+	path = resources/aps
+	url = https://server.keke-046.cc/git/67fe483a1092b606d75a9c15
+[submodule "resources/aquas"]
+	path = resources/aquas
+	url = https://server.keke-046.cc/git/699d5b79c07347930ad79dfb
+[submodule "resources/cement"]
+	path = resources/cement
+	url = https://server.keke-046.cc/git/651fa940510e6a00864b299a
+[submodule "resources/eggmind"]
+	path = resources/eggmind
+	url = https://server.keke-046.cc/git/69e2e07d5171bda91cca1aa4
+[submodule "resources/isamore"]
+	path = resources/isamore
+	url = https://server.keke-046.cc/git/676bbd72f397afcc30b75827
+[submodule "resources/origen"]
+	path = resources/origen
+	url = https://server.keke-046.cc/git/6613a363f0c12b007d883df8
+[submodule "resources/pto-runtime"]
+	path = resources/pto-runtime
+	url = git@github.com:hw-native-sys/simpler.git
+[submodule "resources/skyegg"]
+	path = resources/skyegg
+	url = https://server.keke-046.cc/git/69d6112019e394a64b3f5379
+[submodule "resources/spine"]
+	path = resources/spine
+	url = git@github.com:arch-of-shadow/spine.git
+[submodule "tools/TOSS"]
+	path = tools/TOSS
+	url = git@github.com:uv-xiao/TOSS.git
