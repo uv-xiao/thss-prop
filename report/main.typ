@@ -12,8 +12,8 @@
   blindid: "TODO",
   cthesisname: "博士研究生开题报告",
   cheader: "北京大学博士研究生开题报告",
-  ctitle: "面向算力紧缺的敏捷芯片设计与编译协同创新",
-  etitle: "Agile Chip Design and Compiler Co-Innovation for Compute-Constrained Systems",
+  ctitle: "敏捷芯片设计与创新性编译技术驱动的软硬件协同",
+  etitle: "Hardware-Software Co-Design Driven by Agile Chip Design and Innovative Compilation Techniques",
   school: "TODO",
   cfirstmajor: "TODO",
   cmajor: "TODO",
@@ -25,7 +25,7 @@
   degree-type: "academic",
 
   cabstract: [
-    AI 与数据密集型应用快速演进，使算力需求、能效约束和软硬件生态构建成本同时上升。传统通用处理器难以持续满足领域应用的性能与能效需求，而领域定制芯片又面临设计、验证、综合和软件适配成本高企的问题。本文围绕“提升芯片设计与软件生态构建的系统生产力”这一目标，梳理本人在敏捷芯片设计与创新性编译技术方面的已有研究基础，并提出未来研究计划。
+    AI 与数据密集型应用快速演进，使算力需求、能效约束和软硬件生态构建成本同时上升。传统通用处理器难以持续满足领域应用的性能与能效需求，而领域定制芯片又面临设计、验证、综合和软件适配成本高企的问题。本文围绕“敏捷芯片设计与创新性编译技术驱动的软硬件协同”这一主题，梳理本人已有研究基础，并提出未来研究计划。
 
     已有工作形成了从应用需求到硬件实现、从编译适配到综合优化、从前端抽象到开源生态的协同链条：APS/Aquas 面向 ASIP 与 ISAX 构建端到端硬件-编译协同框架；ISAMORE 通过 e-graph anti-unification 自动发现跨程序可复用的自定义指令；Cement 以周期确定型 eHDL 提升 FPGA 硬件设计前端抽象；SkyEgg 将代数变换、硬件映射和调度统一到 e-graph 设计空间中进行联合优化；OriGen、HECTOR 及相关开源与教程工作进一步支撑 AI 辅助硬件设计、综合基础设施和生态推广。未来工作将围绕 IntelliC、Spine、EggMind 与 PTO Runtime distributed features，进一步探索可解释编译基础设施、验证约束下的 agentic 软硬件协同生成、自动化 e-graph 策略合成和异构任务图运行时协同。
   ],
@@ -202,4 +202,3 @@ EggMind 将围绕 EqSatL、proof-derived rewrite motif caching 和 tractability 
 + 确认各代表性工作的一作身份、正式会议状态和 BibTeX。
 + 补充 Cayman、Clay、HECTOR 的准确论文信息。
 + 安装 Typst CLI 后编译 `report/main.typ`，并根据 pkuthss 模板报错调整。
-

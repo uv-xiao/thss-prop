@@ -13,3 +13,9 @@
   - Context: User requested project-local installation of `grill-me` and repeated use during report improvement.
   - Related: `.agents/skills/grill-me/SKILL.md`, `.agents/rules/report-argument.md`, `docs/writing/preferences.md`
   - Agent interpretation: Add project-local `grill-me` and make it an alignment gate for major report design, structure, and drafting decisions.
+
+- 2026-05-05 00:00 Asia/Shanghai - Correct report theme
+  > 二者都不是很好的主题，我的报告主题应为“敏捷芯片设计与创新性编译技术驱动的软硬件协同”
+  - Context: First grill-me alignment question offered two unsuitable theme framings.
+  - Related: `report/main.typ`, `report/docs/report_spec.md`, `report/docs/agent_writing_guidelines.md`, `docs/writing/preferences.md`, `docs/writing/terminology.md`
+  - Agent interpretation: The report should be framed around agile chip design and innovative compilation techniques as drivers of hardware-software co-design, not around AI education or intelligent programming.
