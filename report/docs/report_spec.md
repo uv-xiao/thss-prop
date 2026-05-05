@@ -92,8 +92,8 @@
 
 未来工作不另起炉灶，而是对现有体系中仍未完全解决的问题做系统扩展：
 
-1. 验证约束下的架构、硬件与编译协同生成：已有 AI 辅助 RTL 与硬件设计经验显示，agent 不能无约束生成，需要把设计意图、架构边界、RTL 证据和执行 oracle 串成验证闭环；Spine 可作为该方向已有基础或原型。
-2. 可解释、可审计的编译基础设施：已有 MLIR/e-graph/编译经验显示，未来编译器不仅要能优化，还要能给人和 LLM agent 提供可读、可验证、可追踪的语义与证据；IntelliC 可作为该方向已有基础或原型。
+1. 验证约束下的架构、硬件与编译协同生成：已有 AI 辅助 RTL 与硬件设计经验显示，agent 不能无约束生成，需要把设计意图、架构边界、RTL 证据和执行 oracle 串成验证闭环；Spine 可作为该方向已有基础或原型。Spine 不能只承接 OriGen，它还应承接 APS/Aquas 的端到端协同框架，作为 APS/Aquas 思想的 agentic 化延伸，把应用意图、架构接口、硬件生成、编译 lowering、oracle/IR/RTL/执行对齐和跨层检查放入统一验证约束。
+2. 可解释、可审计的编译基础设施：已有 MLIR/e-graph/编译经验显示，未来编译器不仅要能优化，还要能给人和 LLM agent 提供可读、可验证、可追踪的语义与证据；IntelliC 可作为该方向已有基础或原型。`resources/compiler-infra-is-harness-medium.md` 的核心论证应被吸收：编译基础设施是 agentic retargeting 的 harness medium，将 target facts、显式 IR、semantic contracts、constrained transformations、backend artifacts 和 evidence/feedback 组织为可审计的生成边界。
 3. 面向工业级异构架构的算子优化与运行时编译协同：硬件和编译定制最终要落到工业级异构架构上的算子生成、优化、运行时编排和性能反馈闭环；PTO Runtime distributed features 可作为该方向已有基础或原型，`resources/seed-proposal.docx` 中的长程芯片算子自动优化 Agent Harness 是该方向的重要未来工作来源。
 
 ## 当前缺口

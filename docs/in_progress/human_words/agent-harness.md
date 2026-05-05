@@ -301,3 +301,9 @@
   - Context: User accepted adding a central thesis sentence near the middle of the introduction.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Add a central thesis sentence near the end of 1.3 or start of 1.5 to bridge the field review to the three core research questions. Draft wording later.
+
+- 2026-05-05 00:00 Asia/Shanghai - Spine also inherits APS/Aquas; compiler infrastructure as harness medium
+  > 不只是承接OriGen，Spine更是APS/Aquas的agentic版本，也需要承接。同时，我在resources/下添加了compiler-infra-is-harness-medium.md， 你需要根据文章内容补充序言部分，并提升未来工作部分的逻辑
+  - Context: User corrected the future-work lineage and added a new resource memo about compiler infrastructure for agentic retargeting.
+  - Related: `resources/compiler-infra-is-harness-medium.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Spine must be written as both an extension of OriGen-style LLM/formal hardware generation and an agentic extension of APS/Aquas-style end-to-end architecture/hardware/compiler co-design. The introduction and Chapter 5 must also use the argument that compiler infrastructure is the harness medium for agents: target facts, explicit IRs, semantic contracts, constrained transformations, executable artifacts, gates, and evidence/feedback.
