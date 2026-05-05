@@ -19,7 +19,7 @@
   -> 研究目标：把定制、综合、编译、验证、运行时工具链化
   -> 已有基础：APS/Aquas/ISAMORE/Cayman/Clay + Cement/SkyEgg/HECTOR + EggMind/OriGen
   -> 现有工作：EggMind 等大模型与形式化技术结合的软硬件协同方法
-  -> 未来工作：IntelliC + Spine + PTO distributed runtime
+  -> 未来工作：可解释编译基础设施 + 验证约束下的协同生成 + 面向异构任务图的编译-运行时协同
 ```
 
 ## 成果分类矩阵
@@ -92,10 +92,9 @@
 
 未来工作不另起炉灶，而是对现有体系中仍未完全解决的问题做系统扩展：
 
-1. IntelliC：已有 MLIR/e-graph/编译经验显示，未来编译器不仅要能优化，还要能给人和 LLM agent 提供可读、可验证、可追踪的语义与证据。
-2. Spine：已有 AI 辅助 RTL 与硬件设计经验显示，agent 不能无约束生成，需要把设计意图、架构边界、RTL 证据和执行 oracle 串成验证闭环。
-3. EggMind：已有 e-graph 工作显示，优化质量受策略影响极大，未来要把策略本身作为可合成、可缓存、可迁移的对象。
-4. PTO Runtime distributed features：硬件和编译定制最终要落到异构设备与任务图执行，未来需要面向 distributed runtime 的任务调度、数据移动、设备协同与可观测性。
+1. 可解释、可审计的编译基础设施：已有 MLIR/e-graph/编译经验显示，未来编译器不仅要能优化，还要能给人和 LLM agent 提供可读、可验证、可追踪的语义与证据；IntelliC 可作为该方向已有基础或原型。
+2. 验证约束下的架构、硬件与编译协同生成：已有 AI 辅助 RTL 与硬件设计经验显示，agent 不能无约束生成，需要把设计意图、架构边界、RTL 证据和执行 oracle 串成验证闭环；Spine 可作为该方向已有基础或原型。
+3. 面向异构任务图的编译-运行时协同：硬件和编译定制最终要落到异构设备与任务图执行，未来需要面向 distributed runtime 的任务调度、数据移动、设备协同与可观测性；PTO Runtime distributed features 可作为该方向已有基础或原型。
 
 ## 当前缺口
 

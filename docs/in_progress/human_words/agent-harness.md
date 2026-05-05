@@ -97,3 +97,9 @@
   - Context: User confirmed the 60-80 page target and added explicit figure requirements.
   - Related: `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`, `docs/writing/preferences.md`
   - Agent interpretation: Design the report for 60-80 pages. Use figures from `resources/` for existing work when suitable; draw missing overview/framework/logic figures directly when needed.
+
+- 2026-05-05 00:00 Asia/Shanghai - Future work directions should not be repository names
+  > 可以，但我们需要用更概括的方式命名他们的方向，而非直接用工具/仓库名。
+  - Context: User accepted limiting future work to three directions, but rejected direct use of IntelliC, Spine, and PTO Runtime distributed features as direction titles.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`, `docs/writing/preferences.md`
+  - Agent interpretation: Future-work section titles should be general research directions: explainable/auditable compiler infrastructure; verification-constrained architecture/hardware/compiler co-generation; compiler-runtime co-design for heterogeneous task graphs. Repository/tool names can appear only as existing foundations or prototypes inside sections.

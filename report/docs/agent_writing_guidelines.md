@@ -44,11 +44,12 @@
 3. 研究基础与已有工作：
    - 领域定制与端到端协同：APS/Aquas + ISAMORE + Cayman。
    - 硬件前端与综合优化：Cement、SkyEgg、Clay，并着重概括 HECTOR。
-   - 大模型与形式化技术驱动的软硬件协同方法：EggMind、OriGen，并连接 IntelliC/Spine/PTO Runtime。
+   - 大模型与形式化技术驱动的软硬件协同方法：EggMind、OriGen，并连接未来三个概括性研究方向。
 4. 未来研究计划：
-   - IntelliC：面向人和 agent 的可解释编译基础设施。
-   - Spine：验证约束下的 agentic 架构/硬件/编译协同生成。
-   - PTO Runtime distributed features：面向异构/分布式任务图运行时的系统验证与协同。
+   - 可解释、可审计的编译基础设施。
+   - 验证约束下的架构、硬件与编译协同生成。
+   - 面向异构任务图的编译-运行时协同。
+   - IntelliC、Spine、PTO Runtime distributed features 只能作为已有基础、原型或内部代号出现，不作为方向标题。
 5. 预期成果与计划安排。
 
 ## 图示规范
