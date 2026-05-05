@@ -145,3 +145,9 @@
   - Context: User chose three core research questions for the introduction's final challenge/problem statement.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: The introduction can use five interface categories for literature review, but must converge to exactly three core research questions before mapping to existing work and future work.
+
+- 2026-05-05 00:00 Asia/Shanghai - Introduction chapter map should be cross-linked
+  > 支持
+  - Context: User accepted mapping chapters to research questions by primary question plus secondary support, rather than rigid one-to-one mapping.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: In the introduction's final map, each chapter has a primary research question and may support others. Keep the map explicit and controlled.
