@@ -87,7 +87,7 @@
   - Agent interpretation: Future work can refer to EggMind only after stating the remaining system problem it motivates. Avoid abrupt reuse of the name without explaining how fourth-chapter results lead to IntelliC, Spine, or PTO Runtime.
 
 - 2026-05-05 00:00 Asia/Shanghai - Cayman, Clay, and HECTOR chapter weights confirmed
-  > Cayman应该作为领域定制与端到端协同的重要子章节，Clay应该作为硬件前端与综合优化的重要子章节，因为他们是我作为一作/共同一作的工作。Hector不需要详细介绍，因为我只是二作，但需要着重（而非简略）概括。
+  > Cayman应该作为面向领域定制的架构接口与端到端协同的重要子章节，Clay应该作为硬件前端与综合优化的重要子章节，因为他们是我作为一作/共同一作的工作。Hector不需要详细介绍，因为我只是二作，但需要着重（而非简略）概括。
   - Context: User answered the representative-work weighting question.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Cayman belongs in Chapter 2 as an important subsection; Clay belongs in Chapter 3 as an important subsection; HECTOR should be carefully summarized as support infrastructure without full representative-work treatment.
@@ -241,6 +241,12 @@
   - Context: User accepted the revised academic subsection titles but rejected a standalone report-structure subsection.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Use six Chapter 1 subsections: 领域应用演进与领域定制计算趋势; 芯片设计生产力瓶颈与敏捷设计路径; 跨硬件架构软硬件协同生态与关键接口; 面向协同接口的国内外研究现状; 核心科学问题与研究挑战; 已有研究基础与拟开展研究. Merge chapter arrangement into the end of 1.6.
+
+- 2026-05-05 00:00 Asia/Shanghai - Chapter 2 title confirmed
+  > 认可
+  - Context: User accepted renaming Chapter 2 from a generic co-design title to one centered on architecture interface.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`, `report/docs/report_spec.md`
+  - Agent interpretation: Use “面向领域定制的架构接口与端到端协同” as Chapter 2 title. It directly answers how application demand becomes reusable instruction, microarchitecture, and accelerator capabilities through architecture interfaces.
 
 - 2026-05-05 00:00 Asia/Shanghai - Evidence table optional
   > 认可
