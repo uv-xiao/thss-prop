@@ -73,3 +73,9 @@
   - Context: User accepted the recommended title after comparing “大模型与形式化技术驱动的软硬件协同方法” with a shorter alternative.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`
   - Agent interpretation: Use “大模型与形式化技术驱动的软硬件协同方法” as the fixed fourth-chapter title.
+
+- 2026-05-05 00:00 Asia/Shanghai - EggMind completion boundary confirmed
+  > 按完整现有工作写“方法、系统、实验、意义”
+  - Context: User answered the second structure-spec confirmation question.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `docs/writing/reference-report-analysis.md`
+  - Agent interpretation: EggMind is not a future direction or preliminary basis in the main report. The fourth chapter must develop it as a complete existing work with method, system, experiments, and significance.

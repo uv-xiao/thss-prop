@@ -261,7 +261,7 @@
 
 ### 第四章 大模型与形式化技术驱动的软硬件协同方法
 
-本章对应现有工作第三层。重构后 EggMind 放在这里，作为现有工作，不再放在未来工作。
+本章对应现有工作第三层。重构后 EggMind 放在这里，作为完整现有工作，不再放在未来工作。
 
 本章标题已确认采用“大模型与形式化技术驱动的软硬件协同方法”。
 
@@ -277,14 +277,17 @@
 
 #### 4.2 E-graph 策略自动化：EggMind
 
+EggMind 按完整现有工作展开，必须写出“方法、系统、实验、意义”的闭环，不写成阶段性基础或未来计划。
+
 内部结构：
 
 1. 背景：EqSat 能表达巨大等价空间，但 rewrite space 和 e-graph growth 难控制。
 2. 相关方法：expert strategy、guide-based steering、MCTS/online controller、LLM code evolution。
 3. 核心问题：缺少可复用 strategy abstraction、LLM-usable feedback、tractability control。
 4. 方法：EqSatL、proof-derived rewrite motif caching、tractability guidance。
-5. 评估与意义：从 `resources/eggmind` 补具体实验和结果。
-6. 与 ISAMORE/SkyEgg 的关系：EggMind 是策略层，服务已有 e-graph 优化任务。
+5. 实验：从 `resources/eggmind` 补具体实验设置、基线、指标和结果。
+6. 意义：说明 EggMind 如何把大模型的策略生成能力放入形式化可控的 e-graph 优化框架，并如何支撑软硬件协同中的自动化优化。
+7. 与 ISAMORE/SkyEgg 的关系：EggMind 是策略层，服务已有 e-graph 优化任务。
 
 #### 4.3 大模型辅助硬件生成中的形式化反馈：OriGen
 
@@ -434,7 +437,7 @@
 ## 待确认问题
 
 1. 第四章标题已确认采用“大模型与形式化技术驱动的软硬件协同方法”。
-2. EggMind 的当前完成度和可公开表述边界是什么？
+2. EggMind 已确认按完整现有工作写“方法、系统、实验、意义”。
 3. Future work 是否包括 EggMind 后续扩展，还是完全把 EggMind 作为现有工作，不在第五章再写？
 4. Cayman、Clay、HECTOR 的资料是否足够进入正文，还是暂时只概括？
 5. 正文目标页数是否按范文量级，还是需要更短的开题报告版本？
