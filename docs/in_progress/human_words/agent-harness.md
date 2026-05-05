@@ -199,3 +199,9 @@
   - Context: User accepted using AI/LLM as the main application pressure while retaining other domains as diversity evidence.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Chapter 1.1 should foreground AI/LLM but also include PQC, DSP, point cloud, graphics, and other domains to show diverse domain-specialization demand.
+
+- 2026-05-05 00:00 Asia/Shanghai - Agile chip design term introduction
+  > 认可
+  - Context: User accepted introducing “敏捷芯片设计” after design-productivity and iteration bottlenecks.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: In Chapter 1.2, define agile chip design as rapid formation, verification, mapping, and iteration of domain hardware capability, not merely faster RTL writing.

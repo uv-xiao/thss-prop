@@ -18,6 +18,7 @@ This file records project-specific preferences that are important but less unive
 - For the compilation-to-runtime interface, prefer PyTorch 2 `torch.compile`/TorchDynamo and NVIDIA TensorRT-LLM as primary framework evidence; use NVL72/CloudMatrix/UB-Mesh as hardware-system context rather than as the primary framework evidence.
 - In the compilation-to-runtime review, make inference the main thread and training/general dynamic programs the supplement. Use TensorRT-LLM as the primary serving-runtime example and PyTorch/Dynamo as supporting evidence for dynamic graph capture and backend compilation.
 - In Chapter 1.1, use AI/LLM as the main application pressure, then use PQC, DSP, point cloud, graphics, and other domains as evidence of domain-specialization diversity. Do not make the report appear to be only about LLM serving.
+- Introduce “敏捷芯片设计” in Chapter 1.2 after explaining design-productivity and iteration bottlenecks. Define it as rapid formation, verification, mapping, and iteration of domain hardware capabilities, not merely faster RTL writing.
 - Learn structure from `resources/博士开题报告-陈仁泽.pdf`, especially its introduction narrowing sequence, completed-work chapter loop, and future-work subsection pattern; do not copy its wording.
 - Organize existing work into three technical layers. Merge “协同框架” and “指令/微架构定制” because they are one domain-specialization and end-to-end co-design layer.
 - In the first layer, APS/Aquas should appear first as the framework entry, but ISAMORE must receive no less space than APS/Aquas combined.
