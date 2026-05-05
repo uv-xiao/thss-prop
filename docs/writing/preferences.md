@@ -30,6 +30,7 @@ This file records project-specific preferences that are important but less unive
 - Organize existing work into three technical layers. Merge “协同框架” and “指令/微架构定制” because they are one domain-specialization and end-to-end co-design layer.
 - In the first layer, APS/Aquas should appear first as the framework entry, but ISAMORE must receive no less space than APS/Aquas combined.
 - Cayman is an important subsection in the domain-specialization and end-to-end co-design chapter because it is first-author/co-first-author work.
+- Chapter 2 order is APS/Aquas -> ISAMORE -> Cayman. Use the transition: framework -> what to customize -> microarchitecture constraints.
 - Clay is an important subsection in the hardware-frontend and synthesis-optimization chapter because it is first-author/co-first-author work.
 - HECTOR should be emphasized and carefully summarized, but not expanded like first-author representative work because the user is second author.
 - EggMind should be presented as existing work in a chapter about large models and formal techniques for hardware-software co-design. Do not put the main EggMind narrative in the future-work chapter.

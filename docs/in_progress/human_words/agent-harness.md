@@ -248,6 +248,12 @@
   - Related: `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`, `report/docs/report_spec.md`
   - Agent interpretation: Use “面向领域定制的架构接口与端到端协同” as Chapter 2 title. It directly answers how application demand becomes reusable instruction, microarchitecture, and accelerator capabilities through architecture interfaces.
 
+- 2026-05-05 00:00 Asia/Shanghai - Chapter 2 internal order
+  > 认可
+  - Context: User accepted keeping the Chapter 2 order.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Chapter 2 order is APS/Aquas -> ISAMORE -> Cayman, with transition logic framework -> what to customize -> microarchitecture constraints.
+
 - 2026-05-05 00:00 Asia/Shanghai - Evidence table optional
   > 认可
   - Context: User accepted making the introduction evidence table optional rather than mandatory.
