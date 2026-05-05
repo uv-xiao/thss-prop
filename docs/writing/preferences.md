@@ -8,6 +8,7 @@ This file records project-specific preferences that are important but less unive
 - The report theme is “敏捷芯片设计与创新性编译技术驱动的软硬件协同”. Do not reframe it as AI education, intelligent programming education, or a narrow C/system programming learning system.
 - The central relation should be cross-architecture hardware-software co-design ecology. Compilation and architecture are the two key interface layers that connect software demand, hardware capability, synthesis optimization, verification evidence, and runtime systems.
 - In the introduction's related-work review, classify literature by co-design interfaces rather than by paper or technology object: application-to-architecture, architecture-to-hardware, software-to-compilation, compilation-to-runtime, and automation through large models plus formal techniques.
+- The introduction should converge to exactly three core research questions, not four or five. The five interface categories are for literature organization; the three questions are the report's research-problem scaffold.
 - Learn structure from `resources/博士开题报告-陈仁泽.pdf`, especially its introduction narrowing sequence, completed-work chapter loop, and future-work subsection pattern; do not copy its wording.
 - Organize existing work into three technical layers. Merge “协同框架” and “指令/微架构定制” because they are one domain-specialization and end-to-end co-design layer.
 - In the first layer, APS/Aquas should appear first as the framework entry, but ISAMORE must receive no less space than APS/Aquas combined.

@@ -139,3 +139,9 @@
   - Context: User accepted organizing the introduction's research-status review by co-design interface rather than by technology object.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: First-chapter related work should use application-to-architecture, architecture-to-hardware, software-to-compilation, compilation-to-runtime, and automation-by-LLM/formal-methods categories. Technical objects appear inside those categories.
+
+- 2026-05-05 00:00 Asia/Shanghai - Introduction should converge to three core questions
+  > 3个
+  - Context: User chose three core research questions for the introduction's final challenge/problem statement.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: The introduction can use five interface categories for literature review, but must converge to exactly three core research questions before mapping to existing work and future work.
