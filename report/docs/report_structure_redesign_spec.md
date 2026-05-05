@@ -393,11 +393,18 @@ EggMind 按完整现有工作展开，必须写出“方法、系统、实验、
 
 本方向标题采用“面向工业级异构架构的算子-运行时编译协同”。相比“面向异构任务图的编译-运行时协同”，该表述更准确：它不仅覆盖任务图运行时，还明确把工业级异构架构、芯片算子、算子生成/优化、运行时调度和编译反馈纳入同一个研究对象。`resources/seed-proposal.docx` 的内容应作为本节未来工作的重要来源，尤其用于支撑“面向新领域、长任务的芯片算子自动优化 Agent”这一子方向。
 
+本方向内部采用并列双子线组织，而不是上下游闭环绑定：
+
+1. 面向工业级异构架构的芯片算子自动优化，重点来自 `resources/seed-proposal.docx`，包括复杂 fused 算子、Torch 训练/推理算子、长程 Agent Harness、IR/Pass/profiling/形式化辅助优化和回归验证。
+2. 面向工业级异构架构的运行时分布式协同，重点来自 PTO Runtime distributed features，包括任务图执行、异构设备边界、数据移动、ready/completion protocol、TensorMap/RingBuffer 扩展和可观测性。
+
+二者的汇合点是工业级异构架构，而不是彼此承担直接上下游关系。写作时可以说明它们共同服务算子与运行时协同，但不要把 PTO Runtime distributed features 写成 Agent Harness 的部署后端，也不要把 Agent Harness 写成 PTO Runtime 的上层计划。
+
 重点：
 
 - 可以在本节中说明 PTO Runtime distributed features 作为该方向的已有基础或原型，但小节论证对象是“面向工业级异构架构的算子-运行时编译协同”。
 - 可以在本节中承接 `resources/seed-proposal.docx`，但正文要抽象成研究问题，不写成公司项目申请书。
-- Agent Harness 只在需要解释长程芯片算子自动优化时出现，不能覆盖整个 PTO Runtime distributed features 原型。PTO Runtime distributed features 暂时没有 agent 计划，应作为运行时协同、任务图执行、数据移动和反馈闭环的已有基础或系统原型来写。
+- Agent Harness 只在需要解释长程芯片算子自动优化时出现，不能覆盖整个 PTO Runtime distributed features 原型。PTO Runtime distributed features 暂时没有 agent 计划，应作为运行时协同、任务图执行、数据移动和可观测性的已有基础或系统原型来写。
 - 研究对象：工业级异构架构上的复杂 fused 算子、Torch 训练/推理核心算子、算子生成与改写、运行时编排、性能反馈和回归验证。
 - 核心问题：新领域算子优化依赖架构知识、ISA/存储层次、编译约束和专家经验，普通代码生成 Agent 难以长期稳定地完成正确性保持、性能调优和跨算子协同优化。
 - 方法方向：构建长程 Agent Harness，提供架构描述、算子需求、IR/Pass 生成边界、工具调用、自动验证、性能 profiling、经验记忆和回归分析。
@@ -416,7 +423,7 @@ EggMind 按完整现有工作展开，必须写出“方法、系统、实验、
 
 - 阶段 1：可解释编译基础设施的最小可执行 compiler slice 和证据模型；
 - 阶段 2：验证约束下协同生成的小型硬件案例 oracle-IR-RTL-codegen 闭环；
-- 阶段 3：面向工业级异构架构的算子-运行时编译协同原型，包括核心 fused 算子优化、Torch 算子覆盖、运行时任务图协同、性能反馈和回归验证；长程 Agent Harness 作为算子自动优化子线推进，不绑定到 PTO Runtime distributed features 全部内容；
+- 阶段 3：面向工业级异构架构推进两条并列子线：一是核心 fused 算子与 Torch 算子的长程自动优化 Harness，二是 PTO Runtime distributed features 的运行时任务图协同、数据移动和可观测性；二者以工业级异构架构为共同汇合点，不强行写成上下游绑定；
 - 阶段 4：跨层案例整合与论文/开源输出；
 - 风险：语义边界过大、agent 生成不可控、运行时依赖真实硬件、评估指标不统一；
 - 对策：从小闭环开始、使用 typed artifacts、以可执行 oracle 和 trace 为核心证据。

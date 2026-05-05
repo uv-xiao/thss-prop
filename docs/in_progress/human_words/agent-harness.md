@@ -115,3 +115,9 @@
   - Context: User confirmed that the third future-work title should not include Agent and clarified the PTO Runtime distributed boundary.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Agent Harness is a method for the long-horizon chip-operator optimization subline from seed proposal. PTO Runtime distributed features should not be framed as an agent project.
+
+- 2026-05-05 00:00 Asia/Shanghai - Operator harness and runtime features are parallel sublines
+  > 我认为并列即可，工业级异构架构是两个方向的汇合点。
+  - Context: User rejected an upstream/downstream closed-loop framing between Agent Harness and PTO Runtime distributed features.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: In the third future-work direction, write chip-operator automatic optimization Agent Harness and PTO Runtime distributed features as parallel sublines. Their common object is industrial heterogeneous architecture.
