@@ -10,6 +10,7 @@ The introduction should not rely only on broad claims such as "compute demand is
 application demand
   -> domain specialization and agile chip design
   -> design productivity and cross-architecture co-design bottlenecks
+  -> LLM/agentic methods as a new engineering-automation trend
   -> compilation and architecture as key software-hardware interface layers
 ```
 
@@ -34,6 +35,46 @@ Use external evidence sparingly and precisely. Data should support the problem c
   - Use for: chip design productivity pressure and AI-assisted EDA as an example of automation entering difficult design stages.
   - Writing constraint: present it as a floorplanning/design-productivity example, not as proof that AI solves chip design. Mention the limited scope.
   - Sources: https://www.nature.com/articles/s41586-021-03544-w and https://www.nature.com/articles/s41586-024-08032-5
+
+- McKinsey, "Seizing the agentic AI advantage", 2025.
+  - Use for: agentic AI as an enterprise engineering and automation trend, not only a research curiosity.
+  - Candidate evidence:
+    - McKinsey reports more than 78% of companies using gen AI in at least one business function, while more than 80% still report no material contribution to earnings and only 1% view their gen-AI strategy as mature.
+    - The report argues for an "agentic mesh" that coordinates custom and off-the-shelf agents, supports multi-agent collaboration, and mitigates agent sprawl, autonomy drift, and lack of observability.
+  - Writing constraint: use this to motivate why agentic methods need infrastructure, governance, observability, and workflow boundaries. Do not use it as direct evidence for chip-design performance.
+  - Source: https://www.mckinsey.com/capabilities/quantumblack/our-insights/seizing-the-agentic-ai-advantage
+
+- Anthropic Economic Index, 2026 reports.
+  - Use for: software engineering is one of the earliest and most concentrated real-world agent/LLM usage domains, supporting the claim that LLM/agentic methods are changing complex engineering workflows.
+  - Candidate evidence:
+    - The January 2026 report states that computer and mathematical tasks dominate Claude usage overall, representing about one third of Claude.ai conversations and nearly half of first-party API traffic; "modifying software to correct errors" is the most common API task at about one in ten records.
+    - The March 2026 report can be used as follow-up evidence on adoption and geographic/workflow diffusion if needed.
+  - Writing constraint: use as broad engineering-automation evidence; do not imply chip design has the same adoption pattern unless EDA-specific sources are also cited.
+  - Sources: https://www.anthropic.com/research/anthropic-economic-index-january-2026-report and https://www.anthropic.com/research/economic-index-march-2026-report
+
+- METR, "Measuring AI Ability to Complete Long Tasks", 2025 / NeurIPS 2025 version.
+  - Use for: long-horizon agent capability is improving, but reliability depends on task structure and evaluation; this supports the need for harnesses rather than free-form autonomy.
+  - Candidate evidence:
+    - METR proposes measuring 50%-task-completion time horizon for AI agents on software and ML research tasks.
+    - The report argues that public language models' task-completion time horizon has grown rapidly and extrapolates that agents may complete a large fraction of multi-day or multi-week software tasks within years, while emphasizing methodological dependence and reliability limitations.
+  - Writing constraint: treat as a capability-trend model, not a deterministic forecast. Use it to justify why doctoral work should consider agentic automation now, while insisting on verification and evidence constraints.
+  - Sources: https://metr.org/blog/2025-03-19-measuring-ai-ability-to-complete-long-tasks/ and https://openreview.net/pdf?id=CGNJL6CeV0
+
+- Siemens Fuse EDA AI Agent and Siemens DAC 2025 AI announcement.
+  - Use for: major EDA vendors are explicitly framing agentic AI as semiconductor/PCB workflow automation across architecture exploration, RTL, verification, place-and-route, physical sign-off, and manufacturing readiness.
+  - Candidate evidence:
+    - Siemens describes Fuse EDA AI Agent as an industrial-grade agentic AI automation system for semiconductor and PCB design that orchestrates multi-tool and multi-agent workflows.
+    - Siemens' product page emphasizes EDA-specific parsers, custom playbooks, RAG, MCP protocol, Agent Skills, and support across Catapult, Questa, Aprisa, Solido, Veloce, and Calibre.
+  - Writing constraint: use as industry-trend evidence, not as a peer-reviewed technical result.
+  - Sources: https://www.siemens.com/en-us/products/fuse-eda-ai-system/agent/ and https://newsroom.sw.siemens.com/en-US/siemens-eda-ai-dac-2025/
+
+- Synopsys AgentEngineer / generative and agentic AI announcements.
+  - Use for: another leading EDA vendor treats agentic AI as a next stage after generative AI for chip design workflows.
+  - Candidate evidence:
+    - Synopsys describes generative AI as the foundation for AgentEngineer technology and presents a progression from step-level single-agent actions to multi-agent actions, adaptive flow optimization, and eventually autonomous decision-making.
+    - Synopsys and Microsoft showcased a DAC 2025 prototype built on Microsoft Discovery.
+  - Writing constraint: use as industry-trend and roadmap evidence; avoid treating vendor vision as validated technical performance.
+  - Sources: https://news.synopsys.com/2025-09-03-Synopsys-Announces-Expanding-AI-Capabilities-for-its-Leading-EDA-Solutions and https://www.synopsys.com/blogs/chip-design/generative-agentic-ai-chip-design.html
 
 - ATLAS: "A Full-Stack Performance Evaluation Infrastructure for 3D-DRAM-based LLM Accelerators", arXiv 2604.08044, 2026.
   - Use for: emerging industrial 3D-DRAM LLM accelerators need full-stack architecture and programming abstractions, not isolated microarchitecture claims.
@@ -111,7 +152,24 @@ Use external evidence sparingly and precisely. Data should support the problem c
 
 - Automation through large models and formal techniques:
   - Nature/AlphaChip for AI-assisted floorplanning, with scope caveat.
+  - McKinsey and Anthropic for broad enterprise/software-engineering agentic trend, with scope caveat.
+  - Siemens Fuse EDA AI Agent and Synopsys AgentEngineer for EDA/chip-design industry trend, with vendor-roadmap caveat.
+  - METR long-task measurement for long-horizon agent capability and reliability limitations.
+  - "Agentic Software Engineering: Foundational Pillars and a Research Roadmap", arXiv 2509.06216, for agent execution environments, human-agent handoff, and structured engineering process.
+  - "The Dawn of Agentic EDA: A Survey of Autonomous Digital Chip Design", arXiv 2512.23189, for the field-level framing that EDA is moving from point-problem AI optimization toward agentic orchestration of RTL-to-GDSII flows; use carefully because it is a survey/preprint.
+  - "A Multi-Agent Generative AI Framework for IC Module-Level Verification Automation", arXiv 2507.21694 / DVCon China 2025, for verification as a bottleneck and multi-agent verification automation evidence.
+  - CompilerGPT, arXiv 2506.06227 / ISC HPC C3PO 2025, for LLMs acting through compiler reports plus user-defined test/evaluation harness; candidate result: speedups up to 6.5x but not consistent across tests.
+  - AwareCompiler, arXiv 2510.11759, for agentic compiler optimization challenges: semantic misalignment, inefficient agent-compiler interaction, and sparse rewards in large optimization spaces.
   - Add local sources: OriGen and EggMind.
+
+### 1.1/1.2/1.3 Placement Of LLM/Agentic Trend
+
+- 1.1 should introduce LLM/agentic methods as a technology and industry trend, not only as an application workload. The narrative should distinguish two roles of LLMs:
+  - LLM workloads intensify compute demand and drive domain-specialized systems.
+  - LLM/agentic methods are changing how complex engineering workflows are automated.
+- 1.2 should connect agentic methods to chip-design productivity. Use EDA vendor evidence and AI-assisted design papers to show that the industry is exploring agents for long, multi-tool workflows, but emphasize the correctness, verification, maintainability, and observability risks.
+- 1.3 should provide the thesis-level constraint: agentic methods can serve cross-hardware-architecture co-design only when architecture interfaces, compiler infrastructure, semantic gates, runtime/profiling feedback, and evidence memory provide a harness.
+- 1.5 should not name a separate "agent problem". It should absorb the agent trend into the third core question: how compilation interfaces connect program semantics, hardware capabilities, runtime feedback, and verifiable reusable evidence loops.
 
 ## Writing Rules For Evidence
 

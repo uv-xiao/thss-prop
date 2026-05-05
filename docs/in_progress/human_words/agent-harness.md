@@ -307,3 +307,9 @@
   - Context: User corrected the future-work lineage and added a new resource memo about compiler infrastructure for agentic retargeting.
   - Related: `resources/compiler-infra-is-harness-medium.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Spine must be written as both an extension of OriGen-style LLM/formal hardware generation and an agentic extension of APS/Aquas-style end-to-end architecture/hardware/compiler co-design. The introduction and Chapter 5 must also use the argument that compiler infrastructure is the harness medium for agents: target facts, explicit IRs, semantic contracts, constrained transformations, executable artifacts, gates, and evidence/feedback.
+
+- 2026-05-06 00:00 Asia/Shanghai - Agentic trend belongs in the introduction
+  > 我认为需要把agent作为一个技术革新或者行业趋势来介绍
+  - Context: User rejected delaying agentic/LLM discussion until only 1.3 or future work.
+  - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Chapter 1 should introduce LLM/agentic methods as a technology innovation and industry trend. Use a three-step placement: 1.1 briefly presents LLM/agentic as changing complex engineering automation; 1.2 connects it to chip-design productivity and AI-assisted design; 1.3 constrains it through architecture interfaces, compiler infrastructure, semantic gates, runtime/profiling feedback, and evidence memory. Use industrial reports and frontier papers as evidence, but distinguish trend evidence from verified chip-design performance.
