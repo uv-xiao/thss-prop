@@ -266,6 +266,12 @@
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Chapter 3 order should be HECTOR -> Cement -> Clay -> SkyEgg. HECTOR appears first as early infrastructure/framework accumulation and is carefully summarized, not fully expanded.
 
+- 2026-05-05 00:00 Asia/Shanghai - Cement and Clay relation
+  > 认可
+  - Context: User accepted writing Cement and Clay as a division of responsibility.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Cement focuses on hardware behavior expression and cycle determinism; Clay focuses on implementation quality and synthesis mechanisms. Do not frame Clay as a successor version of Cement unless sources explicitly support that.
+
 - 2026-05-05 00:00 Asia/Shanghai - Evidence table optional
   > 认可
   - Context: User accepted making the introduction evidence table optional rather than mandatory.

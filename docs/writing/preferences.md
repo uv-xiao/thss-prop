@@ -34,6 +34,7 @@ This file records project-specific preferences that are important but less unive
 - Clay is an important subsection in the hardware-frontend and synthesis-optimization chapter because it is first-author/co-first-author work.
 - HECTOR should be emphasized and carefully summarized, but not expanded like first-author representative work because the user is second author.
 - Chapter 3 order is HECTOR -> Cement -> Clay -> SkyEgg. HECTOR appears first as early undergraduate-era infrastructure and technical framework accumulation that Clay/SkyEgg depend on, but it remains a careful summary rather than a full representative-work section.
+- Present Cement and Clay as a division of responsibility, not a version progression: Cement for hardware behavior expression and cycle determinism; Clay for implementation quality and synthesis mechanisms.
 - EggMind should be presented as existing work in a chapter about large models and formal techniques for hardware-software co-design. Do not put the main EggMind narrative in the future-work chapter.
 - Write EggMind as complete existing work, with method, system, experiments, and significance. Do not soften it into only preliminary basis unless later evidence forces a narrower statement.
 - In the future-work chapter, mention EggMind only as existing foundation that motivates a remaining system problem. The transition must be explicit and logically necessary, not a sudden name drop.
