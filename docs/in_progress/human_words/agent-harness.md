@@ -43,3 +43,9 @@
   - Context: User corrected the writing depth requirement and answered grill-me question 5.
   - Related: `.agents/rules/report-argument.md`, `.agents/rules/evidence-citations-translation.md`, `.agents/skills/report-draft-section/SKILL.md`, `report/docs/agent_writing_guidelines.md`, `report/docs/report_spec.md`, `docs/writing/preferences.md`
   - Agent interpretation: Treat current text as skeletal, require source-backed expansion from `resources/`, and describe both ISAMORE's mechanism role and anti-unification method innovation in detail.
+
+- 2026-05-05 00:00 Asia/Shanghai - Start expansion from introduction and research goals
+  > 赞成
+  - Context: User agreed with grill-me recommendation to expand the introduction and research goals before detailed ISAMORE expansion.
+  - Related: `report/main.typ`, `resources/aps/sec/0_intro.tex`, `resources/aquas/sec/0_intro.tex`, `resources/isamore/tex/1_introduction.tex`, `resources/cement/doc/1_Introduction.tex`, `resources/skyegg/doc/1_introduction.tex`, `resources/IntelliC/docs/story.md`, `resources/spine/docs/story.md`
+  - Agent interpretation: Stabilize the overall story first, then use it as the anchor for representative-work expansions.

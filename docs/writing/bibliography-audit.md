@@ -11,6 +11,53 @@ This file records evidence for bibliography entries and report claims. It is not
 
 ## Institutional Sources
 
+## Local Work Sources
+
+### aps2025
+
+- Source: `resources/aps/sec/0_intro.tex`
+- Accessed: 2026-05-05
+- Evidence inspected: introduction on agile ASIP specialization, RISC-V ISAX integration, interface divergence across RoCC/CV-X-IF, ISAX-specific synthesis, compiler support, APS interface/synthesis/compiler flow, and case-study speedups.
+- Supports: report introduction claims about RISC-V ASIP motivation, interface fragmentation, and the need for end-to-end hardware-software co-design.
+- Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
+- Open gaps: final venue, author order, and publication status need confirmation.
+
+### aquas2026
+
+- Source: `resources/aquas/sec/0_intro.tex`
+- Accessed: 2026-05-05
+- Evidence inspected: introduction on edge ASIP demand, data-intensive ISAX memory-interface challenges, semantic gap in ISAX offloading, MLIR/Aquas-IR, e-graph-based robust mapping, case studies, speedup, and area data.
+- Supports: report introduction claims about complex ISAX, memory-interface attributes, cache effects, scratchpad/access mechanisms, robust mapping, and data-intensive case studies.
+- Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
+- Open gaps: final venue, author order, and publication status need confirmation.
+
+### isamore2026
+
+- Source: `resources/isamore/tex/1_introduction.tex`
+- Accessed: 2026-05-05
+- Evidence inspected: introduction on reusable custom instructions, low reusability of hotspot-driven instruction customization, semantic equivalence, e-graph anti-unification, structured DSL, phase-oriented process, smart AU, pattern vectorization, hardware-aware selection, and evaluation.
+- Supports: report introduction claims about reusable custom instructions as a key mechanism and e-graph anti-unification as method innovation.
+- Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
+- Open gaps: final venue, author order, and publication status need confirmation.
+
+### cement2024
+
+- Source: `resources/cement/doc/1_Introduction.tex`
+- Accessed: 2026-05-05
+- Evidence inspected: introduction on FPGA accelerator programming difficulty, RTL productivity limits, HLS unpredictability, cycle-deterministic eHDL, event layer, control sub-language, timing analysis, FSM synthesis, and evaluation.
+- Supports: report introduction claims about hardware frontend productivity and predictability.
+- Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
+- Open gaps: final venue and exact publication metadata need confirmation.
+
+### skyegg2026
+
+- Source: `resources/skyegg/doc/1_introduction.tex`
+- Accessed: 2026-05-05
+- Evidence inspected: introduction on hardware synthesis, separation of algebraic transformation/scheduling/mapping, e-graph design-space representation, transformation- and mapping-aware scheduling, ILP/ASAP solving, and evaluation.
+- Supports: report introduction claims about synthesis optimization fragmentation and e-graph-based joint optimization.
+- Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
+- Open gaps: final venue, author order, and publication status need confirmation.
+
 ### rightcapitalhq-chinese-style-guide
 
 - Source: https://github.com/RightCapitalHQ/chinese-style-guide
