@@ -49,3 +49,9 @@
   - Context: User agreed with grill-me recommendation to expand the introduction and research goals before detailed ISAMORE expansion.
   - Related: `report/main.typ`, `resources/aps/sec/0_intro.tex`, `resources/aquas/sec/0_intro.tex`, `resources/isamore/tex/1_introduction.tex`, `resources/cement/doc/1_Introduction.tex`, `resources/skyegg/doc/1_introduction.tex`, `resources/IntelliC/docs/story.md`, `resources/spine/docs/story.md`
   - Agent interpretation: Stabilize the overall story first, then use it as the anchor for representative-work expansions.
+
+- 2026-05-05 00:00 Asia/Shanghai - Expand related work and challenges from resources
+  > 先扩写国内外研究现状与挑战。resources/内的每篇工作都有讨论相关工作，需要仔细研读整理。
+  - Context: User chose the next expansion target and emphasized careful reading of each work's related work.
+  - Related: `report/main.typ`, `docs/writing/bibliography-audit.md`, `resources/aps/sec/5_related_works.tex`, `resources/isamore/tex/2_background.tex`, `resources/isamore/tex/7_related_work.tex`, `resources/cement/doc/2_Background_Motiviation.tex`, `resources/cement/doc/7_Related_Work.tex`, `resources/skyegg/doc/2_background.tex`, `resources/skyegg/doc/8_related_work.tex`, `resources/eggmind/tex/2_background.tex`, `resources/eggmind/tex/8_related_work.tex`, `resources/origen/1_Introduction.tex`, `resources/origen/2_Background.tex`
+  - Agent interpretation: Build the related-work chapter from local related-work discussions, not from generic memory.

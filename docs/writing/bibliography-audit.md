@@ -52,9 +52,30 @@ This file records evidence for bibliography entries and report claims. It is not
 ### skyegg2026
 
 - Source: `resources/skyegg/doc/1_introduction.tex`
+- Additional sources: `resources/skyegg/doc/2_background.tex`, `resources/skyegg/doc/8_related_work.tex`
 - Accessed: 2026-05-05
 - Evidence inspected: introduction on hardware synthesis, separation of algebraic transformation/scheduling/mapping, e-graph design-space representation, transformation- and mapping-aware scheduling, ILP/ASAP solving, and evaluation.
 - Supports: report introduction claims about synthesis optimization fragmentation and e-graph-based joint optimization.
+- Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
+- Open gaps: final venue, author order, and publication status need confirmation.
+
+### origen2024
+
+- Source: `resources/origen/1_Introduction.tex`
+- Additional sources: `resources/origen/2_Background.tex`
+- Accessed: 2026-05-05
+- Evidence inspected: introduction and background on LLMs for Verilog generation, RTL dataset scarcity and quality, code-to-code augmentation, compiler-feedback self-reflection, VerilogFixEval, and open-source RTL model limitations.
+- Supports: report related-work claims about AI-assisted RTL generation, dataset quality, compiler feedback, and self-reflection.
+- Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
+- Open gaps: final venue, author order, and publication status need confirmation.
+
+### eggmind2026
+
+- Source: `resources/eggmind/tex/2_background.tex`
+- Additional sources: `resources/eggmind/tex/8_related_work.tex`
+- Accessed: 2026-05-05
+- Evidence inspected: background and related work on equality saturation, strategy-guided EqSat, rule-space growth, expert-tuned schedules, guide-based methods, online search/controllers, LLM-guided optimization, EqSatL, proof-derived motifs, and tractability guidance.
+- Supports: report related-work claims about EqSat strategy control and agentic compiler optimization.
 - Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
 - Open gaps: final venue, author order, and publication status need confirmation.
 
