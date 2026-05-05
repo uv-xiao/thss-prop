@@ -102,6 +102,7 @@ This pattern is directly useful, but this project should expand it because the u
 
 - The report should use a cross-hardware-architecture co-design relation: compilation and architecture are the two key interface layers connecting application demand, hardware capability, synthesis optimization, verification evidence, and runtime systems.
 - The introduction must end with explicit research questions and a map from existing work to future work.
+- The introduction's research-status review should be organized by co-design interfaces, not by a flat list of technology objects.
 - Existing work should use three technical layers, not four: domain specialization and end-to-end co-design; hardware frontend and synthesis optimization; large models and formal techniques for hardware-software co-design.
 - The co-design framework and instruction/microarchitecture customization work should be merged into one layer because they jointly answer how domain-specific hardware capability is discovered, generated, mapped, and reused.
 - Within the first layer, APS/Aquas can establish the framework logic first, but ISAMORE must be developed with at least equal space because focused optimization techniques and the overall co-design framework are equally important.

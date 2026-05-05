@@ -133,3 +133,9 @@
   - Context: User accepted the introduction's “application demand -> design productivity -> interface/co-design” progression, but refined the third step.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: The introduction should not frame the third step as compiler centrality alone. It should frame a cross-hardware-architecture hardware-software co-design ecology, where compilation and architecture are the two key interface layers between software demand and hardware implementation.
+
+- 2026-05-05 00:00 Asia/Shanghai - Introduction related work should use co-design interfaces
+  > B更好
+  - Context: User accepted organizing the introduction's research-status review by co-design interface rather than by technology object.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: First-chapter related work should use application-to-architecture, architecture-to-hardware, software-to-compilation, compilation-to-runtime, and automation-by-LLM/formal-methods categories. Technical objects appear inside those categories.
