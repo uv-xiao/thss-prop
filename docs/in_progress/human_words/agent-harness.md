@@ -229,3 +229,9 @@
   - Context: User accepted keeping the five interface categories in the current order.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Keep the order: application-to-architecture, architecture-to-hardware, software-to-compilation, compilation-to-runtime, automation through large models and formal techniques.
+
+- 2026-05-05 00:00 Asia/Shanghai - No core-question mapping table in Chapter 1.5
+  > 我认为不需要表格，这会破坏报告的流畅性，显得多余且更像技术报告。我们需要的是博士开题报告，更学术，强调故事和逻辑。
+  - Context: User rejected adding a mapping table for the three core questions in Chapter 1.5.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Chapter 1.5 should converge through continuous academic narrative, not a technical-report-style table. Use the 1.7 structure figure for mapping.
