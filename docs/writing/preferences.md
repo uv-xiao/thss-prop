@@ -9,7 +9,7 @@ This file records project-specific preferences that are important but less unive
 - The central relation should be cross-architecture hardware-software co-design ecology. Compilation and architecture are the two key interface layers that connect software demand, hardware capability, synthesis optimization, verification evidence, and runtime systems.
 - In the introduction's related-work review, classify literature by co-design interfaces rather than by paper or technology object: application-to-architecture, architecture-to-hardware, software-to-compilation, compilation-to-runtime, and automation through large models plus formal techniques.
 - Keep the introduction's five interface categories in this order: application-to-architecture, architecture-to-hardware, software-to-compilation, compilation-to-runtime, and automation through large models plus formal techniques.
-- Do not add a core-question mapping table in Chapter 1.5. Use continuous academic narrative for problem convergence; use the Chapter 1.7 structure figure for mapping.
+- Do not add a core-question mapping table in Chapter 1.5. Use continuous academic narrative for problem convergence; use the Chapter 1.6 structure figure for mapping.
 - The introduction should converge to exactly three core research questions, not four or five. The five interface categories are for literature organization; the three questions are the report's research-problem scaffold.
 - At the end of the introduction, map chapters to research questions using “primary question + secondary support”. Avoid rigid one-to-one mapping, but keep each chapter's main role explicit.
 - In the introduction, delay the user's own completed work until section 1.6. Sections 1.1-1.4 should build the field review and problem chain first, without turning into an achievement summary.
@@ -24,6 +24,7 @@ This file records project-specific preferences that are important but less unive
 - In Chapter 1.3, explicitly define architecture interface and compilation interface. Architecture interface defines what hardware capabilities are exposed; compilation interface defines how software discovers, uses, optimizes, and verifies those capabilities.
 - The three core research questions should explicitly use architecture interface in question 1 and compilation interface in question 3.
 - Keep the first chapter title as “引言”. Use subsection titles and overview figures to carry specificity.
+- Chapter 1 has no standalone “报告结构安排” section. Merge chapter-arrangement prose and the research-question-to-chapter figure into the end of 1.6.
 - Add a central thesis sentence near the end of 1.3 or the start of 1.5. It should bridge the field review to the three core research questions; refine wording during drafting.
 - Learn structure from `resources/博士开题报告-陈仁泽.pdf`, especially its introduction narrowing sequence, completed-work chapter loop, and future-work subsection pattern; do not copy its wording.
 - Organize existing work into three technical layers. Merge “协同框架” and “指令/微架构定制” because they are one domain-specialization and end-to-end co-design layer.

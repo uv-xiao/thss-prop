@@ -162,7 +162,7 @@
   > 认可
   - Context: User accepted adding two self-drawn overview figures to the introduction.
   - Related: `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`, `docs/writing/preferences.md`
-  - Agent interpretation: Draw one figure near 1.3 for cross-hardware-architecture co-design ecology, and one near 1.6/1.7 for research questions and chapter mapping.
+  - Agent interpretation: Draw one figure near 1.3 for cross-hardware-architecture co-design ecology, and one near 1.6 for research questions and chapter mapping.
 
 - 2026-05-05 00:00 Asia/Shanghai - Introduction needs external data and top-architecture evidence
   > 赞成；并且我认为我们需要更多的业界数据来支持我们的结论。你可以通过检索论文，尤其是顶级体系结构会议近年的论文，查询可以支撑观点的数据和模型。
@@ -234,7 +234,13 @@
   > 我认为不需要表格，这会破坏报告的流畅性，显得多余且更像技术报告。我们需要的是博士开题报告，更学术，强调故事和逻辑。
   - Context: User rejected adding a mapping table for the three core questions in Chapter 1.5.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
-  - Agent interpretation: Chapter 1.5 should converge through continuous academic narrative, not a technical-report-style table. Use the 1.7 structure figure for mapping.
+  - Agent interpretation: Chapter 1.5 should converge through continuous academic narrative, not a technical-report-style table. Use the 1.6 structure figure for mapping.
+
+- 2026-05-05 00:00 Asia/Shanghai - Introduction subsection titles finalized without standalone structure section
+  > 认可，但我们不需要一个报告结构安排小章节。
+  - Context: User accepted the revised academic subsection titles but rejected a standalone report-structure subsection.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Use six Chapter 1 subsections: 领域应用演进与领域定制计算趋势; 芯片设计生产力瓶颈与敏捷设计路径; 跨硬件架构软硬件协同生态与关键接口; 面向协同接口的国内外研究现状; 核心科学问题与研究挑战; 已有研究基础与拟开展研究. Merge chapter arrangement into the end of 1.6.
 
 - 2026-05-05 00:00 Asia/Shanghai - Evidence table optional
   > 认可
