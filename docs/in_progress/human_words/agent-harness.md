@@ -87,7 +87,7 @@
   - Agent interpretation: Future work can refer to EggMind only after stating the remaining system problem it motivates. Avoid abrupt reuse of the name without explaining how fourth-chapter results lead to IntelliC, Spine, or PTO Runtime.
 
 - 2026-05-05 00:00 Asia/Shanghai - Cayman, Clay, and HECTOR chapter weights confirmed
-  > Cayman应该作为面向领域定制的架构接口与端到端协同的重要子章节，Clay应该作为硬件前端与综合优化的重要子章节，因为他们是我作为一作/共同一作的工作。Hector不需要详细介绍，因为我只是二作，但需要着重（而非简略）概括。
+  > Cayman应该作为面向领域定制的架构接口与端到端协同的重要子章节，Clay应该作为面向高质量硬件实现的前端抽象与综合优化的重要子章节，因为他们是我作为一作/共同一作的工作。Hector不需要详细介绍，因为我只是二作，但需要着重（而非简略）概括。
   - Context: User answered the representative-work weighting question.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Cayman belongs in Chapter 2 as an important subsection; Clay belongs in Chapter 3 as an important subsection; HECTOR should be carefully summarized as support infrastructure without full representative-work treatment.
@@ -253,6 +253,12 @@
   - Context: User accepted keeping the Chapter 2 order.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Chapter 2 order is APS/Aquas -> ISAMORE -> Cayman, with transition logic framework -> what to customize -> microarchitecture constraints.
+
+- 2026-05-05 00:00 Asia/Shanghai - Chapter 3 title confirmed
+  > 认可
+  - Context: User accepted renaming Chapter 3 to better match the second core research question.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`, `report/docs/report_spec.md`
+  - Agent interpretation: Use “面向高质量硬件实现的前端抽象与综合优化” as Chapter 3 title. It should focus on expression, synthesizability, verifiability, performance, and resource control.
 
 - 2026-05-05 00:00 Asia/Shanghai - Evidence table optional
   > 认可
