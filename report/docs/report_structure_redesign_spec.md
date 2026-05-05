@@ -134,6 +134,8 @@
 4. 编译到运行时：编译决策如何进入异构执行、调度、数据移动和性能反馈。内部应优先讨论 NVIDIA TensorRT-LLM 和 PyTorch 2 `torch.compile`/TorchDynamo 等真实框架。写作比例采用“推理为主，训练/通用动态图程序为补充”：TensorRT-LLM 用于说明 engine building、KV-cache management、continuous batching、paged attention、serving backend 等推理运行时问题；PyTorch/Dynamo 用于说明 graph capture、graph break、backend compilation、fallback、custom backend 等训练/动态图程序的编译运行时边界；再结合 NVL72/IMEX、CloudMatrix384/UB-Mesh 等工业异构系统说明复杂度来源。
 5. 自动化方法：大模型与形式化技术如何提升跨层协同的生成、搜索、验证和策略迁移能力。内部可讨论 AI 辅助 RTL/硬件设计、Agent Harness、形式化约束和可验证反馈。
 
+上述顺序固定。它表达从应用需求进入系统，到架构能力定义、硬件实现、编译映射、运行时落地，再由大模型与形式化技术横向增强的叙事顺序。不要把“软件到编译”提前到“架构到硬件”之前。
+
 写作要求：
 
 - 这部分应系统整理 `resources/` 内各论文的 related work，不凭泛泛记忆写。

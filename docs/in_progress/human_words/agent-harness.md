@@ -223,3 +223,9 @@
   - Context: User accepted keeping Chapter 1 title as “引言”.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Keep the first chapter title as “引言”. Put specificity into subsection titles and figures.
+
+- 2026-05-05 00:00 Asia/Shanghai - Interface category order fixed
+  > 保持。
+  - Context: User accepted keeping the five interface categories in the current order.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Keep the order: application-to-architecture, architecture-to-hardware, software-to-compilation, compilation-to-runtime, automation through large models and formal techniques.
