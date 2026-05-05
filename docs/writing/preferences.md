@@ -24,6 +24,7 @@ This file records project-specific preferences that are important but less unive
 - In Chapter 1.3, explicitly define architecture interface and compilation interface. Architecture interface defines what hardware capabilities are exposed; compilation interface defines how software discovers, uses, optimizes, and verifies those capabilities.
 - The three core research questions should explicitly use architecture interface in question 1 and compilation interface in question 3.
 - Keep the first chapter title as “引言”. Use subsection titles and overview figures to carry specificity.
+- Add a central thesis sentence near the end of 1.3 or the start of 1.5. It should bridge the field review to the three core research questions; refine wording during drafting.
 - Learn structure from `resources/博士开题报告-陈仁泽.pdf`, especially its introduction narrowing sequence, completed-work chapter loop, and future-work subsection pattern; do not copy its wording.
 - Organize existing work into three technical layers. Merge “协同框架” and “指令/微架构定制” because they are one domain-specialization and end-to-end co-design layer.
 - In the first layer, APS/Aquas should appear first as the framework entry, but ISAMORE must receive no less space than APS/Aquas combined.

@@ -241,3 +241,9 @@
   - Context: User accepted making the introduction evidence table optional rather than mandatory.
   - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`
   - Agent interpretation: Use representative evidence examples in the narrative. Add a short evidence table only if it improves verifiability without making Chapter 1 feel like a technical report.
+
+- 2026-05-05 00:00 Asia/Shanghai - Introduction needs a central thesis sentence
+  > 认可。
+  - Context: User accepted adding a central thesis sentence near the middle of the introduction.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Add a central thesis sentence near the end of 1.3 or start of 1.5 to bridge the field review to the three core research questions. Draft wording later.
