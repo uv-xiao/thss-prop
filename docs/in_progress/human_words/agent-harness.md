@@ -205,3 +205,9 @@
   - Context: User accepted introducing “敏捷芯片设计” after design-productivity and iteration bottlenecks.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: In Chapter 1.2, define agile chip design as rapid formation, verification, mapping, and iteration of domain hardware capability, not merely faster RTL writing.
+
+- 2026-05-05 00:00 Asia/Shanghai - Architecture and compilation interfaces
+  > 认可
+  - Context: User accepted explicitly defining architecture interface and compilation interface in Chapter 1.3.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Architecture interface defines what hardware capabilities are exposed. Compilation interface defines how software discovers, uses, optimizes, and verifies those capabilities.
