@@ -127,3 +127,9 @@
   - Context: User accepted changing the third future-work title from “面向工业级异构架构的算子-运行时编译协同” to a clearer title.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Use “面向工业级异构架构的算子优化与运行时编译协同” as the fixed third future-work direction title.
+
+- 2026-05-05 00:00 Asia/Shanghai - Introduction third step should be cross-architecture co-design ecology
+  > 认可，但第三部分我认为应该往跨硬件架构的软硬件协同生态靠，而编译与架构两个层次应该是衔接软硬件领域的重要接口。
+  - Context: User accepted the introduction's “application demand -> design productivity -> interface/co-design” progression, but refined the third step.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: The introduction should not frame the third step as compiler centrality alone. It should frame a cross-hardware-architecture hardware-software co-design ecology, where compilation and architecture are the two key interface layers between software demand and hardware implementation.
