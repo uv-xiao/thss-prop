@@ -10,6 +10,8 @@
 - Do not cite a paper, repository, standard, dataset, or report that has not been inspected.
 - Do not infer paper claims from titles alone.
 - When source access is partial, mark the claim as provisional and avoid making it central to the argument.
+- Before expanding a representative work, inspect its local source materials under `resources/<work>/`, especially `README.md`, `main.tex`, `sec/`, `doc/`, `draft/`, `tex/`, figures, tables, and `refs.bib` where present.
+- Record the source paths used for each expansion in task notes, citation audit notes, or the handoff summary.
 
 ## Bibliography Rules
 

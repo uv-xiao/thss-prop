@@ -8,6 +8,8 @@ These rules apply to every substantive change to `report/main.typ`, `report/sect
 - The report must not read like a finished paper, a software manual, or a project retrospective.
 - Existing technical accumulation is supporting evidence. Future work, problem framing, research design, and feasibility deserve substantial space.
 - The central relation is compiler-centered hardware-software co-design: innovative compilation techniques connect application demand, hardware structures, synthesis optimization, verification evidence, and runtime systems.
+- Current report sections are skeletal drafts. Future revisions must use the abundant source material under `resources/` to make each part detailed, patient, and fully argued.
+- Do not leave major work descriptions at abstract-summary depth. A representative work needs background, concrete bottleneck, design motivation, method structure, technical mechanism, evaluation evidence, limitation or remaining question, and connection to the report theme.
 
 ## Required Argument Arc
 
@@ -46,6 +48,7 @@ Every full-report revision must preserve this arc:
 - Do not describe a system feature as research contribution unless it is linked to a research question, evaluation method, or generalizable design insight.
 - In the first existing-work layer, do not let the end-to-end framework narrative crowd out ISAMORE. ISAMORE must receive no less space than APS/Aquas combined.
 - Treat the overall co-design framework and focused single-point optimization techniques as equally important; the report needs both system architecture and deep technical mechanisms.
+- For ISAMORE specifically, describe both sides in detail: reusable custom instructions as a key mechanism for agile chip design, and e-graph anti-unification as the core method innovation enabling reusable instruction discovery.
 
 ## Research Question Discipline
 
@@ -65,6 +68,7 @@ Every full-report revision must preserve this arc:
   - proposed methods and future work design: 25%-30%;
   - feasibility, risks, and schedule: 10%-15%.
 - For a single section edit, keep the section proportional to its role. Do not solve missing argument structure by adding long exposition.
+- Length control must not be used as an excuse for superficial writing. If a section is short because it lacks evidence, mine `resources/` first and then expand with controlled structure.
 
 ## No Overclaiming
 

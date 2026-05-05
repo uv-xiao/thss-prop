@@ -11,6 +11,8 @@ This file records project-specific preferences that are important but less unive
 - Organize existing work into three technical layers. Merge “协同框架” and “指令/微架构定制” because they are one domain-specialization and end-to-end co-design layer.
 - In the first layer, APS/Aquas should appear first as the framework entry, but ISAMORE must receive no less space than APS/Aquas combined.
 - Treat the overall co-design framework and focused single-point optimization techniques as equally important.
+- Current report text is too skeletal. Use the abundant material in `resources/` to expand every major part into a detailed, patient, serious, and coherent story.
+- For ISAMORE, describe both reusable custom instructions as an agile-chip-design mechanism and e-graph anti-unification as a method innovation in detail.
 - The report should foreground industrial background, engineering challenges, scientific question formation, systematic analysis, and targeted future research design.
 - Existing technical accumulation should be accurate and concrete, but it should support the opening-report argument rather than dominate it.
 - Future work should receive substantial space and should include research ideas, system design, validation route, feasibility, and risks.

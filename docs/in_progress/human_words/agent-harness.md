@@ -37,3 +37,9 @@
   - Context: Follow-up to grill-me question about APS/Aquas and ISAMORE ordering inside the first layer.
   - Related: `report/docs/report_spec.md`, `report/docs/agent_writing_guidelines.md`, `.agents/rules/report-argument.md`, `docs/writing/preferences.md`, `docs/writing/reference-report-analysis.md`
   - Agent interpretation: Use APS/Aquas first for logical framing, but allocate ISAMORE at least equal space and preserve deep technical treatment for focused optimization work.
+
+- 2026-05-05 00:00 Asia/Shanghai - Require detailed expansion from resources and detailed ISAMORE treatment
+  > 当前所有部分的文字都过于简略，事实上resources/内有充足的文字资料以供在各部分进行添加，并且整体故事的讲述也需要非常详尽。这应该变成一个重要的要求。对于问题5: 二者都要，并且都需要详细描述。
+  - Context: User corrected the writing depth requirement and answered grill-me question 5.
+  - Related: `.agents/rules/report-argument.md`, `.agents/rules/evidence-citations-translation.md`, `.agents/skills/report-draft-section/SKILL.md`, `report/docs/agent_writing_guidelines.md`, `report/docs/report_spec.md`, `docs/writing/preferences.md`
+  - Agent interpretation: Treat current text as skeletal, require source-backed expansion from `resources/`, and describe both ISAMORE's mechanism role and anti-unification method innovation in detail.

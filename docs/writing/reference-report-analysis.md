@@ -107,3 +107,4 @@ This pattern is directly useful, but this project should expand it because the u
 - Each existing-work section must include local problem, method idea, evidence, and connection to the main theme.
 - Each future-work section must include problem, research question, approach, dependencies, expected output, validation, and risk.
 - The conclusion should not merely recap papers; it should restate how the completed and planned work form a coherent hardware-software co-design program.
+- Unlike the current skeletal draft, the final report should use the abundant local source material to give detailed explanation in each major section. The reference report's chapters are useful because they patiently develop background, motivation, method, evaluation, and conclusion rather than staying at abstract level.
