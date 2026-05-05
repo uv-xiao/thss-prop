@@ -44,6 +44,8 @@ Every full-report revision must preserve this arc:
 - Transitions must carry logic, not decoration. Prefer forms such as “因此，本报告将……”, “这一限制直接导致……”, “与上述方法相比……”, and “基于这一判断……”.
 - Do not introduce future work without explaining what problem it answers and how success will be assessed.
 - Do not describe a system feature as research contribution unless it is linked to a research question, evaluation method, or generalizable design insight.
+- In the first existing-work layer, do not let the end-to-end framework narrative crowd out ISAMORE. ISAMORE must receive no less space than APS/Aquas combined.
+- Treat the overall co-design framework and focused single-point optimization techniques as equally important; the report needs both system architecture and deep technical mechanisms.
 
 ## Research Question Discipline
 

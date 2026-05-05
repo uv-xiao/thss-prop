@@ -9,6 +9,8 @@ This file records project-specific preferences that are important but less unive
 - The central relation should be “编译技术作为连接应用需求、硬件结构、综合优化、验证证据和运行时系统的中枢”.
 - Learn structure from `resources/博士开题报告-陈仁泽.pdf`, especially its introduction narrowing sequence, completed-work chapter loop, and future-work subsection pattern; do not copy its wording.
 - Organize existing work into three technical layers. Merge “协同框架” and “指令/微架构定制” because they are one domain-specialization and end-to-end co-design layer.
+- In the first layer, APS/Aquas should appear first as the framework entry, but ISAMORE must receive no less space than APS/Aquas combined.
+- Treat the overall co-design framework and focused single-point optimization techniques as equally important.
 - The report should foreground industrial background, engineering challenges, scientific question formation, systematic analysis, and targeted future research design.
 - Existing technical accumulation should be accurate and concrete, but it should support the opening-report argument rather than dominate it.
 - Future work should receive substantial space and should include research ideas, system design, validation route, feasibility, and risks.

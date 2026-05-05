@@ -31,3 +31,9 @@
   - Context: Follow-up to grill-me question about whether to use four technical layers.
   - Related: `report/main.typ`, `report/docs/report_spec.md`, `report/docs/agent_writing_guidelines.md`, `docs/writing/reference-report-analysis.md`, `docs/writing/preferences.md`
   - Agent interpretation: Organize existing work into three technical layers and merge APS/Aquas with ISAMORE/Cayman/Clay into one domain-specialization and end-to-end co-design layer.
+
+- 2026-05-05 00:00 Asia/Shanghai - Keep ISAMORE at least as prominent as APS/Aquas
+  > 你的建议是正确的，但篇幅上，isamore是我的非常重要的工作，需要占据不少于aps/aquas的篇幅。整体的协同框架和单点的优化技术一样重要！
+  - Context: Follow-up to grill-me question about APS/Aquas and ISAMORE ordering inside the first layer.
+  - Related: `report/docs/report_spec.md`, `report/docs/agent_writing_guidelines.md`, `.agents/rules/report-argument.md`, `docs/writing/preferences.md`, `docs/writing/reference-report-analysis.md`
+  - Agent interpretation: Use APS/Aquas first for logical framing, but allocate ISAMORE at least equal space and preserve deep technical treatment for focused optimization work.

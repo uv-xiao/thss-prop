@@ -103,6 +103,7 @@ This pattern is directly useful, but this project should expand it because the u
 - The introduction must end with explicit research questions and a map from existing work to future work.
 - Existing work should use three technical layers, not four: domain specialization and end-to-end co-design; hardware frontend and synthesis optimization; ecosystem and system extension.
 - The co-design framework and instruction/microarchitecture customization work should be merged into one layer because they jointly answer how domain-specific hardware capability is discovered, generated, mapped, and reused.
+- Within the first layer, APS/Aquas can establish the framework logic first, but ISAMORE must be developed with at least equal space because focused optimization techniques and the overall co-design framework are equally important.
 - Each existing-work section must include local problem, method idea, evidence, and connection to the main theme.
 - Each future-work section must include problem, research question, approach, dependencies, expected output, validation, and risk.
 - The conclusion should not merely recap papers; it should restate how the completed and planned work form a coherent hardware-software co-design program.
