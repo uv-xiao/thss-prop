@@ -79,3 +79,9 @@
   - Context: User answered the second structure-spec confirmation question.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `docs/writing/reference-report-analysis.md`
   - Agent interpretation: EggMind is not a future direction or preliminary basis in the main report. The fourth chapter must develop it as a complete existing work with method, system, experiments, and significance.
+
+- 2026-05-05 00:00 Asia/Shanghai - EggMind may be referenced in future work only with strict transition
+  > 可以，但必须逻辑严密不突兀
+  - Context: User accepted keeping EggMind out of the future-work chapter as an independent direction, but allowed it to be referenced as existing foundation.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `docs/writing/reference-report-analysis.md`
+  - Agent interpretation: Future work can refer to EggMind only after stating the remaining system problem it motivates. Avoid abrupt reuse of the name without explaining how fourth-chapter results lead to IntelliC, Spine, or PTO Runtime.

@@ -320,6 +320,8 @@ EggMind 按完整现有工作展开，必须写出“方法、系统、实验、
 注意：
 
 - EggMind 不再作为未来工作。
+- 第五章可以承接 EggMind，但只能作为已有基础自然引出未来问题；不能把 EggMind 后续扩展写成独立 future-work 方向。
+- 承接 EggMind 时必须先说明第四章仍未覆盖的系统闭环问题，例如策略自动化如何进入可解释编译基础设施、验证约束的硬件生成流程或运行时反馈闭环，避免逻辑突兀。
 - 未来工作主要是 IntelliC、Spine、PTO Runtime distributed features，以及它们之间的集成验证。
 - 如果 IntelliC/Spine 已有基础，应在每节中写“已有基础”，但仍以“拟开展研究”为主。
 
@@ -346,7 +348,7 @@ EggMind 按完整现有工作展开，必须写出“方法、系统、实验、
 - TraceDB；
 - rewrite/gate 证据；
 - agent action 安全边界；
-- 与 APS/Aquas/ISAMORE/SkyEgg/EggMind 的关系。
+- 与 APS/Aquas/ISAMORE/SkyEgg/EggMind 的关系。写 EggMind 时应说清楚：第四章解决策略自动化，IntelliC 进一步需要把这种策略和证据组织进可解释、可审计、可交互的编译基础设施。
 
 #### 5.3 Spine：验证约束下的架构、硬件与编译协同生成
 
@@ -438,6 +440,6 @@ EggMind 按完整现有工作展开，必须写出“方法、系统、实验、
 
 1. 第四章标题已确认采用“大模型与形式化技术驱动的软硬件协同方法”。
 2. EggMind 已确认按完整现有工作写“方法、系统、实验、意义”。
-3. Future work 是否包括 EggMind 后续扩展，还是完全把 EggMind 作为现有工作，不在第五章再写？
+3. 第五章不把 EggMind 写成独立 future-work 方向；只在 IntelliC/Spine/PTO Runtime 的逻辑承接中作为已有基础出现，且必须解释剩余系统问题，避免突兀。
 4. Cayman、Clay、HECTOR 的资料是否足够进入正文，还是暂时只概括？
 5. 正文目标页数是否按范文量级，还是需要更短的开题报告版本？

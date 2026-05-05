@@ -106,6 +106,7 @@ This pattern is directly useful, but this project should expand it because the u
 - Within the first layer, APS/Aquas can establish the framework logic first, but ISAMORE must be developed with at least equal space because focused optimization techniques and the overall co-design framework are equally important.
 - EggMind should be presented as existing work, not future work. Future work may discuss extensions that build on EggMind, but the main EggMind narrative belongs in the completed-work chapters.
 - EggMind should be written using the completed-work chapter pattern: method, system, experiments, and significance.
+- If the future-work chapter refers back to EggMind, the transition must identify a remaining problem that EggMind does not by itself close, such as explainable compiler infrastructure, verified hardware generation, or runtime feedback.
 - Open-source ecosystem, patents, awards, and industry-university collaboration are not report-level structural themes. Keep the structure focused on technical argument.
 - Each existing-work section must include local problem, method idea, evidence, and connection to the main theme.
 - Each future-work section must include problem, research question, approach, dependencies, expected output, validation, and risk.
