@@ -5,3 +5,5 @@
 /tools/TOSS/.env
 /tools/TOSS/ops/
 /tools/TOSS/tmp/
+/resources/**/*.docx
+/resources/**/*.pdf

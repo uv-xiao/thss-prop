@@ -103,3 +103,9 @@
   - Context: User accepted limiting future work to three directions, but rejected direct use of IntelliC, Spine, and PTO Runtime distributed features as direction titles.
   - Related: `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`, `docs/writing/preferences.md`
   - Agent interpretation: Future-work section titles should be general research directions: explainable/auditable compiler infrastructure; verification-constrained architecture/hardware/compiler co-generation; compiler-runtime co-design for heterogeneous task graphs. Repository/tool names can appear only as existing foundations or prototypes inside sections.
+
+- 2026-05-05 00:00 Asia/Shanghai - Third future direction renamed and seed proposal incorporated
+  > "面向异构任务图的编译-运行时协同"应修改为“面向工业级异构架构的算子-运行时编译协同”？提供更多的意见，将"seed-proposal.docx"的内容作为未来工作的一部分涵盖在这一主题下。此外，对仓库历史进行清理，要求gitignore resources/下的所有docx和pdf。
+  - Context: User refined the third future-work direction and requested use of `resources/seed-proposal.docx`.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `resources/seed-proposal.docx`, `.gitignore`
+  - Agent interpretation: Use “面向工业级异构架构的算子-运行时编译协同” as the third future-work direction. Incorporate seed-proposal material as a research-plan source for long-horizon chip-operator optimization Agent Harness, not as a copied project proposal.
