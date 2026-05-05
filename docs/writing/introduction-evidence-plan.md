@@ -104,8 +104,9 @@ Use external evidence sparingly and precisely. Data should support the problem c
 
 - Compilation to runtime:
   - Primary framework evidence: PyTorch 2 `torch.compile` / TorchDynamo and NVIDIA TensorRT-LLM.
-  - Use PyTorch/Dynamo to show how dynamic high-level programs are captured, broken into graphs, compiled through backends, and sometimes fall back to eager execution.
-  - Use TensorRT-LLM to show how production inference couples model definition, engine building, kernel/runtime optimizations, KV-cache management, continuous batching, paged attention, and serving backends.
+  - Use TensorRT-LLM as the main example, because inference serving clearly exposes runtime scheduling, KV-cache management, continuous batching, paged attention, latency/throughput tradeoffs, and serving backend concerns.
+  - Use PyTorch/Dynamo as supporting evidence for training/general dynamic programs, showing how high-level programs are captured, broken into graphs, compiled through backends, and sometimes fall back to eager execution.
+  - Writing ratio: inference should be the main thread; training should be a necessary supplement, especially to connect with Torch training operators and fused-operator optimization in future work.
   - Use NVIDIA GB200 NVL72/IMEX, Huawei CloudMatrix384/UB-Mesh, DeepStack, and ATLAS as the hardware-system context that makes compilation-to-runtime interfaces harder on industrial heterogeneous architectures.
 
 - Automation through large models and formal techniques:

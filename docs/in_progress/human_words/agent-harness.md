@@ -187,3 +187,9 @@
   - Context: User refined evidence placement for the compilation-to-runtime interface.
   - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`
   - Agent interpretation: Use PyTorch 2 `torch.compile`/TorchDynamo and NVIDIA TensorRT-LLM as primary evidence for the compilation-to-runtime interface. Use NVL72/CloudMatrix/UB-Mesh as hardware-system context for why the interface becomes harder on industrial heterogeneous architectures.
+
+- 2026-05-05 00:00 Asia/Shanghai - Compilation-to-runtime evidence ratio
+  > 支持
+  - Context: User accepted making inference the main thread and training/general dynamic programs the supplement in the compilation-to-runtime review.
+  - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`
+  - Agent interpretation: Use TensorRT-LLM as the main runtime evidence and PyTorch/Dynamo as supporting evidence for dynamic graph capture, backend compilation, and training/Torch operator relevance.

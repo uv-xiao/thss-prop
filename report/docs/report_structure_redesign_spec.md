@@ -122,7 +122,7 @@
 1. 应用到架构：领域需求如何转化为架构、指令和微架构能力。内部可讨论 ASIP/ISAX、RISC-V extension、领域定制处理器、自定义指令识别与复用。
 2. 架构到硬件：架构能力如何转化为可综合、可验证、质量可控的硬件实现。内部可讨论硬件前端、HLS、硬件 IR、综合优化和微架构表达。
 3. 软件到编译：程序语义如何转化为可优化、可证明、可迁移的中间表示和优化空间。内部可讨论 MLIR、e-graph、equality saturation、anti-unification 和编译优化策略。
-4. 编译到运行时：编译决策如何进入异构执行、调度、数据移动和性能反馈。内部应优先讨论 PyTorch 2 `torch.compile`/TorchDynamo、NVIDIA TensorRT-LLM 等真实框架，说明 graph capture、graph break、backend compilation、engine building、KV-cache management、continuous batching、paged attention、serving backend 等机制如何连接编译与运行时；再结合 NVL72/IMEX、CloudMatrix384/UB-Mesh 等工业异构系统说明复杂度来源。
+4. 编译到运行时：编译决策如何进入异构执行、调度、数据移动和性能反馈。内部应优先讨论 NVIDIA TensorRT-LLM 和 PyTorch 2 `torch.compile`/TorchDynamo 等真实框架。写作比例采用“推理为主，训练/通用动态图程序为补充”：TensorRT-LLM 用于说明 engine building、KV-cache management、continuous batching、paged attention、serving backend 等推理运行时问题；PyTorch/Dynamo 用于说明 graph capture、graph break、backend compilation、fallback、custom backend 等训练/动态图程序的编译运行时边界；再结合 NVL72/IMEX、CloudMatrix384/UB-Mesh 等工业异构系统说明复杂度来源。
 5. 自动化方法：大模型与形式化技术如何提升跨层协同的生成、搜索、验证和策略迁移能力。内部可讨论 AI 辅助 RTL/硬件设计、Agent Harness、形式化约束和可验证反馈。
 
 写作要求：
