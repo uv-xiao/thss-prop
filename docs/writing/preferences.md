@@ -24,6 +24,8 @@ This file records project-specific preferences that are important but less unive
 - The report should foreground industrial background, engineering challenges, scientific question formation, systematic analysis, and targeted future research design.
 - Existing technical accumulation should be accurate and concrete, but it should support the opening-report argument rather than dominate it.
 - Future work should receive substantial space and should include research ideas, system design, validation route, feasibility, and risks.
+- Target the main text at 60-80 pages.
+- Add figures where they help the argument. Prefer figures from `resources/` for existing work, and draw new figures directly when the needed overall framework or logic diagram does not exist.
 - The writing should be dense, logical, and restrained. Avoid long generic introductions.
 - Translation should preserve the English source's technical modality and scope.
 - The report should not include the terminology table as a visible section unless explicitly requested.

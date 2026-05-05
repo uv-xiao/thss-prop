@@ -87,6 +87,7 @@ This pattern is directly useful, but this project should expand it because the u
 - Prefer a short paragraph that states the problem before listing technical components.
 - Introduce a system by its design role, not only by its name.
 - Use figures, tables, algorithms, and formulas to carry system structure and evaluation evidence.
+- For this report, existing-work figures should be selected from `resources/` when available. If no figure exists for the overall research story, chapter relation, or future-work closed loop, draw a new figure instead of leaving the argument purely textual.
 - Put contribution bullets after the local problem and method have been explained enough to be meaningful.
 - Use quantitative results only with clear metric, baseline, and condition.
 - End chapters with a local conclusion that connects back to the overall thesis direction.
@@ -114,3 +115,4 @@ This pattern is directly useful, but this project should expand it because the u
 - Each future-work section must include problem, research question, approach, dependencies, expected output, validation, and risk.
 - The conclusion should not merely recap papers; it should restate how the completed and planned work form a coherent hardware-software co-design program.
 - Unlike the current skeletal draft, the final report should use the abundant local source material to give detailed explanation in each major section. The reference report's chapters are useful because they patiently develop background, motivation, method, evaluation, and conclusion rather than staying at abstract level.
+- The target main-text length is 60-80 pages, with appropriate figures.

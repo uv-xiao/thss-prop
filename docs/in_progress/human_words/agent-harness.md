@@ -91,3 +91,9 @@
   - Context: User answered the representative-work weighting question.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Cayman belongs in Chapter 2 as an important subsection; Clay belongs in Chapter 3 as an important subsection; HECTOR should be carefully summarized as support infrastructure without full representative-work treatment.
+
+- 2026-05-05 00:00 Asia/Shanghai - Length and figure requirements confirmed
+  > 确认。另一个需要补充的写作要求：需要适当添加图片，图片暂时从resources/内直接选用，如果需要绘制不存在的图片，如对整体研究的概括，则你直接进行绘制。
+  - Context: User confirmed the 60-80 page target and added explicit figure requirements.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`, `docs/writing/preferences.md`
+  - Agent interpretation: Design the report for 60-80 pages. Use figures from `resources/` for existing work when suitable; draw missing overview/framework/logic figures directly when needed.
