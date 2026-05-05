@@ -278,6 +278,12 @@
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: SkyEgg closes Chapter 3's high-quality hardware implementation story and leads into EggMind/strategy automation, while Clay still receives substantial space.
 
+- 2026-05-05 00:00 Asia/Shanghai - Chapter 4 EggMind and OriGen weight
+  > 因为OriGen我只是靠后的作者，所以不需要展开讨论，只需要较为详细的概括描述。而EggMind则需要作为这部分的绝对重点。
+  - Context: User clarified authorship and weight in Chapter 4.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: EggMind is the absolute focus of Chapter 4 and must be fully developed. OriGen should be summarized in moderate detail as supporting existing work, not treated as a full representative-work section.
+
 - 2026-05-05 00:00 Asia/Shanghai - Evidence table optional
   > 认可
   - Context: User accepted making the introduction evidence table optional rather than mandatory.

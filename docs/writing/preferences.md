@@ -38,6 +38,7 @@ This file records project-specific preferences that are important but less unive
 - Present SkyEgg as the methodological climax of Chapter 3 and the transition to Chapter 4's EggMind/strategy automation, while preserving Clay's substantial space.
 - EggMind should be presented as existing work in a chapter about large models and formal techniques for hardware-software co-design. Do not put the main EggMind narrative in the future-work chapter.
 - Write EggMind as complete existing work, with method, system, experiments, and significance. Do not soften it into only preliminary basis unless later evidence forces a narrower statement.
+- EggMind is the absolute focus of Chapter 4. OriGen should be summarized in moderate detail as supporting existing work, not expanded like a first-author representative work.
 - In the future-work chapter, mention EggMind only as existing foundation that motivates a remaining system problem. The transition must be explicit and logically necessary, not a sudden name drop.
 - Name future-work sections as general research directions, not tool or repository names. IntelliC, Spine, and PTO Runtime distributed features may appear as existing foundations, prototypes, or internal system names inside those sections.
 - The third future-work direction is “面向工业级异构架构的算子优化与运行时编译协同”. Use `resources/seed-proposal.docx` as source material for this direction, especially the long-horizon chip-operator optimization Agent Harness, fused/Torch operators, profiling, validation, and formal/IR-assisted optimization loop.
