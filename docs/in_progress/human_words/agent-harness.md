@@ -260,6 +260,12 @@
   - Related: `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`, `report/docs/report_spec.md`
   - Agent interpretation: Use “面向高质量硬件实现的前端抽象与综合优化” as Chapter 3 title. It should focus on expression, synthesizability, verifiability, performance, and resource control.
 
+- 2026-05-05 00:00 Asia/Shanghai - Chapter 3 should introduce HECTOR first
+  > 我认为Hector应该被优先提出（但不详细展开讨论），因为这是我最早（本科时期）的工作，并且Clay/SkyEgg都有依赖其技术框架积累。
+  - Context: User rejected placing HECTOR last and clarified its narrative role.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Chapter 3 order should be HECTOR -> Cement -> Clay -> SkyEgg. HECTOR appears first as early infrastructure/framework accumulation and is carefully summarized, not fully expanded.
+
 - 2026-05-05 00:00 Asia/Shanghai - Evidence table optional
   > 认可
   - Context: User accepted making the introduction evidence table optional rather than mandatory.

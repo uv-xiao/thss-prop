@@ -57,7 +57,7 @@
 2. 国内外研究现状与挑战：敏捷芯片设计、ASIP/ISAX、硬件设计前端、HLS/综合、AI for EDA。
 3. 研究基础与已有工作：
    - 面向领域定制的架构接口与端到端协同：APS/Aquas + ISAMORE + Cayman。
-   - 面向高质量硬件实现的前端抽象与综合优化：Cement、SkyEgg、Clay，并着重概括 HECTOR。
+   - 面向高质量硬件实现的前端抽象与综合优化：HECTOR、Cement、Clay、SkyEgg。HECTOR 优先提出为早期技术框架积累，但只着重概括；Clay/SkyEgg 可说明其对 HECTOR 技术框架的继承或依赖。
    - 大模型与形式化技术驱动的软硬件协同方法：EggMind、OriGen，并连接未来三个概括性研究方向。
 4. 未来研究计划：
    - 可解释、可审计的编译基础设施。
