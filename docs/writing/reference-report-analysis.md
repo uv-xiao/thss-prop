@@ -38,7 +38,7 @@ For this project, the analogous sequence should be:
 5. State the toolchain fragmentation and evidence-gap limitations.
 6. State research questions around compiler-centered hardware-software co-design.
 7. Present APS/Aquas, ISAMORE, Cement, SkyEgg, HECTOR, EggMind, and OriGen as completed basis.
-8. Present the future work as three general research directions, not tool names: explainable and auditable compiler infrastructure; verification-constrained architecture/hardware/compiler co-generation; operator-runtime compiler co-design for industrial heterogeneous architectures. Present EggMind as completed work in the large-model-and-formal-techniques chapter.
+8. Present the future work as three general research directions, not tool names: explainable and auditable compiler infrastructure; verification-constrained architecture/hardware/compiler co-generation; operator optimization and runtime-compiler co-design for industrial heterogeneous architectures. Present EggMind as completed work in the large-model-and-formal-techniques chapter.
 9. Explain chapter organization.
 
 ## Completed-Work Chapter Pattern
