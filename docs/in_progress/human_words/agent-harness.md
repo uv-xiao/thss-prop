@@ -163,3 +163,9 @@
   - Context: User accepted adding two self-drawn overview figures to the introduction.
   - Related: `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`, `docs/writing/preferences.md`
   - Agent interpretation: Draw one figure near 1.3 for cross-hardware-architecture co-design ecology, and one near 1.6/1.7 for research questions and chapter mapping.
+
+- 2026-05-05 00:00 Asia/Shanghai - Introduction needs external data and top-architecture evidence
+  > 赞成；并且我认为我们需要更多的业界数据来支持我们的结论。你可以通过检索论文，尤其是顶级体系结构会议近年的论文，查询可以支撑观点的数据和模型。
+  - Context: User accepted the introduction's industry-to-academic tone gradient and requested stronger data support.
+  - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Chapter 1 must use verifiable industry data and recent ISCA/MICRO/HPCA/ASPLOS-style evidence to support claims. Record candidate sources before drafting and verify metrics, baselines, workloads, and scope.
