@@ -85,3 +85,9 @@
   - Context: User accepted keeping EggMind out of the future-work chapter as an independent direction, but allowed it to be referenced as existing foundation.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `docs/writing/reference-report-analysis.md`
   - Agent interpretation: Future work can refer to EggMind only after stating the remaining system problem it motivates. Avoid abrupt reuse of the name without explaining how fourth-chapter results lead to IntelliC, Spine, or PTO Runtime.
+
+- 2026-05-05 00:00 Asia/Shanghai - Cayman, Clay, and HECTOR chapter weights confirmed
+  > Cayman应该作为领域定制与端到端协同的重要子章节，Clay应该作为硬件前端与综合优化的重要子章节，因为他们是我作为一作/共同一作的工作。Hector不需要详细介绍，因为我只是二作，但需要着重（而非简略）概括。
+  - Context: User answered the representative-work weighting question.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Cayman belongs in Chapter 2 as an important subsection; Clay belongs in Chapter 3 as an important subsection; HECTOR should be carefully summarized as support infrastructure without full representative-work treatment.

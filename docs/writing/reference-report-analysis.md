@@ -104,6 +104,8 @@ This pattern is directly useful, but this project should expand it because the u
 - Existing work should use three technical layers, not four: domain specialization and end-to-end co-design; hardware frontend and synthesis optimization; large models and formal techniques for hardware-software co-design.
 - The co-design framework and instruction/microarchitecture customization work should be merged into one layer because they jointly answer how domain-specific hardware capability is discovered, generated, mapped, and reused.
 - Within the first layer, APS/Aquas can establish the framework logic first, but ISAMORE must be developed with at least equal space because focused optimization techniques and the overall co-design framework are equally important.
+- Cayman should be an important subsection in the domain-specialization chapter, and Clay should be an important subsection in the hardware-frontend chapter, because they are first-author/co-first-author works.
+- HECTOR should be carefully summarized as supporting infrastructure, not treated as a full representative-work chapter.
 - EggMind should be presented as existing work, not future work. Future work may discuss extensions that build on EggMind, but the main EggMind narrative belongs in the completed-work chapters.
 - EggMind should be written using the completed-work chapter pattern: method, system, experiments, and significance.
 - If the future-work chapter refers back to EggMind, the transition must identify a remaining problem that EggMind does not by itself close, such as explainable compiler infrastructure, verified hardware generation, or runtime feedback.
