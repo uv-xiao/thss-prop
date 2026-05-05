@@ -105,6 +105,7 @@ This pattern is directly useful, but this project should expand it because the u
 - The introduction's research-status review should be organized by co-design interfaces, not by a flat list of technology objects.
 - The introduction should converge from the five interface categories into exactly three core research questions.
 - The introduction's map from research questions to chapters should be cross-linked: each chapter has one primary question and may support others.
+- The introduction should delay the user's own completed work until the “completed basis and planned work” overview, after the field review and challenge statement are established.
 - Existing work should use three technical layers, not four: domain specialization and end-to-end co-design; hardware frontend and synthesis optimization; large models and formal techniques for hardware-software co-design.
 - The co-design framework and instruction/microarchitecture customization work should be merged into one layer because they jointly answer how domain-specific hardware capability is discovered, generated, mapped, and reused.
 - Within the first layer, APS/Aquas can establish the framework logic first, but ISAMORE must be developed with at least equal space because focused optimization techniques and the overall co-design framework are equally important.

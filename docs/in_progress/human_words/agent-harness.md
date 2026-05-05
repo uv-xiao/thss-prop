@@ -151,3 +151,9 @@
   - Context: User accepted mapping chapters to research questions by primary question plus secondary support, rather than rigid one-to-one mapping.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: In the introduction's final map, each chapter has a primary research question and may support others. Keep the map explicit and controlled.
+
+- 2026-05-05 00:00 Asia/Shanghai - Completed work should appear later in the introduction
+  > 赞成
+  - Context: User accepted delaying personal completed-work discussion until section 1.6.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Sections 1.1-1.4 should build the field review and problem chain first. The user's own completed work and future plan should be introduced together in 1.6.
