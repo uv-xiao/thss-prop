@@ -1,5 +1,7 @@
 # 开题报告撰写思路与 Spec
 
+> Status: this early spec is kept as historical planning material. For the next structural rewrite, use `report_structure_redesign_spec.md` as the controlling spec and discuss it before changing `report/main.typ`.
+
 ## 核心命题
 
 算力紧缺不是单纯的硬件峰值性能问题，而是“算力需求增长”和“芯片/编译/软件生态生产力不足”共同作用的系统问题。领域定制处理器、FPGA 加速器和 AI 辅助硬件设计都能提供新的能效空间，但它们只有被编译器、硬件描述、综合优化、验证证据和运行时生态连接起来，才能形成可迭代、可复用、可落地的系统能力。
@@ -16,7 +18,8 @@
   -> 领域定制需要软硬件协同，但现有工具链割裂
   -> 研究目标：把定制、综合、编译、验证、运行时工具链化
   -> 已有基础：APS/Aquas/ISAMORE/Cayman/Clay + Cement/SkyEgg/OriGen/HECTOR
-  -> 未来工作：IntelliC + Spine + EggMind + PTO distributed runtime
+  -> 现有工作：EggMind 等自动化编译优化与协同设计生态基础
+  -> 未来工作：IntelliC + Spine + PTO distributed runtime
 ```
 
 ## 成果分类矩阵
@@ -25,7 +28,7 @@
 | --- | --- | --- | --- |
 | 领域定制与端到端协同 | APS, Aquas, ISAMORE, Cayman, Clay | ISAX 接口碎片化、硬件生成与编译适配割裂、复杂 ISAX 难自动映射、自定义指令复用性不足、微架构约束表达困难 | 既是报告主线的“协同框架层”，也是敏捷芯片设计落到领域定制的核心代表性工作组 |
 | 硬件前端与综合优化 | Cement, SkyEgg, HECTOR, OriGen | RTL 生产率低、HLS 不可预测、调度/映射/代数变换割裂、AI 生成 RTL 缺少高质量数据和反馈闭环 | 展示从高层描述到高质量硬件实现的设计生产力路径 |
-| 生态与系统延伸 | 开源框架、教程、专利、合作项目，IntelliC, Spine, EggMind, PTO Runtime distributed features | 方法难复用、难推广、难落地，agentic 编译/硬件生成需要可验证边界，运行时需要跨层任务图协同 | 支撑发展潜力，并承接未来工作 |
+| 自动化编译优化与生态基础 | EggMind，开源框架、教程、专利、合作项目 | 方法难复用、难推广、难落地，agentic 编译/硬件生成需要可验证边界 | 作为现有工作的一部分，支撑后续 IntelliC、Spine 与运行时方向 |
 
 ## 重点展开的代表性工作
 

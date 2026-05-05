@@ -38,7 +38,7 @@ For this project, the analogous sequence should be:
 5. State the toolchain fragmentation and evidence-gap limitations.
 6. State research questions around compiler-centered hardware-software co-design.
 7. Present APS/Aquas, ISAMORE, Cement, SkyEgg, OriGen/HECTOR, ecosystem work as completed basis.
-8. Present IntelliC, Spine, EggMind, and PTO Runtime distributed features as future extension.
+8. Present IntelliC, Spine, and PTO Runtime distributed features as future extension; present EggMind as completed work in the e-graph strategy and automation chapter.
 9. Explain chapter organization.
 
 ## Completed-Work Chapter Pattern
@@ -101,9 +101,10 @@ This pattern is directly useful, but this project should expand it because the u
 
 - The report should use a compiler-centered central relation: innovative compilation techniques connect application demand, hardware structures, synthesis optimization, verification evidence, and runtime systems.
 - The introduction must end with explicit research questions and a map from existing work to future work.
-- Existing work should use three technical layers, not four: domain specialization and end-to-end co-design; hardware frontend and synthesis optimization; ecosystem and system extension.
+- Existing work should use three technical layers, not four: domain specialization and end-to-end co-design; hardware frontend and synthesis optimization; e-graph strategy, AI-assisted design, and ecosystem foundation.
 - The co-design framework and instruction/microarchitecture customization work should be merged into one layer because they jointly answer how domain-specific hardware capability is discovered, generated, mapped, and reused.
 - Within the first layer, APS/Aquas can establish the framework logic first, but ISAMORE must be developed with at least equal space because focused optimization techniques and the overall co-design framework are equally important.
+- EggMind should be presented as existing work, not future work. Future work may discuss extensions that build on EggMind, but the main EggMind narrative belongs in the completed-work chapters.
 - Each existing-work section must include local problem, method idea, evidence, and connection to the main theme.
 - Each future-work section must include problem, research question, approach, dependencies, expected output, validation, and risk.
 - The conclusion should not merely recap papers; it should restate how the completed and planned work form a coherent hardware-software co-design program.

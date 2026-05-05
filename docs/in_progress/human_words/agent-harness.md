@@ -55,3 +55,9 @@
   - Context: User chose the next expansion target and emphasized careful reading of each work's related work.
   - Related: `report/main.typ`, `docs/writing/bibliography-audit.md`, `resources/aps/sec/5_related_works.tex`, `resources/isamore/tex/2_background.tex`, `resources/isamore/tex/7_related_work.tex`, `resources/cement/doc/2_Background_Motiviation.tex`, `resources/cement/doc/7_Related_Work.tex`, `resources/skyegg/doc/2_background.tex`, `resources/skyegg/doc/8_related_work.tex`, `resources/eggmind/tex/2_background.tex`, `resources/eggmind/tex/8_related_work.tex`, `resources/origen/1_Introduction.tex`, `resources/origen/2_Background.tex`
   - Agent interpretation: Build the related-work chapter from local related-work discussions, not from generic memory.
+
+- 2026-05-05 00:00 Asia/Shanghai - Redesign whole report structure before further implementation
+  > 我认为我们需要需要优先做整个报告的结构修改，详细参考“博士开题报告-陈仁泽.pdf”。具体要求为：引言部分需要是综述形式的总分结构的详细讨论，包括严密的逻辑链条、趋势分析、研究归类、问题与挑战概括、目标总结等，而非概括式的研究背景与研究目标介绍；技术部分，将现有工作的几个层次分别作为一个大章节做详细介绍，最后一个大章节来介绍未来工作，这里需要特别注意的修改是把EggMind作为现有工作的一部分呈现。我们需要先进行整体结构的spec设计，整理为一个文件并详细讨论细节，然后再重新实施，而非在现有基础上增量修改。
+  - Context: User redirected from incremental expansion to whole-report structure redesign.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `resources/博士开题报告-陈仁泽.pdf`, `docs/writing/reference-report-analysis.md`
+  - Agent interpretation: Pause incremental正文 edits, create a detailed structure spec first, move EggMind into existing work, and implement only after structure discussion.
