@@ -217,3 +217,9 @@
   - Context: User accepted rewriting the three core research questions to explicitly use architecture interface and compilation interface.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Research question 1 should use architecture interface; research question 3 should use compilation interface. Research question 2 remains about high-quality hardware implementation.
+
+- 2026-05-05 00:00 Asia/Shanghai - First chapter title
+  > 认可
+  - Context: User accepted keeping Chapter 1 title as “引言”.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Keep the first chapter title as “引言”. Put specificity into subsection titles and figures.
