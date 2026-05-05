@@ -31,7 +31,7 @@
 15. 第一章必须使用业界数据、顶级体系结构会议论文或权威系统论文支撑关键判断。证据优先来自大公司作者机构、工业研究实验室、权威专家、工业系统论文和官方技术报告。写作前阅读 `docs/writing/introduction-evidence-plan.md`，并为每个数据点核验指标、基线、工作负载和适用范围。
 16. 第一章证据写法优先采用“关键转折处代表性例子”。证据表格可选，不是硬性要求；只有在增强可核验性且不破坏学术叙事流畅性时才放入正文。
 17. 第一章应吸收“编译基础设施作为 agent harness 介质”的论断：编译基础设施不是后端工程附属品，而是组织目标事实、IR、语义契约、受约束变换、可执行产物、profiling/trace evidence 和 gate 的中间层。参考材料为 `resources/compiler-infra-is-harness-medium.md`，但正文必须写成中文学术论证。
-18. 支撑 agentic/LLM 趋势时，可优先使用 McKinsey/Anthropic 的企业与软件工程趋势数据、Siemens/Synopsys 的 EDA agentic 产品/路线材料、METR 长程任务能力模型、Agentic Software Engineering / Agentic EDA / CompilerGPT / AwareCompiler 等前沿论文。必须标明来源性质：企业报告用于趋势，厂商页面用于行业动向，论文用于研究问题和技术挑战。
+18. 支撑 agentic/LLM 趋势时，优先使用 NVIDIA AVO、Google DeepMind AlphaEvolve、Anthropic/OpenAI 官方技术报告或系统说明；其次使用 Siemens/Synopsys 的 EDA agentic 产品/路线材料、METR 长程任务能力模型、Agentic Software Engineering / Agentic EDA / CompilerGPT / AwareCompiler 等前沿论文。必须标明来源性质：AVO/AlphaEvolve 用于技术机制和可验证 evaluator/harness，Anthropic/OpenAI 用于 agentic coding、tool use、sandbox/test/review/human oversight/safety boundary，厂商页面用于行业动向，论文用于研究问题和技术挑战。
 19. 每个技术方向必须回答三个问题：
    - 为什么行业需要这个方向？
    - 现有方法卡在哪里？

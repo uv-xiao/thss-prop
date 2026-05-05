@@ -56,7 +56,7 @@
 
 第一章前半部分不要过早介绍本人工作。1.1-1.4 应先完整铺陈产业趋势、技术路线、协同接口分类、研究现状与未解决问题；本人已有工作和未来计划集中在 1.6 “已有研究基础与拟开展研究”中出现。1.4 可以说明各类方法仍存在的问题，但不要插入“本人工作解决了 X”的成果展开。
 
-第一章需要更多业界数据、顶级体系结构会议论文和可核验模型来支撑结论。写作前应参考 `docs/writing/introduction-evidence-plan.md`，优先使用大公司作者机构、权威专家、工业系统论文、官方技术报告，以及 ISCA/MICRO/HPCA/ASPLOS 近年论文、CACM/Nature 等权威来源中的数据。每个数据点必须说明指标、基线、工作负载和适用范围。支撑异构架构复杂度与编程关切时，优先考虑 ATLAS/DeepStack、Huawei CloudMatrix384/UB-Mesh、NVIDIA GB200 NVL72/IMEX 等材料，不把 ISCA AIO 或 MICRO SCAR 作为主要证据。支撑“编译到运行时”接口时，优先使用 PyTorch 2 `torch.compile`/TorchDynamo、NVIDIA TensorRT-LLM 等真实编译/运行时框架；硬件系统材料用于说明该接口为什么在工业异构架构上更复杂。
+第一章需要更多业界数据、顶级体系结构会议论文和可核验模型来支撑结论。写作前应参考 `docs/writing/introduction-evidence-plan.md`，优先使用大公司作者机构、权威专家、工业系统论文、官方技术报告，以及 ISCA/MICRO/HPCA/ASPLOS 近年论文、CACM/Nature 等权威来源中的数据。每个数据点必须说明指标、基线、工作负载和适用范围。支撑异构架构复杂度与编程关切时，优先考虑 ATLAS/DeepStack、Huawei CloudMatrix384/UB-Mesh、NVIDIA GB200 NVL72/IMEX 等材料，不把 ISCA AIO 或 MICRO SCAR 作为主要证据。支撑“编译到运行时”接口时，优先使用 PyTorch 2 `torch.compile`/TorchDynamo、NVIDIA TensorRT-LLM 等真实编译/运行时框架；硬件系统材料用于说明该接口为什么在工业异构架构上更复杂。支撑 LLM/agentic 技术趋势时，优先使用 NVIDIA AVO、Google DeepMind AlphaEvolve、Anthropic/OpenAI 官方技术报告或系统说明。
 
 建议章节：
 
@@ -74,7 +74,7 @@
 - 不要只说“算力紧缺很重要”。
 - 要解释“需求增长”和“设计生产力不足”是共同瓶颈。
 - 应用场景比例采用“AI/LLM 为主，其他领域作为多样性扩展”。不要只写 LLM，也不要均匀铺开所有场景。
-- LLM/agentic 趋势在本节只需作为产业和工程自动化趋势点出，不展开方法细节。可用 McKinsey/Anthropic 等企业报告说明 agentic AI 正在进入软件工程和企业工程流程，但必须标明这只是趋势证据，不是芯片设计技术效果证据。
+- LLM/agentic 趋势在本节只需作为产业和工程自动化趋势点出，不展开方法细节。优先使用 Anthropic/OpenAI 官方 agentic coding 或 agent 系统材料，也可用 McKinsey 等企业报告说明 agentic AI 正在进入软件工程和企业工程流程；必须标明这只是趋势证据，不是芯片设计技术效果证据。
 - 可引用 APS/Aquas/ISAMORE/SkyEgg 等 introduction 中对应用领域的描述。
 - 需要使用外部数据或工业系统论文支撑趋势判断，例如 DSA、TPU、AI/ML 工作负载、异构加速器或芯片设计生产力相关论文。
 - 证据进入正文优先采用“关键转折处代表性例子”的方式。证据表格不是硬性要求；只有在不破坏引言学术叙事流畅性的情况下，才加入简短的“代表性工业系统与研究证据”表。
@@ -95,7 +95,7 @@
 - 结尾需要指出：硬件创新若缺少软件、编译和验证连接，难以形成可复用系统能力。
 - 应结合顶级体系结构会议近年论文说明：早期架构分析、设计空间探索、可重定向编译支持和自动化设计工具为什么成为生产力问题。
 - “敏捷芯片设计”的定义应在本节中段自然出现：它不是单纯缩短 RTL 编写时间，而是快速形成、验证、映射和迭代领域硬件能力。
-- 使用 Siemens Fuse EDA AI Agent、Synopsys AgentEngineer、Agentic EDA survey、verification-agent 论文等材料时，只把它们作为 agentic EDA 行业趋势和研究趋势证据；必须同时指出芯片设计中的 correctness、verification、maintainability、observability 风险，使 1.3 的 harness 论证自然出现。
+- 使用 NVIDIA AVO、Google AlphaEvolve、OpenAI Codex/Operator/ChatGPT agent system cards、Anthropic Agentic Coding Trends Report、Siemens Fuse EDA AI Agent、Synopsys AgentEngineer、Agentic EDA survey、verification-agent 论文等材料时，应分清证据功能：AVO/AlphaEvolve 支撑“agent + evaluator/harness + execution feedback”的技术机制；Anthropic/OpenAI 支撑 agentic coding、tool use、sandbox/test/review/human oversight/safety boundary；Siemens/Synopsys 支撑 EDA 行业趋势。必须同时指出芯片设计中的 correctness、verification、maintainability、observability 风险，使 1.3 的 harness 论证自然出现。
 
 #### 1.3 跨硬件架构的软硬件协同生态与关键接口
 
@@ -142,7 +142,7 @@
 4. 编译到运行时：编译决策如何进入异构执行、调度、数据移动和性能反馈。内部应优先讨论 NVIDIA TensorRT-LLM 和 PyTorch 2 `torch.compile`/TorchDynamo 等真实框架。写作比例采用“推理为主，训练/通用动态图程序为补充”：TensorRT-LLM 用于说明 engine building、KV-cache management、continuous batching、paged attention、serving backend 等推理运行时问题；PyTorch/Dynamo 用于说明 graph capture、graph break、backend compilation、fallback、custom backend 等训练/动态图程序的编译运行时边界；再结合 NVL72/IMEX、CloudMatrix384/UB-Mesh 等工业异构系统说明复杂度来源。
 5. 自动化方法：大模型与形式化技术如何提升跨层协同的生成、搜索、验证和策略迁移能力。内部可讨论 AI 辅助 RTL/硬件设计、Agent Harness、形式化约束和可验证反馈。
 
-在第 3、4、5 类之间需要加入一个清晰过渡：编译基础设施之所以能够支撑自动化方法，不是因为 LLM 可以任意生成编译器，而是因为成熟编译系统已经提供了结构化 IR、pass 边界、目标契约、语义检查、运行证据和 profiling 反馈。正文可将 XLA/StableHLO/HLO/PJRT、Arknife、ACT、TL 等材料作为“目标事实如何进入编译基础设施”的代表性证据，用来支撑“target facts -> explicit IR and semantic contracts -> constrained transformations -> executable backend artifacts -> evidence and feedback”的论证链；这些例子应服务综述逻辑，不写成项目列表。
+在第 3、4、5 类之间需要加入一个清晰过渡：编译基础设施之所以能够支撑自动化方法，不是因为 LLM 可以任意生成编译器，而是因为成熟编译系统已经提供了结构化 IR、pass 边界、目标契约、语义检查、运行证据和 profiling 反馈。正文可将 XLA/StableHLO/HLO/PJRT、Arknife、ACT、TL 等材料作为“目标事实如何进入编译基础设施”的代表性证据，用来支撑“target facts -> explicit IR and semantic contracts -> constrained transformations -> executable backend artifacts -> evidence and feedback”的论证链；将 NVIDIA AVO 与 Google AlphaEvolve 作为“agentic search/evolution 必须依靠 evaluator、execution feedback、domain knowledge 和可验证产物”的代表性证据；将 Anthropic/OpenAI 技术报告作为“agentic coding 需要 sandbox、tool use、test/review、人类监督和安全边界”的工程证据。这些例子应服务综述逻辑，不写成项目列表。
 
 上述顺序固定。它表达从应用需求进入系统，到架构能力定义、硬件实现、编译映射、运行时落地，再由大模型与形式化技术横向增强的叙事顺序。不要把“软件到编译”提前到“架构到硬件”之前。
 

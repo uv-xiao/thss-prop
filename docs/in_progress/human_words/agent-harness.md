@@ -313,3 +313,9 @@
   - Context: User rejected delaying agentic/LLM discussion until only 1.3 or future work.
   - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Chapter 1 should introduce LLM/agentic methods as a technology innovation and industry trend. Use a three-step placement: 1.1 briefly presents LLM/agentic as changing complex engineering automation; 1.2 connects it to chip-design productivity and AI-assisted design; 1.3 constrains it through architecture interfaces, compiler infrastructure, semantic gates, runtime/profiling feedback, and evidence memory. Use industrial reports and frontier papers as evidence, but distinguish trend evidence from verified chip-design performance.
+
+- 2026-05-06 00:00 Asia/Shanghai - Prioritize NVIDIA AVO, AlphaEvolve, Anthropic/OpenAI reports
+  > 我们需要重点关注Nvidia的工作，如AVO；此外，google的alphaevolve相关工作和anthropic/openai的技术报告也需要重点关注。
+  - Context: User refined the evidence priority for LLM/agentic trend and harness discussion.
+  - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: For Chapter 1 and Chapter 5 evidence, prioritize NVIDIA AVO as the technical anchor for agentic kernel/compiler optimization on industrial GPUs; Google DeepMind AlphaEvolve as the anchor for evaluator-driven evolutionary coding agents; Anthropic/OpenAI official reports/system cards as the anchor for agentic coding workflows, tool use, sandboxing, testing/review, human oversight, and safety boundaries.

@@ -36,6 +36,45 @@ Use external evidence sparingly and precisely. Data should support the problem c
   - Writing constraint: present it as a floorplanning/design-productivity example, not as proof that AI solves chip design. Mention the limited scope.
   - Sources: https://www.nature.com/articles/s41586-021-03544-w and https://www.nature.com/articles/s41586-024-08032-5
 
+- NVIDIA AVO: "Agentic Variation Operators for Autonomous Evolutionary Search", arXiv 2603.24517, 2026.
+  - Use for: the strongest current evidence that agentic search can matter for performance-critical compiler/kernel optimization on state-of-the-art industrial hardware.
+  - Candidate evidence:
+    - AVO replaces fixed mutation/crossover/hand-designed evolutionary heuristics with autonomous coding-agent variation operators.
+    - The agent loop consults lineage, domain-specific knowledge, and execution feedback to propose, repair, critique, and verify implementation edits.
+    - Evaluation target is attention kernels on NVIDIA Blackwell B200 GPUs.
+    - Reported results: over seven days of autonomous evolution on multi-head attention, AVO outperforms cuDNN by up to 3.5% and FlashAttention-4 by up to 10.5% across evaluated configurations; adaptation to grouped-query attention takes 30 minutes and yields gains up to 7.0% over cuDNN and 9.3% over FlashAttention-4.
+  - Writing constraint: this is highly relevant to our future “面向工业级异构架构的算子优化与运行时编译协同” direction and the long-horizon chip-operator optimization Agent Harness. Use it as a prioritized technical anchor, but still verify benchmark scope, configurations, baselines, and author affiliations before citing precise numbers.
+  - Source: https://arxiv.org/abs/2603.24517
+
+- Google DeepMind AlphaEvolve: "AlphaEvolve: A coding agent for scientific and algorithmic discovery", arXiv 2506.13131, 2025.
+  - Use for: a high-profile example of LLM/evolutionary coding agents discovering algorithms under automated evaluation, including computational infrastructure optimization.
+  - Candidate evidence:
+    - AlphaEvolve is an evolutionary coding agent that orchestrates LLMs to improve algorithms by directly modifying code and receiving evaluator feedback.
+    - It discovered novel, provably correct algorithms across mathematics and computer science.
+    - Reported example: a procedure for multiplying two 4x4 complex-valued matrices using 48 scalar multiplications, improving on a long-standing Strassen-related record in that setting.
+  - Writing constraint: use this to support the pattern “agent + evolutionary loop + evaluator/harness” rather than as direct chip-design evidence. It should be paired with AVO when discussing kernel/compiler optimization and with harness/evidence constraints when discussing future work.
+  - Source: https://arxiv.org/abs/2506.13131
+
+- OpenAI Codex / GPT-5-Codex and agent system cards, 2025-2026.
+  - Use for: official technical/industrial evidence that agentic coding systems are moving from code completion toward isolated environments, test execution, PR review, long-running tasks, and workflow integration.
+  - Candidate evidence:
+    - OpenAI describes Codex as a cloud-based software engineering agent that works on many tasks in parallel in separate sandbox environments preloaded with a repository, can edit files and run tests/linters/type checkers, and typically completes tasks in 1-30 minutes.
+    - GPT-5-Codex is described as optimized for real-world agentic software engineering, including long complex tasks, code review, tests, CLI/IDE/cloud/GitHub workflows, and in internal testing working independently for more than seven hours on large tasks.
+    - Codex general availability notes broad developer adoption inside OpenAI and Codex review integration into PR workflows; use carefully as vendor-reported adoption evidence.
+    - OpenAI Operator / Computer-Using Agent / ChatGPT agent system cards are useful for safety framing: agents that act through tools need safety evaluations, red teaming, mitigations, and action boundaries.
+  - Writing constraint: use official OpenAI pages/system cards for trend and system-design evidence; do not overgeneralize vendor metrics to chip design. These sources are most useful for explaining sandboxes, tool use, tests, review, approval, and workflow harnesses.
+  - Sources: https://openai.com/index/introducing-codex/, https://openai.com/index/introducing-upgrades-to-codex/, https://openai.com/index/codex-now-generally-available/, https://openai.com/index/operator-system-card, https://openai.com/index/chatgpt-agent-system-card
+
+- Anthropic Agentic Coding Trends Report and Economic Index, 2026.
+  - Use for: official Anthropic evidence that software development is shifting from writing code toward orchestrating coding agents, while human oversight, quality, and security remain central.
+  - Candidate evidence:
+    - The Agentic Coding Trends Report states that software development is shifting from writing code to orchestrating agents, while engineering leaders must balance productivity against oversight, quality, and security.
+    - It emphasizes multi-agent coordination, human-AI collaboration patterns, and agentic quality control.
+    - The PDF notes a case where Claude Code completed a seven-hour autonomous implementation with 99.9% numerical accuracy compared to a reference method, and argues that effective collaboration still requires active human judgment because many tasks are not fully delegable.
+    - The Economic Index reports that computer and mathematical tasks dominate Claude usage overall, with first-party API traffic especially concentrated in coding-related tasks.
+  - Writing constraint: use as official trend evidence and as support for “human oversight scales through harnesses”; avoid treating case-study numbers as peer-reviewed benchmark results.
+  - Sources: https://resources.anthropic.com/2026-agentic-coding-trends-report, https://resources.anthropic.com/hubfs/2026%20Agentic%20Coding%20Trends%20Report.pdf, https://www.anthropic.com/research/anthropic-economic-index-january-2026-report
+
 - McKinsey, "Seizing the agentic AI advantage", 2025.
   - Use for: agentic AI as an enterprise engineering and automation trend, not only a research curiosity.
   - Candidate evidence:
@@ -43,14 +82,6 @@ Use external evidence sparingly and precisely. Data should support the problem c
     - The report argues for an "agentic mesh" that coordinates custom and off-the-shelf agents, supports multi-agent collaboration, and mitigates agent sprawl, autonomy drift, and lack of observability.
   - Writing constraint: use this to motivate why agentic methods need infrastructure, governance, observability, and workflow boundaries. Do not use it as direct evidence for chip-design performance.
   - Source: https://www.mckinsey.com/capabilities/quantumblack/our-insights/seizing-the-agentic-ai-advantage
-
-- Anthropic Economic Index, 2026 reports.
-  - Use for: software engineering is one of the earliest and most concentrated real-world agent/LLM usage domains, supporting the claim that LLM/agentic methods are changing complex engineering workflows.
-  - Candidate evidence:
-    - The January 2026 report states that computer and mathematical tasks dominate Claude usage overall, representing about one third of Claude.ai conversations and nearly half of first-party API traffic; "modifying software to correct errors" is the most common API task at about one in ten records.
-    - The March 2026 report can be used as follow-up evidence on adoption and geographic/workflow diffusion if needed.
-  - Writing constraint: use as broad engineering-automation evidence; do not imply chip design has the same adoption pattern unless EDA-specific sources are also cited.
-  - Sources: https://www.anthropic.com/research/anthropic-economic-index-january-2026-report and https://www.anthropic.com/research/economic-index-march-2026-report
 
 - METR, "Measuring AI Ability to Complete Long Tasks", 2025 / NeurIPS 2025 version.
   - Use for: long-horizon agent capability is improving, but reliability depends on task structure and evaluation; this supports the need for harnesses rather than free-form autonomy.
@@ -152,6 +183,10 @@ Use external evidence sparingly and precisely. Data should support the problem c
 
 - Automation through large models and formal techniques:
   - Nature/AlphaChip for AI-assisted floorplanning, with scope caveat.
+  - NVIDIA AVO should be treated as the highest-priority technical evidence for agentic kernel/compiler optimization on industrial GPUs.
+  - Google DeepMind AlphaEvolve should be treated as a high-priority evidence point for evolutionary coding agents with automated evaluators and algorithmic discovery.
+  - OpenAI Codex/GPT-5-Codex/Operator/ChatGPT agent system cards should be treated as high-priority evidence for software-engineering agents, sandboxed execution, tests, code review, tool use, and agent safety boundaries.
+  - Anthropic Agentic Coding Trends Report / Economic Index should be treated as high-priority evidence for agentic coding adoption, human oversight, quality control, and multi-agent coordination.
   - McKinsey and Anthropic for broad enterprise/software-engineering agentic trend, with scope caveat.
   - Siemens Fuse EDA AI Agent and Synopsys AgentEngineer for EDA/chip-design industry trend, with vendor-roadmap caveat.
   - METR long-task measurement for long-horizon agent capability and reliability limitations.
