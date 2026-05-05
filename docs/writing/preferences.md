@@ -18,6 +18,7 @@ This file records project-specific preferences that are important but less unive
 - In the future-work chapter, mention EggMind only as existing foundation that motivates a remaining system problem. The transition must be explicit and logically necessary, not a sudden name drop.
 - Name future-work sections as general research directions, not tool or repository names. IntelliC, Spine, and PTO Runtime distributed features may appear as existing foundations, prototypes, or internal system names inside those sections.
 - The third future-work direction is “面向工业级异构架构的算子-运行时编译协同”. Use `resources/seed-proposal.docx` as source material for this direction, especially the long-horizon chip-operator optimization Agent Harness, fused/Torch operators, profiling, validation, and formal/IR-assisted optimization loop.
+- Agent Harness should appear only where it is technically needed, especially for long-horizon chip-operator optimization from `seed-proposal.docx`. Do not imply that PTO Runtime distributed features itself currently has an agent plan.
 - The fourth completed-work chapter title is “大模型与形式化技术驱动的软硬件协同方法”.
 - Do not make open-source ecosystem, patents, awards, or industry-university collaboration a structural theme of the report. Mention such facts only when they directly support a technical claim and are source-backed.
 - Treat the overall co-design framework and focused single-point optimization techniques as equally important.

@@ -51,6 +51,7 @@
    - 面向工业级异构架构的算子-运行时编译协同。
    - IntelliC、Spine、PTO Runtime distributed features 只能作为已有基础、原型或内部代号出现，不作为方向标题。
    - `resources/seed-proposal.docx` 的内容属于“面向工业级异构架构的算子-运行时编译协同”方向，写作时应抽象为研究问题和技术路线，不照搬项目申请书格式。
+   - Agent Harness 只在长程芯片算子自动优化等需要它的子线中出现；不要把 PTO Runtime distributed features 写成 agent 项目。
 5. 预期成果与计划安排。
 
 ## 图示规范

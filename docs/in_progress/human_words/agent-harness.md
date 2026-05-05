@@ -109,3 +109,9 @@
   - Context: User refined the third future-work direction and requested use of `resources/seed-proposal.docx`.
   - Related: `report/docs/report_structure_redesign_spec.md`, `resources/seed-proposal.docx`, `.gitignore`
   - Agent interpretation: Use “面向工业级异构架构的算子-运行时编译协同” as the third future-work direction. Incorporate seed-proposal material as a research-plan source for long-horizon chip-operator optimization Agent Harness, not as a copied project proposal.
+
+- 2026-05-05 00:00 Asia/Shanghai - Agent scope in operator-runtime direction
+  > 对，但pto-runtime-distributed项目暂时没有agent计划，所以agent只在需要的地方出现。
+  - Context: User confirmed that the third future-work title should not include Agent and clarified the PTO Runtime distributed boundary.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Agent Harness is a method for the long-horizon chip-operator optimization subline from seed proposal. PTO Runtime distributed features should not be framed as an agent project.
