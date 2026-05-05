@@ -169,3 +169,9 @@
   - Context: User accepted the introduction's industry-to-academic tone gradient and requested stronger data support.
   - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Chapter 1 must use verifiable industry data and recent ISCA/MICRO/HPCA/ASPLOS-style evidence to support claims. Record candidate sources before drafting and verify metrics, baselines, workloads, and scope.
+
+- 2026-05-05 00:00 Asia/Shanghai - Introduction evidence source priority
+  > 赞成。关于参考数据和模型的选择，我们优先选用大公司作为作者机构的、权威专家发布的论文或者报告。
+  - Context: User accepted using representative examples plus an evidence table, and clarified evidence-source priority.
+  - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Prioritize evidence from large-company authors, industrial labs, authoritative experts, industrial system papers, official technical reports, and top conferences.

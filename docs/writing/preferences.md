@@ -12,6 +12,8 @@ This file records project-specific preferences that are important but less unive
 - At the end of the introduction, map chapters to research questions using “primary question + secondary support”. Avoid rigid one-to-one mapping, but keep each chapter's main role explicit.
 - In the introduction, delay the user's own completed work until section 1.6. Sections 1.1-1.4 should build the field review and problem chain first, without turning into an achievement summary.
 - Chapter 1 needs industry data and recent top architecture-conference evidence, not only qualitative claims. Use `docs/writing/introduction-evidence-plan.md` before drafting the introduction.
+- Prefer introduction evidence from large-company authors, industrial research labs, authoritative experts, industrial system papers, official technical reports, and top architecture/systems conferences.
+- Introduce evidence through representative examples at key argument transitions plus an evidence table; avoid dense numerical listing.
 - Learn structure from `resources/博士开题报告-陈仁泽.pdf`, especially its introduction narrowing sequence, completed-work chapter loop, and future-work subsection pattern; do not copy its wording.
 - Organize existing work into three technical layers. Merge “协同框架” and “指令/微架构定制” because they are one domain-specialization and end-to-end co-design layer.
 - In the first layer, APS/Aquas should appear first as the framework entry, but ISAMORE must receive no less space than APS/Aquas combined.

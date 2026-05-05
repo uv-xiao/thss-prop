@@ -75,8 +75,11 @@ Use external evidence sparingly and precisely. Data should support the problem c
 
 ## Writing Rules For Evidence
 
+- Prefer evidence from large industrial organizations, industrial research labs, or widely recognized experts when it is available and technically relevant. Examples include Google/DeepMind/Google Cloud, NVIDIA, Microsoft, Intel, AMD, IBM, Meta, Amazon, Apple, TSMC/Synopsys/Cadence, and Turing Award or field-defining architecture/compiler researchers.
 - Prefer primary papers, official conference pages, DOI pages, or official project pages over secondary news.
+- Prefer industrial system papers, top architecture/systems/conference papers, official technical reports, and authoritative expert essays over generic surveys.
 - For each numerical claim, record metric, baseline, workload, and scope.
 - Do not generalize a narrow result. For example, floorplanning automation supports "automation can reduce one difficult chip-design stage", not "AI designs complete chips".
 - Do not use industry data without tying it to one of the three core research questions.
 - Each subsection of Chapter 1 should contain at least one concrete data point, model, or top-conference example when possible.
+- In final prose, use a small number of representative examples at key argument transitions, plus an evidence table that records source, claim supported, data/model, and limitation/scope. Avoid turning the introduction into a dense list of numbers.
