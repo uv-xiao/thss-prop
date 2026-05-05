@@ -11,6 +11,7 @@ This file records project-specific preferences that are important but less unive
 - Organize existing work into three technical layers. Merge “协同框架” and “指令/微架构定制” because they are one domain-specialization and end-to-end co-design layer.
 - In the first layer, APS/Aquas should appear first as the framework entry, but ISAMORE must receive no less space than APS/Aquas combined.
 - EggMind should be presented as existing work in a chapter about large models and formal techniques for hardware-software co-design. Do not put the main EggMind narrative in the future-work chapter.
+- The fourth completed-work chapter title is “大模型与形式化技术驱动的软硬件协同方法”.
 - Do not make open-source ecosystem, patents, awards, or industry-university collaboration a structural theme of the report. Mention such facts only when they directly support a technical claim and are source-backed.
 - Treat the overall co-design framework and focused single-point optimization techniques as equally important.
 - Current report text is too skeletal. Use the abundant material in `resources/` to expand every major part into a detailed, patient, serious, and coherent story.

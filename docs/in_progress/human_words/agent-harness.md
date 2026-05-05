@@ -67,3 +67,9 @@
   - Context: User rejected the fourth-chapter framing around open-source ecosystem, patents, and industry-university collaboration.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Fourth chapter should focus on how large models and formal techniques jointly support hardware-software co-design methods and toolchains; nontechnical ecosystem/patent/collaboration material must not become a structural theme.
+
+- 2026-05-05 00:00 Asia/Shanghai - Fourth chapter title confirmed
+  > 支持
+  - Context: User accepted the recommended title after comparing “大模型与形式化技术驱动的软硬件协同方法” with a shorter alternative.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`
+  - Agent interpretation: Use “大模型与形式化技术驱动的软硬件协同方法” as the fixed fourth-chapter title.
