@@ -284,6 +284,12 @@
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: EggMind is the absolute focus of Chapter 4 and must be fully developed. OriGen should be summarized in moderate detail as supporting existing work, not treated as a full representative-work section.
 
+- 2026-05-05 00:00 Asia/Shanghai - Future work order
+  > 我认为应该先说“验证约束下的架构、硬件与编译协同生成”，再说“可解释、可审计的编译基础设施”，最后说“面向工业级异构架构的算子优化与运行时编译协同”。
+  - Context: User rejected the previous future-work order.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`, `report/docs/report_spec.md`
+  - Agent interpretation: Chapter 5 order is verification-constrained architecture/hardware/compiler co-generation, then explainable/auditable compiler infrastructure, then operator optimization and runtime/compiler co-design for industrial heterogeneous architectures.
+
 - 2026-05-05 00:00 Asia/Shanghai - Evidence table optional
   > 认可
   - Context: User accepted making the introduction evidence table optional rather than mandatory.
