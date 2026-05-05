@@ -157,3 +157,9 @@
   - Context: User accepted delaying personal completed-work discussion until section 1.6.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Sections 1.1-1.4 should build the field review and problem chain first. The user's own completed work and future plan should be introduced together in 1.6.
+
+- 2026-05-05 00:00 Asia/Shanghai - Introduction needs two new overview figures
+  > 认可
+  - Context: User accepted adding two self-drawn overview figures to the introduction.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`, `docs/writing/preferences.md`
+  - Agent interpretation: Draw one figure near 1.3 for cross-hardware-architecture co-design ecology, and one near 1.6/1.7 for research questions and chapter mapping.

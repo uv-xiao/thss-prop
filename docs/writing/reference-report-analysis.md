@@ -88,6 +88,7 @@ This pattern is directly useful, but this project should expand it because the u
 - Introduce a system by its design role, not only by its name.
 - Use figures, tables, algorithms, and formulas to carry system structure and evaluation evidence.
 - For this report, existing-work figures should be selected from `resources/` when available. If no figure exists for the overall research story, chapter relation, or future-work closed loop, draw a new figure instead of leaving the argument purely textual.
+- The introduction should include two original overview figures: one for cross-architecture hardware-software co-design ecology, and one for research-question-to-chapter mapping.
 - Put contribution bullets after the local problem and method have been explained enough to be meaningful.
 - Use quantitative results only with clear metric, baseline, and condition.
 - End chapters with a local conclusion that connects back to the overall thesis direction.
