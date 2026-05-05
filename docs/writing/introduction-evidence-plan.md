@@ -35,19 +35,41 @@ Use external evidence sparingly and precisely. Data should support the problem c
   - Writing constraint: present it as a floorplanning/design-productivity example, not as proof that AI solves chip design. Mention the limited scope.
   - Sources: https://www.nature.com/articles/s41586-021-03544-w and https://www.nature.com/articles/s41586-024-08032-5
 
-- AIO: "An Abstraction for Performance Analysis Across Diverse Accelerator Architectures", ISCA 2024.
-  - Use for: diverse accelerator architectures and the need for architecture-independent early performance analysis to preserve software/system/architecture productivity.
-  - Source: https://colab.ws/articles/10.1109%2Fisca59077.2024.00043
+- ATLAS: "A Full-Stack Performance Evaluation Infrastructure for 3D-DRAM-based LLM Accelerators", arXiv 2604.08044, 2026.
+  - Use for: emerging industrial 3D-DRAM LLM accelerators need full-stack architecture and programming abstractions, not isolated microarchitecture claims.
+  - Candidate data to verify before citation: ATLAS validates against real silicon with <=8.57% simulation error and 97.26%-99.96% correlation with measured performance; derived designs report up to 3.64/1.42x speedup over GPUs and prior 3D accelerators.
+  - Programming concern: paper explicitly argues existing 3D accelerators lack unified programming model/primitives and flexible software execution.
+  - Source: https://arxiv.org/pdf/2604.08044
+
+- DeepStack: "Scalable and Accurate Design Space Exploration for Distributed 3D-Stacked AI Accelerators", arXiv 2604.04750, 2026.
+  - Use for: distributed 3D-stacked AI accelerators require cross-stack co-design across memory architecture, interconnect, parallelism strategy, execution scheduling, and hardware DSE.
+  - Candidate data to verify before citation: DeepStack reports up to 100,000x faster runtime over state-of-the-art simulators at comparable accuracy, explores 2.5e14 design points, and achieves up to 9.5x higher throughput through co-optimized parallelism and 3D architecture search.
+  - Key argument: incomplete schedule search can lead to permanently suboptimal silicon that software tuning cannot recover.
+  - Source: https://arxiv.org/abs/2604.04750
 
 ### 1.3 Cross-Architecture Co-Design Interfaces
-
-- ISCA 2024 AIO.
-  - Use for: cross-accelerator abstraction and "application/algorithm work item remains comparable across accelerator classes" style argument.
-  - Supports: architecture and compilation as interfaces between algorithm-level work and accelerator choice.
 
 - ASPLOS 2024 "Automatic Generation of Vectorizing Compilers for Customizable Digital Signal Processors".
   - Use for: customizable architectures need generated or retargetable compiler support; compiler construction becomes part of architecture usability.
   - Source: https://jamesbornholt.com/papers/isaria-asplos24.pdf
+
+- NVIDIA GB200 NVL72 official technical blog and IMEX documentation.
+  - Use for: rack-scale heterogeneous AI systems expose programming and runtime concerns beyond single-device performance.
+  - Candidate data to verify before citation: GB200 NVL72 has 72 GPUs in one NVLink domain; NVLink provides 1.8 TB/s bidirectional bandwidth per GPU and 130 TB/s total NVLink bandwidth; NVIDIA IMEX coordinates memory export/import across OS/node domains for NVLink multi-node deployments.
+  - Programming concern: coherent/unified memory space, shared memory operations across OS domains, MPI/NCCL handle sharing, VA/PA/fabric-address mappings, privileged orchestration service.
+  - Sources: https://developer.nvidia.com/blog/nvidia-gb200-nvl72-delivers-trillion-parameter-llm-training-and-real-time-inference/ and https://docs.nvidia.com/multi-node-nvlink-systems/imex-guide/overview.html
+
+- NVIDIA GB200 NVL72 OCP design contribution.
+  - Use for: industrial rack-scale systems create not only algorithmic but also infrastructure, cabling, cooling, and deployment complexity.
+  - Candidate data to verify before citation: 72-GPU NVLink domain, 1.8 TB/s per GPU communication speed, over 5,000 copper cables, aggregate All-to-All bandwidth 130 TB/s and AllReduce bandwidth 260 TB/s; reference architecture can reduce implementation time by up to 50%.
+  - Source: https://developer.nvidia.com/blog/nvidia-contributes-nvidia-gb200-nvl72-designs-to-open-compute-project/
+
+- Huawei CloudMatrix384 and UB-Mesh.
+  - Use for: industrial heterogeneous AI infrastructure requires hardware-software co-design across supernode architecture, interconnect, serving software, communication libraries, operator optimization, and runtime resource pooling.
+  - Candidate evidence:
+    - CloudMatrix384 integrates 384 Ascend 910 NPUs and 192 Kunpeng CPUs through Unified Bus, and CloudMatrix-Infer combines peer-to-peer serving, EP320 expert parallelism, UB-based token dispatch, specialized operators, microbatch pipelining, and INT8 quantization.
+    - UB-Mesh proposes a hierarchically localized nD-FullMesh data-center network with NPU/CPU/switch/NIC building blocks, flexible IO bandwidth allocation, hardware resource pooling, All-Path-Routing, and reports 2.04x higher cost-efficiency, 7.2% higher network availability, and 95%+ linearity in LLM training tasks.
+  - Sources: https://arxiv.org/abs/2506.12708 and https://arxiv.org/abs/2503.20377
 
 ### 1.4 Interface-Oriented Research Status
 
@@ -64,10 +86,9 @@ Use external evidence sparingly and precisely. Data should support the problem c
   - Add local sources: APS, Aquas, ISAMORE, SkyEgg, EggMind.
 
 - Compilation to runtime:
-  - SCAR, MICRO 2024.
-    - Use for: heterogeneous multi-chiplet accelerator scheduling complexity.
-    - Candidate data to verify before citation: scheduling search space reaches O(10^56) for two-model workloads on 6x6 chiplets; reported lower EDP than homogeneous baselines in datacenter and AR/VR settings.
-    - Sources: https://arxiv.org/abs/2405.00790 and https://its.uci.edu/research_products/conference-paper-scar-scheduling-multi-model-ai-workloads-on-heterogeneous-multi-chiplet-module-accelerators/
+  - NVIDIA GB200 NVL72, NVIDIA IMEX, Huawei CloudMatrix384, and UB-Mesh for industrial heterogeneous architecture complexity and programming concerns.
+  - DeepStack for distributed 3D-stacked AI accelerator scheduling, parallelism, and hardware DSE coupling.
+  - ATLAS for full-stack modeling and programming primitives in 3D-DRAM-based LLM accelerators.
 
 - Automation through large models and formal techniques:
   - Nature/AlphaChip for AI-assisted floorplanning, with scope caveat.
@@ -78,6 +99,7 @@ Use external evidence sparingly and precisely. Data should support the problem c
 - Prefer evidence from large industrial organizations, industrial research labs, or widely recognized experts when it is available and technically relevant. Examples include Google/DeepMind/Google Cloud, NVIDIA, Microsoft, Intel, AMD, IBM, Meta, Amazon, Apple, TSMC/Synopsys/Cadence, and Turing Award or field-defining architecture/compiler researchers.
 - Prefer primary papers, official conference pages, DOI pages, or official project pages over secondary news.
 - Prefer industrial system papers, top architecture/systems/conference papers, official technical reports, and authoritative expert essays over generic surveys.
+- Do not use ISCA AIO or MICRO SCAR as primary Chapter 1 evidence unless later specifically requested. Prefer ATLAS/DeepStack, Huawei CloudMatrix384/UB-Mesh, and NVIDIA GB200 NVL72/IMEX for heterogeneous architecture complexity and programming concerns.
 - For each numerical claim, record metric, baseline, workload, and scope.
 - Do not generalize a narrow result. For example, floorplanning automation supports "automation can reduce one difficult chip-design stage", not "AI designs complete chips".
 - Do not use industry data without tying it to one of the three core research questions.

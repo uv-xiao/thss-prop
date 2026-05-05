@@ -175,3 +175,9 @@
   - Context: User accepted using representative examples plus an evidence table, and clarified evidence-source priority.
   - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Prioritize evidence from large-company authors, industrial labs, authoritative experts, industrial system papers, official technical reports, and top conferences.
+
+- 2026-05-05 00:00 Asia/Shanghai - Replace AIO/SCAR evidence with stronger heterogeneous architecture sources
+  > I don't like the ISCA AIO and MICRO SCAR work. I think https://arxiv.org/pdf/2604.08044, https://arxiv.org/abs/2604.04750 are better, and you also need to look for paper about huawei ascend (especially cloudmatrix384 and ub-mesh) and report about NVL72 to support the heterogenous architecutre complexity with programming concerns.
+  - Context: User rejected two proposed evidence sources and requested stronger sources for heterogeneous architecture complexity and programming concerns.
+  - Related: `docs/writing/introduction-evidence-plan.md`
+  - Agent interpretation: Do not use ISCA AIO or MICRO SCAR as primary Chapter 1 evidence. Prefer ATLAS, DeepStack, Huawei CloudMatrix384/UB-Mesh, and NVIDIA GB200 NVL72/IMEX.
