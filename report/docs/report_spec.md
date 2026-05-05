@@ -15,7 +15,7 @@
   -> 通用处理器难以兼顾性能、能效与迭代速度
   -> 领域定制需要软硬件协同，但现有工具链割裂
   -> 研究目标：把定制、综合、编译、验证、运行时工具链化
-  -> 已有基础：APS/Aquas + ISAMORE + Cement + SkyEgg + OriGen/HECTOR
+  -> 已有基础：APS/Aquas/ISAMORE/Cayman/Clay + Cement/SkyEgg/OriGen/HECTOR
   -> 未来工作：IntelliC + Spine + EggMind + PTO distributed runtime
 ```
 
@@ -23,12 +23,9 @@
 
 | 方向 | 代表工作 | 解决的核心挑战 | 报告中的定位 |
 | --- | --- | --- | --- |
-| 端到端协同与可重定向编译 | APS, Aquas | ISAX 接口碎片化、硬件生成与编译适配割裂、复杂 ISAX 难自动映射 | 系统主线的“协同框架层” |
-| 指令/微架构定制自动化 | ISAMORE, Cayman, Clay | 自定义指令复用性不足、微架构约束表达困难、人工经验依赖强 | 代表性工作重点展开 |
-| 硬件设计前端抽象 | Cement, OriGen | RTL 生产率低、HLS 不可预测、AI 生成 RTL 缺少高质量数据和反馈闭环 | 代表性工作重点展开，OriGen 概括 |
-| 综合方法学与优化质量 | SkyEgg, HECTOR | HLS 调度、映射、代数变换割裂，导致 QoR 损失 | 代表性工作重点展开 |
-| 生态与影响 | 开源框架、教程、专利、合作项目 | 方法难复用、难推广、难落地 | 支撑发展潜力和可持续影响 |
-| 未来工作 | IntelliC, Spine, EggMind, PTO Runtime distributed features | agentic 编译/硬件生成需要可验证边界，运行时需要跨层任务图协同 | 从已有工作自然延伸 |
+| 领域定制与端到端协同 | APS, Aquas, ISAMORE, Cayman, Clay | ISAX 接口碎片化、硬件生成与编译适配割裂、复杂 ISAX 难自动映射、自定义指令复用性不足、微架构约束表达困难 | 既是报告主线的“协同框架层”，也是敏捷芯片设计落到领域定制的核心代表性工作组 |
+| 硬件前端与综合优化 | Cement, SkyEgg, HECTOR, OriGen | RTL 生产率低、HLS 不可预测、调度/映射/代数变换割裂、AI 生成 RTL 缺少高质量数据和反馈闭环 | 展示从高层描述到高质量硬件实现的设计生产力路径 |
+| 生态与系统延伸 | 开源框架、教程、专利、合作项目，IntelliC, Spine, EggMind, PTO Runtime distributed features | 方法难复用、难推广、难落地，agentic 编译/硬件生成需要可验证边界，运行时需要跨层任务图协同 | 支撑发展潜力，并承接未来工作 |
 
 ## 重点展开的代表性工作
 

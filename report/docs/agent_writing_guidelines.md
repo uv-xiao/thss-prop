@@ -38,11 +38,9 @@
 1. 绪论：算力紧缺、领域定制、芯片设计生产力瓶颈。
 2. 国内外研究现状与挑战：敏捷芯片设计、ASIP/ISAX、硬件设计前端、HLS/综合、AI for EDA。
 3. 研究基础与已有工作：
-   - 可重定向编译与端到端协同：APS/Aquas。
-   - 可复用指令/微架构定制：ISAMORE，并概括 Cayman/Clay。
-   - 硬件设计前端抽象：Cement，并概括 OriGen。
-   - 综合优化与优化质量：SkyEgg，并概括 HECTOR。
-   - 开源生态与产学研协同。
+   - 领域定制与端到端协同：APS/Aquas + ISAMORE，并概括 Cayman/Clay。
+   - 硬件前端与综合优化：Cement、SkyEgg，并概括 OriGen/HECTOR。
+   - 生态与系统延伸：开源生态、专利、产学研协同，并连接 IntelliC/Spine/EggMind/PTO Runtime。
 4. 未来研究计划：
    - IntelliC：面向人和 agent 的可解释编译基础设施。
    - Spine：验证约束下的 agentic 架构/硬件/编译协同生成。

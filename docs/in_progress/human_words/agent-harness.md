@@ -25,3 +25,9 @@
   - Context: User confirmed the second grill-me answer and supplied a reference opening report for structural learning.
   - Related: `resources/博士开题报告-陈仁泽.pdf`, `docs/writing/reference-report-analysis.md`, `.agents/rules/report-argument.md`, `report/docs/report_spec.md`
   - Agent interpretation: Treat compilation as the central connector in hardware-software co-design, and extract reusable report structure from the reference PDF without copying wording.
+
+- 2026-05-05 00:00 Asia/Shanghai - Merge co-design framework and instruction customization layers
+  > 你的建议是对的，但我们不需要四个技术层次，协同框架与指令/微架构定制 可以合并。
+  - Context: Follow-up to grill-me question about whether to use four technical layers.
+  - Related: `report/main.typ`, `report/docs/report_spec.md`, `report/docs/agent_writing_guidelines.md`, `docs/writing/reference-report-analysis.md`, `docs/writing/preferences.md`
+  - Agent interpretation: Organize existing work into three technical layers and merge APS/Aquas with ISAMORE/Cayman/Clay into one domain-specialization and end-to-end co-design layer.
