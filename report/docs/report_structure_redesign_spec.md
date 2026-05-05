@@ -54,7 +54,7 @@
 
 第一章前半部分不要过早介绍本人工作。1.1-1.4 应先完整铺陈产业趋势、技术路线、协同接口分类、研究现状与未解决问题；本人已有工作和未来计划集中在 1.6 “已有研究基础与拟开展工作概览”中出现。1.4 可以说明各类方法仍存在的问题，但不要插入“本人工作解决了 X”的成果展开。
 
-第一章需要更多业界数据、顶级体系结构会议论文和可核验模型来支撑结论。写作前应参考 `docs/writing/introduction-evidence-plan.md`，优先使用大公司作者机构、权威专家、工业系统论文、官方技术报告，以及 ISCA/MICRO/HPCA/ASPLOS 近年论文、CACM/Nature 等权威来源中的数据。每个数据点必须说明指标、基线、工作负载和适用范围。支撑异构架构复杂度与编程关切时，优先考虑 ATLAS/DeepStack、Huawei CloudMatrix384/UB-Mesh、NVIDIA GB200 NVL72/IMEX 等材料，不把 ISCA AIO 或 MICRO SCAR 作为主要证据。
+第一章需要更多业界数据、顶级体系结构会议论文和可核验模型来支撑结论。写作前应参考 `docs/writing/introduction-evidence-plan.md`，优先使用大公司作者机构、权威专家、工业系统论文、官方技术报告，以及 ISCA/MICRO/HPCA/ASPLOS 近年论文、CACM/Nature 等权威来源中的数据。每个数据点必须说明指标、基线、工作负载和适用范围。支撑异构架构复杂度与编程关切时，优先考虑 ATLAS/DeepStack、Huawei CloudMatrix384/UB-Mesh、NVIDIA GB200 NVL72/IMEX 等材料，不把 ISCA AIO 或 MICRO SCAR 作为主要证据。支撑“编译到运行时”接口时，优先使用 PyTorch 2 `torch.compile`/TorchDynamo、NVIDIA TensorRT-LLM 等真实编译/运行时框架；硬件系统材料用于说明该接口为什么在工业异构架构上更复杂。
 
 建议章节：
 
@@ -122,7 +122,7 @@
 1. 应用到架构：领域需求如何转化为架构、指令和微架构能力。内部可讨论 ASIP/ISAX、RISC-V extension、领域定制处理器、自定义指令识别与复用。
 2. 架构到硬件：架构能力如何转化为可综合、可验证、质量可控的硬件实现。内部可讨论硬件前端、HLS、硬件 IR、综合优化和微架构表达。
 3. 软件到编译：程序语义如何转化为可优化、可证明、可迁移的中间表示和优化空间。内部可讨论 MLIR、e-graph、equality saturation、anti-unification 和编译优化策略。
-4. 编译到运行时：编译决策如何进入异构执行、调度、数据移动和性能反馈。内部可讨论异构运行时、任务图、profile-guided optimization 和编译-运行时协同。
+4. 编译到运行时：编译决策如何进入异构执行、调度、数据移动和性能反馈。内部应优先讨论 PyTorch 2 `torch.compile`/TorchDynamo、NVIDIA TensorRT-LLM 等真实框架，说明 graph capture、graph break、backend compilation、engine building、KV-cache management、continuous batching、paged attention、serving backend 等机制如何连接编译与运行时；再结合 NVL72/IMEX、CloudMatrix384/UB-Mesh 等工业异构系统说明复杂度来源。
 5. 自动化方法：大模型与形式化技术如何提升跨层协同的生成、搜索、验证和策略迁移能力。内部可讨论 AI 辅助 RTL/硬件设计、Agent Harness、形式化约束和可验证反馈。
 
 写作要求：

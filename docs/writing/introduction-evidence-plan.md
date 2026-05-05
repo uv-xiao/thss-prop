@@ -71,6 +71,23 @@ Use external evidence sparingly and precisely. Data should support the problem c
     - UB-Mesh proposes a hierarchically localized nD-FullMesh data-center network with NPU/CPU/switch/NIC building blocks, flexible IO bandwidth allocation, hardware resource pooling, All-Path-Routing, and reports 2.04x higher cost-efficiency, 7.2% higher network availability, and 95%+ linearity in LLM training tasks.
   - Sources: https://arxiv.org/abs/2506.12708 and https://arxiv.org/abs/2503.20377
 
+- PyTorch 2 `torch.compile` / TorchDynamo.
+  - Use for: the compilation-to-runtime interface in mainstream deep-learning software. PyTorch 2 shows that runtime execution now depends on graph capture, graph breaks, backend compilation, recompilation limits, and fallback behavior rather than a clean static compiler pipeline.
+  - Candidate evidence:
+    - `torch.compile` is introduced to solve accurate graph capture and make PyTorch programs faster.
+    - TorchDynamo uses CPython Frame Evaluation API to safely capture PyTorch graphs.
+    - Dynamo graph breaks split execution between compiled FX graphs and regular Python; `fullgraph=True` can require no graph breaks.
+    - `torch.compile` supports custom backends, making it an interface from dynamic Python programs to specialized compiler/runtime implementations.
+  - Sources: https://docs.pytorch.org/docs/2.9/torch.compiler.html, https://docs.pytorch.org/docs/main/user_guide/torch_compiler/compile/programming_model.dynamo_core_concepts.html, https://docs.pytorch.org/docs/stable/generated/torch.compile.html
+
+- NVIDIA TensorRT-LLM.
+  - Use for: production LLM inference as a compiler-runtime system, where model definition, engine building, kernel fusion, quantization, KV-cache management, in-flight batching, paged attention, C++ runtime execution, and serving integration jointly determine performance.
+  - Candidate evidence:
+    - TensorRT-LLM incorporates kernel fusion, quantization, runtime optimizations, KV caching, continuous in-flight batching, and paged attention.
+    - Runtime components load TensorRT engines and drive execution.
+    - NVIDIA technical blog notes in-flight batching and KV-cache management for high-throughput/low-latency serving, including Triton TensorRT-LLM backend production deployment.
+  - Sources: https://nvidia.github.io/TensorRT-LLM/0.20.0/overview.html, https://nvidia.github.io/TensorRT-LLM/architecture/core-concepts.html, https://developer.nvidia.com/blog/nvidia-tensorrt-llm-now-accelerates-encoder-decoder-models-with-in-flight-batching/
+
 ### 1.4 Interface-Oriented Research Status
 
 - Application to architecture:
@@ -86,9 +103,10 @@ Use external evidence sparingly and precisely. Data should support the problem c
   - Add local sources: APS, Aquas, ISAMORE, SkyEgg, EggMind.
 
 - Compilation to runtime:
-  - NVIDIA GB200 NVL72, NVIDIA IMEX, Huawei CloudMatrix384, and UB-Mesh for industrial heterogeneous architecture complexity and programming concerns.
-  - DeepStack for distributed 3D-stacked AI accelerator scheduling, parallelism, and hardware DSE coupling.
-  - ATLAS for full-stack modeling and programming primitives in 3D-DRAM-based LLM accelerators.
+  - Primary framework evidence: PyTorch 2 `torch.compile` / TorchDynamo and NVIDIA TensorRT-LLM.
+  - Use PyTorch/Dynamo to show how dynamic high-level programs are captured, broken into graphs, compiled through backends, and sometimes fall back to eager execution.
+  - Use TensorRT-LLM to show how production inference couples model definition, engine building, kernel/runtime optimizations, KV-cache management, continuous batching, paged attention, and serving backends.
+  - Use NVIDIA GB200 NVL72/IMEX, Huawei CloudMatrix384/UB-Mesh, DeepStack, and ATLAS as the hardware-system context that makes compilation-to-runtime interfaces harder on industrial heterogeneous architectures.
 
 - Automation through large models and formal techniques:
   - Nature/AlphaChip for AI-assisted floorplanning, with scope caveat.

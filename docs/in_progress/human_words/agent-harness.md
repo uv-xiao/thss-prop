@@ -181,3 +181,9 @@
   - Context: User rejected two proposed evidence sources and requested stronger sources for heterogeneous architecture complexity and programming concerns.
   - Related: `docs/writing/introduction-evidence-plan.md`
   - Agent interpretation: Do not use ISCA AIO or MICRO SCAR as primary Chapter 1 evidence. Prefer ATLAS, DeepStack, Huawei CloudMatrix384/UB-Mesh, and NVIDIA GB200 NVL72/IMEX.
+
+- 2026-05-05 00:00 Asia/Shanghai - Compilation-to-runtime evidence should use real frameworks
+  > 编译到运行时更适合使用pytorch或者dynamo, https://github.com/NVIDIA/TensorRT-LLM等框架作为证据？
+  - Context: User refined evidence placement for the compilation-to-runtime interface.
+  - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`
+  - Agent interpretation: Use PyTorch 2 `torch.compile`/TorchDynamo and NVIDIA TensorRT-LLM as primary evidence for the compilation-to-runtime interface. Use NVL72/CloudMatrix/UB-Mesh as hardware-system context for why the interface becomes harder on industrial heterogeneous architectures.

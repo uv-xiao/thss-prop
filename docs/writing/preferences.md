@@ -15,6 +15,7 @@ This file records project-specific preferences that are important but less unive
 - Prefer introduction evidence from large-company authors, industrial research labs, authoritative experts, industrial system papers, official technical reports, and top architecture/systems conferences.
 - Introduce evidence through representative examples at key argument transitions plus an evidence table; avoid dense numerical listing.
 - For heterogeneous architecture complexity and programming concerns, prefer ATLAS/DeepStack, Huawei CloudMatrix384/UB-Mesh, and NVIDIA GB200 NVL72/IMEX over ISCA AIO or MICRO SCAR.
+- For the compilation-to-runtime interface, prefer PyTorch 2 `torch.compile`/TorchDynamo and NVIDIA TensorRT-LLM as primary framework evidence; use NVL72/CloudMatrix/UB-Mesh as hardware-system context rather than as the primary framework evidence.
 - Learn structure from `resources/博士开题报告-陈仁泽.pdf`, especially its introduction narrowing sequence, completed-work chapter loop, and future-work subsection pattern; do not copy its wording.
 - Organize existing work into three technical layers. Merge “协同框架” and “指令/微架构定制” because they are one domain-specialization and end-to-end co-design layer.
 - In the first layer, APS/Aquas should appear first as the framework entry, but ISAMORE must receive no less space than APS/Aquas combined.
