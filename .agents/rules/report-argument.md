@@ -7,6 +7,7 @@ These rules apply to every substantive change to `report/main.typ`, `report/sect
 - The report is an opening report for a thesis project. It must justify why the work should be done, why the proposed research questions matter, why the existing preparation is credible, and why the proposed plan is feasible.
 - The report must not read like a finished paper, a software manual, or a project retrospective.
 - Existing technical accumulation is supporting evidence. Future work, problem framing, research design, and feasibility deserve substantial space.
+- The central relation is compiler-centered hardware-software co-design: innovative compilation techniques connect application demand, hardware structures, synthesis optimization, verification evidence, and runtime systems.
 
 ## Required Argument Arc
 
@@ -19,6 +20,14 @@ Every full-report revision must preserve this arc:
 5. Systematic analysis: compare existing methods, projects, or design choices through a consistent framework.
 6. Targeted research approach: connect each future method, experiment, or system design decision to a stated challenge or research question.
 7. Feasibility and schedule: state available materials, skills, implementation basis, verification plan, risks, and dated milestones.
+
+## Reference Report Pattern
+
+- Use `docs/writing/reference-report-analysis.md` when planning chapter structure.
+- The introduction should narrow from field pressure to bottleneck, method-family limitations, research questions, completed basis, future directions, and report structure.
+- Each completed-work chapter or major section should contain local problem, background/motivation, design overview, core method, evaluation evidence, related comparison, and a local conclusion when space permits.
+- Each future-work direction should contain problem analysis, research question, framework design, key technical implementation, expected technical characteristics, validation/application plan, and risk.
+- Do not copy wording from the reference report. Learn its organization and adapt it to this report's theme.
 
 ## Alignment Gate
 
