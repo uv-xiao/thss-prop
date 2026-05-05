@@ -272,6 +272,12 @@
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Cement focuses on hardware behavior expression and cycle determinism; Clay focuses on implementation quality and synthesis mechanisms. Do not frame Clay as a successor version of Cement unless sources explicitly support that.
 
+- 2026-05-05 00:00 Asia/Shanghai - SkyEgg role in Chapter 3
+  > 认可
+  - Context: User accepted writing SkyEgg as the methodological climax of Chapter 3 and transition to Chapter 4.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: SkyEgg closes Chapter 3's high-quality hardware implementation story and leads into EggMind/strategy automation, while Clay still receives substantial space.
+
 - 2026-05-05 00:00 Asia/Shanghai - Evidence table optional
   > 认可
   - Context: User accepted making the introduction evidence table optional rather than mandatory.

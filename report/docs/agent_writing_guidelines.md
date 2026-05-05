@@ -59,6 +59,7 @@
    - 面向领域定制的架构接口与端到端协同：APS/Aquas + ISAMORE + Cayman。
    - 面向高质量硬件实现的前端抽象与综合优化：HECTOR、Cement、Clay、SkyEgg。HECTOR 优先提出为早期技术框架积累，但只着重概括；Clay/SkyEgg 可说明其对 HECTOR 技术框架的继承或依赖。
    - Cement 和 Clay 写成分工关系，不写成版本递进：Cement 偏硬件行为表达和周期确定性，Clay 偏实现质量与综合机制。
+   - SkyEgg 写成本章方法高潮和通向第四章 EggMind/策略自动化的过渡点，但不能压缩 Clay 的重要篇幅。
    - 大模型与形式化技术驱动的软硬件协同方法：EggMind、OriGen，并连接未来三个概括性研究方向。
 4. 未来研究计划：
    - 可解释、可审计的编译基础设施。
