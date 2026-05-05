@@ -61,3 +61,9 @@
   - Context: User redirected from incremental expansion to whole-report structure redesign.
   - Related: `report/docs/report_structure_redesign_spec.md`, `resources/博士开题报告-陈仁泽.pdf`, `docs/writing/reference-report-analysis.md`
   - Agent interpretation: Pause incremental正文 edits, create a detailed structure spec first, move EggMind into existing work, and implement only after structure discussion.
+
+- 2026-05-05 00:00 Asia/Shanghai - Fourth chapter should center large models and formal methods
+  > 我们不需要强调开源生态和专利与产学研协同统一， 这些不属于该报告的内容。对于第四章标题，我认为需要突出大模型与形式化技术结合对软硬件生态的作用。
+  - Context: User rejected the fourth-chapter framing around open-source ecosystem, patents, and industry-university collaboration.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Fourth chapter should focus on how large models and formal techniques jointly support hardware-software co-design methods and toolchains; nontechnical ecosystem/patent/collaboration material must not become a structural theme.

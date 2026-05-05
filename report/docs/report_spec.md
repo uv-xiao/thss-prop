@@ -17,8 +17,8 @@
   -> 通用处理器难以兼顾性能、能效与迭代速度
   -> 领域定制需要软硬件协同，但现有工具链割裂
   -> 研究目标：把定制、综合、编译、验证、运行时工具链化
-  -> 已有基础：APS/Aquas/ISAMORE/Cayman/Clay + Cement/SkyEgg/OriGen/HECTOR
-  -> 现有工作：EggMind 等自动化编译优化与协同设计生态基础
+  -> 已有基础：APS/Aquas/ISAMORE/Cayman/Clay + Cement/SkyEgg/HECTOR + EggMind/OriGen
+  -> 现有工作：EggMind 等大模型与形式化技术结合的软硬件协同方法
   -> 未来工作：IntelliC + Spine + PTO distributed runtime
 ```
 
@@ -28,7 +28,7 @@
 | --- | --- | --- | --- |
 | 领域定制与端到端协同 | APS, Aquas, ISAMORE, Cayman, Clay | ISAX 接口碎片化、硬件生成与编译适配割裂、复杂 ISAX 难自动映射、自定义指令复用性不足、微架构约束表达困难 | 既是报告主线的“协同框架层”，也是敏捷芯片设计落到领域定制的核心代表性工作组 |
 | 硬件前端与综合优化 | Cement, SkyEgg, HECTOR, OriGen | RTL 生产率低、HLS 不可预测、调度/映射/代数变换割裂、AI 生成 RTL 缺少高质量数据和反馈闭环 | 展示从高层描述到高质量硬件实现的设计生产力路径 |
-| 自动化编译优化与生态基础 | EggMind，开源框架、教程、专利、合作项目 | 方法难复用、难推广、难落地，agentic 编译/硬件生成需要可验证边界 | 作为现有工作的一部分，支撑后续 IntelliC、Spine 与运行时方向 |
+| 大模型与形式化技术驱动的软硬件协同方法 | EggMind、OriGen | 大模型生成与搜索能力需要形式化语义、等价约束、可验证反馈和可控优化空间 | 作为现有工作的一部分，支撑后续 IntelliC、Spine 与运行时方向 |
 
 ## 重点展开的代表性工作
 
