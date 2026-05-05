@@ -15,7 +15,7 @@ This file records project-specific preferences that are important but less unive
 - In the introduction, delay the user's own completed work until section 1.6. Sections 1.1-1.4 should build the field review and problem chain first, without turning into an achievement summary.
 - Chapter 1 needs industry data and recent top architecture-conference evidence, not only qualitative claims. Use `docs/writing/introduction-evidence-plan.md` before drafting the introduction.
 - Prefer introduction evidence from large-company authors, industrial research labs, authoritative experts, industrial system papers, official technical reports, and top architecture/systems conferences.
-- Introduce evidence through representative examples at key argument transitions plus an evidence table; avoid dense numerical listing.
+- Introduce evidence through representative examples at key argument transitions. Evidence tables are optional and should only be included if they improve verifiability without making the introduction feel like a technical report.
 - For heterogeneous architecture complexity and programming concerns, prefer ATLAS/DeepStack, Huawei CloudMatrix384/UB-Mesh, and NVIDIA GB200 NVL72/IMEX over ISCA AIO or MICRO SCAR.
 - For the compilation-to-runtime interface, prefer PyTorch 2 `torch.compile`/TorchDynamo and NVIDIA TensorRT-LLM as primary framework evidence; use NVL72/CloudMatrix/UB-Mesh as hardware-system context rather than as the primary framework evidence.
 - In the compilation-to-runtime review, make inference the main thread and training/general dynamic programs the supplement. Use TensorRT-LLM as the primary serving-runtime example and PyTorch/Dynamo as supporting evidence for dynamic graph capture and backend compilation.

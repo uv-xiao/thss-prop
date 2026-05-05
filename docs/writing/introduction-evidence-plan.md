@@ -123,4 +123,5 @@ Use external evidence sparingly and precisely. Data should support the problem c
 - Do not generalize a narrow result. For example, floorplanning automation supports "automation can reduce one difficult chip-design stage", not "AI designs complete chips".
 - Do not use industry data without tying it to one of the three core research questions.
 - Each subsection of Chapter 1 should contain at least one concrete data point, model, or top-conference example when possible.
-- In final prose, use a small number of representative examples at key argument transitions, plus an evidence table that records source, claim supported, data/model, and limitation/scope. Avoid turning the introduction into a dense list of numbers.
+- In final prose, use a small number of representative examples at key argument transitions. Maintain this evidence plan and bibliography entries for traceability.
+- A short evidence table is optional, not mandatory. Add it only if it improves verifiability without disrupting the academic narrative; otherwise keep evidence tracking in this file and `.bib`.

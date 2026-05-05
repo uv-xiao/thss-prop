@@ -235,3 +235,9 @@
   - Context: User rejected adding a mapping table for the three core questions in Chapter 1.5.
   - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: Chapter 1.5 should converge through continuous academic narrative, not a technical-report-style table. Use the 1.7 structure figure for mapping.
+
+- 2026-05-05 00:00 Asia/Shanghai - Evidence table optional
+  > 认可
+  - Context: User accepted making the introduction evidence table optional rather than mandatory.
+  - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`
+  - Agent interpretation: Use representative evidence examples in the narrative. Add a short evidence table only if it improves verifiability without making Chapter 1 feel like a technical report.
