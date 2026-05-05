@@ -193,3 +193,9 @@
   - Context: User accepted making inference the main thread and training/general dynamic programs the supplement in the compilation-to-runtime review.
   - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`
   - Agent interpretation: Use TensorRT-LLM as the main runtime evidence and PyTorch/Dynamo as supporting evidence for dynamic graph capture, backend compilation, and training/Torch operator relevance.
+
+- 2026-05-05 00:00 Asia/Shanghai - Chapter 1.1 application scope
+  > 认可
+  - Context: User accepted using AI/LLM as the main application pressure while retaining other domains as diversity evidence.
+  - Related: `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Chapter 1.1 should foreground AI/LLM but also include PQC, DSP, point cloud, graphics, and other domains to show diverse domain-specialization demand.
