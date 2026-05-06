@@ -328,11 +328,47 @@ SkyEgg 还区分三类硬件映射配置。第一类是基本逻辑，即用 Ver
 #figure(
   kind: table,
   placement: none,
-  rect(width: 100%, inset: 8pt, stroke: gray + 0.7pt)[
-    #text(size: 9pt)[
-      目标：最小化 `f_(cls_root) + alpha * sum_i b_(m_i)`，即根等价类完成时间加少量映射数量惩罚。\
-      完整性：`cls_root` 必须被选中；若等价类被选中，则至少一个内部映射节点被选中；若映射节点被选中，则其子等价类也必须被选中。\
-      调度：映射节点开始时间不得早于其子等价类完成时间；映射节点完成时间等于开始时间加映射延迟；被选中映射之间还必须满足串接与插入寄存器约束。
+  rect(width: 100%, inset: 7pt, stroke: gray + 0.7pt)[
+    #text(size: 7.4pt)[
+      目标函数同时最小化根等价类完成时间，并用小系数 $alpha$ 抑制不必要的映射选择：
+      $
+        min_(f, b, s) f_"cls_root" + alpha sum_(i=1)^N b_"m_i"
+      $
+
+      完整性约束保证最终表达式语义完整：根等价类必须被计算；被选择的等价类至少选择一个内部映射等价节点；被选择的映射节点必须递归计算其所有子等价类：
+      $
+        b_"cls_root" = 1
+      $
+      $
+        forall j, quad b_"cls_j" <= sum_(m_i in "cls"_j) b_"m_i"
+      $
+      $
+        forall i, forall "cls"_j in "child"_(m_i), quad b_"m_i" <= b_"cls_j"
+      $
+
+      调度约束把表达式选择和时钟周期安排绑定在一起。映射节点只有在其子等价类完成后才能开始，完成时间由开始时间和映射延迟 $L_"m_i"$ 决定；若映射节点被选择，则其所在等价类的完成时间不得早于该节点完成时间：
+      $
+        forall i, forall "cls"_j in "child"_(m_i), quad s_"m_i" >= f_"cls_j"
+      $
+      $
+        forall i, quad f_"m_i" = s_"m_i" + L_"m_i"
+      $
+      $
+        forall j, forall m_i in "cls"_j, quad f_"cls_j" >= f_"m_i" - M(1 - b_"m_i")
+      $
+
+      串接约束把时序闭合转化为所需流水寄存器数。对从 $m_i$ 到 $m_j$ 的结构路径 $pi$，若路径上的映射节点均被选择，则 $m_j$ 的开始时间至少要晚于 $m_i$ 的完成时间加上切分寄存器数：
+      $
+        forall pi in Pi(m_i, m_j), quad
+        s_"m_j" >= f_"m_i" + "cuts"(t_"path"(pi)) - M sum_(m in pi) (1 - b_m)
+      $
+      $
+        t_"path"(pi) + q(t_"su" + t_"cq" + t_"net") <= (q + 1) T_"clk"
+      $
+      $
+        "cuts"(t_"path"(pi)) =
+        ceil((t_"path"(pi) - T_"clk") / (T_"clk" - (t_"su" + t_"cq" + t_"net")))
+      $
     ]
   ],
   caption: [SkyEgg 的变换-映射感知调度建模。该问题同时决定表达式形态、硬件映射选择和时钟周期安排。],
