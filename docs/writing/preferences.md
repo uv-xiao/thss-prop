@@ -32,6 +32,8 @@ This file records project-specific preferences that are important but less unive
 - Chapter 1 has no standalone “报告结构安排” section. Merge chapter-arrangement prose and the research-question-to-chapter figure into the end of 1.6.
 - Add a central thesis sentence near the end of 1.3 or the start of 1.5. It should bridge the field review to the three core research questions; refine wording during drafting.
 - Learn structure from `resources/博士开题报告-陈仁泽.pdf`, especially its introduction narrowing sequence, completed-work chapter loop, and future-work subsection pattern; do not copy its wording.
+- For technical chapters, follow `docs/writing/technical-chapter-rewrite-plan.md`: representative completed works must have concrete technical subsection trees, not one-section abstract summaries. Each important work should expose background/motivation, method overview, core abstractions or algorithms, implementation/evaluation, and significance to the report theme.
+- For first-author/co-first-author works, use the reference report's patient method organization: define technical objects, explain why they are needed, show system workflow, describe algorithms/rules/models, and connect experiments back to mechanisms. Do not compress them into one long narrative subsection.
 - Organize existing work into three technical layers. Merge “协同框架” and “指令/微架构定制” because they are one domain-specialization and end-to-end co-design layer.
 - In the first layer, APS/Aquas should appear first as the framework entry, but ISAMORE must receive no less space than APS/Aquas combined.
 - Cayman is an important subsection in the domain-specialization and end-to-end co-design chapter because it is first-author/co-first-author work.

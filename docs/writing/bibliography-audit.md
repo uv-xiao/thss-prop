@@ -100,13 +100,13 @@ This file records evidence for bibliography entries and report claims. It is not
 
 ### cayman2025
 
-- Source: `resources/aquas/refs.bib` entry `xiao_cayman_2025`
-- Additional sources: `resources/isamore/refs.bib` entry `xiao_cayman_2025`; ResearchGate metadata page; J-GLOBAL metadata page.
+- Source: `resources/cayman/main.tex`, `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/3_methodology.tex`, `resources/cayman/doc/4_evaluation.tex`, and `resources/cayman/refs.bib`.
+- Additional sources: `resources/aquas/refs.bib` entry `xiao_cayman_2025`; `resources/isamore/refs.bib` entry `xiao_cayman_2025`; ResearchGate metadata page; J-GLOBAL metadata page.
 - Accessed: 2026-05-06
-- Evidence inspected: title, DAC 2025 venue metadata, DOI, author list from public index and local BibTeX, and abstract describing automatic kernel selection from hierarchical program representation, control-flow and data-access optimization, specialized processor-accelerator interfaces, accelerator merging, and reported 8.0x and 14.4x improvements over two state-of-the-art frameworks.
-- Supports: Chapter 2 Cayman subsection claims about its role as custom accelerator generation with control-flow/data-access optimization and microarchitecture/interface-aware specialization.
-- Metadata confidence: medium-high for title, authors, venue, DOI, and abstract; lower for detailed mechanism because full paper PDF is not currently present under `resources/`.
-- Open gaps: add full paper PDF or local manuscript before expanding Cayman beyond abstract-supported claims.
+- Evidence inspected: title, DAC 2025 venue metadata, DOI, author list, introduction framing, methodology sections on wPST representation, profiling/program analysis, accelerator modeling, coupled/decoupled/scratchpad interfaces, dynamic-programming candidate selection, accelerator merging, implementation, and evaluation.
+- Supports: Chapter 2 Cayman subsection claims about custom accelerator generation with control-flow/data-access optimization, whole-application program structure tree, processor-accelerator interface specialization, Pareto candidate selection, reusable accelerator merging, and reported speedups/area savings.
+- Metadata confidence: high for local manuscript content and BibTeX-backed metadata; final camera-ready status should still be checked before final submission.
+- Open gaps: verify final author order, page numbers, and official DOI formatting against the published DAC record before final bibliography freeze.
 
 ## External Technical And Industrial Sources
 

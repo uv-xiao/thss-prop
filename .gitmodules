@@ -10,6 +10,9 @@
 [submodule "resources/cement"]
 	path = resources/cement
 	url = https://server.keke-046.cc/git/651fa940510e6a00864b299a
+[submodule "resources/cayman"]
+	path = resources/cayman
+	url = https://server.keke-046.cc/git/671b9ed264a60d8f3c0c2a63
 [submodule "resources/eggmind"]
 	path = resources/eggmind
 	url = https://server.keke-046.cc/git/69e2e07d5171bda91cca1aa4
