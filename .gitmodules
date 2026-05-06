@@ -13,6 +13,9 @@
 [submodule "resources/cayman"]
 	path = resources/cayman
 	url = https://server.keke-046.cc/git/671b9ed264a60d8f3c0c2a63
+[submodule "resources/clay"]
+	path = resources/clay
+	url = https://server.keke-046.cc/git/67a595a6635929a9bbf9f950
 [submodule "resources/eggmind"]
 	path = resources/eggmind
 	url = https://server.keke-046.cc/git/69e2e07d5171bda91cca1aa4

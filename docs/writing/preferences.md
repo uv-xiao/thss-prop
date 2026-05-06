@@ -33,6 +33,7 @@ This file records project-specific preferences that are important but less unive
 - Add a central thesis sentence near the end of 1.3 or the start of 1.5. It should bridge the field review to the three core research questions; refine wording during drafting.
 - Learn structure from `resources/博士开题报告-陈仁泽.pdf`, especially its introduction narrowing sequence, completed-work chapter loop, and future-work subsection pattern; do not copy its wording.
 - For technical chapters, follow `docs/writing/technical-chapter-rewrite-plan.md`: representative completed works must have concrete technical subsection trees, not one-section abstract summaries. Each important work should expose background/motivation, method overview, core abstractions or algorithms, implementation/evaluation, and significance to the report theme.
+- For technical chapters, also follow `docs/writing/source-alignment-and-figures.md`: source LaTeX organization should determine the technical object order, and important method figures/tables from `resources/` should be used when they clarify systems, algorithms, interfaces, or evaluation evidence.
 - For first-author/co-first-author works, use the reference report's patient method organization: define technical objects, explain why they are needed, show system workflow, describe algorithms/rules/models, and connect experiments back to mechanisms. Do not compress them into one long narrative subsection.
 - Organize existing work into three technical layers. Merge “协同框架” and “指令/微架构定制” because they are one domain-specialization and end-to-end co-design layer.
 - In the first layer, APS/Aquas should appear first as the framework entry, but ISAMORE must receive no less space than APS/Aquas combined.
@@ -64,6 +65,7 @@ This file records project-specific preferences that are important but less unive
 - Future work should receive substantial space and should include research ideas, system design, validation route, feasibility, and risks.
 - Target the main text at 60-80 pages.
 - Add figures where they help the argument. Prefer figures from `resources/` for existing work, and draw new figures directly when the needed overall framework or logic diagram does not exist.
+- Use `docs/writing/terminology-decisions.md` as the review workspace for terms whose Chinese/English treatment is still undecided. Do not bulk rewrite unsettled terms in the report before the user has reviewed the table.
 - The introduction should include two newly drawn overview figures: “跨硬件架构软硬件协同生态” and “研究问题与章节映射”.
 - The writing should be dense, logical, and restrained. Avoid long generic introductions.
 - Translation should preserve the English source's technical modality and scope.

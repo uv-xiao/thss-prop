@@ -62,11 +62,12 @@ This file records evidence for bibliography entries and report claims. It is not
 ### clay2025
 
 - Source: `resources/isamore/refs.bib` entry `peng_clay_2025`
+- Additional sources: `resources/clay/sec/0_intro.tex`, `resources/clay/sec/1_preliminaries.tex`, `resources/clay/sec/2_methodologies.tex`, `resources/clay/sec/3_eval.tex`, `resources/clay/tex/framework.tex`, `resources/clay/tex/interface.tex`, `resources/clay/tex/code-transfrom.tex`, `resources/clay/tex/synthesis.tex`, `resources/clay/tex/sched.tex`, `resources/clay/tex/impl.tex`, `resources/clay/tex/eval-desc.tex`, `resources/clay/tex/eval-results.tex`, `resources/clay/fig/tab:exts-desc.tex`, `resources/clay/fig/tab:exts-ppa.tex`, `resources/clay/fig/tab:exts-e2e.tex`, `resources/clay/fig/tab:ablation-ppa.tex`, `resources/clay/fig/tab:base-compare.tex`
 - Accessed: 2026-05-06
-- Evidence inspected: ICCAD 2025 metadata and abstract describing Clay as an open-source high-level ASIP framework with unified instruction extension interface, microarchitecture-agnostic actions, microarchitectural attributes, CADL, microarchitecture-aware synthesis, coupling strategy selection, and evaluation across Clay-core and Rocket-core.
-- Supports: Chapter 3 claims about Clay as a microarchitecture-aware ASIP framework and a major subsection for hardware frontend and synthesis optimization.
-- Metadata confidence: medium-high for metadata and abstract; lower for detailed algorithms because the full paper has not been inspected in this workspace turn.
-- Open gaps: add or inspect full paper PDF before expanding Clay experiments and internal mechanisms beyond abstract-supported claims.
+- Evidence inspected: full local LaTeX structure for Clay, including introduction, preliminaries, methodology, evaluation, framework/interface/synthesis/scheduling/implementation fragments, and evaluation tables. Source text supports claims about limitations of in-pipeline-only ASIP frameworks, unified instruction extension actions and microarchitectural attributes, CADL, HIR/LIR/RuleIR lowering, microarchitecture-aware coupling-strategy selection, ILP/modulo scheduling, finite-state hardware generation, Clay-core/Rocket-core evaluation, individual-kernel speedups, and EdgeDet/CFOEst workload results.
+- Supports: Chapter 3 claims about Clay as a microarchitecture-aware ASIP framework and a major subsection for hardware frontend and synthesis optimization; detailed Clay section text, figures, and evaluation statements.
+- Metadata confidence: high for local manuscript content and local BibTeX metadata; final publication details, pages, and DOI still need confirmation before bibliography freeze.
+- Open gaps: verify final ICCAD 2025 proceedings metadata when the official record is available.
 
 ### skyegg2026
 
