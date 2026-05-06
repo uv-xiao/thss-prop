@@ -53,8 +53,8 @@
 
 - 源文重点：`resources/cement/doc/3_HDL.tex`、`4_Synthesis.tex`、`6_Evaluation.tex`。
 - 写作组织：硬件前端表达、event layer、control sub-language、timing analysis、FSM synthesis、实验。
-- 图表候选：framework、shuffler、timing-analysis example、control statements table、traits table、PolyBench result table。
-- 当前状态：已补入 framework、shuffler 和 state-tree 图；图题承担中文解释，正文保留“前端表达—周期分析—FSM 综合—实验意义”的组织。
+- 图表候选：shuffler、framework comparison table、control statements table、timing-analysis example、traits table、PolyBench result table。
+- 当前状态：已按用户反馈撤下 overview/framework 图，改用源文 Figure 1 的四级流水 shuffler 示例、Table 1 的 FPGA 编程框架对比、Table 3 的 ctrl 子语言语句表，以及 state-tree 图。Cement 小节应突出“代表性例子 + 对比表 + 控制语义表”，避免用 overview 图替代具体技术组织。
 
 ### Clay
 
