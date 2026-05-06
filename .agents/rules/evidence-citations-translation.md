@@ -25,6 +25,7 @@
 
 - Before translating a technical claim, identify the English source sentence, phrase, table, or code location being represented.
 - Translate meaning, not word order. Preserve the technical relationship between subject, method, condition, and result.
+- Preserve the source's representation mode for formal content. If the source presents a recurrence, constraint, objective, cost model, complexity bound, path delay equation, or table cell as mathematical notation, the report must typeset it as Typst math, including inside report tables. Use code formatting only for actual code identifiers, syntax examples, API names, or literal tool/package names.
 - If the English term has multiple possible Chinese translations, add the choice to `docs/writing/terminology.md` with rationale.
 - Never strengthen a source claim during translation. “May improve” cannot become “能够提升”; “prototype” cannot become “成熟系统”; “we evaluate” cannot become “已经证明”.
 - If a source distinguishes system design, implementation, evaluation, and theory, keep those distinctions in Chinese.

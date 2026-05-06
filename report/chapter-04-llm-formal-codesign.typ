@@ -42,6 +42,23 @@ EggMind 的第二个核心是智能体工作流。它把离线策略合成组织
 
 这一机制解决了 agentic 编译优化中的一个关键问题：经验如何不变成不可审计的自然语言偏好。EggMind 首先定位证明树中的局部证明区域，用同余路径 标记子表达式上下文；随后把局部重写链 通过规则到标签映射提升为语义 tag chain，并对重复 motif 进行去重和排序。motif 的评分同时考虑相对收益和跨案例频率，因此缓存保留的是在成功优化中反复出现、且能带来实际代价降低的结构证据。后续 Generator 或 Strategist 使用这些 motif 时，看到的是来自等价证明的结构化引导，而不是未经验证的人工经验。
 
+#block(breakable: false)[
+  #rect(width: 100%, inset: 7pt, stroke: gray + 0.7pt)[
+    #text(size: 7.6pt)[
+      EggMind 的证明派生记忆用相对收益更新 motif 评分。对候选案例 $c$ 和 motif $gamma$，源文中的核心更新可写为：
+      $
+        g(c) = max(0, 1 - "final-cost"(c) / "previous-best-cost"(c))
+      $
+      $
+        "score"(gamma) <- (1 - alpha) "score"(gamma) + alpha g(c)
+      $
+      $
+        "best-gain"(gamma) <- max("best-gain"(gamma), g(c))
+      $
+    ]
+  ]
+]
+
 #figure(
   image("assets/eggmind/proof-memory.pdf", width: 82%),
   caption: [EggMind 证明派生 motif 记忆。系统从等价证明中抽取局部重写 motif，并将其转化为可复用、可审计的策略证据。],
@@ -52,6 +69,32 @@ EggMind 的第二个核心是智能体工作流。它把离线策略合成组织
 第四个核心是可处理性引导。EggMind 用基于依赖的规则集风险模型为规则集划分提供稳定性指导：它把重写词表建模为规则依赖图，根据 RHS/LHS 激活、算子重叠和子树可匹配性估计规则之间的互相激活风险；划分目标奖励前向阶段依赖，惩罚回流、首阶段流入和同阶段纠缠，从而使规则交互更接近稳定的前向激活。与此同时，LLM 引导简化提示为不同阶段提供偏好/剪除模式对，将 simplification 从单一全局代价剪枝 变成阶段局部结构偏好。二者共同服务一个目标：让 LLM 搜索停留在稳定、可执行、可复用的策略空间中，而不是不断触发等价图膨胀 @eggmind2026。
 
 具体地，基于依赖的规则集风险模型将重写规则 作为图节点，用有向边表示一条规则可能启发另一条规则的强度；阶段分配的目标是鼓励规则依赖从前一阶段流向后一阶段，同时抑制后向激活、首阶段反复被后续规则激活，以及同阶段规则强耦合。LLM 引导简化提示则在每个阶段给出少量偏好/剪除模式对，形成局部简化偏序，并通过有界惩罚改变 e-class 内候选的保留优先级。这种做法没有把 LLM 提示作为硬删除规则，而是让评价继续检验提示是否过强或损害后续优化；如果提示不合适，后续迭代可以修正。因此，EggMind 对 LLM 的使用始终围绕可执行评价和可回退控制，而不是让模型直接决定最终正确性。
+
+#block(breakable: false)[
+  #rect(width: 100%, inset: 7pt, stroke: gray + 0.7pt)[
+    #text(size: 7.2pt)[
+      规则集风险模型把重写词表表示为有向依赖图 $G = (R, E, w)$，并为阶段分配 $phi: R -> {1, dots, k}$ 求解如下目标：
+      $
+        max_phi
+        alpha sum_((i,j) in E) w_(i,j) "1"[phi(i) + 1 = phi(j)]
+        - beta sum_((i,j) in E) w_(i,j) "1"[phi(i) > phi(j)]
+      $
+      $
+        - gamma sum_((i,j) in E) w_(i,j) "1"[phi(j) = 1, phi(i) != 1]
+        - delta sum_((i,j) in E) w_(i,j) "1"[phi(i) = phi(j)]
+      $
+      四项分别奖励前向依赖，并惩罚回流、首阶段流入和同阶段纠缠。对 LLM 引导简化，阶段 $t$ 中的偏好/剪除模式对定义局部偏序：
+      $
+        (p^+, p^-) in Pi_t times Pi_t, quad p^- prec_t p^+
+      $
+      简化评分以基础代价加有界提示惩罚表示：
+      $
+        s(e) = c(e) + p_"llm"(e)
+      $
+      其中 $theta$ 控制按评分剪除的强度。
+    ]
+  ]
+]
 
 === 实验评估与对软硬件协同的意义
 
