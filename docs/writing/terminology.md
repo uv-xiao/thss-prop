@@ -38,3 +38,25 @@ This table is a writing aid. It must not be inserted into the report unless expl
 | benchmark | 基准测试 | 基准测试（benchmark） | Evaluation sections | 中文自然。 | benchmark（仅在专名或图表中保留） |
 | profiling | 性能剖析 | 性能剖析（profiling） | Runtime/compiler optimization sections | 用户要求中英文使用更严格；正文中文优先，必要处首次括注英文。 | profiling 单独使用、性能画像 |
 | runtime | 运行时 | 运行时（runtime） | Compilation-to-runtime sections | 中文自然，框架名可保留英文。 | 运行时系统（范围略宽） |
+| kernel | 内核 / 计算内核 | 计算内核（kernel） | Evaluation and runtime/compiler optimization sections | 普通技术对象在正文中中文优先；框架 API 或文件名中保留英文。 | kernel 单独泛用 |
+| speedup | 加速比 | 加速比（speedup） | Evaluation sections | 中文稳定，便于开题报告叙事。 | 加速率 |
+| area overhead | 面积开销 | 面积开销（area overhead） | ASIP/accelerator evaluation sections | 与 PPA 语境匹配。 | 面积负担 |
+| cost model | 代价模型 | 代价模型（cost model） | Compiler/e-graph optimization sections | 编译优化常用译法。 | 成本模型 |
+| cache effect | 缓存效应 | 缓存效应（cache effect） | Aquas / memory-centric ISAX sections | 中文自然，可对应存储层次影响。 | cache 影响 |
+| offloading | 卸载 | 卸载（offloading） | ASIP/ISAX compiler sections | 指编译器把区域或操作交给定制硬件执行。 | 下放、外包 |
+| matching / matcher | 匹配 / 匹配器 | 匹配器（matcher） | Compiler and SkyEgg mapping-rule sections | 普通行为译为“匹配”；系统对象可首次括注英文。 | matching 单独泛用 |
+| applier | 应用器 | 应用器（applier） | SkyEgg mapping-rule sections | 与 e-graph rewrite rule 结构对应。 | 施加器 |
+| condition | 条件 | 条件（condition） | Mapping-rule sections | 普通术语中文化。 | condition 单独泛用 |
+| event layer | 事件层 | 事件层（event layer） | Cement | 用户审阅表已倾向中文；正文中文优先。 | 时间层 |
+| guard | 守卫条件 | 守卫条件（guard） | Cement event semantics | 硬件/编译语义中常用译法。 | 保护条件 |
+| cycle sequence | 周期序列 | 周期序列（cycle sequence） | Cement timing analysis | 准确表达跨周期事件顺序。 | 循环序列 |
+| procedural statement | 过程式语句 | 过程式语句（procedural statement） | Cement control sub-language | 与源文 procedural control 对应。 | 程序式语句 |
+| static analysis | 静态分析 | 静态分析（static analysis） | Cement timing analysis | 中文稳定。 | 静态检查（范围略窄） |
+| dynamic monitoring | 动态监测 | 动态监测（dynamic monitoring） | Cement timing analysis | 已在术语决策表使用。 | 动态监听 |
+| timing violation | 时序违规 | 时序违规（timing violation） | Cement timing analysis | 硬件验证语境常用。 | 时序违例 |
+| hardware primitive | 硬件原语 | 硬件原语（hardware primitive） | SkyEgg mapping model | 中文自然，保留对象性。 | 硬件基元 |
+| parameterized IP core | 参数化 IP 核 | 参数化 IP 核（parameterized IP core） | SkyEgg mapping model | IP core 可保留英文缩写，整体中文化。 | 参数化 IP 内核 |
+| preset | 预设配置 | 预设配置（preset） | SkyEgg IP configuration | 避免英文泛用。 | preset 单独使用 |
+| mapping-configuration pair | 映射-配置对 | 映射-配置对（mapping-configuration pair） | SkyEgg | 准确表达联合对象。 | 映射配置对 |
+| top-k path delays | 前 k 条路径延迟 | 前 k 条路径延迟（top-k path delays） | SkyEgg scheduler | 保留 k 的数学含义，正文中文优先。 | top-k 路径延迟 |
+| workflow | 工作流 | 工作流（workflow） | System/method sections | 中文自然。 | workflow 单独泛用 |

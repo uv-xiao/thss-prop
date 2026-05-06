@@ -4,6 +4,17 @@
 //   typst compile main.typ --input alwaysstartodd=false
 
 #import "@preview/modern-pku-thesis:0.2.3": appendix, conf
+#import "@preview/codly:1.3.0": *
+
+#show: codly-init.with()
+#codly(
+  display-icon: false,
+  display-name: false,
+  lang-format: none,
+  number-format: none,
+  inset: (x: 0.32em, y: 0.08em),
+  radius: 0pt,
+)
 
 #show: conf.with(
   cauthor: "肖有为",
