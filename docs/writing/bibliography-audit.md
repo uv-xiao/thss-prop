@@ -109,6 +109,48 @@ This file records evidence for bibliography entries and report claims. It is not
 - Metadata confidence: high for local manuscript content and BibTeX-backed metadata; final camera-ready status should still be checked before final submission.
 - Open gaps: verify final author order, page numbers, and official DOI formatting against the published DAC record before final bibliography freeze.
 
+## Internal Future-Work Sources
+
+### compiler-infra-is-harness-medium
+
+- Source: `resources/compiler-infra-is-harness-medium.md`
+- Accessed: 2026-05-06
+- Evidence inspected: argument that compiler infrastructure is a natural intelligent-agent collaboration medium when target facts, explicit IR/semantic contracts, constrained transformations, executable backend artifacts, and evidence/feedback are organized as first-class objects.
+- Supports: Chapter 1 and Chapter 5 claims about compiler infrastructure as the interface between hardware facts, program semantics, verification evidence, and intelligent-agent automation.
+- Metadata confidence: internal design memo; cite only as project rationale, not as external publication.
+
+### spine
+
+- Source: `resources/spine/docs/story.md`, `resources/spine/docs/design/layer-01-delta-oracle-execution.md`, `resources/spine/docs/design/layer-04-gcd-validation-pipeline.md`
+- Accessed: 2026-05-06
+- Evidence inspected: semantic boundary, typed Delta actor/task surface, oracle execution, trace stream, alignment reports, and GCD Delta-to-RTL validation pipeline.
+- Supports: Chapter 5 future-work claims about verification-constrained architecture/hardware/compiler co-generation and staged executable evidence.
+- Metadata confidence: internal prototype documentation; keep clear distinction between implemented foundation and future vision.
+
+### intellic
+
+- Source: `resources/IntelliC/docs/design/compiler_framework.md`, `resources/IntelliC/docs/design/compiler_semantics.md`, `resources/IntelliC/docs/design/agent_harness.md`
+- Accessed: 2026-05-06
+- Evidence inspected: `IR := Sy + Se`, MLIR/xDSL-style syntax, first-class semantic definitions, TraceDB facts/events, compiler actions, fixed vs agent action boundaries, and repository harness design.
+- Supports: Chapter 5 future-work claims about explainable/auditable compiler infrastructure and intelligent-agent collaboration over compiler-native objects.
+- Metadata confidence: internal design documentation; do not cite as external prior work.
+
+### seed-proposal
+
+- Source: `resources/seed-proposal.docx`
+- Accessed: 2026-05-06
+- Evidence inspected: project plan for chip-operator automatic optimization agents, architecture/operator/candidate/verification/performance-feedback loop, Torch training/inference operator scope, and 2026.06--2027.06 milestone structure.
+- Supports: Chapter 5 future-work claims and schedule for industrial heterogeneous operator optimization.
+- Metadata confidence: internal planning document; use for future work, not external evidence.
+
+### pto-runtime
+
+- Source: `resources/pto-runtime/README.md`, `resources/pto-runtime/src/a5/runtime/tensormap_and_ringbuffer/docs/RUNTIME_LOGIC.md`, `resources/pto-runtime/src/a5/runtime/tensormap_and_ringbuffer/docs/profiling_levels.md`
+- Accessed: 2026-05-06
+- Evidence inspected: host/AICPU/AICore three-program model, TensorMap dependency tracking, RingBuffer flow control and back-pressure, scheduler/orchestrator roles, ready/completion protocol, profiling levels, PMU/runtime trace and failure diagnostics.
+- Supports: Chapter 5 future-work claims about runtime-distributed collaboration, task graph execution, and runtime evidence feedback for compiler/operator optimization.
+- Metadata confidence: internal prototype documentation; keep implementation details tied to source paths.
+
 ## External Technical And Industrial Sources
 
 ### tpuv4isca2023

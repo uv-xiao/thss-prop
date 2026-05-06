@@ -21,7 +21,7 @@
 | evidence memory | 中文为主 | 证据记忆 | 证据记忆（Evidence Memory） | 强调结构化 facts/events/artifacts，不是聊天历史。 | 经验库、记忆库 | 待确认 |
 | target facts | 中文为主 | 目标事实 | 目标事实 | IntelliC/编译 harness 语境中的目标架构事实。 | 目标信息 | 待确认 |
 | semantic contract | 中文为主 | 语义契约 | 语义契约（Semantic Contract） | 与 IR、pass、验证义务关联，中文较准确。 | 语义合同 | 待确认 |
-| semantic boundary | 中文为主 | 语义边界 | 语义边界（Semantic Boundary） | Spine/未来工作核心概念。 | 语义界面 | 待确认 |
+| semantic boundary | 中文为主 | 语义边界 | 语义边界（semantic boundary） | Spine/未来工作核心概念。正文后续统一用“语义边界”。 | 语义界面 | 已采用 |
 | typed artifact | 中文为主 | 类型化产物 | 类型化产物（typed artifact） | “artifact”在报告中应落到可解析、可重放对象。 | 类型化制品 | 待确认 |
 | executable oracle | 中文为主 | 可执行基准 | 可执行基准（executable oracle） | oracle 在验证语境中常保留英文；“可执行判定器”不够自然。 | 可执行判定器 | 待确认 |
 | cross-layer check | 中文为主 | 跨层检查 | 跨层检查（Cross-Layer Check） | 表达清晰。 | 跨层校验 | 待确认 |
