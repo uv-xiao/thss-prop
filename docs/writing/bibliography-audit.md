@@ -72,10 +72,10 @@ This file records evidence for bibliography entries and report claims. It is not
 ### skyegg2026
 
 - Source: `resources/skyegg/doc/1_introduction.tex`
-- Additional sources: `resources/skyegg/doc/2_background.tex`, `resources/skyegg/doc/8_related_work.tex`
-- Accessed: 2026-05-05
-- Evidence inspected: introduction on hardware synthesis, separation of algebraic transformation/scheduling/mapping, e-graph design-space representation, transformation- and mapping-aware scheduling, ILP/ASAP solving, and evaluation.
-- Supports: report introduction claims about synthesis optimization fragmentation and e-graph-based joint optimization.
+- Additional sources: `resources/skyegg/doc/2_background.tex`, `resources/skyegg/doc/3_overview.tex`, `resources/skyegg/doc/4_egraph.tex`, `resources/skyegg/doc/5_formulation.tex`, `resources/skyegg/doc/6_solving.tex`, `resources/skyegg/doc/7_evaluation.tex`, `resources/skyegg/doc/8_related_work.tex`, `resources/skyegg/fig/overview-p1.pdf`, `resources/skyegg/fig/egraph-p1.pdf`, `resources/skyegg/results/speedup_ilp_vs_asap.pdf`
+- Accessed: 2026-05-05 and 2026-05-06
+- Evidence inspected: local LaTeX source on hardware synthesis fragmentation, SkyEgg overview, MLIR-to-e-graph construction, mapping e-nodes and mapping rules, timing-property modeling, profile-based timing database, path-delay/chaining constraints, transformation- and mapping-aware ILP formulation, top-k path delays, ASAP scheduler, evaluation methodology, speedup/resource/timing/scalability results, and ablation framing.
+- Supports: Chapter 1 and Chapter 3 claims about synthesis optimization fragmentation, e-graph-based joint transformation/mapping/scheduling, timing-aware mapping selection, ILP/ASAP solving tradeoffs, and reported performance/timing-closure results.
 - Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
 - Open gaps: final venue, author order, and publication status need confirmation.
 
