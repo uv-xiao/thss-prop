@@ -32,17 +32,20 @@
 16. 第一章证据写法优先采用“关键转折处代表性例子”。证据表格可选，不是硬性要求；只有在增强可核验性且不破坏学术叙事流畅性时才放入正文。
 17. 第一章应吸收“编译基础设施作为 agent harness 介质”的论断：编译基础设施不是后端工程附属品，而是组织目标事实、IR、语义契约、受约束变换、可执行产物、profiling/trace evidence 和 gate 的中间层。参考材料为 `resources/compiler-infra-is-harness-medium.md`，但正文必须写成中文学术论证。
 18. 支撑 agentic/LLM 趋势时，优先使用 NVIDIA AVO、Google DeepMind AlphaEvolve、Anthropic/OpenAI 官方技术报告或系统说明；其次使用 Siemens/Synopsys 的 EDA agentic 产品/路线材料、METR 长程任务能力模型、Agentic Software Engineering / Agentic EDA / CompilerGPT / AwareCompiler 等前沿论文。必须标明来源性质：AVO/AlphaEvolve 用于技术机制和可验证 evaluator/harness，Anthropic/OpenAI 用于 agentic coding、tool use、sandbox/test/review/human oversight/safety boundary，厂商页面用于行业动向，论文用于研究问题和技术挑战。
-19. 每个技术方向必须回答三个问题：
+19. 第一章 1.4 的自动化方法小类应形成递进链条：OpenAI/Anthropic 工程 agent -> AlphaEvolve evaluator-constrained coding agent -> NVIDIA AVO 工业 GPU kernel/compiler optimization -> Agentic EDA/verification-agent 风险 -> 本报告的模型-工具-证据闭环判断。
+20. 写 AlphaEvolve 与 EggMind 的关系时只做轻量对照：共同点是都通过可执行或可验证反馈约束搜索；区别是 EggMind 更贴近编译优化与等价空间，能更自然过渡到 IntelliC 的 compiler-native harness。
+21. 写 AVO 与第五章 5.4 的关系时，AVO 是方向证据，不是窄义竞品。必须说明本报告拟研究的长程芯片算子自动优化 Harness 具有更宽对象、更系统约束、更异构硬件假设和更长期的可维护证据记忆。
+22. 每个技术方向必须回答三个问题：
    - 为什么行业需要这个方向？
    - 现有方法卡在哪里？
    - 本人的工作如何构成可复用的方法、工具或系统能力？
-20. 避免成果堆砌。每项工作都要放回主线中，说明它在“系统生产力”链条中的位置。
-21. 第一作者代表性工作要详尽展开：问题背景、关键挑战、核心思想、系统设计、技术机制、实验设置、结果和意义都要写。
-22. 其他工作概括介绍：强调它们如何补全技术链条，不展开实现细节。
-23. 未来工作不能变成项目列表；必须从已有工作自然推出，说明未来要解决的剩余矛盾。
-24. 第一层“面向领域定制的架构接口与端到端协同”中，顺序固定为 APS/Aquas -> ISAMORE -> Cayman。APS/Aquas 作为框架入口先写，ISAMORE 回答“定制什么”，Cayman 讨论微架构约束。ISAMORE 是同等重要的代表性工作，正文篇幅不得少于 APS/Aquas 的合计篇幅。
-25. 协同框架和单点优化技术同样重要。不要为了强调系统性而压缩单点优化技术的技术深度。
-26. 当前正文只能视为骨架。后续质量提升必须显著扩写各部分，形成耐心、严肃、完整的故事讲述。
+23. 避免成果堆砌。每项工作都要放回主线中，说明它在“系统生产力”链条中的位置。
+24. 第一作者代表性工作要详尽展开：问题背景、关键挑战、核心思想、系统设计、技术机制、实验设置、结果和意义都要写。
+25. 其他工作概括介绍：强调它们如何补全技术链条，不展开实现细节。
+26. 未来工作不能变成项目列表；必须从已有工作自然推出，说明未来要解决的剩余矛盾。
+27. 第一层“面向领域定制的架构接口与端到端协同”中，顺序固定为 APS/Aquas -> ISAMORE -> Cayman。APS/Aquas 作为框架入口先写，ISAMORE 回答“定制什么”，Cayman 讨论微架构约束。ISAMORE 是同等重要的代表性工作，正文篇幅不得少于 APS/Aquas 的合计篇幅。
+28. 协同框架和单点优化技术同样重要。不要为了强调系统性而压缩单点优化技术的技术深度。
+29. 当前正文只能视为骨架。后续质量提升必须显著扩写各部分，形成耐心、严肃、完整的故事讲述。
 
 ## 语言风格
 

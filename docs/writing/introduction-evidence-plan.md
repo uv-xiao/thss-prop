@@ -197,6 +197,25 @@ Use external evidence sparingly and precisely. Data should support the problem c
   - AwareCompiler, arXiv 2510.11759, for agentic compiler optimization challenges: semantic misalignment, inefficient agent-compiler interaction, and sparse rewards in large optimization spaces.
   - Add local sources: OriGen and EggMind.
 
+Suggested narrative chain for this subsection:
+
+1. Start with a short bridge from traditional AI for EDA: AI methods have entered floorplanning, DSE, verification, and optimization, but many earlier successes are point-problem automation.
+2. Move to the newer agentic trend: agentic systems can read context, call tools, edit code, run tests, and iterate from feedback.
+3. Use OpenAI/Anthropic to show agentic software-engineering workflows in real tool environments, with sandbox/test/review/human-oversight constraints.
+4. Use AlphaEvolve to show that evaluator-constrained coding agents can discover non-trivial algorithms.
+5. Use NVIDIA AVO to show that agentic evolutionary search has entered the compiler/kernel optimization neighborhood on industrial GPUs.
+6. Use EDA vendor / Agentic EDA / verification-agent materials to show chip-design exploration, while emphasizing stronger correctness, verification, maintainability, and observability risks.
+7. Conclude with the explicit judgment: the core of agentic methods is not only a stronger model, but the loop among model, tools, target constraints, execution feedback, and evidence memory. For chip design and compilation, this loop must be embedded in architecture interfaces, compiler IR, formal semantics, runtime profiling, and hardware verification.
+
+AVO should be used mainly as evidence that the direction is technically real, not as a narrow baseline to chase. In Chapter 5.4, write the distinction clearly: AVO focuses on attention-kernel evolution on a specific industrial GPU setting, while our proposed long-horizon chip-operator optimization harness targets broader fused/Torch operators, IR/pass boundaries, formal constraints, profiling, regression validation, runtime orchestration evidence, heterogeneous architecture assumptions, and maintainable long-term optimization.
+
+AlphaEvolve can be lightly compared with EggMind:
+
+- AlphaEvolve: a general coding agent plus evolutionary evaluator for algorithmic discovery and computational optimization.
+- EggMind: LLM-guided compiler optimization strategy synthesis that outputs EqSatL strategy artifacts under e-graph/equality-saturation semantics.
+- Common point: neither should be framed as free-form text generation; both rely on executable or verifiable feedback to constrain search.
+- Difference: EggMind is closer to compiler optimization and equivalence spaces, and therefore provides a more direct bridge to IntelliC's compiler-native harness.
+
 ### 1.1/1.2/1.3 Placement Of LLM/Agentic Trend
 
 - 1.1 should introduce LLM/agentic methods as a technology and industry trend, not only as an application workload. The narrative should distinguish two roles of LLMs:
@@ -204,6 +223,7 @@ Use external evidence sparingly and precisely. Data should support the problem c
   - LLM/agentic methods are changing how complex engineering workflows are automated.
 - 1.2 should connect agentic methods to chip-design productivity. Use EDA vendor evidence and AI-assisted design papers to show that the industry is exploring agents for long, multi-tool workflows, but emphasize the correctness, verification, maintainability, and observability risks.
 - 1.3 should provide the thesis-level constraint: agentic methods can serve cross-hardware-architecture co-design only when architecture interfaces, compiler infrastructure, semantic gates, runtime/profiling feedback, and evidence memory provide a harness.
+- 1.4 should concentrate the full agentic evidence chain: OpenAI/Anthropic -> AlphaEvolve -> AVO -> Agentic EDA/verification-agent -> report-level harness judgment.
 - 1.5 should not name a separate "agent problem". It should absorb the agent trend into the third core question: how compilation interfaces connect program semantics, hardware capabilities, runtime feedback, and verifiable reusable evidence loops.
 
 ## Writing Rules For Evidence

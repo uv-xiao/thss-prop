@@ -319,3 +319,9 @@
   - Context: User refined the evidence priority for LLM/agentic trend and harness discussion.
   - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
   - Agent interpretation: For Chapter 1 and Chapter 5 evidence, prioritize NVIDIA AVO as the technical anchor for agentic kernel/compiler optimization on industrial GPUs; Google DeepMind AlphaEvolve as the anchor for evaluator-driven evolutionary coding agents; Anthropic/OpenAI official reports/system cards as the anchor for agentic coding workflows, tool use, sandboxing, testing/review, human oversight, and safety boundaries.
+
+- 2026-05-06 00:00 Asia/Shanghai - Agentic evidence chain and AVO positioning
+  > 支持 / 可以 / 接受
+  - Context: User accepted the grill-me decisions on AVO/AlphaEvolve/OpenAI/Anthropic evidence roles and Chapter 5.4 positioning.
+  - Related: `docs/writing/introduction-evidence-plan.md`, `report/docs/report_structure_redesign_spec.md`, `docs/writing/preferences.md`, `report/docs/agent_writing_guidelines.md`
+  - Agent interpretation: Chapter 1.4 should not list agentic examples flatly. It should build the chain OpenAI/Anthropic engineering agents -> AlphaEvolve evaluator-constrained coding agents -> NVIDIA AVO industrial GPU kernel/compiler optimization -> Agentic EDA/verification-agent risks -> report-level model-tool-evidence loop. AVO is direction evidence for Chapter 5.4, not a narrow competitor; our harness differs by broader operator scope, systematic IR/pass/formal/profiling/regression/runtime constraints, heterogeneous architecture assumptions, and maintainable long-term evidence memory.
