@@ -50,6 +50,7 @@ Every full-report revision must preserve this arc:
 - Treat the overall co-design framework and focused single-point optimization techniques as equally important; the report needs both system architecture and deep technical mechanisms.
 - For ISAMORE specifically, describe both sides in detail: reusable custom instructions as a key mechanism for agile chip design, and e-graph anti-unification as the core method innovation enabling reusable instruction discovery.
 - In representative technical sections, prefer source-backed algorithms, formulas, problem formulations, state transitions, cost models, and scheduling rules over additional experimental figures. Experiments should mainly list the key conclusion data and explain which mechanism the data validates, unless an original experimental figure is indispensable for understanding the result.
+- Never insert only one subfigure from a source-paper composite figure. If the original paper presents a grouped figure, preserve the grouped figure as a semantic whole; discuss the relevant panel in prose or caption instead of cropping or extracting it alone.
 
 ## Research Question Discipline
 

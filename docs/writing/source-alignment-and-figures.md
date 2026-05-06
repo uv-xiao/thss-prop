@@ -11,8 +11,27 @@
 - 技术方法部分应优先补充源文中的算法、公式、递推关系、代价模型、调度约束和问题形式化。实验部分以列举主要结论数据和解释其支撑的技术机制为主，不应为了完整复现论文评测而过多引用实验图片。
 - 正文实际引用的 `resources/` 图表需要复制到 `report/assets/<work>/` 下，再由 `report/main.typ` 引用；不要在报告正文中直接用 `../resources/...` 路径。
 - 技术章节优先选用对应论文原始 LaTeX 实际 `\includegraphics` 或 `\input` 使用的图表。若 `drawio/`、`fig/` 或 `results/` 中存在多页导出或同名候选，必须按源文引用选择具体页面，不能只因为文件存在于 `resources/` 就放入报告。
+- 如果源文图是组图，必须保持组图完整。不得只截取或插入其中某一个子图；即使正文重点解释某一 panel，也应插入完整组图，并在中文图题或正文中说明 “图 xa/xb/xc” 的对应含义。
 - 单栏报告中的图片宽度应按信息密度和长宽比逐一设置：近方形或高图通常控制在 75%--86%，宽流程图可放宽到 90%--96%，极宽结果图可接近满栏；避免图过大压迫正文，也避免关键标签因缩放过小而不可读。
 - 对英文图内文字暂不强制重绘；图题和正文解释应使用中文，并与 `docs/writing/terminology-decisions.md` 和已确认术语保持一致。
+
+## Typst 组图排版模板
+
+Typst 目前没有内建完整 subfigure 语法。需要把多个 panel 重组为一个父 `#figure(...)` 时，参考 Typst issue 246 的 workaround：用 `grid` 或 `stack` 放置所有子图，并只给父图一个正式 caption。若需要子图标注，优先把 `(a)`、`(b)` 写入子图局部 caption 或正文说明，不要把子图作为独立图号插入。
+
+```typ
+#figure(
+  grid(
+    columns: 2,
+    gutter: 1em,
+    [#image("assets/work/panel-a.pdf", width: 100%) #align(center)[(a) 子图说明]],
+    [#image("assets/work/panel-b.pdf", width: 100%) #align(center)[(b) 子图说明]],
+  ),
+  caption: [完整组图中文图题。说明每个 panel 的技术含义，并点明正文重点讨论的 panel。],
+)
+```
+
+若源文已经有完整组合 PDF/PNG，应优先直接复制并插入完整组图，而不是用上述模板重新拼接。
 
 ## 2026-05-06 图表来源复查
 
