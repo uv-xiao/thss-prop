@@ -156,13 +156,36 @@ Cayman 的关键贡献之一是把处理器-加速器数据访问接口显式纳
 #pagebreak()
 
 #block(breakable: false)[
-  #rect(width: 100%, inset: 6pt, stroke: gray + 0.7pt)[
+  #rect(width: 100%, inset: 7pt, stroke: gray + 0.7pt)[
     #align(center)[Cayman 源文中的性能估计、候选选择递推和过滤规则]
-    #text(size: 7.4pt)[
-      收益估计：`Speedup = T_all / (T_all - T_cand + Cycle_cand / F)`，其中 `T_all` 是原程序总时间，`T_cand` 是候选区域剖析时间，`Cycle_cand` 是候选加速器估计周期数，`F` 是目标频率。\
-      状态转移：若 `v` 为基本块，`F[v] <- pareto(accel(v, R))`；若 `v` 为控制流区域，`F[v] <- pareto(accel(v, R) union tensor_(u in v.children) F[u])`；否则 `F[v] <- pareto(tensor_(u in v.children) F[u])`。\
-      兄弟组合：`F[u_1] tensor F[u_2] = pareto({phi_1 union phi_2 | phi_1 in F[u_1], phi_2 in F[u_2]})`，用于组合互不重叠子树候选。\
-      解过滤与复杂度：若首个满足 `a_j > alpha a_i` 的解为 `phi_j`，则移除 `{phi_(i+1), ..., phi_(j-1)}`，候选序列规模由 `A` 降为 `log_alpha A` 量级；总复杂度为 `O(N log_alpha^2 A + E)`。
+    #text(size: 7.6pt)[
+      收益估计将候选区域的剖析时间、估计硬件周期数和目标频率统一到端到端加速比中：
+      $
+        "Speedup" = T_"all" / (T_"all" - T_"cand" + C_"cand" / f)
+      $
+      其中 $T_"all"$ 为原程序总时间，$T_"cand"$ 为候选区域剖析时间，$C_"cand"$ 为候选加速器估计周期数，$f$ 为目标频率。
+
+      对 wPST 节点 $v$，动态规划状态 $F[v]$ 表示其子树内的帕累托最优候选序列：
+      $
+        F[v] <- "筛选"("帕累托"("加速"(v, R))) quad "若 " v " 为基本块"
+      $
+      $
+        F[v] <- "筛选"("帕累托"("加速"(v, R) union "组合"_(u in "子节点"(v)) F[u])) quad "若 " v " 为控制流区域"
+      $
+      $
+        F[v] <- "筛选"("帕累托"("组合"_(u in "子节点"(v)) F[u])) quad "其他情况"
+      $
+
+      兄弟子树通过张量组合表达互不重叠区域的联合选择：
+      $
+        F[u_1] op("⊗") F[u_2] =
+        "帕累托"({phi_1 union phi_2 | phi_1 in F[u_1], phi_2 in F[u_2]})
+      $
+
+      解过滤规则移除面积过近的中间解。若 $phi_j$ 是首个满足 $a_j > alpha a_i$ 的解，则删除 $phi_(i+1), dots, phi_(j-1)$，使候选序列规模从 $A$ 降到 $"log"_alpha A$ 量级；总复杂度为
+      $
+        O(N ("log"_alpha A)^2 + E)
+      $
     ]
   ]
 ]
