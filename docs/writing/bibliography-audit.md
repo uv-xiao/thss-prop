@@ -49,6 +49,25 @@ This file records evidence for bibliography entries and report claims. It is not
 - Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
 - Open gaps: final venue and exact publication metadata need confirmation.
 
+### hector2022
+
+- Source: `resources/cement/refs.bib` entry `HECTOR`
+- Additional sources: `resources/skyegg/doc/7_evaluation.tex`, `resources/cement/doc/7_Related_Work.tex`
+- Accessed: 2026-05-06
+- Evidence inspected: ICCAD 2022 metadata and abstract describing HECTOR as a two-level MLIR-based IR for hardware synthesis, with a high-level IR binding computation to timing-annotated control graph and a low-level IR for hardware modules and elastic interconnects; SkyEgg evaluation uses HECTOR as a baseline/native scheduling flow.
+- Supports: Chapter 3 claims about HECTOR as early hardware synthesis infrastructure and a foundation for later MLIR/HLS/e-graph synthesis work.
+- Metadata confidence: high for metadata from local BibTeX; use detailed method claims only at abstract level unless full paper is inspected.
+- Open gaps: inspect full PDF before adding fine-grained HECTOR implementation details.
+
+### clay2025
+
+- Source: `resources/isamore/refs.bib` entry `peng_clay_2025`
+- Accessed: 2026-05-06
+- Evidence inspected: ICCAD 2025 metadata and abstract describing Clay as an open-source high-level ASIP framework with unified instruction extension interface, microarchitecture-agnostic actions, microarchitectural attributes, CADL, microarchitecture-aware synthesis, coupling strategy selection, and evaluation across Clay-core and Rocket-core.
+- Supports: Chapter 3 claims about Clay as a microarchitecture-aware ASIP framework and a major subsection for hardware frontend and synthesis optimization.
+- Metadata confidence: medium-high for metadata and abstract; lower for detailed algorithms because the full paper has not been inspected in this workspace turn.
+- Open gaps: add or inspect full paper PDF before expanding Clay experiments and internal mechanisms beyond abstract-supported claims.
+
 ### skyegg2026
 
 - Source: `resources/skyegg/doc/1_introduction.tex`

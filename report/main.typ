@@ -249,59 +249,57 @@ Cayman 在多个 benchmark 上相对两个 state-of-the-art frameworks 分别取
 
 == 引言
 
-本章目标：回答架构能力如何高质量落到可综合、可验证、性能与资源可控的硬件实现。
+第二章讨论了领域能力如何被识别、表达并接入架构接口，但架构能力本身并不等于高质量硬件实现。一个自定义指令、加速器 region 或硬件前端描述，只有在时序、面积、资源、接口协议、控制逻辑和验证条件都满足目标约束时，才能真正成为可部署的系统能力。因此，本章围绕第一章提出的第二个核心科学问题展开：架构能力如何高质量落到可综合、可验证、性能与资源可控的硬件实现。
 
-写作 TODO：
-- 覆盖 HECTOR、Cement、Clay、SkyEgg。
-- 顺序固定为 HECTOR -> Cement -> Clay -> SkyEgg。
-- HECTOR 是早期技术框架积累，着重概括但不按一作代表性工作展开。
+这一问题的难点在于硬件实现质量来自多个层次的共同决定。RTL 能提供细粒度控制，但抽象层次低、生产率不足；HLS 能从软件描述生成硬件，却常把关键微架构决策隐藏在 pragma 和启发式调度之后；硬件 DSL 与 IR 试图提高表达能力和可分析性，但如果不能携带时序、资源和映射信息，仍难以形成可预测结果。因此，本章按 HECTOR、Cement、Clay、SkyEgg 的顺序组织：HECTOR 作为早期多层 IR 与硬件综合基础设施积累，提供后续工作的技术背景；Cement 关注周期确定型硬件行为表达；Clay 关注面向 ASIP 的微架构感知前端与综合机制；SkyEgg 则把代数变换、硬件映射和调度放入统一 e-graph 设计空间，形成对高质量硬件实现问题的进一步推进。
 
 == 综合基础设施积累：HECTOR
 
-写作 TODO：
-- 概括 HECTOR 的 MLIR 多层 IR、高层综合基础设施和工具链支撑。
-- 说明 HECTOR 如何为 Clay/SkyEgg 提供硬件 IR、综合流程组织或可扩展接口。
-- 不详细展开实现细节，但不能简略带过。
+HECTOR 是本人较早参与的硬件综合基础设施工作，其意义在于把硬件综合问题从单一 HLS 工具实现，推进到基于多层 IR 的方法学表达。传统 HLS 工具、硬件生成器和领域专用 DSL 往往各自实现一套前端、IR、调度、生成和优化流程，工程成本高，方法难复用。HECTOR 提出基于 MLIR 的两层 IR：高层 IR 将 computation 与带 timing information 的 control graph 绑定，低层 IR 则用于描述硬件模块和 elastic interconnections，并可进一步转换为 synthesizable RTL @hector2022。
 
-Source paths:
-- `resources/` 中 HECTOR 相关材料，待定位。
+HECTOR 对本报告的作用不在于作为最重要的代表性工作展开，而在于提供了后续研究反复依赖的基础设施视角。它说明硬件综合可以被组织成多层 IR、转换 pass、调度信息和 RTL lowering 的组合，而不是只能依赖黑盒 HLS 或手写 RTL。基于这一思想，后续 Cement、Clay、SkyEgg 等工作都可以被理解为在不同维度上深化 HECTOR 开启的问题：Cement 强调前端语言必须显式表达周期行为和 timing constraints；Clay 强调 ASIP 指令扩展的 coupling strategy 和 microarchitectural attributes 需要进入综合约束；SkyEgg 则强调 algebraic transformation、mapping 和 scheduling 不应被拆成固定顺序的阶段。
+
+因此，HECTOR 在本文中承担“综合基础设施积累”的角色。它为本章后续讨论提供两个重要判断。第一，硬件实现质量需要 IR 层支撑，只有把控制、时序、模块连接和 lowering 边界显式化，后续方法才有可分析对象。第二，多层 IR 本身还不够，IR 中携带哪些时序、资源、接口和映射信息，决定了工具能优化到什么程度。Cement、Clay 和 SkyEgg 分别从前端时序表达、微架构感知综合和联合优化三个方向回答这一问题。
 
 == 周期确定型硬件前端：Cement
 
-写作 TODO：
-- 说明 HDL/HLS/DSL/IR 的现状与局限。
-- 展开 CmtHDL 的 event layer、control sub-language。
-- 展开 CmtC 的 timing analysis、FSM synthesis。
-- 补充 PolyBench、systolic array、sparse accelerator 等实验。
+Cement 面向 FPGA 加速器设计中的一个长期矛盾：设计者需要硬件级别的微架构表达和时序控制，但 RTL 生产率低、HLS 结果难预测、许多 DSL 又只覆盖特定结构。HDL 能直接描述连接和寄存器传输，却缺少对跨周期行为的显式表达，复杂 FSM 和流水线控制需要大量手工设计；HLS 从 C/C++ 等软件语言出发，依赖 pragma 与启发式调度补足微架构信息，导致同一设计在不同工具版本或配置下可能产生不可预测结果；部分 DSL 提升了安全性或特定并行模式表达，但往往牺牲一般微架构能力。Cement 因此提出 cycle-deterministic eHDL CmtHDL 与 CmtC 编译器，目标是在不牺牲微架构表达力的前提下，提高硬件前端生产率和结果可预测性 @cement2024。
 
-Source paths:
-- `resources/cement/`
+CmtHDL 嵌入 Rust，先利用 Rust trait 和宏系统定义 data types、bundles、interfaces、module instantiation、operations 和 port connections，再引入 event layer 与 control sub-language。event layer 用 event 表示一组带 guard 的硬件行为，并显式记录这些行为发生的 cycle sequence；control sub-language 用 `seq`、`par`、`if`、`for`、`while`、`step` 等 procedural statements 描述 event 的时序关系，使设计者能够直接表达确定的跨周期行为。与普通 RTL 只描述“每周期连接如何生效”不同，CmtHDL 允许设计者把“哪些行为在哪些周期发生”作为一等对象写入前端表示 @cement2024。
+
+这一抽象对复杂控制逻辑尤其重要。以 shuffler 和 arbiter pipeline 为例，HDL 设计者需要手工保证发送、仲裁、接收和 resend 之间的周期对齐；HLS 版本则可能因为软件循环依赖模型和工具启发式调度而无法稳定达到 II=1。CmtHDL 可以用 `seq` statement 明确流水线不同 stage 的 timing，并由 CmtC 检查 timing violation。这种 cycle determinism 不是简单固定延迟，而是在静态或动态输入条件下保证 event 的执行周期可推导、可检查、可综合，从而降低手工 FSM 和流水线控制中的隐性错误。
+
+CmtC 的核心编译能力包括 timing analysis 和 FSM synthesis。Timing analysis 分为 static analysis 和 dynamic monitoring：前者对 elaboration-time 可确定的 static events/statements 推导 cycle sequence，在仿真前发现数据收发周期不匹配；后者在仿真中插入 monitor signals 和 assertions，用于捕获数据相关行为下的 timing violations。FSM synthesis 则从 control sub-language 生成严格满足时序规格的控制逻辑，并用 state tree representation、transition table 和编码优化减少 FF/LUT 开销。这使 Cement 不只是前端语法改进，而是在语言、分析和综合之间形成闭环：设计者显式写出时序，编译器检查时序并生成资源优化的控制电路 @cement2024。
+
+实验上，Cement 在 PolyBench、systolic array 和 sparse accelerator 等案例中展示了周期确定前端的实际价值。相对 Vitis HLS，Cement 在未流水和流水配置下分别获得 1.41x 和 1.52x 几何平均加速，并平均节省 23%/47% LUT 和 68%/78% FF；相对 Dahlia-Calyx flow，Cement 获得 3.49x 几何平均加速，并节省 54% LUT 和 82% FF。Systolic array case study 中，CmtHDL 通过显式周期对齐降低开发成本，并相对 EMS 节省 49% LUT 和 23% DSP，频率提升 7%，throughput per DSP 提升 33%。Sparse accelerator case study 中，CmtHDL 用更少代码描述 shuffler，并相对 Vitis HLS 方案提升频率、显著节省 LUT/FF。这些结果说明，硬件前端的价值不仅在于“写得更快”，也在于使时序行为可预测、可检查、可综合优化 @cement2024。
 
 == 面向硬件实现质量的前端抽象与综合机制：Clay
 
-写作 TODO：
-- Clay 是一作/共同一作工作，应作为重要子章节。
-- 不写成 Cement 的后续版本，而写成与 Cement 的分工互补：Cement 偏前端表达和周期确定性，Clay 偏实现质量与综合机制。
-- 需要先阅读资源后补充问题背景、核心抽象、实现流程、实验结果。
+Clay 与 Cement 不是版本递进关系，而是面向不同硬件实现问题的互补工作。Cement 关注 FPGA 设计前端如何显式表达周期行为和控制逻辑；Clay 则回到 ASIP/ISAX 场景，关注自定义指令如何在不同处理器微架构和 coupling strategy 下获得灵活、高质量实现。现有 ASIP 工具通常从高层 ADL 生成硬件和软件 artifacts，但许多工具只支持特定处理器上的 in-pipeline coupling strategy，导致两类限制：一是指令扩展被限制在 stateless behavior，难以实现高效 loop 等状态化控制；二是 register file 和 memory interaction 被固定微架构约束限制，阻碍自定义指令跨处理器部署 @clay2025。
 
-Source paths:
-- `resources/` 中 Clay 相关材料，待定位。
+Clay 提出 open-source high-level ASIP framework，核心是把不同 coupling strategies 抽象为 microarchitecture-agnostic actions 和 microarchitectural attributes。Clay ADL（CADL）将接口 action 与高层语法结合，用于描述一般、可带状态的 instruction behavior；microarchitecture-aware synthesis flow 则把 microarchitectural attributes 建模为约束，并为每条自定义指令选择合适 coupling strategy 与调度实现 @clay2025。这个设计相当于把第二章讨论的“架构接口”进一步细化到实现层：同一个指令语义在不同处理器、不同耦合位置、不同寄存器/内存访问路径下，其最佳实现可能不同，工具必须把这些微架构属性放入综合决策。
+
+从本章角度看，Clay 的贡献在于把 ASIP 前端表达与硬件实现质量直接关联起来。APS 强调跨 RoCC/CV-X-IF 的统一 transaction 接口，Aquas 强调复杂访存接口选择，ISAMORE 强调可复用指令发现；Clay 则进一步追问：当一个自定义指令已经被选中并描述出来，应该以何种 coupling strategy 接入处理器流水线或协处理器接口，如何表达 stateful behavior，如何调度 register/memory interactions，如何在 Clay-core 和 Rocket-core 等不同 RISC-V processors 上获得稳定性能收益。Clay 在 diverse workloads 上展示了跨两类 RISC-V processors 的 substantial performance improvements @clay2025，这说明微架构感知不是实现细节，而是决定自定义指令能否灵活部署和高效执行的关键。
+
+Clay 因此在本章承担连接第二章与第三章的角色。它继承第二章中领域定制与 ASIP/ISAX 的问题对象，但把关注点从“识别和接入能力”转向“如何高质量实现能力”。它也与 Cement 形成互补：Cement 通过 event/control 表达和 timing analysis 解决一般硬件行为的周期确定性；Clay 通过 microarchitecture-agnostic actions、microarchitectural attributes 和 synthesis constraints 解决 ASIP 指令扩展在不同处理器微架构上的实现质量问题。二者共同说明，高质量硬件实现需要前端表达携带足够的时序、接口和微架构事实，而不是把这些事实留给后端黑盒工具猜测。
 
 == 变换、映射与调度联合优化：SkyEgg
 
-写作 TODO：
-- SkyEgg 是本章方法高潮，并过渡到第四章 EggMind。
-- 展开 HLS 顺序流程局限、e-graph 统一设计空间、mapping candidates as rewrite rules、ILP extraction as scheduling、ASAP heuristic。
-- 补充评估结果和意义，不压缩 Clay 篇幅。
+前面三个小节分别从基础设施、前端时序表达和微架构感知 ASIP 综合角度讨论硬件实现质量。SkyEgg 则进一步指出，许多硬件综合质量问题并不是单个前端或调度器可以解决的，而来自 algebraic transformation、operation mapping 和 scheduling 被人为拆成固定顺序的阶段。传统 HLS 通常先进行若干前端优化，再调度到时钟周期，最后把操作绑定到资源或 IP；但调度需要知道 mapping 的精确 latency 和 resource behavior，mapping 又依赖调度决定操作在何时执行，代数变换也可能是获得更好映射的前提。把这些阶段分开，会错过需要跨层联合选择才能发现的高质量实现 @skyegg2026。
 
-Source paths:
-- `resources/skyegg/`
+SkyEgg 采用 e-graph 统一表达 algebraic transformation 和 hardware mapping design space。它把 MLIR 程序转换为 e-graph，并把 FPGA mapping candidates 也表示为 rewrite rules，使 operation rewrites 与 mapping choices 在同一个等价空间中展开。与传统 equality saturation 在饱和后用 cost extraction 选择单个表达式不同，SkyEgg 将 extraction 改写为 scheduling problem：在饱和后的 e-graph 上用 ILP 选择合法的 mapping 和 schedule，并以全局性能为目标进行优化。这个 formulation 能同时考虑表达式变换、资源映射和时序安排，使“哪种代数形式更好”不再只由软件代价模型决定，而由具体硬件 mapping 和 schedule 的综合结果决定 @skyegg2026。
+
+为了提高可扩展性，SkyEgg 还提出 ASAP heuristic scheduler，在保持接近 ILP 性能收益的同时显著降低求解时间。评估中，SkyEgg 相对 Xilinx Vitis HLS 在多类 benchmark 上获得 3.10x 平均加速、最高 5.22x 加速；ILP 和 ASAP scheduler 在 FF/LUT 使用上保持竞争力，并且所有 SkyEgg 设计都满足 timing constraints，而 Vitis HLS 在高目标频率下有 48% case 不能 meet timing。ASAP heuristic 可以在一秒内扩展到超过 600 个 operations，同时维持主要性能收益 @skyegg2026。
+
+SkyEgg 是本章的方法高潮，因为它把前三节强调的几个判断合到同一个优化框架中。HECTOR 说明硬件综合需要 IR 化和多层方法学支撑；Cement 说明时序行为必须显式表达并可检查；Clay 说明微架构属性和 coupling strategy 必须进入综合约束；SkyEgg 则说明一旦这些事实进入 IR/设计空间，工具还需要避免固定 pass order 和阶段割裂，把变换、映射与调度作为联合问题求解。由此，本章从“如何表达硬件”推进到“如何在语义等价空间和硬件映射空间中选择高质量实现”。
+
+这一点也自然引出第四章。SkyEgg 仍主要依赖预定义 rewrite rules、mapping candidates、ILP/heuristic scheduler 和工程化 cost formulation；随着设计空间变大，哪些规则应当被应用、哪些策略能在不同任务上复用、如何把专家经验和历史证明转化为可审计策略，成为新的问题。第四章中的 EggMind 正是在 SkyEgg/ISAMORE 所代表的 e-graph 优化基础上，把 LLM 的策略生成能力纳入形式化可控的 EqSat 策略对象中，进一步讨论大模型与形式化技术如何共同服务软硬件协同。
 
 == 本章小结
 
-写作 TODO：
-- 回到第一章问题 2。
-- 通过 SkyEgg 过渡到 e-graph 策略自动化和大模型/形式化方法。
+本章回应第一章提出的第二个科学问题：架构能力如何高质量落到可综合、可验证、性能与资源可控的硬件实现。HECTOR 提供了基于 MLIR 多层 IR 的早期硬件综合基础设施视角，说明硬件实现质量需要结构化 IR 和 lowering 流程支撑。Cement 强调前端必须显式表达周期行为，并通过 timing analysis 与 FSM synthesis 保证硬件行为可预测、可检查、可综合优化。Clay 将这一问题带回 ASIP/ISAX 场景，强调 coupling strategy、microarchitectural attributes 和 synthesis constraints 对自定义指令实现质量的决定性作用。SkyEgg 则进一步把 algebraic transformation、operation mapping 和 scheduling 统一到 e-graph 设计空间中，避免固定阶段顺序造成的次优实现。
+
+这些工作共同说明，高质量硬件实现不是后端工具的附属结果，而需要从前端表达、IR 设计、时序语义、微架构属性、映射选择和调度求解共同组织。它们也为下一章奠定了方法基础：当 e-graph、MLIR、硬件 IR 和综合反馈成为软硬件协同的核心对象后，大模型和 agentic 方法若要进入这一流程，就必须操作这些结构化对象，并受到形式化语义、验证检查和执行证据约束。
 
 = 大模型与形式化技术驱动的软硬件协同方法
 
