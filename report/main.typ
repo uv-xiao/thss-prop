@@ -357,67 +357,71 @@ OriGen 的意义在于把大模型硬件生成从“一次性生成 RTL”推进
 
 == 未来工作总体目标
 
-本章目标：把前三章现有工作提炼出的剩余问题组织为三个概括性未来方向，构建可解释、可验证、可自动演化、可运行时落地的软硬件协同系统闭环。
+前文的现有工作展示了三条已经形成基础的研究线索：面向应用和架构的可编程接口能够降低领域定制门槛，面向硬件实现的前端抽象和综合优化能够提高 RTL 生成与硬件设计效率，大模型与形式化技术结合能够把策略生成、反馈修复和证据积累引入编译与硬件设计流程。但这些工作也共同暴露出更深层的剩余矛盾：软硬件协同的对象已经从单个模块、单条 pass 或单个 kernel 扩展到架构接口、硬件结构、编译流程、运行时调度和产业级系统部署的联合空间，而现有工具链仍然缺少一个能够同时保持语义边界、生成能力、验证证据和运行反馈的系统化方法。
 
-写作 TODO：
-- 说明第五章不是项目列表，而是从已有工作自然推出的剩余矛盾。
-- 三个方向顺序固定：验证约束下的架构、硬件与编译协同生成；可解释、可审计的编译基础设施；面向工业级异构架构的算子优化与运行时编译协同。
+因此，未来工作不应被理解为若干已有项目的线性延伸，而应围绕“敏捷芯片设计与创新性编译技术驱动的软硬件协同”这一主题，进一步回答三个问题。第一，在架构、硬件和编译支持都需要快速生成与协同演化的情况下，如何让生成过程始终受验证约束，而不是退化为不可审计的自由生成。第二，当编译器成为连接应用语义、架构事实、硬件能力和运行时反馈的核心接口时，如何构建对人和 agent 都可解释、可审计、可复现的编译基础设施。第三，在工业级异构架构上，如何把算子优化、编译决策、运行时任务图、数据移动和 profiling 反馈组织为长期演化的工程闭环，使单点优化技术能够落到复杂系统中。
+
+围绕上述问题，本章提出三个相互支撑但各有侧重的未来方向：验证约束下的架构、硬件与编译协同生成；可解释、可审计的编译基础设施；面向工业级异构架构的算子优化与运行时编译协同。三者之间不是简单上下游关系。第一个方向关注生成对象的跨层一致性，第二个方向关注编译接口和证据组织方式，第三个方向关注产业级异构系统中的性能闭环。它们共同构成从方法、基础设施到场景落地的研究路线。
 
 == 验证约束下的架构、硬件与编译协同生成
 
-写作 TODO：
-- Spine 是该方向已有基础或原型，但小节标题不用 Spine。
-- Spine 既承接 APS/Aquas 的端到端协同框架，也是 OriGen 所代表的大模型硬件生成方法向系统级协同生成的延伸。
-- 展开 semantic boundary、typed artifacts、staged hardware generation、staged compiler lowering、executable oracle、cross-layer checks。
+第一项未来工作面向架构、硬件与编译支持的协同生成。第二章中的 APS/Aquas 已经说明，若应用接口、架构描述、编译 IR 和硬件生成流程能够被统一组织，领域定制处理器和近数据处理系统就可以从“手工拼接工具链”转向“由接口驱动的端到端协同”。第四章中的 OriGen 则说明，大模型可以在 RTL 生成中利用 compiler feedback 进行修复和迭代，但其对象仍主要停留在局部 RTL 代码和编译错误反馈。下一步需要把这两类思路结合起来：让大模型进入架构、硬件和编译的联合生成过程，但让语义边界、类型化产物和可执行验证始终作为权威约束。
 
-Source paths:
-- `resources/spine/`
-- `resources/compiler-infra-is-harness-medium.md`
-- `resources/aps/`
-- `resources/aquas/`
-- `resources/origen/`
+该方向的核心判断是，软硬件协同生成不能把自然语言需求直接映射为不可分解的 RTL 或编译器代码，而应先建立明确的 semantic boundary。该边界把人的需求、算法意图、架构约束和 agent 提案转化为类型化 artifact，例如接口描述、任务/actor 语义、硬件阶段性表示、编译 lowering 计划、验证 obligation 和执行 trace。自然语言可以帮助解释需求、提出候选和组织修复，但不能成为系统事实本身；系统事实必须由可解析、可执行、可重放的对象承载。
+
+在具体方法上，未来工作将研究 staged hardware generation 与 staged compiler lowering 的协同框架。硬件侧不一次性生成完整实现，而是从架构接口、并发语义、通信协议和存储结构开始，逐步进入 microarchitecture、RTL 和综合约束；编译侧也不直接生成目标后端，而是从程序语义、target facts、IR lowering、pass sequence 和 runtime ABI 逐步推进。两个过程通过共同的 executable oracle 和 cross-layer checks 对齐：同一个任务或算子应当能够在高层语义模型、硬件原型、编译产物和运行时执行之间产生可比较的 trace；若 trace 不一致，系统应能定位责任边界，例如接口语义错误、lowering 错误、调度错误或硬件实现错误。
+
+这种方法也是对 Spine 原型思路的系统化提升。已有基础已经包含 Delta actor/task surface、generator-backed execution、trace stream、case report 和严格 GCD Delta-to-RTL validation path 等要素，说明小规模语义 oracle、任务执行和 RTL 对齐可以被组织为可重放证据。未来研究需要进一步扩大该机制的覆盖面：一方面，使架构描述能够表达 APS/Aquas 类系统中的处理器-加速器接口、存储/缓存约束和 domain-specific operation；另一方面，使 agent 能够在 bounded action space 中提出接口修订、硬件结构候选、编译 lowering 候选和修复建议，并由类型检查、仿真、等价性检查、综合反馈和运行 trace 共同筛选。
+
+预期贡献不是单纯“用大模型生成硬件”，而是提出一套验证约束下的协同生成方法。其关键科学问题包括：如何定义跨层语义边界，使架构、硬件和编译对象可以共同引用同一组事实；如何设计 typed artifacts，使 agent 的修改具有明确所有权、输入输出和验证责任；如何组织 executable oracle，使高层语义、硬件实现和编译产物可以持续对齐；以及如何将反例和 trace 转化为可复用的修复知识。若该方向能够成立，敏捷芯片设计将不再只依赖更快的单点生成器，而可以依赖一个带有语义、证据和反馈的协同生成系统。
 
 == 可解释、可审计的编译基础设施
 
-写作 TODO：
-- IntelliC 是本方向主要未来工作载体，但标题和论证对象是可解释、可审计的编译基础设施。
-- 使用“目标事实 -> 显式 IR 与语义契约 -> 受约束变换 -> 可执行后端产物 -> 证据与反馈”的论证链。
-- 展开 syntax/semantics 分离、TraceDB、rewrite/gate 证据、agent action 安全边界。
-- 说明 Spine 提供架构/硬件目标描述与证据，IntelliC 提供编译生成、验证和证据组织层。
+第二项未来工作面向可解释、可审计的编译基础设施。第一章已经指出，编译与架构是衔接软硬件领域的重要接口；第二、三、四章进一步说明，无论是 APS/Aquas 的端到端处理器生成、ISAMORE 的 phased EqSat 与 custom instruction 复用、SkyEgg 的 e-graph HLS 优化，还是 EggMind 的 EqSatL 策略合成，真正困难的部分都不是孤立 pass 的实现，而是如何让目标事实、IR 表达、语义约束、变换过程、后端产物和评价证据保持一致。大模型和 agentic 方法进入这一过程后，编译基础设施更不能只是“可运行”的脚本集合，而必须成为可解释、可审计、可复现的 harness medium。
 
-Source paths:
-- `resources/IntelliC/`
-- `resources/compiler-infra-is-harness-medium.md`
+该方向将以“目标事实 -> 显式 IR 与语义契约 -> 受约束变换 -> 可执行后端产物 -> 证据与反馈”为基本链条。目标事实包括并行层级、存储层级、通信与同步约束、指令语义、layout 限制、runtime ABI 和 profiling 能力；显式 IR 负责承载程序结构与变换边界；语义契约负责说明 operation、region、dialect 和 backend artifact 的含义；受约束变换负责把 analysis、rewrite、pass、gate、semantic execution 和 agent action 统一到可记录的 action 机制中；后端产物包括可执行代码、调度计划、kernel、runtime 配置和验证脚本；证据与反馈则包括 TraceDB 中的 facts/events、rewrite 证据、gate 结果、测试输出、profiling 数据和人工审阅记录。
+
+IntelliC 的未来研究重点正是构建这样一类编译基础设施。其基础设计将 IR 拆分为 `Sy + Se`：`Sy` 负责 syntax、结构、identity、verification、canonical text 和 parsing，`Se` 负责由 typed SemanticDef、semantic level keys 和 TraceDB 承载的语义定义。这样的拆分避免把语义隐藏在 parser 或 pass 的临时状态中，也避免把 agent 的解释当作编译事实。一个 operation 可以有 concrete value、abstract range、symbol、backend evidence 等多个语义层级；同一个 pass pipeline 可以通过 TraceDB 记录 match、mutation intent、semantic fact、diagnostic、obligation 和 evidence link，从而让人和 agent 都能追踪“为什么发生了这个变换、它依赖哪些事实、通过了哪些 gate、产生了哪些后端证据”。
+
+在 agent 参与方面，编译基础设施需要明确区分 fixed action、agent action 和 agent-evolved fixed action。固定 action 可以是传统编译 pass、验证 gate 或后端 handoff；agent action 可以在受限输入、受限输出和明确 evidence schema 下提出候选变换、候选 pass sequence 或诊断解释；agent-evolved fixed action 则需要经过测试、语义检查和审计后，才被固化为可复用的 pipeline 组件。这样的边界是必要的，因为编译器中的错误往往具有跨层传播性：一个看似局部的 rewrite 可能破坏 layout 假设、别名关系、同步语义或后端 ABI。若没有 TraceDB、gate 和 mutation intent 等显式证据，agent 的“合理解释”很难转化为可信编译行为。
+
+该方向与前一方向互补。验证约束下的协同生成需要架构/硬件目标描述、可执行 oracle 和跨层 trace；可解释编译基础设施则提供 IR、语义、action、pass、backend handoff 和 evidence memory。换言之，前一方向回答“生成对象如何跨架构、硬件和编译保持一致”，本方向回答“编译层如何把这些对象变成可检查、可演化、可被 agent 使用的基础设施”。预期成果包括一个最小可执行 compiler slice：从 Python construction surface 生成 MLIR/xDSL 风格 IR，经过结构验证、语义执行、canonicalization、rewrite/gate、backend evidence 和 TraceDB 审计，并用包含 loop-carried semantics 的非平凡例子证明该链条不是玩具级直线程序。
 
 == 面向工业级异构架构的算子优化与运行时编译协同
 
-写作 TODO：
-- 本方向采用并列双子线组织，不写成上下游闭环绑定。
-- 子线一：工业级异构架构上的芯片算子自动优化，重点来自 `resources/seed-proposal.docx`，包括复杂 fused 算子、Torch 训练/推理算子、长程 Agent Harness、IR/Pass/profiling/形式化辅助优化和回归验证。
-- 子线二：运行时分布式协同，重点来自 PTO Runtime distributed features，包括任务图执行、异构设备边界、数据移动、ready/completion protocol、TensorMap/RingBuffer 扩展和可观测性。
-- 写 AVO 时作为“方向正确但问题仍未被系统解决”的外部证据，不写成窄义 baseline 或竞品。
+第三项未来工作面向工业级异构架构的算子优化与运行时编译协同。它不是前两个方向的简单应用，而是一个独立的产业级压力测试：当目标从单个可控硬件原型扩展到真实异构系统时，编译器不仅要生成高性能 kernel，还要面对动态图捕获、runtime scheduling、memory movement、multi-device communication、serving latency、throughput、profiling 和回归稳定性等问题。PyTorch `torch.compile`/TorchDynamo 已经把动态图程序、graph break、backend compilation 和 eager fallback 组织为编译-运行时边界 @pytorchCompile2026；TensorRT-LLM 则展示了 LLM 推理系统中 engine building、kernel fusion、quantization、KV cache、continuous batching、paged attention 和 serving backend 的共同作用 @tensorrtllm2026。这些系统说明，工业级异构架构上的优化对象天然跨越编译与运行时。
 
-Source paths:
-- `resources/seed-proposal.docx`
-- PTO Runtime distributed features 相关资源，待定位。
-- `docs/writing/introduction-evidence-plan.md`
+本方向采用并列的两条子线。第一条子线研究工业级异构架构上的芯片算子自动优化。其目标不是只自动生成单个算子实现，而是构建面向复杂 fused operator、Torch 训练/推理核心算子和长程优化任务的 Agent Harness。该 harness 的输入应包括芯片架构描述、ISA 与存储层级、编译约束、算子语义和性能目标；其动作空间应覆盖候选实现生成、IR rewrite、pass 组合、profiling 调用、形式化辅助建模、回归测试和经验记忆更新；其输出不只是一段 kernel 代码，而应包括正确性证据、性能证据、适用配置、失败案例和可复用优化经验。
+
+NVIDIA AVO 是这一方向的重要外部证据，但不应被理解为狭义 baseline。AVO 说明，在 Blackwell B200 GPU attention kernel 优化中，autonomous coding agent 可以结合 lineage、domain knowledge 和 execution feedback 作为 variation operator，进入性能敏感的 kernel/compiler optimization 流程 @avo2026。这证明“agent + evaluator + execution feedback”在工业硬件附近是技术上真实的趋势。然而，本报告拟研究的问题更宽：目标算子不局限于 attention kernel，目标硬件不局限于单一 GPU，优化过程不应停留在代码变异，而需要结合 target IR、compiler pass、profiling trace、formal constraints、regression validation 和长期经验记忆。也就是说，AVO 支撑方向正确性，但剩余问题仍是如何把 agentic search 嵌入可维护、可审计、可迁移的编译和算子优化基础设施。
+
+第二条子线研究运行时分布式协同。PTO Runtime 的层级运行时原型提供了重要基础：系统用 L0--L6 层级对应 Ascend NPU cluster 拓扑，其中 L2 是 chip boundary，L3 以上由 Orchestrator、Scheduler 和 Worker 递归组合；Orchestrator 通过 TensorMap 从 TaskArgs 的 INPUT/OUTPUT/INOUT 等标签推导依赖，Ring 提供带 back-pressure 的 slot pool，Scheduler 负责 wiring queue、ready queue 和 completion queue，WorkerThread 在 THREAD 或 PROCESS 模式下把 Callable、TaskArgs 和 CallConfig 分发给下一级执行单元。L2 chip-level runtime 又包含 host runtime、AICPU scheduler 和 AICore worker 的三程序模型，形成从 host orchestration 到 device task execution 的明确边界。
+
+基于这一基础，未来工作需要把运行时协同从“可执行任务图”推进到“可被编译器和 agent 使用的运行时证据系统”。一方面，TensorMap、RingBuffer、ready/completion protocol、group task、CallConfig 和 mailbox/blob ABI 可以扩展为描述数据依赖、设备边界、执行配置和任务完成状态的结构化对象；另一方面，profiling、tensor dump、PMU、runtime trace 和 failure reports 应进入统一证据层，反馈给算子优化和编译决策。这样，运行时不只是被动执行编译产物，而能向编译器暴露数据移动瓶颈、任务粒度失衡、设备边界开销、memory hierarchy 压力和调度等待原因。
+
+两条子线在“工业级异构架构”处汇合，但并不强行写成单向闭环。算子自动优化需要运行时提供真实反馈和部署约束，运行时分布式协同也需要编译器提供任务图、kernel、layout 和配置决策；二者共同面向的是跨硬件架构的软硬件协同生态。未来研究将优先选择能够被自动验证和重复评估的核心场景，例如 Torch 训练算子、LLM 推理 fused operator、multi-device task graph 和 runtime scheduling case，通过 correctness test、performance profiling、trace replay、regression benchmark 和人工审计共同评价。其预期贡献是把单点 kernel 优化、编译 pass 组合和运行时调度反馈提升为可长期演化的系统能力。
 
 == 集成路线、里程碑与风险控制
 
-写作 TODO：
-- 阶段 1：验证约束下协同生成的小型硬件案例 oracle-IR-RTL-codegen 闭环。
-- 阶段 2：可解释编译基础设施的最小可执行 compiler slice 和证据模型。
-- 阶段 3：推进核心 fused 算子与 Torch 算子的长程自动优化 Harness，以及 PTO Runtime distributed features 的运行时任务图协同、数据移动和可观测性。
-- 阶段 4：跨层案例整合与论文/开源输出。
-- 风险与对策：语义边界过大、agent 生成不可控、运行时依赖真实硬件、评估指标不统一；从小闭环开始、使用 typed artifacts、以可执行 oracle 和 trace 为核心证据。
+上述三个方向需要分阶段推进，以避免一开始就落入过大的系统范围。第一阶段聚焦验证约束下协同生成的小型闭环，选择语义明确、接口清晰、验证成本可控的硬件案例，完成 oracle、IR、RTL/codegen 和 trace alignment 的端到端验证。该阶段的目标不是覆盖复杂设计，而是证明 semantic boundary、typed artifacts、staged generation 和 executable oracle 能够共同工作，并形成可重放证据。
+
+第二阶段聚焦可解释编译基础设施的最小可执行 slice。该阶段应完成 syntax/semantics 分离的核心对象模型、canonical IR parser/printer、TraceDB、semantic execution、fixed action、rewrite/gate 和 backend evidence 的基本链条，并用包含循环、region、loop-carried value 和至少一种优化变换的例子检验基础设施深度。该阶段的评价重点是可解释性和可审计性：每一次变换都应能够追溯依赖事实、语义义务、mutation intent、gate 结果和最终证据。
+
+第三阶段聚焦工业级异构架构中的算子优化与运行时协同。一方面，推进复杂 fused operator 和 Torch 训练/推理算子的长程自动优化 harness，形成候选生成、验证、profiling、回归和经验记忆循环；另一方面，推进 PTO Runtime 分布式特性的任务图协同、数据移动、ready/completion protocol 和可观测性建设，使运行时 trace 能够反馈到编译和优化决策。该阶段的核心评价不只是单次性能提升，而是多轮迭代的稳定性、可维护性、跨配置迁移能力和错误恢复能力。
+
+第四阶段进行跨层案例整合。理想的综合案例应同时包含架构/硬件约束、编译 IR 与 pass、算子或任务图优化、运行时执行和 trace 反馈，使前三个方向能够在同一系统中相互验证。该阶段应产出论文、开源工具链、可复现实验和文档化证据，强调研究方法而非只展示工程功能。
+
+主要风险有四类。第一，语义边界过大，导致系统难以实现和验证；应从小闭环开始，先证明一个窄而深的路径，再逐步扩展 artifact 类型。第二，agent 生成不可控，产生不可审计或不可维护的修改；应限制 agent action 的输入输出，使用 typed artifacts、TraceDB、gate 和 replay 约束其行为。第三，运行时研究依赖真实硬件和复杂部署环境；应同时保留 simulation、unit benchmark、trace replay 和真实硬件验证路径，避免评价完全被硬件可用性阻塞。第四，评估指标不统一，导致正确性、性能、可维护性和研究贡献彼此脱节；应为每个阶段明确 correctness、performance、evidence quality、reproducibility 和 human audit cost 等多维指标，并把失败案例纳入证据库。
 
 = 结论
 
-写作 TODO：
-- 重申核心矛盾：领域应用演进与芯片/编译/软件生态生产力不足。
-- 总结三章现有工作如何构成技术基础。
-- 总结未来工作如何从现有基础推进到系统闭环。
-- 点明预期贡献：方法体系、工具链能力和可验证软硬件协同能力。
+本报告围绕“敏捷芯片设计与创新性编译技术驱动的软硬件协同”展开，核心判断是：领域应用、人工智能模型和产业级异构系统正在快速演进，但芯片设计、编译基础设施和运行时软件生态的生产力仍难以匹配这种演进速度。传统依赖人工经验、固定工具边界和局部优化的研发方式，已经难以支撑从算法需求到架构接口、硬件实现、编译优化和运行时部署的跨层协同。软硬件协同研究因此不能只追求某个单点工具的性能提升，而需要同时关注接口抽象、生成方法、验证证据、编译基础设施和系统反馈。
+
+已有工作构成了本研究继续推进的技术基础。面向领域定制的架构接口与端到端协同工作表明，应用语义、架构描述和编译支持可以通过明确接口被共同组织，APS/Aquas、ISAMORE 和 Cayman 分别从处理器生成、可复用自定义指令和端到端接口协同等角度展示了领域定制的可行路径。面向高质量硬件实现的前端抽象与综合优化工作表明，硬件前端、IR 设计和综合优化能够显著影响设计质量和生产效率，HECTOR、Cement、Clay 和 SkyEgg 分别提供了多层 IR 积累、硬件建模、ASIP 设计和 HLS 优化的技术支撑。大模型与形式化技术驱动的软硬件协同工作进一步说明，LLM/agent 的价值不在于替代工具链，而在于进入 EqSat、RTL 生成、编译反馈和证据驱动优化等流程，帮助策略生成、错误修复和经验迁移；EggMind 和 OriGen 分别展示了这一方向在编译优化与硬件生成中的潜力。
+
+在此基础上，未来研究将从三个方向推进到更完整的系统闭环。验证约束下的架构、硬件与编译协同生成，旨在让架构接口、硬件实现和编译支持在 typed artifacts、semantic boundary、executable oracle 和 cross-layer checks 中共同演化。可解释、可审计的编译基础设施，旨在把编译器建设为 agentic 方法的 harness medium，使目标事实、IR、语义契约、pass、gate、backend artifact 和 evidence memory 能够被人和 agent 共同使用。面向工业级异构架构的算子优化与运行时编译协同，旨在把复杂 fused operator、Torch 训练/推理算子、运行时任务图、数据移动和 profiling trace 纳入长期优化流程，使单点优化能力能够面向真实系统持续演化。
+
+预期而言，本研究的贡献将体现在三个层面。方法层面，形成面向敏捷芯片设计的验证约束协同生成方法，以及面向编译优化的 agentic、formal 和 evidence-driven 方法体系。基础设施层面，构建可解释、可审计、可复现的编译与运行时 harness，使软硬件协同过程中的事实、变换和证据能够被系统化管理。应用层面，在领域定制处理器、高质量硬件实现、编译优化和工业级异构架构算子/运行时协同场景中验证上述方法，最终支撑更高生产力、更强可验证性和更好可迁移性的软硬件协同研发流程。
 
 #appendix()
 
