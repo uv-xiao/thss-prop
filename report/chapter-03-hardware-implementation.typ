@@ -2,7 +2,6 @@
 #import algorithmic: style-algorithm, algorithm-figure
 #show: style-algorithm
 
-#let tiny-code(body) = text(size: 4.6pt, font: "New Computer Modern Mono", body)
 #let tab-note(body) = text(size: 5.8pt, body)
 #let good(body) = text(fill: rgb("#16753b"), body)
 #let bad(body) = text(fill: rgb("#a61b1b"), body)
@@ -152,58 +151,49 @@ shuffler(io) {
 
 这一抽象对复杂控制逻辑尤其重要。以 shuffler 和 arbiter pipeline 为例，HDL 设计者需要手工保证发送、仲裁、接收和 resend 之间的周期对齐；HLS 版本则可能因为软件循环依赖模型和工具启发式调度而无法稳定达到 II=1。CmtHDL 可以用 `seq` statement 明确流水线不同阶段的时序，并由 CmtC 检查时序违规。这种周期确定性不是简单固定延迟，而是在静态或动态输入条件下保证事件的执行周期可推导、可检查、可综合，从而降低手工 FSM 和流水线控制中的隐性错误。
 
-#pagebreak(weak: true)
-#page(flipped: true, margin: (x: 1.35cm, y: 1.35cm), header: none)[
 #figure(
   kind: table,
   placement: none,
-  text(size: 6.0pt)[
+  text(size: 6.6pt)[
     #table(
-      columns: (0.72fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-      inset: 1.15pt,
-      align: (left, left, left, left, left, left, left),
-      table.header([变体], [`Step(StepStmt)`], [`Seq(SeqStmt)`], [`Par(ParStmt)`], [`If(IfStmt)`], [`For(ForStmt)`], [`While(WhileStmt)`]),
-      [类型定义],
-      [#tiny-code([struct StepStmt\{ events: Vec<Event>, entry: Vec<Event>, exit: Vec<Event> \}])],
-      [#tiny-code([struct SeqStmt\{ stmts: Vec<Stmt> \}])],
-      [#tiny-code([struct ParStmt\{ stmts: Vec<Stmt> \}])],
-      [#tiny-code([struct IfStmt\{ cond: Event, t_stmt: Box<Stmt>, e_stmt: Box<Stmt> \}])],
-      [#tiny-code([struct ForStmt\{ indvar: Reg, range: Range, do_stmt: Box<Stmt> \}])],
-      [#tiny-code([struct WhileStmt\{ cond: Event, do_stmt: Box<Stmt> \}])],
-      [宏语法],
-      [#tiny-code([[x]\ e0, e1\ [y]])],
-      [#tiny-code([seq \{ s0; s1 \}])],
-      [#tiny-code([par \{ s0; s1 \}])],
-      [#tiny-code([if \{ [cond] t_stmt else e_stmt \}])],
-      [#tiny-code([for \{ [indvar in range] do_stmt \}])],
-      [#tiny-code([while \{ [cond] do_stmt \}])],
-      [时序规则],
-      [等待 $x$ 发生；同周期触发 $e_0,e_1$；再等待 $y$。],
-      [无额外间隔顺序触发 $s_0,s_1$。],
-      [立即并行触发 $s_0,s_1$，等待二者完成。],
-      [按 $"cond"$ 是否发生立即触发 then/else 分支。],
-      [按 range 无额外间隔重复执行循环体。],
-      [条件成立时无额外间隔重复执行循环体。],
-      [延迟],
-      [$1 + "入口等待周期" + "出口等待周期"$],
-      [$L[s_0] + L[s_1]$],
-      [$max(L[s_0], L[s_1])$],
-      [$L[t_"stmt"]$ 或 $L[e_"stmt"]$],
-      [$L["do_stmt"] dot "trip-count"$],
-      [$L["do_stmt"] dot "trip-count"$],
-      [周期推导],
-      [$"sc"[e_0] = "sc"[e_1] = "sc"[s] + "入口等待周期"$],
-      [$"sc"[s_0] = "sc"[s]$；$"sc"[s_1] = "sc"[s] + L[s_0]$],
-      [$"sc"[s_0] = "sc"[s]$；$"sc"[s_1] = "sc"[s]$],
-      [$"sc"[t_"stmt"] = "sc"[s]$，若 $"cond"$ 发生],
-      [$"sc"["do_stmt"] = "sc"[s] + k dot L["do_stmt"]$],
-      [$"sc"["do_stmt"] = "sc"[s] + k dot L["do_stmt"]$],
+      columns: (0.65fr, 2.35fr, 2.35fr, 2.35fr),
+      inset: (x: 2.0pt, y: 2.7pt),
+      align: (center + horizon, left, left, left),
+      table.header([语句], [定义与宏语法], [时序语义], [延迟与周期推导]),
+      [`step`],
+      [`StepStmt` 包含事件集合、入口事件和出口事件；宏语法为 `[x] e0, e1 [y]`。],
+      [等待入口事件 $x$ 发生；在同一周期触发事件 $e_0,e_1$；随后等待出口事件 $y$。],
+      [$L = 1 + "入口等待周期" + "出口等待周期"$ \
+       $"sc"[e_0] = "sc"[e_1] = "sc"[s] + "入口等待周期"$],
+      [`seq`],
+      [`SeqStmt` 包含语句序列；宏语法为 `seq { s0; s1 }`。],
+      [无额外间隔顺序触发 $s_0$ 与 $s_1$。],
+      [$L = L[s_0] + L[s_1]$ \
+       $"sc"[s_0] = "sc"[s]$；$"sc"[s_1] = "sc"[s] + L[s_0]$],
+      [`par`],
+      [`ParStmt` 包含语句序列；宏语法为 `par { s0; s1 }`。],
+      [立即并行触发 $s_0$ 与 $s_1$，等待二者完成。],
+      [$L = max(L[s_0], L[s_1])$ \
+       $"sc"[s_0] = "sc"[s]$；$"sc"[s_1] = "sc"[s]$],
+      [`if`],
+      [`IfStmt` 包含条件事件、then 分支和 else 分支；宏语法为 `if { [cond] t_stmt else e_stmt }`。],
+      [根据条件事件 $"cond"$ 是否发生，立即触发 then 或 else 分支。],
+      [$L = L[t_"stmt"]$ 或 $L[e_"stmt"]$ \
+       $"sc"[t_"stmt"] = "sc"[s]$，若 $"cond"$ 发生],
+      [`for`],
+      [`ForStmt` 包含归纳变量、范围和循环体；宏语法为 `for { [indvar in range] do_stmt }`。],
+      [按 $"range"$ 无额外间隔重复执行循环体。],
+      [$L = L["do_stmt"] dot "trip-count"$ \
+       $"sc"["do_stmt"] = "sc"[s] + k dot L["do_stmt"]$],
+      [`while`],
+      [`WhileStmt` 包含条件事件和循环体；宏语法为 `while { [cond] do_stmt }`。],
+      [条件成立时无额外间隔重复执行循环体，直到条件失败。],
+      [$L = L["do_stmt"] dot "trip-count"$ \
+       $"sc"["do_stmt"] = "sc"[s] + k dot L["do_stmt"]$],
     )
   ],
-  caption: [Cement 控制子语言语句。该表对应源文 Table 3，说明 `step`、`seq`、`par`、`if`、`for`、`while` 如何把过程式控制转换为可推导的周期行为。],
+  caption: [Cement 控制子语言语句。该表重排自源文 Table 3，将 `step`、`seq`、`par`、`if`、`for`、`while` 的定义与宏语法、时序语义、延迟和周期推导放在同一行，便于在单栏报告中阅读。],
 )
-]
-#pagebreak(weak: true)
 
 === 周期分析与有限状态机综合
 
