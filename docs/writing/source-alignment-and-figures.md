@@ -8,6 +8,7 @@
 - 不逐段翻译论文，但必须保持源文技术对象的先后关系。例如源文先定义接口原语，再讨论中间表示和综合算法，正文也不能先给结果再补接口细节。
 - 第一作者或共同第一作者工作应按照范文的“具体工作章节”方式写作：先提出局部问题，再解释方法结构，随后给出关键机制、图示、实验数据和本报告主题下的意义。
 - 图表优先从 `resources/` 直接选用。图用于呈现系统框架、流程、调度或数据结构；表用于承载定义、对比、实验设置或关键结果。避免为了堆砌材料加入破坏博士开题报告叙事流畅性的表格。
+- 技术方法部分应优先补充源文中的算法、公式、递推关系、代价模型、调度约束和问题形式化。实验部分以列举主要结论数据和解释其支撑的技术机制为主，不应为了完整复现论文评测而过多引用实验图片。
 - 正文实际引用的 `resources/` 图表需要复制到 `report/assets/<work>/` 下，再由 `report/main.typ` 引用；不要在报告正文中直接用 `../resources/...` 路径。
 - 技术章节优先选用对应论文原始 LaTeX 实际 `\includegraphics` 或 `\input` 使用的图表。若 `drawio/`、`fig/` 或 `results/` 中存在多页导出或同名候选，必须按源文引用选择具体页面，不能只因为文件存在于 `resources/` 就放入报告。
 - 单栏报告中的图片宽度应按信息密度和长宽比逐一设置：近方形或高图通常控制在 75%--86%，宽流程图可放宽到 90%--96%，极宽结果图可接近满栏；避免图过大压迫正文，也避免关键标签因缩放过小而不可读。
@@ -40,8 +41,8 @@
 
 - 源文重点：`resources/cayman/doc/3_methodology.tex`、`4_evaluation.tex`。
 - 写作组织：以“领域定制与端到端协同”为主线，说明任务表示、数据通信、候选选择、加速器合并和端到端评价。
-- 图表候选：framework、representation、data communication、Algorithm 1 Candidate Selection、merging、evaluation tables。
-- 当前状态：已补入 framework、data communication scheduling、Algorithm 1 Candidate Selection 和 accelerator merging 图表；后续如补实验数据，应只选择能支撑面积预算、接口选择或合并收益的关键结果，避免把 Cayman 小节写成评测报告。
+- 图表候选：framework、representation、data communication、speedup estimation formula、candidate-selection recurrence、Algorithm 1 Candidate Selection、merging、evaluation tables。
+- 当前状态：已补入 framework、data communication scheduling、性能估计公式、候选选择递推式、Algorithm 1 Candidate Selection 和 accelerator merging 图表；后续如补实验数据，应只选择能支撑面积预算、接口选择或合并收益的关键结果，避免把 Cayman 小节写成评测报告。
 
 ### HECTOR
 
@@ -68,7 +69,7 @@
 - 源文重点：`resources/skyegg/doc/3_overview.tex`、`4_egraph.tex`、`5_formulation.tex`、`6_solving.tex`、`7_evaluation.tex`。
 - 写作组织：分离式 HLS 优化局限；e-graph 设计空间；mapping e-node；timing model；调度式 extraction；ILP 与 ASAP；实验。
 - 图表候选：Table 1 notations、problem formulation、Figure 5 ASAP scheduler、Figure 6 speedup over Vitis HLS、Table 3 resource/timing comparison。
-- 当前状态：已按用户反馈撤下 overview/e-graph 图，改用 Table 1 的问题符号表、问题公式建模、Figure 5 的 ASAP 调度器伪代码、Figure 6 的 speedup 图，以及 Table 3 的资源利用率与时序闭合表。SkyEgg 小节应突出“等价图设计空间 -> 调度式问题建模 -> ASAP/ILP 求解 -> 性能与时序证据”的链条。
+- 当前状态：已按用户反馈撤下 overview/e-graph 图，改用 Table 1 的问题符号表、问题公式建模、Figure 5 的 ASAP 调度器伪代码，以及 Table 3 的资源利用率与时序闭合表；性能 speedup 不再引用实验图片，改为正文列举平均/最高加速、浮点/整数分组、时序闭合和可扩展性结论。SkyEgg 小节应突出“等价图设计空间 -> 调度式问题建模 -> ASAP/ILP 求解 -> 性能与时序证据”的链条。
 
 ### EggMind
 

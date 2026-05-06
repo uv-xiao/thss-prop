@@ -280,12 +280,9 @@ SkyEgg 的求解难点主要来自串接约束，因为饱和等价图中许多 
 
 实验上，SkyEgg 使用 HECTOR 将输入程序降低到 MLIR 并提取基本块，再将其转为 C++ kernel，基线为 Vitis HLS 2024.1，目标平台为 Xilinx xcku3p FPGA；SkyEgg 的 Verilog 输出使用 Vivado 2024.1 综合，ILP 求解使用 OR-Tools 并设置 1 小时超时 @skyegg2026。映射库覆盖整数和浮点操作：整数侧包含 LUT 逻辑、DSP48E2 和除法 IP，浮点侧使用 Xilinx floating-point IP core 并考虑不同流水配置。基准包含 liquid-dsp 数学 kernel、ggml 神经网络 kernel、PolyBench 科学计算 kernel、Vitis Library 信号处理 kernel，以及用于可扩展性分析的 100 到 600 操作合成基准。
 
-#figure(
-  image("assets/skyegg/speedup.pdf", width: 96%),
-  caption: [SkyEgg 源文 Fig. 6 的性能结果。该图比较 SkyEgg ILP/ASAP 调度器相对 Vitis HLS 的加速比，展示变换-映射感知调度带来的整体收益。],
-)
+结果显示，SkyEgg 的变换-映射感知调度相对 Vitis HLS 在全部基准和频率目标上平均获得 3.10x 加速，其中 ILP 平均 3.12x，ASAP 平均 3.08x；浮点基准平均 3.64x、最高 5.22x，整数基准平均 2.38x、最高 4.33x @skyegg2026。源文中的分组分析比单张性能图更能说明机制来源：在 `rmsnorm` 中，平方根映射的 10--13 周期配置都能达到 431 MHz，SkyEgg 选择满足 400 MHz 约束的 10 周期配置，而 Vitis HLS 使用保守的 28 周期映射，使整体延迟从 73 周期降至 25 周期；在 `randnf_pdf` 中，Vivado 浮点指数 IP 的 full DSP 配置为 30 周期、medium DSP 配置可在相同频率下达到 20 周期，SkyEgg 进一步选择 8 周期 medium 配置并达到 450 MHz，使整体延迟从 154 周期降至 52 周期 @skyegg2026。这些数据直接支持前文的判断：性能来源不是单一后端优化，而是等价变换、映射配置和时序调度共同进入求解空间。
 
-结果显示，SkyEgg 的变换-映射感知调度相对 Vitis HLS 在全部基准和频率目标上平均获得 3.10x 加速，其中 ILP 平均 3.12x，ASAP 平均 3.08x；浮点基准平均 3.64x、最高 5.22x，整数基准平均 2.38x、最高 4.33x @skyegg2026。更重要的是，SkyEgg 的 ILP 和 ASAP 设计在所有频率目标下均满足时序约束，而 Vitis HLS 在高频目标下有 48% 的设计无法满足时序。资源方面，SkyEgg 的 FF 使用与 Vitis HLS 相近，LUT 使用有所增加，体现出以适度逻辑复杂度换取延迟和时序收益的取舍 @skyegg2026。可扩展性实验中，ASAP 在 100 到 600 操作的整数和浮点合成基准上均能在 1 秒内完成，而 ILP 在大规模浮点问题上频繁超时；这说明 SkyEgg 同时提供了精确优化路径和可扩展工程路径。
+时序和资源结果同样以结论数据呈现即可。SkyEgg 的 ILP 和 ASAP 设计在所有频率目标下均满足时序约束，而 Vitis HLS 在高频目标下有 48% 的设计无法满足时序；资源方面，ILP/ASAP 的 FF 使用量分别为 Vitis HLS 的 0.87x/0.95x，LUT 使用量分别为 1.51x/1.28x @skyegg2026。可扩展性实验中，ASAP 在 100 到 600 操作的整数和浮点合成基准上均能在 1 秒内完成，而 ILP 在大规模浮点问题上频繁超时；这说明 SkyEgg 同时提供了精确优化路径和可扩展工程路径。
 
 #figure(
   kind: table,

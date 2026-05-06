@@ -151,6 +151,18 @@ Cayman 的关键贡献之一是把处理器-加速器数据访问接口显式纳
 
 #pagebreak()
 
+#block(breakable: false)[
+  #rect(width: 100%, inset: 6pt, stroke: gray + 0.7pt)[
+    #align(center)[Cayman 源文中的性能估计、候选选择递推和过滤规则]
+    #text(size: 7.4pt)[
+      收益估计：`Speedup = T_all / (T_all - T_cand + Cycle_cand / F)`，其中 `T_all` 是原程序总时间，`T_cand` 是候选区域剖析时间，`Cycle_cand` 是候选加速器估计周期数，`F` 是目标频率。\
+      状态转移：若 `v` 为基本块，`F[v] <- pareto(accel(v, R))`；若 `v` 为控制流区域，`F[v] <- pareto(accel(v, R) union tensor_(u in v.children) F[u])`；否则 `F[v] <- pareto(tensor_(u in v.children) F[u])`。\
+      兄弟组合：`F[u_1] tensor F[u_2] = pareto({phi_1 union phi_2 | phi_1 in F[u_1], phi_2 in F[u_2]})`，用于组合互不重叠子树候选。\
+      解过滤与复杂度：若首个满足 `a_j > alpha a_i` 的解为 `phi_j`，则移除 `{phi_(i+1), ..., phi_(j-1)}`，候选序列规模由 `A` 降为 `log_alpha A` 量级；总复杂度为 `O(N log_alpha^2 A + E)`。
+    ]
+  ]
+]
+
 #figure(
   kind: table,
   placement: none,
