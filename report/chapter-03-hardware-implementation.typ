@@ -83,7 +83,7 @@ CmtC 的核心编译能力包括 timing analysis 和 FSM synthesis。Timing anal
 具体而言，static timing analysis 首先识别 cycle sequence 可在 elaboration time 确定的 static events/statements，然后自底向上推导 statement latency，再自顶向下推导每个 event 的执行周期，并比较每个 port/wire 的发送与接收周期。如果发送周期与接收周期不一致，系统可以在仿真前报告 invalid-data 或 data-loss 风险。dynamic monitoring 则把 event 是否在当前周期发生编码为 boolean signals，为端口收发生成监测信号并插入 SystemVerilog assertions，从而处理数据相关控制流下的时序违规。FSM synthesis 使用 state tree representation 表达 control sub-language 的状态空间：叶节点对应状态，边携带状态编码片段，transition table 描述输入条件与下一状态；随后通过编码优化在 FF 数、LUT 数和解码延迟之间折中。这些机制使 CmtHDL 的“周期确定性”落到编译器可检查、可综合、可优化的具体对象上。
 
 #figure(
-  image("assets/cement/state-tree.png", width: 78%),
+  image("assets/cement/state-tree.pdf", width: 78%),
   caption: [Cement 有限状态机综合中的状态树表示。控制子语言被转化为可编码、可优化的状态空间，而不是由设计者手写控制器。],
 )
 

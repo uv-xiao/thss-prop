@@ -51,6 +51,7 @@ Every full-report revision must preserve this arc:
 - For ISAMORE specifically, describe both sides in detail: reusable custom instructions as a key mechanism for agile chip design, and e-graph anti-unification as the core method innovation enabling reusable instruction discovery.
 - In representative technical sections, prefer source-backed algorithms, formulas, problem formulations, state transitions, cost models, and scheduling rules over additional experimental figures. Experiments should mainly list the key conclusion data and explain which mechanism the data validates, unless an original experimental figure is indispensable for understanding the result.
 - Never insert only one subfigure from a source-paper composite figure. If the original paper presents a grouped figure, preserve the grouped figure as a semantic whole; discuss the relevant panel in prose or caption instead of cropping or extracting it alone.
+- Always use PDF format for images copied or derived from source papers. Do not use PNG, JPG, SVG, or other original-paper image formats in the report; the only exception is a new figure automatically drawn by GPT rather than copied from source material.
 
 ## Research Question Discipline
 
