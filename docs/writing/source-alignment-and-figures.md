@@ -67,8 +67,8 @@
 
 - 源文重点：`resources/skyegg/doc/3_overview.tex`、`4_egraph.tex`、`5_formulation.tex`、`6_solving.tex`、`7_evaluation.tex`。
 - 写作组织：分离式 HLS 优化局限；e-graph 设计空间；mapping e-node；timing model；调度式 extraction；ILP 与 ASAP；实验。
-- 图表候选：overview、e-graph、ASAP、speedup、resource/timing。
-- 当前状态：已补入 overview、e-graph 和 speedup 图；正文已按设计空间、映射节点、时序模型、提取/调度和实验组织。
+- 图表候选：Table 1 notations、problem formulation、Figure 5 ASAP scheduler、Figure 6 speedup over Vitis HLS、Table 3 resource/timing comparison。
+- 当前状态：已按用户反馈撤下 overview/e-graph 图，改用 Table 1 的问题符号表、问题公式建模、Figure 5 的 ASAP 调度器伪代码、Figure 6 的 speedup 图，以及 Table 3 的资源利用率与时序闭合表。SkyEgg 小节应突出“等价图设计空间 -> 调度式问题建模 -> ASAP/ILP 求解 -> 性能与时序证据”的链条。
 
 ### EggMind
 
