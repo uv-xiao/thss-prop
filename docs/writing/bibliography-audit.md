@@ -117,6 +117,35 @@ This file records evidence for bibliography entries and report claims. It is not
 - Metadata confidence: high for official product page; use as vendor/system evidence rather than peer-reviewed research result.
 - Open gaps: add separate entries for GPT-5-Codex, Operator, or ChatGPT agent system cards only if final prose cites those pages directly.
 
+### anthropicClaudeCode2026
+
+- Source: https://docs.anthropic.com/en/docs/claude-code/overview
+- Accessed: 2026-05-06
+- Evidence inspected: official Anthropic documentation describing Claude Code as an agentic coding tool that operates from development environments and supports repository-oriented coding workflows.
+- Supports: Chapter 1 claims that agentic coding has become an explicit engineering workflow with tool use and human oversight requirements.
+- Metadata confidence: high for official documentation; use as vendor/system evidence, not peer-reviewed benchmark evidence.
+- Open gaps: if final prose cites adoption or productivity numbers, inspect the Agentic Coding Trends Report PDF separately and add a separate citation key.
+
+### pytorchCompile2026
+
+- Source: https://docs.pytorch.org/docs/stable/generated/torch.compile.html
+- Additional source: https://docs.pytorch.org/docs/main/user_guide/torch_compiler/torch.compiler.html
+- Accessed: 2026-05-06
+- Evidence inspected: official PyTorch documentation for `torch.compile`, including compiled-region caching, backend compilation, fallback behavior, and TorchDynamo graph capture through CPython frame evaluation.
+- Supports: Chapter 1 claims that mainstream ML frameworks expose compilation-to-runtime boundaries through graph capture, graph breaks, backend compilation, recompilation, and fallback.
+- Metadata confidence: high for official documentation; exact version number may change with PyTorch documentation updates.
+- Open gaps: avoid citing performance claims unless tied to a stable paper or benchmark report.
+
+### tensorrtllm2026
+
+- Source: https://docs.nvidia.com/tensorrt-llm/
+- Additional source: https://nvidia.github.io/TensorRT-LLM/
+- Accessed: 2026-05-06
+- Evidence inspected: official NVIDIA TensorRT-LLM documentation describing LLM inference acceleration and optimization on NVIDIA GPUs, runtime components, serving documentation, and integration topics.
+- Supports: Chapter 1 claims that production LLM inference is a compiler-runtime system involving engine generation, runtime execution, serving integration, and performance-sensitive deployment mechanisms.
+- Metadata confidence: high for official documentation; use as vendor/system evidence rather than peer-reviewed performance result.
+- Open gaps: inspect versioned documentation pages before citing detailed feature lists or benchmark numbers.
+
 ### rightcapitalhq-chinese-style-guide
 
 - Source: https://github.com/RightCapitalHQ/chinese-style-guide
