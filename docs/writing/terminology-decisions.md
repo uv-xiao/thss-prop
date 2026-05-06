@@ -77,7 +77,7 @@
 | candidate selection | 中文为主 | 候选选择 | 候选选择（candidate selection） | Cayman。 | 候选项选择 | 待确认 |
 | accelerator merging | 中文为主 | 加速器合并 | 加速器合并（accelerator merging） | Cayman。 | 加速器融合 | 待确认 |
 | reconfigurable datapath | 中文为主 | 可重构数据通路 | 可重构数据通路（reconfigurable datapath） | Cayman。 | 可配置数据路径 | 待确认 |
-| profiling | 保留英文/待定 | profiling | profiling（性能画像/剖析） | “性能剖析”可用但不如 profiling 简洁；需统一。 | 性能剖析、画像 | 待确认 |
+| profiling | 中文为主 | 性能剖析 | 性能剖析（profiling） | 用户反馈要求中英文使用更严格，正文中普通术语应中文优先；必要时首次括注英文。 | profiling 单独使用、性能画像 | 已采用 |
 | benchmark | 中文为主 | 基准测试 | 基准测试 | 中文“基准测试”可解释，但正文大量出现时英文更自然。 | 基准测试 | 待确认 |
 | workload | 中文为主 | 工作负载 | 工作负载（workload） | 中文“工作负载”自然；是否全译待定。 | 工作负载 | 待确认 |
 | runtime | 保留中文 | 运行时 | 运行时（runtime） | “运行时”中文自然，但框架名/系统层常保留英文。 | 运行时系统 | 待确认 |

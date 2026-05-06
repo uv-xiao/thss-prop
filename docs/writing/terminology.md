@@ -36,5 +36,5 @@ This table is a writing aid. It must not be inserted into the report unless expl
 | initiation interval / II | 启动间隔 / II | 启动间隔（initiation interval, II） | Clay and HLS scheduling | HLS/流水调度常用。 | 初始间隔 |
 | workload | 工作负载 | 工作负载（workload） | Evaluation sections | 中文自然，首次可保留英文。 | workload（正文中过多英文会破坏流畅性） |
 | benchmark | 基准测试 | 基准测试（benchmark） | Evaluation sections | 中文自然。 | benchmark（仅在专名或图表中保留） |
-| profiling | profiling | profiling（性能剖析） | Runtime/compiler optimization sections | 暂保留英文以对应工具链实践，首次用中文解释。 | 性能画像 |
+| profiling | 性能剖析 | 性能剖析（profiling） | Runtime/compiler optimization sections | 用户要求中英文使用更严格；正文中文优先，必要处首次括注英文。 | profiling 单独使用、性能画像 |
 | runtime | 运行时 | 运行时（runtime） | Compilation-to-runtime sections | 中文自然，框架名可保留英文。 | 运行时系统（范围略宽） |

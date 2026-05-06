@@ -65,6 +65,9 @@ This file records project-specific preferences that are important but less unive
 - Future work should receive substantial space and should include research ideas, system design, validation route, feasibility, and risks.
 - Target the main text at 60-80 pages.
 - Add figures where they help the argument. Prefer figures from `resources/` for existing work, and draw new figures directly when the needed overall framework or logic diagram does not exist.
+- For existing-work figures, do not only check that the asset exists under `resources/`; prefer figures that the corresponding source LaTeX actually includes in the paper text. If a copied image comes from generated drawio/PDF outputs but is not referenced by the source paper, replace it with the source-used page or remove it.
+- In section and subsection titles, use Chinese-first academic titles. Avoid tool names, English abbreviations, and dense specialized terms in headings unless the term is the topic itself and removing it would obscure the section. Put system names and exact English terms in the first paragraph instead.
+- For single-column report layout, size figures by aspect ratio and information density rather than applying one default width. Wide workflow figures may use near full width; square or tall mechanism figures should be reduced enough to preserve surrounding prose and avoid oversized pages.
 - Use `docs/writing/terminology-decisions.md` as the review workspace for terms whose Chinese/English treatment is still undecided. Do not bulk rewrite unsettled terms in the report before the user has reviewed the table.
 - The introduction should include two newly drawn overview figures: “跨硬件架构软硬件协同生态” and “研究问题与章节映射”.
 - The writing should be dense, logical, and restrained. Avoid long generic introductions.

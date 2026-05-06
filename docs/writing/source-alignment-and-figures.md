@@ -9,7 +9,16 @@
 - 第一作者或共同第一作者工作应按照范文的“具体工作章节”方式写作：先提出局部问题，再解释方法结构，随后给出关键机制、图示、实验数据和本报告主题下的意义。
 - 图表优先从 `resources/` 直接选用。图用于呈现系统框架、流程、调度或数据结构；表用于承载定义、对比、实验设置或关键结果。避免为了堆砌材料加入破坏博士开题报告叙事流畅性的表格。
 - 正文实际引用的 `resources/` 图表需要复制到 `report/assets/<work>/` 下，再由 `report/main.typ` 引用；不要在报告正文中直接用 `../resources/...` 路径。
+- 技术章节优先选用对应论文原始 LaTeX 实际 `\includegraphics` 或 `\input` 使用的图表。若 `drawio/`、`fig/` 或 `results/` 中存在多页导出或同名候选，必须按源文引用选择具体页面，不能只因为文件存在于 `resources/` 就放入报告。
+- 单栏报告中的图片宽度应按信息密度和长宽比逐一设置：近方形或高图通常控制在 75%--86%，宽流程图可放宽到 90%--96%，极宽结果图可接近满栏；避免图过大压迫正文，也避免关键标签因缩放过小而不可读。
 - 对英文图内文字暂不强制重绘；图题和正文解释应使用中文，并与 `docs/writing/terminology-decisions.md` 和已确认术语保持一致。
+
+## 2026-05-06 图表来源复查
+
+- APS 流程图已从 `resources/aps/drawio/aps-flow-p1.pdf` 替换为源文 `resources/aps/sec/0.5_overview.tex` 实际使用的 `resources/aps/drawio/aps-flow-p2.pdf`。
+- Aquas 编译器流程图已从 `resources/aquas/drawio/compiler-final-p1.pdf` 替换为 `resources/aquas/fig_tex/compiler_e2e.tex` 实际使用的 `resources/aquas/drawio/compiler-final-p3.pdf`。
+- ISAMORE 总览图已从 `resources/isamore/fig/overview-p1.pdf` 替换为 `resources/isamore/tex/fig_tex/overview.tex` 实际使用的 `resources/isamore/fig/framework-p1.pdf`。
+- Clay 框架图已从未被当前源文直接引用的 `resources/clay/fig/framework.png` 替换为 `resources/clay/tex/framework.tex` 实际使用的 `resources/clay/drawio/overview-p1.pdf`，并在报告资产目录中统一保存为 PDF。
 
 ## 各工作源文与图表候选
 
