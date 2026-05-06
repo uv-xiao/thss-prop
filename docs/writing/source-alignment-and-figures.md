@@ -40,8 +40,8 @@
 
 - 源文重点：`resources/cayman/doc/3_methodology.tex`、`4_evaluation.tex`。
 - 写作组织：以“领域定制与端到端协同”为主线，说明任务表示、数据通信、候选选择、加速器合并和端到端评价。
-- 图表候选：framework、representation、data communication、merging、evaluation tables。
-- 当前状态：已补入 framework、data communication scheduling 和 accelerator merging 图；后续可按需要补候选选择伪代码或实验数据，但正文应继续保持博士开题报告叙事。
+- 图表候选：framework、representation、data communication、Algorithm 1 Candidate Selection、merging、evaluation tables。
+- 当前状态：已补入 framework、data communication scheduling、Algorithm 1 Candidate Selection 和 accelerator merging 图表；后续如补实验数据，应只选择能支撑面积预算、接口选择或合并收益的关键结果，避免把 Cayman 小节写成评测报告。
 
 ### HECTOR
 
