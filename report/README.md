@@ -6,7 +6,14 @@
 
 - `docs/agent_writing_guidelines.md`：agent 撰写规范。
 - `docs/report_spec.md`：报告主线、成果矩阵和未来工作 spec。
-- `main.typ`：基于 `pkuthss-typst` / `modern-pku-thesis` 的 Typst 初稿。
+- `main.typ`：报告入口文件，只保留模板配置、摘要、参考文献设置和章节 `include`。
+- `chapter-01-introduction.typ`：引言。
+- `chapter-02-architecture-interface.typ`：面向领域定制的架构接口与端到端协同。
+- `chapter-03-hardware-implementation.typ`：面向高质量硬件实现的前端抽象与综合优化。
+- `chapter-04-llm-formal-codesign.typ`：大模型与形式化技术驱动的软硬件协同方法。
+- `chapter-05-future-work.typ`：未来工作。
+- `chapter-06-conclusion.typ`：结论。
+- `appendix-checklist.typ`：附录待核验清单。
 - `refs.bib`：当前手工整理的参考文献占位，后续需要按正式论文信息核验。
 
 ## 编译
