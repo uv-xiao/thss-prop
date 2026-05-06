@@ -79,6 +79,44 @@ This file records evidence for bibliography entries and report claims. It is not
 - Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
 - Open gaps: final venue, author order, and publication status need confirmation.
 
+## External Technical And Industrial Sources
+
+### tpuv4isca2023
+
+- Source: https://arxiv.org/abs/2304.01433
+- Accessed: 2026-05-06
+- Evidence inspected: arXiv abstract and metadata for TPU v4 ISCA 2023, including authors, DSA framing, production ML workload changes, SparseCore embedding acceleration, 4096-chip supercomputer scale, and reported TPU v4 vs TPU v3 performance and performance/Watt improvements.
+- Supports: Chapter 1 claims that AI/ML workload evolution drives industrial domain-specific architectures and that successful accelerators are full hardware-software systems rather than isolated chips.
+- Metadata confidence: high for arXiv metadata and abstract; exact venue formatting can be refined later.
+- Open gaps: inspect PDF before citing detailed system architecture beyond abstract-level claims.
+
+### avo2026
+
+- Source: https://arxiv.org/abs/2603.24517
+- Accessed: 2026-05-06
+- Evidence inspected: arXiv abstract and metadata for AVO, including agentic variation operators, autonomous coding-agent loop, lineage/domain-knowledge/execution-feedback inputs, attention kernels on NVIDIA Blackwell B200 GPUs, and reported gains over cuDNN and FlashAttention-4 in evaluated configurations.
+- Supports: Chapter 1 and Chapter 5 claims that agentic search/evolution can be technically relevant to performance-critical kernel/compiler optimization when constrained by execution feedback and verification.
+- Metadata confidence: high for arXiv metadata and abstract; precise benchmark claims should be rechecked in the PDF before final numeric discussion.
+- Open gaps: inspect PDF for affiliations, exact benchmark matrix, hardware configuration, and limitations.
+
+### alphaevolve2025
+
+- Source: https://arxiv.org/abs/2506.13131
+- Accessed: 2026-05-06
+- Evidence inspected: arXiv abstract and metadata for AlphaEvolve, including evolutionary coding-agent framing, direct code edits by LLMs, evaluator feedback, Google computational-stack examples, and algorithmic discovery claims including the 4x4 complex matrix multiplication example.
+- Supports: Chapter 1 claims about evaluator-constrained coding agents and the broader model-tool-evaluator loop.
+- Metadata confidence: high for arXiv metadata and abstract; detailed examples should be checked in the PDF before final numeric discussion.
+- Open gaps: inspect PDF for exact wording of infrastructure optimization and proof/correctness claims.
+
+### openaiCodex2025
+
+- Source: https://openai.com/index/introducing-codex/
+- Accessed: 2026-05-06
+- Evidence inspected: official OpenAI page describing Codex as a cloud-based software engineering agent, separate sandbox environments preloaded with repositories, file edits, command execution, test harnesses, linters, type checkers, citations to terminal logs and test outputs, and manual review requirement.
+- Supports: Chapter 1 claims about agentic coding workflows relying on sandbox, tool use, tests, logs, and human review rather than unconstrained text generation.
+- Metadata confidence: high for official product page; use as vendor/system evidence rather than peer-reviewed research result.
+- Open gaps: add separate entries for GPT-5-Codex, Operator, or ChatGPT agent system cards only if final prose cites those pages directly.
+
 ### rightcapitalhq-chinese-style-guide
 
 - Source: https://github.com/RightCapitalHQ/chinese-style-guide

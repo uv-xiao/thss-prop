@@ -16,3 +16,7 @@ This table is a writing aid. It must not be inserted into the report unless expl
 | hardware-software co-design | 软硬件协同 | 软硬件协同（hardware-software co-design） | 报告主题与 APS/Aquas 等已有工作 | 与用户确定的报告主题一致，强调硬件设计、编译器、软件生态、运行时之间的共同设计。 | 软硬协同、硬件软件协同 |
 | agile chip design | 敏捷芯片设计 | 敏捷芯片设计（agile chip design） | 报告主题、APS 论文标题 | 强调芯片设计迭代速度、可复用工具链和生产力，不等同于单纯快速 RTL 生成。 | 敏捷芯片开发 |
 | innovative compilation techniques | 创新性编译技术 | 创新性编译技术（innovative compilation techniques） | 用户确定的报告主题 | 覆盖可重定向编译、e-graph、MLIR、多层 IR、编译证据与 agentic 编译基础设施。 | 创新编译技术 |
+| architecture interface | 架构接口 | 架构接口（architecture interface） | `report/main.typ` Chapter 1.3, APS/Aquas framing | 指硬件能力对软件和工具链暴露的边界，包括 ISA/ISAX、微架构机制、存储层次、互连、执行模型和运行时可见资源。 | 体系结构接口（过长且不如“架构接口”稳定） |
+| compilation interface / compiler interface | 编译接口 | 编译接口（compilation interface） | `report/main.typ` Chapter 1.3, `resources/compiler-infra-is-harness-medium.md` | 指软件语义进入 IR、lowering、rewrite、调度、代码生成、runtime API 和 profiling feedback 的边界。 | 编译器接口（容易误解为 API 层面） |
+| agentic method | agentic 方法 | agentic 方法 | Chapter 1 agentic trend discussion | “agentic”暂无稳定中文译名，报告中保留英文形容词，强调具备工具调用、反馈迭代和行动边界的智能体式方法。 | 智能体式方法（可解释但略口语化） |
+| evidence memory | 证据记忆 | 证据记忆（evidence memory） | IntelliC / compiler harness discussion | 指为后续编译或 agent action 保留的结构化事实、诊断、obligation、artifact 和运行反馈，不是自然语言聊天记忆。 | 记忆库、经验库 |
