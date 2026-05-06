@@ -60,8 +60,8 @@
 
 - 源文重点：`resources/clay/sec/0_intro.tex`、`1_preliminaries.tex`、`2_methodologies.tex`、`3_eval.tex`，以及 `resources/clay/tex/framework.tex`、`interface.tex`、`code-transfrom.tex`、`synthesis.tex`、`sched.tex`、`impl.tex`、`eval-desc.tex`、`eval-results.tex`。
 - 写作组织：ASIP/自定义指令背景；现有流水线内耦合工具的状态化行为、控制流和访存限制；统一指令扩展接口；CADL；微架构感知综合与调度；硬件实现；实验与意义。
-- 图表候选：`resources/clay/fig/framework.png`、`resources/clay/fig/schedule.png`、`resources/clay/drawio/code-transform-p1.pdf`、`resources/clay/drawio/impl-p1.pdf`，以及自定义指令描述/性能表。
-- 当前状态：已完成一轮源文组织重写并补入 framework/schedule 图；后续可继续补 code-transform 或 implementation 图，但需避免把章节写成工具手册。
+- 图表候选：`resources/clay/drawio/code-transform-p1.pdf`、`resources/clay/drawio/sched-p1.pdf`、`resources/clay/drawio/impl-p1.pdf`、TABLE II 自定义指令描述表、TABLE III 综合与性能结果表。
+- 当前状态：已按用户反馈撤下 framework/schedule.png 图，改用源文 Fig. 4 的 CADL 到多层 IR 转换图、Fig. 5 的 `stream_add` 微架构感知调度图，以及 TABLE II/III 的中文化单栏表格。Clay 小节应突出“无时序指令语义 -> 多层 IR -> 微架构感知调度 -> PPA 结果”的链条。
 
 ### SkyEgg
 
