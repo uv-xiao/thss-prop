@@ -79,6 +79,16 @@ This file records evidence for bibliography entries and report claims. It is not
 - Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
 - Open gaps: final venue, author order, and publication status need confirmation.
 
+### cayman2025
+
+- Source: `resources/aquas/refs.bib` entry `xiao_cayman_2025`
+- Additional sources: `resources/isamore/refs.bib` entry `xiao_cayman_2025`; ResearchGate metadata page; J-GLOBAL metadata page.
+- Accessed: 2026-05-06
+- Evidence inspected: title, DAC 2025 venue metadata, DOI, author list from public index and local BibTeX, and abstract describing automatic kernel selection from hierarchical program representation, control-flow and data-access optimization, specialized processor-accelerator interfaces, accelerator merging, and reported 8.0x and 14.4x improvements over two state-of-the-art frameworks.
+- Supports: Chapter 2 Cayman subsection claims about its role as custom accelerator generation with control-flow/data-access optimization and microarchitecture/interface-aware specialization.
+- Metadata confidence: medium-high for title, authors, venue, DOI, and abstract; lower for detailed mechanism because full paper PDF is not currently present under `resources/`.
+- Open gaps: add full paper PDF or local manuscript before expanding Cayman beyond abstract-supported claims.
+
 ## External Technical And Industrial Sources
 
 ### tpuv4isca2023
