@@ -205,20 +205,20 @@ Define the chapter-level question: LLM/agentic methods must operate on formal/co
 EggMind is the absolute focus and must become a detailed representative-work section:
 
 - `研究背景与动机`: EqSat strategy bottleneck in ISAMORE/SkyEgg-style methods.
-- `策略对象与 EqSatL`: ruleset partitioning, schedule construction, simplification control.
+- `策略表示与 EqSatL`: ruleset partitioning, schedule construction, simplification control.
 - `Agentic workflow`: Strategist, Generator, Evaluator, Partitioner, Simplifier, strategy repository.
 - `Proof-derived motif memory`: proof extraction, motif abstraction, memory update, reuse.
 - `Tractability guidance`: ruleset dependency/risk model, simplification hints.
 - `实验评估与意义`: vectorization, XLA tensor compiler, EqMap logic synthesis; ablations; explain why it is formal + LLM co-design.
 
-### 4.3 OriGen：大模型辅助 RTL 生成中的反馈闭环
+### 4.1 引言中的 OriGen 背景：大模型辅助 RTL 生成的工具约束
 
-Moderate-detail supporting structure:
+Moderate-detail supporting structure, merged into the Chapter 4 introduction rather than as an independent subsection:
 
 - `问题定位`: open-source RTL generation limitations, privacy/customization/reproducibility.
 - `数据增强`: code-to-code augmentation, teacher model, refined RTL.
 - `编译反馈自反思`: VerilogFixEval, compiler error messages, repair training.
-- `结果与启示`: use as feedback-loop evidence, not a main representative work.
+- `结果与启示`: use as tool-feedback and repair-evaluation evidence, not a main representative work.
 
 ### 4.4 协同边界与本章小结
 

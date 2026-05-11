@@ -34,7 +34,7 @@ For this project, the analogous sequence should be:
 1. Industry demand and compute pressure.
 2. Why agile chip design and domain specialization matter.
 3. Why hardware innovation alone is insufficient without compilation, verification, and runtime support.
-4. Review method families: ASIP/ISAX, hardware frontends, HLS/synthesis, compiler IR/e-graph, AI-assisted design, runtime systems.
+4. Review method families: ASIP/ISAX, hardware frontends, HLS/synthesis, compiler IR/e-graph, architecture-constrained compilation optimization, and AI-assisted design.
 5. State the toolchain fragmentation and evidence-gap limitations.
 6. State research questions around compiler-centered hardware-software co-design.
 7. Present APS/Aquas, ISAMORE, Cement, SkyEgg, HECTOR, EggMind, and OriGen as completed basis.
@@ -101,10 +101,10 @@ This pattern is directly useful, but this project should expand it because the u
 
 ## Actionable Rules For This Report
 
-- The report should use a cross-hardware-architecture co-design relation: compilation and architecture are the two key interface layers connecting application demand, hardware capability, synthesis optimization, verification evidence, and runtime systems.
+- The report should use a cross-hardware-architecture co-design relation: compilation and architecture are the two key interface layers connecting application demand, hardware capability, synthesis optimization, verification evidence, system software boundaries, and target execution environments.
 - The introduction must end with explicit research questions and a map from existing work to future work.
 - The introduction's research-status review should be organized by co-design interfaces, not by a flat list of technology objects.
-- The introduction should converge from the five interface categories into exactly three core research questions.
+- The introduction should converge from the four survey categories into exactly three core research questions.
 - The introduction's map from research questions to chapters should be cross-linked: each chapter has one primary question and may support others.
 - The introduction should delay the user's own completed work until the “completed basis and planned work” overview, after the field review and challenge statement are established.
 - Existing work should use three technical layers, not four: domain specialization and end-to-end co-design; hardware frontend and synthesis optimization; large models and formal techniques for hardware-software co-design.
@@ -114,7 +114,7 @@ This pattern is directly useful, but this project should expand it because the u
 - HECTOR should be carefully summarized as supporting infrastructure, not treated as a full representative-work chapter.
 - EggMind should be presented as existing work, not future work. Future work may discuss extensions that build on EggMind, but the main EggMind narrative belongs in the completed-work chapters.
 - EggMind should be written using the completed-work chapter pattern: method, system, experiments, and significance.
-- If the future-work chapter refers back to EggMind, the transition must identify a remaining problem that EggMind does not by itself close, such as explainable compiler infrastructure, verified hardware generation, or runtime feedback.
+- If the future-work chapter refers back to EggMind, the transition must identify a remaining problem that EggMind does not by itself close, such as intelligent-agent compiler infrastructure, validation-constrained hardware generation, or long-horizon optimization under target execution evidence.
 - Future-work section titles should be general research directions rather than tool or repository names. Tool names can appear inside the sections as foundations or prototypes.
 - Open-source ecosystem, patents, awards, and industry-university collaboration are not report-level structural themes. Keep the structure focused on technical argument.
 - Each existing-work section must include local problem, method idea, evidence, and connection to the main theme.

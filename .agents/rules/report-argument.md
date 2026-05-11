@@ -5,30 +5,49 @@ These rules apply to every substantive change to `report/main.typ`, `report/sect
 ## Proposal Purpose
 
 - The report is an opening report for a thesis project. It must justify why the work should be done, why the proposed research questions matter, why the existing preparation is credible, and why the proposed plan is feasible.
+- Treat this report as a doctoral topic report for an Integrated Circuit School context, applicable to microelectronics and solid-state electronics / integrated circuit science and engineering. It is not only a writing artifact but also a written-report and oral-defense basis for evaluating thesis topic quality, research maturity, and the student's ability and conditions to complete innovative scientific research.
 - The report must not read like a finished paper, a software manual, or a project retrospective.
 - Existing technical accumulation is supporting evidence. Future work, problem framing, research design, and feasibility deserve substantial space.
-- The central relation is compiler-centered hardware-software co-design: innovative compilation techniques connect application demand, hardware structures, synthesis optimization, verification evidence, and runtime systems.
+- The central relation is compiler-centered hardware-software co-design: innovative compilation techniques connect application demand, hardware structures, synthesis optimization, verification evidence, system software boundaries, and target execution environments.
 - Current report sections are skeletal drafts. Future revisions must use the abundant source material under `resources/` to make each part detailed, patient, and fully argued.
 - Do not leave major work descriptions at abstract-summary depth. A representative work needs background, concrete bottleneck, design motivation, method structure, technical mechanism, evaluation evidence, limitation or remaining question, and connection to the report theme.
+
+## Institutional Content Gate
+
+Every full-report revision and whole-report review must check that the written report covers, at minimum:
+
+1. Research purpose and topic significance: explain the academic, engineering, industrial, economic, or social value of the topic without empty slogan wording.
+2. Literature review and frontier dynamics: show broad investigation in the relevant discipline, including prior related results, frontier achievements, development trends, and unresolved tensions.
+3. Key scientific questions: state the problems to be solved as precise, answerable research questions with clear objects, scope, and evaluation basis.
+4. Innovation: explain what is scientifically or methodologically new, and distinguish innovation from ordinary engineering implementation or tool integration.
+5. Research methods and technical route: describe the planned methods, system design, formal/experimental validation, data or artifact sources, and why the methods target the stated questions.
+6. Research content and staged results: present completed preliminary work, current progress, available prototypes, experiments, resources, and evidence of feasibility.
+7. Research plan: provide a staged research arrangement with evaluation criteria, feasibility discussion, and expected outputs, while avoiding project-management-style section titles or prose in the report body.
+8. References: maintain adequate, traceable, and field-relevant references that support the literature review, technical claims, industrial background, and proposed research route.
+
+The report must also support oral defense. Its argument should prepare for questions about topic selection, literature survey depth, innovation and practical value, research-scheme feasibility, foundational knowledge, specialized technical knowledge, scientific reasoning ability, academic norms, report logic, and language expression.
 
 ## Required Argument Arc
 
 Every full-report revision must preserve this arc:
 
 1. Industrial and engineering background: explain why the class of systems matters in practice and what current development pressure creates the research opportunity.
-2. Concrete challenges: identify the bottlenecks, failure modes, or unresolved tensions that cannot be solved by routine engineering alone.
-3. Scientific or research questions: summarize the challenges into explicit research questions, not vague topics.
-4. Existing basis: show accumulated systems, prototypes, codebases, experiments, or related work accurately and without exaggeration.
-5. Systematic analysis: compare existing methods, projects, or design choices through a consistent framework.
-6. Targeted research approach: connect each future method, experiment, or system design decision to a stated challenge or research question.
-7. Feasibility and schedule: state available materials, skills, implementation basis, verification plan, risks, and dated milestones.
+2. Topic significance: explain why the topic matters for academic development, integrated-circuit engineering practice, economic construction, or broader technological progress.
+3. Concrete challenges: identify the bottlenecks, failure modes, or unresolved tensions that cannot be solved by routine engineering alone.
+4. Literature and frontier review: situate those challenges against prior related work and current development trends.
+5. Scientific or research questions: summarize the challenges into explicit research questions, not vague topics.
+6. Innovation: state the expected conceptual, methodological, system, or validation contribution and how it differs from prior work.
+7. Existing basis and staged results: show accumulated systems, prototypes, codebases, experiments, or related work accurately and without exaggeration.
+8. Systematic analysis: compare existing methods, projects, or design choices through a consistent framework.
+9. Targeted research approach: connect each future method, experiment, or system design decision to a stated challenge or research question.
+10. Feasibility and research arrangement: state available materials, skills, implementation basis, verification plan, staged research focus, and expected outputs. Do not use report-facing wording that makes the future-work chapter read like an engineering delivery plan.
 
 ## Reference Report Pattern
 
 - Use `docs/writing/reference-report-analysis.md` when planning chapter structure.
 - The introduction should narrow from field pressure to bottleneck, method-family limitations, research questions, completed basis, future directions, and report structure.
 - Each completed-work chapter or major section should contain local problem, background/motivation, design overview, core method, evaluation evidence, related comparison, and a local conclusion when space permits.
-- Each future-work direction should contain problem analysis, research question, framework design, key technical implementation, expected technical characteristics, validation/application plan, and risk.
+- Each future-work direction should contain problem analysis, research question, method or system design, key technical implementation, expected technical characteristics, validation/application plan, feasibility boundary, and its role in completing the overall proposal story.
 - Do not copy wording from the reference report. Learn its organization and adapt it to this report's theme.
 
 ## Alignment Gate
@@ -46,6 +65,8 @@ Every full-report revision must preserve this arc:
 - Transitions must carry logic, not decoration. Prefer forms such as “因此，本报告将……”, “这一限制直接导致……”, “与上述方法相比……”, and “基于这一判断……”.
 - Do not introduce future work without explaining what problem it answers and how success will be assessed.
 - Do not describe a system feature as research contribution unless it is linked to a research question, evaluation method, or generalizable design insight.
+- Do not let “innovation” remain implicit. For each major proposed research direction, state the intended innovation in relation to prior work, then name the method and validation route that can substantiate it.
+- Do not describe preliminary work only as personal achievement. Tie staged results to feasibility, research preparation, and the ability to complete the proposed doctoral work.
 - In the first existing-work layer, do not let the end-to-end framework narrative crowd out ISAMORE. ISAMORE must receive no less space than APS/Aquas combined.
 - Treat the overall co-design framework and focused single-point optimization techniques as equally important; the report needs both system architecture and deep technical mechanisms.
 - For ISAMORE specifically, describe both sides in detail: reusable custom instructions as a key mechanism for agile chip design, and e-graph anti-unification as the core method innovation enabling reusable instruction discovery.
@@ -72,7 +93,7 @@ Every full-report revision must preserve this arc:
   - literature and related systems: 20%-25%;
   - research questions and systematic analysis: 20%-25%;
   - proposed methods and future work design: 25%-30%;
-  - feasibility, risks, and schedule: 10%-15%.
+  - feasibility and research arrangement: 10%-15%.
 - For a single section edit, keep the section proportional to its role. Do not solve missing argument structure by adding long exposition.
 - Length control must not be used as an excuse for superficial writing. If a section is short because it lacks evidence, mine `resources/` first and then expand with controlled structure.
 

@@ -1,0 +1,1357 @@
+# Related Work Bibliography Reservoir
+
+This file is generated from citation keys used in source-paper introduction, background, motivation, and related-work sections. It is intentionally broader than the current Chapter 1 bibliography. Use it to design a fuller related-work discussion before promoting selected entries into `report/refs.bib`.
+
+- Source sections scanned: 24
+- Distinct local citation keys found: 286
+- Resolved to local BibTeX entries: 280
+- Unresolved local citation keys: 6
+- Full compact BibTeX reservoir: `docs/writing/related-work-bib-reservoir.bib`
+
+## Source Section Coverage
+
+- `resources/aps/sec/0_intro.tex` (APS introduction): 16 keys, 16 resolved
+- `resources/aps/sec/5_related_works.tex` (APS related work): 22 keys, 21 resolved
+- `resources/aquas/sec/0_intro.tex` (Aquas introduction): 20 keys, 20 resolved
+- `resources/aquas/sec/1_preliminary.tex` (Aquas background): 13 keys, 13 resolved
+- `resources/isamore/tex/1_introduction.tex` (ISAMORE introduction): 30 keys, 30 resolved
+- `resources/isamore/tex/2_background.tex` (ISAMORE background): 14 keys, 14 resolved
+- `resources/isamore/tex/7_related_work.tex` (ISAMORE related work): 25 keys, 25 resolved
+- `resources/cayman/doc/1_introduction.tex` (Cayman introduction): 22 keys, 20 resolved
+- `resources/cayman/doc/2_background.tex` (Cayman background): 25 keys, 22 resolved
+- `resources/cayman/doc/5_related_work.tex` (Cayman related work): 0 keys, 0 resolved
+- `resources/cement/doc/1_Introduction.tex` (Cement introduction): 9 keys, 9 resolved
+- `resources/cement/doc/2_Background_Motiviation.tex` (Cement background): 9 keys, 9 resolved
+- `resources/cement/doc/7_Related_Work.tex` (Cement related work): 41 keys, 40 resolved
+- `resources/clay/sec/0_intro.tex` (Clay introduction): 17 keys, 17 resolved
+- `resources/clay/sec/1_preliminaries.tex` (Clay background): 15 keys, 15 resolved
+- `resources/clay/sec/4_related.tex` (Clay related work): 12 keys, 12 resolved
+- `resources/skyegg/doc/1_introduction.tex` (SkyEgg introduction): 25 keys, 25 resolved
+- `resources/skyegg/doc/2_background.tex` (SkyEgg background): 12 keys, 12 resolved
+- `resources/skyegg/doc/8_related_work.tex` (SkyEgg related work): 16 keys, 16 resolved
+- `resources/origen/1_Introduction.tex` (OriGen introduction): 19 keys, 19 resolved
+- `resources/origen/2_Background.tex` (OriGen background and related work): 14 keys, 14 resolved
+- `resources/eggmind/tex/1_introduction.tex` (EggMind introduction): 27 keys, 27 resolved
+- `resources/eggmind/tex/2_background.tex` (EggMind background): 18 keys, 18 resolved
+- `resources/eggmind/tex/8_related_work.tex` (EggMind related work): 23 keys, 23 resolved
+
+## Organized Bibliography
+
+### 应用与产业压力
+
+- `tree_matching` (1989). Code generation using tree matching and dynamic programming
+  - venue/source: ACM Trans. Program. Lang. Syst.
+  - doi: 10.1145/69558.75700
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `aditya_automatic_1999` (1999). Automatic architectural synthesis of {VLIW} and {EPIC} processors
+  - venue/source: Proceedings 12th {International} {Symposium} on {System} {Synthesis}
+  - doi: 10.1109/ISSS.1999.814268
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `hoffmann_methodology_2001` (2001). A methodology for the design of application specific instruction set processors ({ASIP}) using the machine description language {LISA}
+  - venue/source: {IEEE}/{ACM} {International} {Conference} on {Computer} {Aided} {Design}. {ICCAD} 2001. {IEEE}/{ACM} {Digest} of {Technical} {Papers} ({Cat}. {No}.{01CH37281})
+  - doi: 10.1109/ICCAD.2001.968726
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/0_intro.tex`
+- `LLVM` (2004). LLVM: A Compilation Framework for Lifelong Program Analysis \& Transformation
+  - venue/source: Proceedings of the International Symposium on Code Generation and Optimization: Feedback-Directed and Runtime Optimization
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`, `resources/cayman/doc/2_background.tex`
+- `chen_fast_2007` (2007). Fast {Identification} of {Custom} {Instructions} for {Extensible} {Processors}
+  - venue/source: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  - doi: 10.1109/TCAD.2006.883915
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `mishra_adl-driven_2008` (2008). {ADL}-driven {Methodologies} for {Design} {Automation} of {Embedded} {Processors}
+  - venue/source: Processor {Description} {Languages}
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/0_intro.tex`
+- `reddington_better_2009` (2009). Better {Than} {Optimal}: {Fast} {Identification} of {Custom} {Instruction} {Candidates}
+  - venue/source: 2009 {International} {Conference} on {Computational} {Science} and {Engineering}
+  - doi: 10.1109/CSE.2009.167
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `atasu_fish_2012` (2012). {FISH}: {Fast} {Instruction} {SyntHesis} for {Custom} {Processors}
+  - venue/source: IEEE Transactions on Very Large Scale Integration (VLSI) Systems
+  - doi: 10.1109/TVLSI.2010.2090543
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `ahn_isomorphism-aware_2013` (2013). Isomorphism-{Aware} {Identification} of {Custom} {Instructions} {With} {I}/{O} {Serialization}
+  - venue/source: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  - doi: 10.1109/TCAD.2012.2214033
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `canis_legup_2013` (2013). {LegUp}: {An} open-source high-level synthesis tool for {FPGA}-based processor/accelerator systems
+  - venue/source: ACM Transactions on Embedded Computing Systems
+  - doi: 10.1145/2514740
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`
+- `Darkroom` (2014). Darkroom: Compiling High-Level Image Processing Code into Hardware Pipelines
+  - venue/source: ACM Trans. Graph.
+  - doi: 10.1145/2601097.2601174
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `giaquinta_maximum_2015` (2015). Maximum {Convex} {Subgraphs} {Under} {I}/{O} {Constraint} for {Automatic} {Identification} of {Custom} {Instructions}
+  - venue/source: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  - doi: 10.1109/TCAD.2014.2387375
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/7_related_work.tex`
+- `DNNWeaver` (2016). From high-level deep neural models to FPGAs
+  - venue/source: 2016 49th Annual IEEE/ACM International Symposium on Microarchitecture (MICRO)
+  - doi: 10.1109/MICRO.2016.7783720
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `chen_eyeriss_2017` (2017). Eyeriss: {An} {Energy}-{Efficient} {Reconfigurable} {Accelerator} for {Deep} {Convolutional} {Neural} {Networks}
+  - venue/source: IEEE Journal of Solid-State Circuits
+  - doi: 10.1109/JSSC.2016.2616357
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`
+- `gautschi_near-threshold_2017` (2017). Near-{Threshold} {RISC}-{V} {Core} {With} {DSP} {Extensions} for {Scalable} {IoT} {Endpoint} {Devices}
+  - venue/source: IEEE Transactions on Very Large Scale Integration (VLSI) Systems
+  - doi: 10.1109/TVLSI.2017.2654506
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`, `resources/aquas/sec/0_intro.tex`, `resources/isamore/tex/1_introduction.tex`, `resources/clay/sec/0_intro.tex`
+- `S2FA` (2018). S2FA: an accelerator automation framework for heterogeneous computing in datacenters
+  - doi: 10.1145/3195970.3196109
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `Spatial` (2018). Spatial: A Language and Compiler for Application Accelerators
+  - venue/source: Proceedings of the 39th ACM SIGPLAN Conference on Programming Language Design and Implementation
+  - doi: 10.1145/3192366.3192379
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/1_Introduction.tex`, `resources/cement/doc/2_Background_Motiviation.tex`
+- `Triton` (2019). Triton: an intermediate language and compiler for tiled neural network computations
+  - venue/source: Proceedings of the 3rd ACM SIGPLAN International Workshop on Machine Learning and Programming Languages
+  - doi: 10.1145/3315508.3329973
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `Fleet` (2020). Fleet: A Framework for Massively Parallel Streaming on FPGAs
+  - venue/source: Proceedings of the Twenty-Fifth International Conference on Architectural Support for Programming Languages and Operating Systems
+  - doi: 10.1145/3373376.3378495
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `dave` (2020). Dave: Deriving automatically verilog from english
+  - venue/source: Proceedings of the 2020 ACM/IEEE Workshop on Machine Learning for CAD
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/2_Background.tex`
+- `gnanasambandapillai_finder_2020` (2020). {FINDER}: {Find} {Efficient} {Parallel} {Instructions} for {ASIPs} to {Improve} {Performance} of {Large} {Applications}
+  - venue/source: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  - doi: 10.1109/TCAD.2020.3012211
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `lattner_mlir_2020` (2020). {MLIR}: {A} {Compiler} {Infrastructure} for the {End} of {Moore}'s {Law}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2002.11054
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`
+- `zhao_sonicboom_2020` (2020). {SonicBOOM}: {The} 3rd {Generation} {Berkeley} {Out}-of-{Order} {Machine}
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`
+- `AttentionOnFPGA` (2021). Algorithm-Hardware Co-Design of Attention Mechanism on FPGA Devices
+  - venue/source: ACM Trans. Embed. Comput. Syst.
+  - doi: 10.1145/3477002
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/1_Introduction.tex`
+- `AutoDSE` (2021). AutoDSE: Enabling Software Programmers Design Efficient FPGA Accelerators
+  - venue/source: The 2021 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  - doi: 10.1145/3431920.3439464
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`, `resources/cement/doc/7_Related_Work.tex`
+- `AutoSA` (2021). AutoSA: A Polyhedral Compiler for High-Performance Systolic Arrays on FPGA
+  - venue/source: The 2021 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  - doi: 10.1145/3431920.3439292
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `Calyx` (2021). A Compiler Infrastructure for Accelerator Generators
+  - venue/source: Proceedings of the 26th ACM International Conference on Architectural Support for Programming Languages and Operating Systems
+  - doi: 10.1145/3445814.3446712
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/2_Background_Motiviation.tex`
+- `ScaleHLS` (2021). {ScaleHLS}: {A} {New} {Scalable} {High}-{Level} {Synthesis} {Framework} on {Multi}-{Level} {Intermediate} {Representation}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2107.11673
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`, `resources/cement/doc/7_Related_Work.tex`
+- `domingos_unlimited_2021` (2021). Unlimited vector extension with data streaming support
+  - venue/source: Proceedings of the 48th {Annual} {International} {Symposium} on {Computer} {Architecture}
+  - doi: 10.1109/ISCA52012.2021.00025
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/0_intro.tex`
+- `guo_autobridge_2021` (2021). {AutoBridge}: {Coupling} {Coarse}-{Grained} {Floorplanning} and {Pipelining} for {High}-{Frequency} {HLS} {Design} on {Multi}-{Die} {FPGAs}
+  - venue/source: The 2021 {ACM}/{SIGDA} {International} {Symposium} on {Field}-{Programmable} {Gate} {Arrays}
+  - doi: 10.1145/3431920.3439289
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/2_background.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `nandi_rewrite_2021` (2021). Rewrite rule inference using equality saturation
+  - venue/source: Proc. ACM Program. Lang.
+  - doi: 10.1145/3485496
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/2_background.tex`, `resources/eggmind/tex/8_related_work.tex`
+- `nigam_compiler_2021` (2021). A compiler infrastructure for accelerator generators
+  - venue/source: Proceedings of the 26th {ACM} {International} {Conference} on {Architectural} {Support} for {Programming} {Languages} and {Operating} {Systems}
+  - url: https://doi.org/10.1145/3445814.3446712
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/skyegg/doc/1_introduction.tex`
+- `tine_vortex_2021` (2021). Vortex: {Extending} the {RISC}-{V} {ISA} for {GPGPU} and {3D}-{Graphics}
+  - venue/source: {MICRO}-54: 54th {Annual} {IEEE}/{ACM} {International} {Symposium} on {Microarchitecture}
+  - doi: 10.1145/3466752.3480128
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`
+- `vanhattum_vectorization_2021` (2021). Vectorization for digital signal processors via equality saturation
+  - venue/source: Proceedings of the 26th {ACM} {International} {Conference} on {Architectural} {Support} for {Programming} {Languages} and {Operating} {Systems}
+  - doi: 10.1145/3445814.3446707
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/7_related_work.tex`, `resources/eggmind/tex/1_introduction.tex`
+- `yang_flexacc_2021` (2021). {FlexACC}: {A} {Programmable} {Accelerator} with {Application}-{Specific} {ISA} for {Flexible} {Deep} {Neural} {Network} {Inference}
+  - venue/source: 2021 {IEEE} 32nd {International} {Conference} on {Application}-specific {Systems}, {Architectures} and {Processors} ({ASAP})
+  - doi: 10.1109/ASAP52443.2021.00046
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`, `resources/clay/sec/0_intro.tex`
+- `cao_babble_2022` (2022). babble: {Learning} {Better} {Abstractions} with {E}-{Graphs} and {Anti}-{Unification}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2212.04596
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/2_background.tex`, `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/8_related_work.tex`
+- `coward_automatic_2022` (2022). Automatic {Datapath} {Optimization} using {E}-{Graphs}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2204.11478
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `AccelMerger` (2023). Early DSE and Automatic Generation of Coarse-grained Merged Accelerators
+  - venue/source: ACM Trans. Embed. Comput. Syst.
+  - doi: 10.1145/3546070
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `FAB` (2023). FAB: An FPGA-based Accelerator for Bootstrappable Fully Homomorphic Encryption
+  - venue/source: 2023 IEEE International Symposium on High-Performance Computer Architecture (HPCA)
+  - doi: 10.1109/HPCA56546.2023.10070953
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/1_Introduction.tex`
+- `Filament` (2023). Modular Hardware Design with Timeline Types
+  - venue/source: Proc. ACM Program. Lang.
+  - doi: 10.1145/3591234
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/2_Background_Motiviation.tex`
+- `autochip` (2023). Autochip: Automating hdl generation using llm feedback
+  - venue/source: arXiv preprint arXiv:2311.04887
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`, `resources/origen/2_Background.tex`
+- `chipchat` (2023). Chip-chat: Challenges and opportunities in conversational hardware design
+  - venue/source: 2023 ACM/IEEE 5th Workshop on Machine Learning for CAD (MLCAD)
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/2_Background.tex`
+- `chipnemo` (2023). Chipnemo: Domain-adapted llms for chip design
+  - venue/source: arXiv preprint arXiv:2311.00176
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `melchert_apex_2023` (2023). {APEX}: {A} {Framework} for {Automated} {Processing} {Element} {Design} {Space} {Exploration} using {Frequent} {Subgraph} {Analysis}
+  - venue/source: Proceedings of the 28th {ACM} {International} {Conference} on {Architectural} {Support} for {Programming} {Languages} and {Operating} {Systems}, {Volume} 3
+  - doi: 10.1145/3582016.3582070
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `pal_equality_2023` (2023). Equality Saturation Theory Exploration \`{a} la Carte
+  - venue/source: Proc. ACM Program. Lang.
+  - doi: 10.1145/3622834
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/2_background.tex`, `resources/eggmind/tex/8_related_work.tex`
+- `tine_skybox_2023` (2023). Skybox: {Open}-{Source} {Graphic} {Rendering} on {Programmable} {RISC}-{V} {GPUs}
+  - venue/source: Proceedings of the 28th {ACM} {International} {Conference} on {Architectural} {Support} for {Programming} {Languages} and {Operating} {Systems}, {Volume} 3
+  - doi: 10.1145/3582016.3582024
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`
+- `zhang_better_2023` (2023). Better {Together}: {Unifying} {Datalog} and {Equality} {Saturation}
+  - venue/source: Artifact for "Better Together: Unifying Datalog and Equality Saturation"
+  - doi: 10.1145/3591239
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/1_preliminary.tex`, `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/2_background.tex`, `resources/eggmind/tex/1_introduction.tex` and 2 more
+- `Popa` (2024). POPA: Expressing High and Portable Performance across Spatial and Vector Architectures for Tensor Computations
+  - venue/source: Proceedings of the 2024 ACM/SIGDA International Symposium on Field Programmable Gate Arrays
+  - doi: 10.1145/3626202.3637566
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`
+- `chen_allo_2024` (2024). Allo: {A} {Programming} {Model} for {Composable} {Accelerator} {Design}
+  - venue/source: Allo: A Programming Model for Composable Accelerator Design
+  - doi: 10.1145/3656401
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`
+- `cheng_risc-v_2024` (2024). {RISC}-{V} {Instruction} {Set} {Extensions} for {Multi}-{Precision} {Integer} {Arithmetic}: {A} {Case} {Study} on {Post}-{Quantum} {Key} {Exchange} {Using} {CSIDH}-512
+  - venue/source: Proceedings of the 61st {ACM}/{IEEE} {Design} {Automation} {Conference}
+  - doi: 10.1145/3649329.3657347
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`, `resources/aquas/sec/0_intro.tex`, `resources/clay/sec/0_intro.tex`
+- `codesurvey` (2024). A Survey of Neural Code Intelligence: Paradigms, Advances and Beyond
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `dataisallyouneed` (2024). Data is all you need: Finetuning LLMs for Chip Design via an Automated design-data augmentation framework
+  - venue/source: arXiv preprint arXiv:2403.11202
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `kim_unifying_2024` (2024). Unifying {Static} and {Dynamic} {Intermediate} {Languages} for {Accelerator} {Generators}
+  - venue/source: Proceedings of the ACM on Programming Languages
+  - doi: 10.1145/3689790
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`
+- `liyanage_accelerating_2024` (2024). Accelerating {Chaining} in {Genomic} {Analysis} {Using} {RISC}- {V} {Custom} {Instructions}
+  - venue/source: 2024 {Design}, {Automation} \& {Test} in {Europe} {Conference} \& {Exhibition} ({DATE})
+  - doi: 10.23919/DATE58400.2024.10546650
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/0_intro.tex`
+- `mcts` (2024). Make Every Move Count: LLM-based High-Quality RTL Code Generation Using MCTS
+  - venue/source: arXiv preprint arXiv:2402.03289
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/2_Background.tex`
+- `rtllm` (2024). RTLLM: An open-source benchmark for design rtl generation with large language model
+  - venue/source: 2024 29th Asia and South Pacific Design Automation Conference (ASP-DAC)
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/2_Background.tex`
+- `smith_fpga_2024` (2024). {FPGA} {Technology} {Mapping} {Using} {Sketch}-{Guided} {Program} {Synthesis}
+  - venue/source: Proceedings of the 29th {ACM} {International} {Conference} on {Architectural} {Support} for {Programming} {Languages} and {Operating} {Systems}, {Volume} 2
+  - doi: 10.1145/3620665.3640387
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `smith_scaling_2024` (2024). Scaling {Program} {Synthesis} {Based} {Technology} {Mapping} with {Equality} {Saturation}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2411.11036
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `thomas_automatic_2024` (2024). Automatic {Generation} of {Vectorizing} {Compilers} for {Customizable} {Digital} {Signal} {Processors}
+  - venue/source: Proceedings of the 29th {ACM} {International} {Conference} on {Architectural} {Support} for {Programming} {Languages} and {Operating} {Systems}, {Volume} 1
+  - doi: 10.1145/3617232.3624873
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`, `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/2_background.tex`, `resources/eggmind/tex/8_related_work.tex`
+- `Zhang2025ASPENLE` (2025). ASPEN: LLM-Guided E-Graph Rewriting for RTL Datapath Optimization
+  - venue/source: 2025 ACM/IEEE 7th Symposium on Machine Learning for CAD (MLCAD)
+  - doi: 10.1109/MLCAD65511.2025.11189222
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/2_background.tex`, `resources/eggmind/tex/8_related_work.tex`
+- `armeniakos_mixed-precision_2025` (2025). Mixed-precision {Neural} {Networks} on {RISC}-{V} {Cores}: {ISA} extensions for {Multi}-{Pumped} {Soft} {SIMD} {Operations}
+  - venue/source: Proceedings of the 43rd {IEEE}/{ACM} {International} {Conference} on {Computer}-{Aided} {Design}
+  - doi: 10.1145/3676536.3676840
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`, `resources/aquas/sec/0_intro.tex`, `resources/clay/sec/0_intro.tex`
+- `georgi_gerganov_ggml_2025` (2025). ggml: {Tensor} library for machine learning
+  - url: https://github.com/ggml-org/ggml
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`
+- `gerogiannis_deca_2025` (2025). {DECA}: {A} {Near}-{Core} {LLM} {Decompression} {Accelerator} {Grounded} on a {3D} {Roofline} {Model}
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`
+- `ma2025bitnetb1582b4ttechnical` (2025). BitNet b1.58 2B4T Technical Report
+  - url: https://arxiv.org/abs/2504.12285
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`
+- `minaee_large_2025` (2025). Large {Language} {Models}: {A} {Survey}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2402.06196
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`
+- `pan_finesse_2025` (2025). Finesse: {An} {Agile} {Design} {Framework} for {Pairing}-based {Cryptography} via {Software}/{Hardware} {Co}-{Design}
+  - venue/source: Proceedings of the 52nd {Annual} {International} {Symposium} on {Computer} {Architecture}
+  - doi: 10.1145/3695053.3731033
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`
+- `xiao_invited_2025` (2025). Invited {Paper}: {APS}: {Open}-{Source} {Hardware}-{Software} {Co}-{Design} {Framework} for {Agile} {Processor} {Specialization}
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`, `resources/aquas/sec/1_preliminary.tex`, `resources/isamore/tex/1_introduction.tex`
+- `yin_boole_2025` (2025). {BoolE}: {Exact} {Symbolic} {Reasoning} via {Boolean} {Equality} {Saturation}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2504.05577
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `zhang_llmcompass_2025` (2025). {LLMCompass}: {Enabling} {Efficient} {Hardware} {Design} for {Large} {Language} {Model} {Inference}
+  - venue/source: Proceedings of the 51st {Annual} {International} {Symposium} on {Computer} {Architecture}
+  - doi: 10.1109/ISCA59077.2024.00082
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`
+- `zou_aquas_2025` (2025). Aquas: {Enhancing} {Domain} {Specialization} through {Holistic} {Hardware}-{Software} {Co}-{Optimization} based on {MLIR}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2511.22267
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`
+- `asplos27isamore` (2026). Finding Reusable Instructions via E-Graph Anti-Unification
+  - venue/source: Proceedings of the 31st ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2
+  - doi: 10.1145/3779212.3790162
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`
+- `mikek2026agenticcodeoptimizationcompilerllm` (2026). Agentic Code Optimization via Compiler-LLM Cooperation
+  - url: https://arxiv.org/abs/2604.04238
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/2_background.tex`, `resources/eggmind/tex/8_related_work.tex`
+- `xla_tf2xla` (2026). XLA: Optimizing Compiler for Machine Learning
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`
+
+### RISC-V 与 ASIP 接口/框架
+
+- `Lava` (1998). Lava: Hardware Design in Haskell
+  - venue/source: Proceedings of the Third ACM SIGPLAN International Conference on Functional Programming
+  - doi: 10.1145/289423.289440
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `jain_asip_2001` (2001). {ASIP} design methodologies: survey and issues
+  - venue/source: {VLSI} {Design} 2001. {Fourteenth} {International} {Conference} on {VLSI} {Design}
+  - doi: 10.1109/ICVD.2001.902643
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/0_intro.tex`
+- `ienne_customizable_2006` (2006). Customizable {Embedded} {Processors}: {Design} {Technologies} and {Applications}
+  - venue/source: Elsevier
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/0_intro.tex`
+- `pozzi_exact_2006` (2006). Exact and approximate algorithms for the extension of embedded processor instruction sets
+  - venue/source: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  - doi: 10.1109/TCAD.2005.855950
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/2_background.tex`, `resources/isamore/tex/7_related_work.tex`
+- `van_praet_nml_2008` (2008). Chapter 4 - nML: A Structural Processor Modeling Language for Retargetable Compilation and ASIP Design
+  - venue/source: Processor Description Languages
+  - doi: https://doi.org/10.1016/B978-012374287-2.50007-0
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`, `resources/clay/sec/4_related.tex`
+- `waterman_risc-v_2014` (2014). The {RISC}-{V} {Instruction} {Set} {Manual}, {Volume} {I}: {User}-{Level} {ISA}, {Version} 2.0
+  - url: http://www2.eecs.berkeley.edu/Pubs/TechRpts/2014/EECS-2014-54.html
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`
+- `asanovic2016rocket` (2016). The rocket chip generator
+  - venue/source: EECS Department, University of California, Berkeley, Tech. Rep. UCB/EECS-2016-17
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`
+- `asanovic_rocket_2016` (2016). The {Rocket} {Chip} {Generator}
+  - venue/source: EECS Department, University of California, Berkeley, Tech. Rep. UCB/EECS-2016-17
+  - url: https://aspire.eecs.berkeley.edu/wp/wp-content/uploads/2016/04/Tech-Report-The-Rocket-Chip-Generator-Beamer.pdf
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/clay/sec/1_preliminaries.tex`, `resources/clay/sec/4_related.tex`
+- `ASSIST` (2019). Rapid generation of high-quality RISC-V processors from functional instruction set specifications
+  - venue/source: Proceedings of the 56th Annual Design Automation Conference 2019
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/2_background.tex`
+- `AccelSeeker` (2019). Compiler-Assisted Selection of Hardware Acceleration Candidates from Application Source Code
+  - venue/source: 2019 IEEE 37th International Conference on Computer Design (ICCD)
+  - doi: 10.1109/ICCD46524.2019.00024
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`
+- `assist` (2019). Rapid {Generation} of {High}-{Quality} {RISC}-{V} {Processors} from {Functional} {Instruction} {Set} {Specifications}
+  - venue/source: Proceedings of the 56th {Annual} {Design} {Automation} {Conference} 2019
+  - doi: 10.1145/3316781.3317890
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `liu_rapid_2019` (2019). Rapid {Generation} of {High}-{Quality} {RISC}-{V} {Processors} from {Functional} {Instruction} {Set} {Specifications}
+  - venue/source: Proceedings of the 56th {Annual} {Design} {Automation} {Conference} 2019
+  - doi: 10.1145/3316781.3317890
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/4_related.tex`
+- `FINDER` (2020). FINDER: Find Efficient Parallel Instructions for ASIPs to Improve Performance of Large Applications
+  - venue/source: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  - doi: 10.1109/TCAD.2020.3012211
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `amid_chipyard_2020` (2020). Chipyard: {Integrated} {Design}, {Simulation}, and {Implementation} {Framework} for {Custom} {SoCs}
+  - venue/source: IEEE Micro
+  - doi: 10.1109/MM.2020.2996616
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`, `resources/aquas/sec/1_preliminary.tex`, `resources/isamore/tex/1_introduction.tex`
+- `chipyard` (2020). Chipyard: Integrated Design, Simulation, and Implementation Framework for Custom SoCs
+  - venue/source: IEEE Micro
+  - doi: 10.1109/MM.2020.2996616
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`
+- `schuiki_stream_2020` (2021). Stream Semantic Registers: A Lightweight RISC-V ISA Extension Achieving Full Compute Utilization in Single-Issue Cores
+  - venue/source: IEEE Trans. Comput.
+  - doi: 10.1109/TC.2020.2987314
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/0_intro.tex`
+- `tigra` (2021). Tigra: A tightly integrated generic risc-v accelerator interface
+  - venue/source: 2021 IEEE International Conference on Cluster Computing (CLUSTER)
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `SCAIEV` (2022). SCAIE-V: An Open-Source SCAlable Interface for ISA Extensions for RISC-V Processors
+  - venue/source: Proceedings of the 59th ACM/IEEE Design Automation Conference
+  - doi: 10.1145/3489517.3530432
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`
+- `damian_scaie-v_2022` (2022). {SCAIE}-{V}: an open-source {SCAlable} interface for {ISA} extensions for {RISC}-{V} processors
+  - venue/source: Proceedings of the 59th {ACM}/{IEEE} {Design} {Automation} {Conference}
+  - doi: 10.1145/3489517.3530432
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/1_preliminary.tex`, `resources/clay/sec/1_preliminaries.tex`, `resources/clay/sec/4_related.tex`
+- `li_scalable_2022` (2022). A scalable {SIMD} {RISC}-{V} based processor with customized vector extensions for {CRYSTALS}-kyber
+  - venue/source: Proceedings of the 59th {ACM}/{IEEE} {Design} {Automation} {Conference}
+  - doi: 10.1145/3489517.3530552
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`, `resources/clay/sec/0_intro.tex`
+- `APPEND` (2023). APPEND: Rethinking ASIP Synthesis in the Era of AI
+  - doi: 10.1109/DAC56929.2023.10247872
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`
+- `FADO` (2023). FADO: Floorplan-Aware Directive Optimization for High-Level Synthesis Designs on Multi-Die FPGAs
+  - venue/source: Proceedings of the 2023 ACM/SIGDA International Symposium on Field Programmable Gate Arrays
+  - doi: 10.1145/3543622.3573188
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `Trireme` (2023). Trireme: Exploration of Hierarchical Multi-level Parallelism for Hardware Acceleration
+  - venue/source: ACM Trans. Embed. Comput. Syst.
+  - doi: 10.1145/3580394
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`
+- `Longnail` (2024). Longnail: High-Level Synthesis of Portable Custom Instruction Set Extensions for RISC-V Processors from Descriptions in the Open-Source CoreDSL Language
+  - venue/source: Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 3
+  - doi: 10.1145/3620666.3651375
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/2_background.tex`
+- `longnail` (2024). Longnail: High-Level Synthesis of Portable Custom Instruction Set Extensions for {RISC}-V Processors from Descriptions in the Open-Source {CoreDSL} Language
+  - venue/source: Proceedings of the 29th {ACM} International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 3
+  - doi: 10.1145/3620666.3651375
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`, `resources/aps/sec/5_related_works.tex`
+- `oppermann_longnail_2024` (2024). Longnail: {High}-{Level} {Synthesis} of {Portable} {Custom} {Instruction} {Set} {Extensions} for {RISC}-{V} {Processors} from {Descriptions} in the {Open}-{Source} {CoreDSL} {Language}
+  - venue/source: Proceedings of the 29th {ACM} {International} {Conference} on {Architectural} {Support} for {Programming} {Languages} and {Operating} {Systems}, {Volume} 3
+  - doi: 10.1145/3620666.3651375
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`, `resources/aquas/sec/1_preliminary.tex`, `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/2_background.tex` and 3 more
+- `scheffler_saris_2024` (2024). {SARIS}: {Accelerating} {Stencil} {Computations} on {Energy}-{Efficient} {RISC}-{V} {Compute} {Clusters} with {Indirect} {Stream} {Registers}
+  - venue/source: Proceedings of the 61st {ACM}/{IEEE} {Design} {Automation} {Conference}
+  - doi: 10.1145/3649329.3658494
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`, `resources/clay/sec/0_intro.tex`
+- `cadence_design_systems_inc_cadence_2025` (2025). Cadence {Tensilica} {Offerings}
+  - url: https://www.cadence.com/en_US/home/tools/silicon-solutions/compute-ip/technologies.html
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/2_background.tex`
+- `clay` (2025). Clay: High-level ASIP Framework for Flexible Microarchitecture-Aware Instruction Customization
+  - venue/source: Proceedings of the 44st IEEE/ACM International Conference on Computer-Aided Design
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`
+- `codasip_codasip_2025` (2025). Codasip {Studio}
+  - url: https://codasip.com/products/codasip-studio/
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/2_background.tex`
+- `croc` (2025). Croc: An End-to-End Open-Source Extensible RISC-V MCU Platform to Democratize Silicon
+  - url: https://arxiv.org/abs/2502.05090
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`
+- `openhw_group_core-v_2025` (2025). Core-{V} {eXtension} interface ({CV}-{X}-{IF})
+  - url: https://github.com/openhwgroup/core-v-xif
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/1_preliminaries.tex`, `resources/clay/sec/4_related.tex`
+- `peng_clay_2025` (2025). Clay: {High}-level {ASIP} {Framework} for {Flexible} {Microarchitecture}-{Aware} {Instruction} {Customization}
+  - venue/source: 2025 {IEEE}/{ACM} {International} {Conference} {On} {Computer} {Aided} {Design} ({ICCAD})
+  - doi: 10.1109/ICCAD66269.2025.11240669
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`
+- `pulp` (2025). PULP Platform: Open hardware, the way it should be!
+  - url: https://pulp-platform.org/index.html
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`
+- `synopsys_inc_asip_2025` (2025). {ASIP} {Designer}
+  - url: https://www.synopsys.com/dw/ipdir.php?ds=asip-designer
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`
+- `synopsys_inc_synopsys_2025` (2025). Synopsys {ASIP} {Designer}
+  - url: https://www.synopsys.com/dw/ipdir.php?ds=asip-designer
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/2_background.tex`
+- `openhw_group_openhwgroupcore-v-xif_2026` (2026). openhwgroup/core-v-xif
+  - venue/source: OpenHW Group
+  - url: https://github.com/openhwgroup/core-v-xif
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`, `resources/aquas/sec/1_preliminary.tex`
+- `CORE-V-XIF` (n.d.). The OpenHW Group CORE-V-XIF interface
+  - url: https://docs.openhwgroup.org/projects/openhw-group-core-v-xif/en/latest/
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`, `resources/aps/sec/5_related_works.tex`
+- `cadence_design_systems_inc_cadence_nodate` (n.d.). Cadence {Tensilica} {Offerings}
+  - url: https://www.cadence.com/en_US/home/tools/silicon-solutions/compute-ip/technologies.html
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`, `resources/clay/sec/0_intro.tex`, `resources/clay/sec/1_preliminaries.tex`, `resources/clay/sec/4_related.tex`
+- `codasip_codasip_nodate` (n.d.). Codasip {Studio}
+  - url: https://codasip.com/products/codasip-studio/
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`, `resources/aps/sec/5_related_works.tex`, `resources/clay/sec/0_intro.tex`, `resources/clay/sec/1_preliminaries.tex` and 1 more
+- `nice` (n.d.). {NICE} ({Nuclei} {Instruction} {Co}-unit {Extension})
+  - url: https://doc.nucleisys.com/hbirdv2/core/core.html#nice
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `nuclei_system_technology_nice_nodate` (n.d.). {NICE} ({Nuclei} {Instruction} {Co}-unit {Extension})
+  - url: https://doc.nucleisys.com/hbirdv2/core/core.html#nice
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/1_preliminaries.tex`, `resources/clay/sec/4_related.tex`
+- `pcpi` (n.d.). PicoRV32 - A Size-Optimized RISC-V CPU
+  - url: https://github.com/ YosysHQ/picorv32
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `scaie-v` (2022). {SCAIE}-V: an open-source {SCAlable} interface for {ISA} extensions for {RISC}-V processors
+  - venue/source: Proceedings of the 59th {ACM}/{IEEE} Design Automation Conference
+  - doi: 10.1145/3489517.3530432
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `synopsys_inc_synopsys_nodate` (n.d.). Synopsys {ASIP} {Designer}
+  - url: https://www.synopsys.com/dw/ipdir.php?ds=asip-designer
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`, `resources/clay/sec/0_intro.tex`, `resources/clay/sec/1_preliminaries.tex`, `resources/clay/sec/4_related.tex`
+
+### 定制指令与加速器发现
+
+- `PST` (1994). The Program Structure Tree: Computing Control Regions in Linear Time
+  - venue/source: Association for Computing Machinery
+  - doi: 10.1145/178243.178258
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/2_background.tex`
+- `larsen_exploting_2000` (2000). Exploiting superword level parallelism with multimedia instruction sets
+  - venue/source: Proceedings of the ACM SIGPLAN 2000 Conference on Programming Language Design and Implementation
+  - doi: 10.1145/349299.349320
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `Clark03` (2003). Processor Acceleration Through Automated Instruction Set Customization
+  - venue/source: Proceedings of the 36th Annual IEEE/ACM International Symposium on Microarchitecture
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `Paolo03` (2003). Automatic application-specific instruction-set extensions under microarchitectural constraints
+  - venue/source: Proceedings 2003. Design Automation Conference (IEEE Cat. No.03CH37451)
+  - doi: 10.1145/775832.775897
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `clark_processor_2003` (2003). Processor acceleration through automated instruction set customization
+  - venue/source: 22nd {Digital} {Avionics} {Systems} {Conference}. {Proceedings} ({Cat}. {No}.{03CH37449})
+  - doi: 10.1109/MICRO.2003.1253189
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/2_background.tex`, `resources/isamore/tex/7_related_work.tex`
+- `Cong04` (2004). Application-Specific Instruction Generation for Configurable Processor Architectures
+  - venue/source: Proceedings of the 2004 ACM/SIGDA 12th International Symposium on Field Programmable Gate Arrays
+  - doi: 10.1145/968280.968307
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `pan_yu_scalable_2004` (2004). Scalable custom instructions identification for instruction-set extensible processors
+  - doi: 10.1145/1023833.1023844
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `clark_automated_2005` (2005). Automated custom instruction generation for domain-specific processor acceleration
+  - venue/source: IEEE Transactions on Computers
+  - doi: 10.1109/TC.2005.156
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/2_background.tex`, `resources/isamore/tex/7_related_work.tex`
+- `Pozzi06` (2006). Exact and approximate algorithms for the extension of embedded processor instruction sets
+  - venue/source: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  - doi: 10.1109/TCAD.2005.855950
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `nuzman_auto-vectorization_2006` (2006). Auto-vectorization of interleaved data for SIMD
+  - venue/source: Proceedings of the 27th ACM SIGPLAN Conference on Programming Language Design and Implementation
+  - doi: 10.1145/1133981.1133997
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `bonzini_recurrence-aware_2008` (2008). Recurrence-{Aware} {Instruction} {Set} {Selection} for {Extensible} {Embedded} {Processors}
+  - venue/source: IEEE Transactions on Very Large Scale Integration (VLSI) Systems
+  - doi: 10.1109/TVLSI.2008.2001863
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `tie` (2008). TIE: An ADL for designing application-specific instruction set extensions
+  - venue/source: Processor Description Languages
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `CCORES` (2010). Conservation cores: reducing the energy of mature computations
+  - venue/source: ACM SIGARCH Computer Architecture News
+  - doi: 10.1145/1735970.1736044
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `cabodi_speeding-up_2010` (2010). Speeding-up heuristic allocation, scheduling and binding with {SAT}-based abstraction/refinement techniques
+  - venue/source: ACM Trans. Des. Autom. Electron. Syst.
+  - doi: 10.1145/1698759.1698762
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/2_background.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `venkatesh_conservation_2010` (2010). Conservation cores: reducing the energy of mature computations
+  - venue/source: ACM SIGARCH Computer Architecture News
+  - doi: 10.1145/1735970.1736044
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `LegUp` (2011). LegUp: High-Level Synthesis for FPGA-Based Processor/Accelerator Systems
+  - venue/source: Proceedings of the 19th ACM/SIGDA International Symposium on Field Programmable Gate Arrays
+  - doi: 10.1145/1950413.1950423
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `QSCORES` (2011). QSCORES: Trading dark silicon for scalable energy efficiency with quasi-specific cores
+  - venue/source: 2011 44th Annual IEEE/ACM International Symposium on Microarchitecture (MICRO)
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `goulding-hotta_greendroid_2011` (2011). The {GreenDroid} {Mobile} {Application} {Processor}: {An} {Architecture} for {Silicon}'s {Dark} {Future}
+  - venue/source: IEEE Micro
+  - doi: 10.1109/MM.2011.18
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `venkatesh_qscores_2011` (2011). {QsCores}: trading dark silicon for scalable energy efficiency with quasi-specific cores
+  - venue/source: Proceedings of the 44th {Annual} {IEEE}/{ACM} {International} {Symposium} on {Microarchitecture}
+  - doi: 10.1145/2155620.2155640
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/7_related_work.tex`
+- `gonzalez-alvarez_accelerating_2013` (2013). Accelerating an application domain with specialized functional units
+  - venue/source: ACM Trans. Archit. Code Optim.
+  - doi: 10.1145/2541228.2555303
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/2_background.tex`
+- `HLSDAE` (2016). Efficient Data Supply for Hardware Accelerators with Prefetching and Access/Execute Decoupling
+  - venue/source: The 49th Annual IEEE/ACM International Symposium on Microarchitecture
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/2_background.tex`
+- `gonzalez-alvarez_mingle_2016` (2016). {MInGLE}: {An} {Efficient} {Framework} for {Domain} {Acceleration} {Using} {Low}-{Power} {Specialized} {Functional} {Units}
+  - venue/source: ACM Trans. Archit. Code Optim.
+  - doi: 10.1145/2898356
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/2_background.tex`, `resources/isamore/tex/7_related_work.tex`
+- `Halide-HLS` (2017). Programming Heterogeneous Systems from an Image Processing DSL
+  - venue/source: ACM Trans. Archit. Code Optim.
+  - doi: 10.1145/3107953
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `Dynamatic` (2018). Dynamically Scheduled High-level Synthesis
+  - venue/source: Proceedings of the 2018 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  - doi: 10.1145/3174243.3174264
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `josipovic_dynamically_2018` (2018). Dynamically {Scheduled} {High}-level {Synthesis}
+  - venue/source: Proceedings of the 2018 {ACM}/{SIGDA} {International} {Symposium} on {Field}-{Programmable} {Gate} {Arrays}
+  - doi: 10.1145/3174243.3174264
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`
+- `HeteroCL` (2019). HeteroCL: A Multi-Paradigm Programming Infrastructure for Software-Defined Reconfigurable Computing
+  - venue/source: Proceedings of the 2019 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  - doi: 10.1145/3289602.3293910
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`, `resources/cement/doc/7_Related_Work.tex`
+- `NICA` (2019). {NICA}: An Infrastructure for Inline Acceleration of Network Applications
+  - venue/source: 2019 USENIX Annual Technical Conference (USENIX ATC 19)
+  - url: https://www.usenix.org/conference/atc19/presentation/eran
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/1_Introduction.tex`
+- `RegionSeeker` (2019). RegionSeeker: Automatically Identifying and Selecting Accelerators From Application Source Code
+  - venue/source: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  - doi: 10.1109/TCAD.2018.2818689
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `muir` (2019). \textmu IR -An Intermediate Representation for Transforming and Optimizing the Microarchitecture of Application Accelerators
+  - venue/source: Proceedings of the 52nd Annual IEEE/ACM International Symposium on Microarchitecture
+  - doi: 10.1145/3352460.3358292
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `willsey_iterative_2019` (2019). Iterative {Search} for {Reconfigurable} {Accelerator} {Blocks} {With} a {Compiler} in the {Loop}
+  - venue/source: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  - doi: 10.1109/TCAD.2018.2878194
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `Aetherling` (2020). Type-Directed Scheduling of Streaming Accelerators
+  - venue/source: Proceedings of the 41st ACM SIGPLAN Conference on Programming Language Design and Implementation
+  - doi: 10.1145/3385412.3385983
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/2_Background_Motiviation.tex`, `resources/cement/doc/7_Related_Work.tex`
+- `Dahlia` (2020). Predictable Accelerator Design with Time-Sensitive Affine Types
+  - venue/source: Proceedings of the 41st ACM SIGPLAN Conference on Programming Language Design and Implementation
+  - doi: 10.1145/3385412.3385974
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/1_Introduction.tex`, `resources/cement/doc/2_Background_Motiviation.tex`
+- `SOFF` (2020). SOFF: An OpenCL High-Level Synthesis Framework for FPGAs
+  - venue/source: Proceedings of the ACM/IEEE 47th Annual International Symposium on Computer Architecture
+  - doi: 10.1109/ISCA45697.2020.00034
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `durst_type-directed_2020` (2020). Type-directed scheduling of streaming accelerators
+  - venue/source: Proceedings of the 41st {ACM} {SIGPLAN} {Conference} on {Programming} {Language} {Design} and {Implementation}
+  - doi: 10.1145/3385412.3385983
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`
+- `nigam_predictable_2020` (2020). Predictable accelerator design with time-sensitive affine types
+  - venue/source: Proceedings of the 41st {ACM} {SIGPLAN} {Conference} on {Programming} {Language} {Design} and {Implementation}
+  - doi: 10.1145/3385412.3385974
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`
+- `ESI` (2021). Elastic Silicon Interconnects: Abstracting Communication in Accelerator Design
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `NOVIA` (2021). NOVIA: A Framework for Discovering Non-Conventional Inline Accelerators
+  - venue/source: MICRO-54: 54th Annual IEEE/ACM International Symposium on Microarchitecture
+  - doi: 10.1145/3466752.3480094
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `Tensorlib` (2021). TensorLib: A Spatial Accelerator Generation Framework for Tensor Algebra
+  - venue/source: 2021 58th ACM/IEEE Design Automation Conference (DAC)
+  - doi: 10.1109/DAC18074.2021.9586329
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `ferrandi_invited_2021` (2021). Invited: {Bambu}: an {Open}-{Source} {Research} {Framework} for the {High}-{Level} {Synthesis} of {Complex} {Applications}
+  - venue/source: 2021 58th {ACM}/{IEEE} {Design} {Automation} {Conference} ({DAC})
+  - doi: 10.1109/DAC18074.2021.9586110
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`
+- `trilla_novia_2021` (2021). {NOVIA}: {A} {Framework} for {Discovering} {Non}-{Conventional} {Inline} {Accelerators}
+  - venue/source: {MICRO}-54: 54th {Annual} {IEEE}/{ACM} {International} {Symposium} on {Microarchitecture}
+  - doi: 10.1145/3466752.3480094
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/2_background.tex`
+- `HECTOR` (2022). HECTOR: A Multi-Level Intermediate Representation for Hardware Synthesis Methodologies
+  - venue/source: Proceedings of the 41st IEEE/ACM International Conference on Computer-Aided Design
+  - doi: 10.1145/3508352.3549370
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `HeteroFlow` (2022). HeteroFlow: An Accelerator Programming Model with Decoupled Data Placement for Software-Defined FPGAs
+  - venue/source: Proceedings of the 2022 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  - doi: 10.1145/3490422.3502369
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/1_Introduction.tex`
+- `HiSparse` (2022). High-Performance Sparse Linear Algebra on HBM-Equipped FPGAs Using HLS: A Case Study on SpMV
+  - venue/source: Proceedings of the 2022 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays
+  - doi: 10.1145/3490422.3502368
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/1_Introduction.tex`, `resources/cement/doc/2_Background_Motiviation.tex`
+- `ferrandi_invited_2022` (2022). Invited: {Bambu}: {An} {Open}-{Source} {Research} {Framework} for the {High}-{Level} {Synthesis} of {Complex} {Applications}
+  - venue/source: Proceedings of the 58th {Annual} {ACM}/{IEEE} {Design} {Automation} {Conference}
+  - url: https://doi.org/10.1109/DAC18074.2021.9586110
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`
+- `hector` (2022). HECTOR: A Multi-Level Intermediate Representation for Hardware Synthesis Methodologies
+  - venue/source: Proceedings of the 41st IEEE/ACM International Conference on Computer-Aided Design
+  - doi: 10.1145/3508352.3549370
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/0_intro.tex`
+- `xu_hector_2022` (2022). {HECTOR}: {A} {Multi}-level {Intermediate} {Representation} for {Hardware} {Synthesis} {Methodologies}
+  - venue/source: 2022 {IEEE}/{ACM} {International} {Conference} {On} {Computer} {Aided} {Design} ({ICCAD})
+  - url: https://ieeexplore.ieee.org/document/10068908
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/1_preliminary.tex`, `resources/isamore/tex/1_introduction.tex`, `resources/clay/sec/1_preliminaries.tex`, `resources/skyegg/doc/1_introduction.tex`
+- `gpt4aigchip` (2023). Gpt4aigchip: Towards next-generation ai accelerator design automation via large language models
+  - venue/source: 2023 IEEE/ACM International Conference on Computer Aided Design (ICCAD)
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/2_Background.tex`
+- `guo_tapa_2023` (2023). {TAPA}: {A} {Scalable} {Task}-parallel {Dataflow} {Programming} {Framework} for {Modern} {FPGAs} with {Co}-optimization of {HLS} and {Physical} {Design}
+  - venue/source: ACM Transactions on Reconfigurable Technology and Systems
+  - doi: 10.1145/3609335
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/2_background.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `jiang_blueface_2023` (2023). {BlueFace}: {Integrating} an {Accelerator} into the {Core}'s {Pipeline} through {Algorithm}-{Interface} {Co}-{Design} for {Real}-{Time} {SoCs}
+  - venue/source: 2023 60th {ACM}/{IEEE} {Design} {Automation} {Conference} ({DAC})
+  - doi: 10.1109/DAC56929.2023.10247830
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `lau_rapidstream_2024` (2024). {RapidStream} {IR}: {Infrastructure} for {FPGA} {High}-{Level} {Physical} {Synthesis}
+  - venue/source: Proceedings of the 43rd {IEEE}/{ACM} {International} {Conference} on {Computer}-{Aided} {Design}
+  - doi: 10.1145/3676536.3676649
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/2_background.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `xiao_cement_2024` (2024). Cement: {Streamlining} {FPGA} {Hardware} {Design} with {Cycle}-{Deterministic} {eHDL} and {Synthesis}
+  - venue/source: Proceedings of the 2024 {ACM}/{SIGDA} {International} {Symposium} on {Field} {Programmable} {Gate} {Arrays}
+  - doi: 10.1145/3626202.3637561
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`
+- `xiao_cayman_2025` (2025). Cayman: {Custom} {Accelerator} {Generation} with {Control} {Flow} and {Data} {Access} {Optimization}
+  - venue/source: 2025 62nd {ACM}/{IEEE} {Design} {Automation} {Conference} ({DAC})
+  - doi: 10.1109/DAC63849.2025.11132875
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`
+- `zhang_user_sched_tensor_2026` (2026). Pushing Tensor Accelerators beyond MatMul in a User-Schedulable Language
+  - venue/source: 2026 IEEE/ACM International Symposium on Code Generation and Optimization (CGO)
+  - doi: 10.1109/CGO68049.2026.11395214
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`
+- `andes_technology_andes_nodate` (n.d.). Andes {Custom} {Extension}™
+  - url: https://www.andestech.com/en/products-solutions/andes-custom-extension/
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/1_preliminaries.tex`, `resources/clay/sec/4_related.tex`
+- `jia_tensorlib_2021` (2021). {TensorLib}: A Spatial Accelerator Generation Framework for Tensor Algebra
+  - venue/source: 2021 58th {ACM}/{IEEE} Design Automation Conference ({DAC})
+  - doi: 10.1109/DAC18074.2021.9586329
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/1_preliminaries.tex`
+- `zagieboylo_pdl_2022` (2022). {PDL}: a high-level hardware design language for pipelined processors
+  - venue/source: Proceedings of the 43rd {ACM} {SIGPLAN} International Conference on Programming Language Design and Implementation
+  - doi: 10.1145/3519939.3523455
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+
+### 硬件语言、HLS、DSL 与 IR
+
+- `visser_2001_stratego` (2001). Stratego: A Language for Program Transformation Based on Rewriting Strategies System Description of Stratego 0.5
+  - venue/source: Rewriting Techniques and Applications
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/8_related_work.tex`
+- `BSV` (2004). Bluespec System Verilog: efficient, correct RTL from high level specifications
+  - venue/source: Proceedings. Second ACM and IEEE International Conference on Formal Methods and Models for Co-Design, 2004. MEMOCODE '04.
+  - doi: 10.1109/MEMCOD.2004.1459818
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/2_Background_Motiviation.tex`
+- `AutoPilot` (2008). AutoPilot: A platform-based ESL synthesis system
+  - doi: 10.1007/978-1-4020-8588-8
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `coussy_high-level_2008` (2008). High-{Level} {Synthesis}: {From} {Algorithm} to {Digital} {Circuit}
+  - venue/source: Springer
+  - doi: 10.1007/978-1-4020-8588-8
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/1_preliminaries.tex`
+- `Chisel` (2012). Chisel: Constructing hardware in a Scala embedded language
+  - venue/source: DAC Design Automation Conference 2012
+  - doi: 10.1145/2228360.2228584
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/1_Introduction.tex`, `resources/cement/doc/2_Background_Motiviation.tex`, `resources/cement/doc/7_Related_Work.tex`
+- `HLS` (2012). High—Level Synthesis: Introduction to Chip and System Design
+  - venue/source: Springer Science \& Business Media
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/2_background.tex`
+- `PyMTL` (2014). PyMTL: A Unified Framework for Vertically Integrated Computer Architecture Research
+  - venue/source: Proceedings of the 47th Annual IEEE/ACM International Symposium on Microarchitecture
+  - doi: 10.1109/MICRO.2014.50
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `zheng_fast_2014` (2014). Fast and effective placement and routing directed high-level synthesis for {FPGAs}
+  - venue/source: Proceedings of the 2014 {ACM}/{SIGDA} international symposium on {Field}-programmable gate arrays
+  - doi: 10.1145/2554688.2554775
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/8_related_work.tex`
+- `Rigel` (2016). Rigel: Flexible Multi-Rate Image Processing Hardware
+  - venue/source: ACM Trans. Graph.
+  - doi: 10.1145/2897824.2925892
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `FIRRTL` (2017). Reusability is FIRRTL ground: Hardware construction languages, compiler frameworks, and transformations
+  - venue/source: 2017 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)
+  - doi: 10.1109/ICCAD.2017.8203780
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `PyRTL` (2017). A pythonic approach for rapid hardware prototyping and instrumentation
+  - venue/source: 2017 27th International Conference on Field Programmable Logic and Applications (FPL)
+  - doi: 10.23919/FPL.2017.8056860
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `szalinski2020synthesizing` (2020). Synthesizing structured CAD models with equality saturation and inverse transformations
+  - venue/source: Proceedings of the 41st ACM SIGPLAN Conference on Programming Language Design and Implementation
+  - doi: 10.1145/3385412.3386012
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`
+- `CIRCT` (2022). CIRCT: Circuit IR Compilers and Tools
+  - url: https://github.com/llvm/circt
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `guo_rapidstream_2022` (2022). {RapidStream}: {Parallel} {Physical} {Implementation} of {FPGA} {HLS} {Designs}
+  - venue/source: Proceedings of the 2022 {ACM}/{SIGDA} {International} {Symposium} on {Field}-{Programmable} {Gate} {Arrays}
+  - doi: 10.1145/3490422.3502361
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/2_background.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `ye_scalehls_2022` (2022). {ScaleHLS}: a scalable high-level synthesis framework with multi-level transformations and optimizations: invited
+  - venue/source: Proceedings of the 59th {ACM}/{IEEE} {Design} {Automation} {Conference}
+  - doi: 10.1145/3489517.3530631
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/1_preliminary.tex`
+- `Shakeflow` (2023). ShakeFlow: Functional Hardware Description with Latency-Insensitive Interface Combinators
+  - venue/source: Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2
+  - doi: 10.1145/3575693.3575701
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `benchmarking` (2023). Benchmarking large language models for automated verilog rtl code generation
+  - venue/source: 2023 Design, Automation \& Test in Europe Conference \& Exhibition (DATE)
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `deepframework` (2023). A deep learning framework for verilog autocompletion towards design and verification automation
+  - venue/source: arXiv preprint arXiv:2304.13840
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `rtlcoder` (2023). Rtlcoder: Outperforming gpt-3.5 in design rtl generation with our open-source dataset and lightweight solution
+  - venue/source: arXiv preprint arXiv:2312.08617
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`, `resources/origen/2_Background.tex`
+- `rtlfixer` (2023). Rtlfixer: Automatically fixing rtl syntax errors with large language models
+  - venue/source: arXiv preprint arXiv:2311.16543
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`, `resources/origen/2_Background.tex`
+- `verigen` (2023). Verigen: A large language model for verilog code generation
+  - venue/source: ACM Transactions on Design Automation of Electronic Systems
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`, `resources/origen/2_Background.tex`
+- `verilogeval` (2023). Verilogeval: Evaluating large language models for verilog code generation
+  - venue/source: 2023 IEEE/ACM International Conference on Computer Aided Design (ICCAD)
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`, `resources/origen/2_Background.tex`
+- `wang_mapbuf_2023` (2023). {MapBuf}: {Simultaneous} {Technology} {Mapping} and {Buffer} {Insertion} for {HLS} {Performance} {Optimization}
+  - venue/source: 2023 {IEEE}/{ACM} {International} {Conference} on {Computer} {Aided} {Design} ({ICCAD})
+  - doi: 10.1109/ICCAD57390.2023.10323639
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/2_background.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `AccHLS` (2024). Bluespec Accelerate-HLS
+  - url: https://info.bluespec.com/acceleratehls
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/2_background.tex`
+- `VitisHLS` (2024). Vitis High-Level Synthesis User Guide (UG1399)
+  - url: https://docs.amd.com/r/en-US/ug1399-vitis-hls
+  - local bib: `resources/cayman/refs.bib`
+  - cited by source sections: `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`, `resources/cement/doc/1_Introduction.tex`, `resources/cement/doc/2_Background_Motiviation.tex` and 1 more
+- `betterv` (2024). BetterV: Controlled Verilog Generation with Discriminative Guidance
+  - venue/source: arXiv preprint arXiv:2402.03375
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`, `resources/origen/2_Background.tex`
+- `briggs_megalibm_2024` (2024). Implementation and Synthesis of Math Library Functions
+  - venue/source: Proc. ACM Program. Lang.
+  - doi: 10.1145/3632874
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`
+- `chen_e-syn_2024` (2024). E-{Syn}: {E}-{Graph} {Rewriting} with {Technology}-{Aware} {Cost} {Functions} for {Logic} {Synthesis}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2403.14242
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`, `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `cheng_seer_2024` (2024). {SEER}: {Super}-{Optimization} {Explorer} for {High}-{Level} {Synthesis} using {E}-graph {Rewriting}
+  - venue/source: Proceedings of the 29th {ACM} {International} {Conference} on {Architectural} {Support} for {Programming} {Languages} and {Operating} {Systems}, {Volume} 2
+  - doi: 10.1145/3620665.3640392
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`, `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `coward_combining_2024` (2024). Combining {Power} and {Arithmetic} {Optimization} via {Datapath} {Rewriting}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2404.12336
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`
+- `multi` (2024). A Multi-Expert Large Language Model Architecture for Verilog Code Generation
+  - venue/source: arXiv preprint arXiv:2404.08029
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `seer_24_chen` (2024). SEER: Super-Optimization Explorer for High-Level Synthesis using E-graph Rewriting
+  - venue/source: Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2
+  - doi: 10.1145/3620665.3640392
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`
+- `ye_subgraph_2024` (2024). Subgraph {Extraction}-{Based} {Feedback}-{Guided} {Iterative} {Scheduling} for {HLS}
+  - venue/source: 2024 {Design}, {Automation} \& {Test} in {Europe} {Conference} \& {Exhibition} ({DATE})
+  - doi: 10.23919/DATE58400.2024.10546877
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/8_related_work.tex`
+- `amd_inc_vitis_2025` (2025). Vitis {DSP} {Library}
+  - url: https://docs.amd.com/r/en-US/Vitis_Libraries/dsp/index.html
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/2_background.tex`
+- `amd_inc_vitis_2025-1` (2025). Vitis {High}-{Level} {Synthesis} {User} {Guide} ({UG1399})
+  - url: https://docs.amd.com/r/en-US/ug1399-vitis-hls
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`
+- `chen_e-morphic_2025` (2025). E-morphic: {Scalable} {Equality} {Saturation} for {Structural} {Exploration} in {Logic} {Synthesis}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2504.11574
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/7_related_work.tex`, `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `emorphic_25_chen` (2025). E-morphic: Scalable Equality Saturation for Structural Exploration in Logic Synthesis
+  - venue/source: 2025 62nd ACM/IEEE Design Automation Conference (DAC)
+  - doi: 10.1109/DAC63849.2025.11133110
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/8_related_work.tex`
+- `hofmann_eqmap_2025` (2025). {EqMap}: {FPGA} {LUT} {Remapping} using {E}-{Graphs}
+  - venue/source: Proceedings of the 44th {IEEE}/{ACM} {International} {Conference} on {Computer}-{Aided} {Design}
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/8_related_work.tex`, `resources/eggmind/tex/1_introduction.tex`
+- `josipovic_dynamatic_2025` (2025). dynamatic: {DHLS} ({Dynamic} {High}-{Level} {Synthesis}) compiler based on {MLIR}
+  - url: https://github.com/EPFL-LAP/dynamatic
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/1_preliminary.tex`
+- `merckx_eqsat_2025` (2025). eqsat: {An} {Equality} {Saturation} {Dialect} for {Non}-destructive {Rewriting}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2505.09363
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/1_preliminary.tex`
+- `misaal_2025synthesis-based_2025` (2025). MISAAL: Synthesis-Based Automatic Generation of Efficient and Retargetable Semantics-Driven Optimizations
+  - venue/source: Proc. ACM Program. Lang.
+  - doi: 10.1145/3729301
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/2_background.tex`
+- `skyegg_25_xiao` (2025). SkyEgg: Joint Implementation Selection and Scheduling for Hardware Synthesis using E-graphs
+  - url: https://arxiv.org/abs/2511.15323
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`
+- `Amaranth` (n.d.). Amaranth HDL
+  - url: https://github.com/amaranth-lang/amaranth
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `CatapultHLS` (n.d.). Catapult High-Level Synthesis
+  - url: https://eda.sw.siemens.com/en-US/ic/ic-design/high-level-synthesis-and-verification-platform/
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `IntelHLS` (n.d.). Intel® High Level Synthesis Compiler
+  - url: https://www.intel.com/content/www/us/en/software/programmable/quartus-prime/hls-compiler.html
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `MyHDL` (n.d.). MyHDL
+  - url: https://www.myhdl.org/
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `SpinalHDL` (n.d.). SpinalHDL
+  - url: https://github.com/SpinalHDL/SpinalHDL
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `StratusHLS` (n.d.). Stratus High-Level Synthesis
+  - url: https://www.cadence.com/en_US/home/tools/digital-design-and-signoff/synthesis/stratus-high-level-synthesis.html
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `bluespec_inc_accelerate-hls_nodate` (n.d.). Accelerate-{HLS}
+  - url: https://info.bluespec.com/acceleratehls
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/1_preliminaries.tex`, `resources/clay/sec/4_related.tex`
+- `luo_rubick_2023` (2023). Rubick: A Synthesis Framework for Spatial Architectures via Dataflow Decomposition
+  - venue/source: 2023 60th {ACM}/{IEEE} Design Automation Conference ({DAC})
+  - doi: 10.1109/DAC56929.2023.10247743
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/1_preliminaries.tex`
+- `siemens_catapult_nodate` (n.d.). Catapult {High}-{Level} {Synthesis} {Tools}
+  - url: https://eda.sw.siemens.com/en-US/ic/catapult-high-level-synthesis/hls/
+  - local bib: `resources/clay/refs.bib`
+  - cited by source sections: `resources/clay/sec/1_preliminaries.tex`
+
+### 编译基础设施、MLIR 与运行时
+
+- `P4FPGA` (2017). P4FPGA: A Rapid Prototyping Framework for P4
+  - venue/source: Proceedings of the Symposium on SDN Research
+  - doi: 10.1145/3050220.3050234
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `tvm` (2018). {TVM}: An Automated {End-to-End} Optimizing Compiler for Deep Learning
+  - venue/source: 13th USENIX Symposium on Operating Systems Design and Implementation (OSDI 18)
+  - url: https://www.usenix.org/conference/osdi18/presentation/chen
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `eldridge_mlir_2021` (2021). {MLIR} as {Hardware} {Compiler} {Infrastructure}
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/1_preliminary.tex`
+- `lattner_mlir_2021` (2021). {MLIR}: {Scaling} {Compiler} {Infrastructure} for {Domain} {Specific} {Computation}
+  - venue/source: 2021 {IEEE}/{ACM} {International} {Symposium} on {Code} {Generation} and {Optimization} ({CGO})
+  - doi: 10.1109/CGO51591.2021.9370308
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`, `resources/aquas/sec/1_preliminary.tex`
+- `max_willsey_egg_2021` (2021). egg: {Fast} and extensible equality saturation
+  - venue/source: Proceedings of the ACM on Programming Languages
+  - doi: 10.1145/3434304
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/2_background.tex`, `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/2_background.tex`, `resources/eggmind/tex/1_introduction.tex` and 2 more
+- `willsey_egg_2021` (2021). egg: {Fast} and extensible equality saturation
+  - venue/source: Artifact for "Fast and Extensible Equality Saturation"
+  - doi: 10.1145/3434304
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`
+- `koehler_sketch_guided_eqsat_2022` (2022). Sketch-Guided Equality Saturation: Scaling Equality Saturation to Complex Optimizations of Functional Programs
+  - url: https://arxiv.org/abs/2111.13040
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/2_background.tex`, `resources/eggmind/tex/8_related_work.tex`
+- `cummins2024metalargelanguagemodel` (2024). Meta Large Language Model Compiler: Foundation Models of Compiler Optimization
+  - url: https://arxiv.org/abs/2407.02524
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/8_related_work.tex`
+- `hartmann_tensor_eqsat_mcts_2024` (2024). Optimizing Tensor Computation Graphs with Equality Saturation and Monte Carlo Tree Search
+  - venue/source: Proceedings of the 2024 International Conference on Parallel Architectures and Compilation Techniques
+  - doi: 10.1145/3656019.3689611
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/2_background.tex`
+- `shaikhha_sparse_diff_2024` (2024). A Tensor Algebra Compiler for Sparse Differentiation
+  - venue/source: Proceedings of the 2024 IEEE/ACM International Symposium on Code Generation and Optimization
+  - doi: 10.1109/CGO57630.2024.10444787
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`
+- `mcmichen_saving_2025` (2025). Saving Energy with Per-Variable Bitwidth Speculation
+  - venue/source: Proceedings of the 30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2
+  - doi: 10.1145/3676641.3716271
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `zayed_dialegg_2025` (2025). {DialEgg}: {Dialect}-{Agnostic} {MLIR} {Optimizer} using {Equality} {Saturation} with {Egglog}
+  - venue/source: Proceedings of the 23rd {ACM}/{IEEE} {International} {Symposium} on {Code} {Generation} and {Optimization}
+  - doi: 10.1145/3696443.3708957
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/1_preliminary.tex`
+- `chen2026magellanautonomousdiscoverynovel` (2026). Magellan: Autonomous Discovery of Novel Compiler Optimization Heuristics with AlphaEvolve
+  - url: https://arxiv.org/abs/2601.21096
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/2_background.tex`, `resources/eggmind/tex/8_related_work.tex`
+- `eqsatdialect` (2026). E-Graphs as a Persistent Compiler Abstraction
+  - url: https://arxiv.org/abs/2602.16707
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/8_related_work.tex`
+- `parallel-eqsat` (2026). Parallel and Customizable Equality Saturation
+  - venue/source: Proceedings of the 35th ACM SIGPLAN International Conference on Compiler Construction
+  - doi: 10.1145/3771775.3786266
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/8_related_work.tex`
+- `qiu2026passbypassoptimizationintentdrivenir` (2026). Beyond Pass-by-Pass Optimization: Intent-Driven IR Optimization with Large Language Models
+  - url: https://arxiv.org/abs/2602.18511
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/2_background.tex`, `resources/eggmind/tex/8_related_work.tex`
+
+### 等价图、等价饱和与 EDA 优化
+
+- `he2023mctsgebmontecarlotree` (2023). MCTS-GEB: Monte Carlo Tree Search is a Good E-graph Builder
+  - url: https://arxiv.org/abs/2303.04651
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/2_background.tex`
+- `koehler_guided_eqsat_2024` (2024). Guided Equality Saturation
+  - venue/source: Proc. ACM Program. Lang.
+  - doi: 10.1145/3632900
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/2_background.tex`, `resources/eggmind/tex/8_related_work.tex`
+- `kurashige_cclemma_2024` (2024). CCLemma: E-Graph Guided Lemma Discovery for Inductive Equational Proofs
+  - venue/source: Proc. ACM Program. Lang.
+  - doi: 10.1145/3674653
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`
+- `cai2025smoothe` (2025). Smoothe: Differentiable e-graph extraction
+  - venue/source: Proceedings of the 30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1
+  - doi: 10.1145/3669940.3707262
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/8_related_work.tex`
+- `saul_shanabrook_egglog_2025` (2025). egglog {Python} documentation
+  - url: https://egglog-python.readthedocs.io/latest/index.html
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`
+- `yin2025boost` (2025). e-boost: Boosted E-Graph Extraction with Adaptive Heuristics and Exact Solving
+  - url: https://arxiv.org/abs/2508.13020
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/8_related_work.tex`
+
+### LLM/智能体与硬件生成
+
+- `chipgpt` (2023). Chipgpt: How far are we from natural language hardware design
+  - venue/source: arXiv preprint arXiv:2305.14019
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/2_Background.tex`
+- `gpt4` (2023). Gpt-4 technical report
+  - venue/source: arXiv preprint arXiv:2303.08774
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `chateda` (2024). Chateda: A large language model powered autonomous agent for eda
+  - venue/source: IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `claude3` (2024). Introducing the next generation of Claude
+  - url: https://www.anthropic.com/news/claude-3-family
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `deepseek` (2024). DeepSeek-Coder: When the Large Language Model Meets Programming--The Rise of Code Intelligence
+  - venue/source: arXiv preprint arXiv:2401.14196
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `distillation` (2024). A survey on knowledge distillation of large language models
+  - venue/source: arXiv preprint arXiv:2402.13116
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/2_Background.tex`
+- `sweagent` (2024). SWE-agent: Agent Computer Interfaces Enable Software Engineering Language Models
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/2_Background.tex`
+- `novikov2025alphaevolvecodingagentscientific` (2025). AlphaEvolve: A coding agent for scientific and algorithmic discovery
+  - url: https://arxiv.org/abs/2506.13131
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`, `resources/eggmind/tex/2_background.tex`, `resources/eggmind/tex/8_related_work.tex`
+
+### 其他候选文献
+
+- `gordon_plotkin_lattice_1970` (1970). Lattice {Theoretic} {Properties} of {Subsumption}.
+  - venue/source: Edinburgh University, Department of Machine Intelligence and Perception.
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/2_background.tex`
+- `john_c_reynolds_transformational_1970` (1970). Transformational systems and the algebraic structure of atomic formulas.
+  - venue/source: Edinburgh University Press
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`, `resources/isamore/tex/2_background.tex`
+- `borovansky_2001_elan` (2001). Rewriting with Strategies in ELAN: A Functional Semantics
+  - venue/source: International Journal of Foundations of Computer Science
+  - doi: 10.1142/S0129054101000412
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/8_related_work.tex`
+- `Loop-aware_SLP` (2007). Loop-aware SLP in GCC
+  - local bib: `resources/aps/refs.bib`
+  - cited by source sections: `resources/aps/sec/5_related_works.tex`
+- `moura_z3_proofs_2008` (2008). Proofs and Refutations, and Z3
+  - venue/source: LPAR Workshops
+  - url: http://ceur-ws.org/Vol-418/paper10.pdf
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/2_background.tex`
+- `oe_smt_proof_checking_2009` (2009). Fast and flexible proof checking for SMT
+  - venue/source: Proceedings of the 7th International Workshop on Satisfiability Modulo Theories
+  - doi: 10.1145/1670412.1670414
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/2_background.tex`
+- `Clash` (2010). ClaSH: Structural Descriptions of Synchronous Hardware Using Haskell
+  - venue/source: 2010 13th Euromicro Conference on Digital System Design: Architectures, Methods and Tools
+  - doi: 10.1109/DSD.2010.21
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `tan_mapping-aware_2015` (2015). Mapping-{Aware} {Constrained} {Scheduling} for {LUT}-{Based} {FPGAs}
+  - venue/source: Proceedings of the 2015 {ACM}/{SIGDA} {International} {Symposium} on {Field}-{Programmable} {Gate} {Arrays}
+  - doi: 10.1145/2684746.2689063
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/2_background.tex`, `resources/skyegg/doc/8_related_work.tex`
+- `PolySA` (2018). PolySA: Polyhedral-Based Systolic Array Auto-Compilation
+  - venue/source: 2018 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)
+  - doi: 10.1145/3240765.3240838
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `SODA` (2018). SODA: Stencil with Optimized Dataflow Architecture
+  - venue/source: 2018 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)
+  - doi: 10.1145/3240765.3240850
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `Magma` (2020). Creating an Agile Hardware Design Flow
+  - venue/source: 2020 57th ACM/IEEE Design Automation Conference (DAC)
+  - doi: 10.1109/DAC18072.2020.9218553
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `amd_inc_ultrascale_2021` (2021). {UltraScale} {Architecture} {DSP} {Slice} {User} {Guide}
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/1_introduction.tex`, `resources/skyegg/doc/2_background.tex`
+- `ammus` (2021). Ammus: A survey of transformer-based pretrained models in natural language processing
+  - venue/source: arXiv preprint arXiv:2108.05542
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `flatt_small_proofs_2022` (2022). Small Proofs from Congruence Closure
+  - venue/source: 2022 Formal Methods in Computer-Aided Design (FMCAD)
+  - doi: 10.34727/2022/isbn.978-3-85448-053-2_13
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/2_background.tex`
+- `maude_strategy_language` (2023). The Maude strategy language
+  - venue/source: Journal of Logical and Algebraic Methods in Programming
+  - doi: 10.1016/j.jlamp.2023.100887
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/8_related_work.tex`
+- `qwen` (2023). Qwen Technical Report
+  - venue/source: arXiv preprint arXiv:2309.16609
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `saiki_target-aware_2024` (2024). Target-{Aware} {Implementation} of {Real} {Expressions}
+  - venue/source: arXiv
+  - doi: 10.48550/arXiv.2410.14025
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/1_introduction.tex`
+- `shoggoth_formal_foundation_strategic_2024` (2024). Shoggoth: A Formal Foundation for Strategic Rewriting
+  - venue/source: Proc. ACM Program. Lang.
+  - doi: 10.1145/3633211
+  - local bib: `resources/eggmind/refs.bib`
+  - cited by source sections: `resources/eggmind/tex/8_related_work.tex`
+- `stackv2` (2024). StarCoder 2 and The Stack v2: The Next Generation
+  - venue/source: arXiv preprint arXiv:2402.19173
+  - local bib: `resources/origen/references.bib`
+  - cited by source sections: `resources/origen/1_Introduction.tex`
+- `zhao_saturn_2024` (2024). The {Saturn} {Microarchitecture} {Manual}
+  - url: http://www2.eecs.berkeley.edu/Pubs/TechRpts/2024/EECS-2024-215.html
+  - local bib: `resources/aquas/refs.bib`
+  - cited by source sections: `resources/aquas/sec/0_intro.tex`
+- `amd_inc_kintex_2025` (2025). Kintex {UltraScale}+ {FPGAs} {Data} {Sheet}: {DC} and {AC} {Switching} {Characteristics} ({DS922})
+  - url: https://docs.amd.com/r/en-US/ds922-kintex-ultrascale-plus
+  - local bib: `resources/skyegg/skyegg.bib`
+  - cited by source sections: `resources/skyegg/doc/2_background.tex`
+- `david_tschumperle_cimg_2025` (2025). The {CImg} {Library}, a small and open-source {C}++ toolkit for image processing
+  - url: https://github.com/GreycLab/CImg
+  - local bib: `resources/isamore/refs.bib`
+  - cited by source sections: `resources/isamore/tex/1_introduction.tex`
+- `PipelineC` (n.d.). PipelineC
+  - url: https://github.com/JulianKemmerer/PipelineC
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `PyGears` (n.d.). PyGears
+  - url: https://github.com/bogdanvuk/pygears
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+- `Silice` (n.d.). Silice
+  - url: https://github.com/sylefeb/Silice
+  - local bib: `resources/cement/refs.bib`
+  - cited by source sections: `resources/cement/doc/7_Related_Work.tex`
+
+## Unresolved Source Keys
+
+- `rocc`: cited by `resources/aps/sec/5_related_works.tex`
+- `Hector`: cited by `resources/cayman/doc/1_introduction.tex`, `resources/cayman/doc/2_background.tex`
+- `GreenDroid`: cited by `resources/cayman/doc/1_introduction.tex`
+- `CFG`: cited by `resources/cayman/doc/2_background.tex`
+- `LLVMRegion`: cited by `resources/cayman/doc/2_background.tex`
+- `Susy`: cited by `resources/cement/doc/7_Related_Work.tex`

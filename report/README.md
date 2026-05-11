@@ -6,14 +6,15 @@
 
 - `docs/agent_writing_guidelines.md`：agent 撰写规范。
 - `docs/report_spec.md`：报告主线、成果矩阵和未来工作 spec。
-- `main.typ`：报告入口文件，只保留模板配置、摘要、参考文献设置和章节 `include`。
+- `main.typ`：报告入口文件，基于 `modern-pku-thesis` 原模板生成封面、摘要、目录、正文和参考文献。
+- `pku-topic-template.typ`：选题报告模板入口，沿用 `modern-pku-thesis` 页面实现，仅跳过选题报告不需要的无效页面。
+- `pku-topic-template-package/`：`modern-pku-thesis 0.2.3` 的本地化模板支撑文件，用于保证上述入口可复现编译。
 - `chapter-01-introduction.typ`：引言。
 - `chapter-02-architecture-interface.typ`：面向领域定制的架构接口与端到端协同。
 - `chapter-03-hardware-implementation.typ`：面向高质量硬件实现的前端抽象与综合优化。
 - `chapter-04-llm-formal-codesign.typ`：大模型与形式化技术驱动的软硬件协同方法。
 - `chapter-05-future-work.typ`：未来工作。
 - `chapter-06-conclusion.typ`：结论。
-- `appendix-checklist.typ`：附录待核验清单。
 - `refs.bib`：当前手工整理的参考文献占位，后续需要按正式论文信息核验。
 
 ## 编译
@@ -29,11 +30,7 @@ make watch
 
 本地 `report/fonts/` 可以放置 `pkuthss-typst` 模板仓库提供的宋体、黑体、仿宋、Times New Roman 与 New Computer Modern Mono 字体。该目录不会提交到主仓库；Makefile 会在目录存在时通过 `--font-path fonts` 传给 Typst，避免不同系统字体差异影响版式。
 
-`pkuthss-typst` 当前 Typst Universe 包名为 `modern-pku-thesis`，初稿使用版本 `0.2.3`：
-
-```typst
-#import "@preview/modern-pku-thesis:0.2.3": appendix, conf
-```
+`main.typ` 保留原模板封面和正文样式；选题报告不需要的附录、版权声明、致谢、原创性声明和使用授权说明不进入最终 `main.pdf`。其中，附录未在正文入口引入，其余无效页面在 `pku-topic-template.typ` 中从生成源头跳过，因此目录也不会出现对应条目。
 
 ## TOSS 协同写作
 

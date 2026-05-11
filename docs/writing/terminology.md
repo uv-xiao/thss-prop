@@ -20,11 +20,13 @@ This table is a writing aid. It must not be inserted into the report unless expl
 | compilation interface / compiler interface | 编译接口 | 编译接口（compilation interface） | `report/main.typ` Chapter 1.3, `resources/compiler-infra-is-harness-medium.md` | 指软件语义进入 IR、lowering、rewrite、调度、代码生成、runtime API 和 profiling feedback 的边界。 | 编译器接口（容易误解为 API 层面） |
 | agentic method | 智能体方法 | 智能体（agentic）方法 | Chapter 1 agentic trend discussion, `docs/writing/terminology-decisions.md` | 正文以中文为主，首次出现保留 agentic 以对应工业报告和英文论文语境。 | 智能体式方法 |
 | evidence memory | 证据记忆 | 证据记忆（evidence memory） | IntelliC / compiler harness discussion | 指为后续编译或 agent action 保留的结构化事实、诊断、obligation、artifact 和运行反馈，不是自然语言聊天记忆。 | 记忆库、经验库 |
-| e-graph | 等价图 | 等价图（e-graph） | ISAMORE, SkyEgg, EggMind | 正文以中文为主，首次出现保留英文以对应数据结构。 | 等价图（单独使用时可能弱化 e-graph 专有结构） |
-| equality saturation / EqSat | 等式饱和 | 等式饱和（equality saturation） | ISAMORE, EggMind | 形式化优化常用概念，后文可用 EqSat 指策略对象或算法族。 | 等价饱和 |
+| e-graph | 等价图 | 等价图（e-graph） | ISAMORE, SkyEgg, EggMind; user confirmed 2026-05-07 | 正文以中文为主，首次出现保留英文以对应数据结构，后文普通叙述使用“等价图”。 | e-graph 泛用、等价图（不括注的首次出现） |
+| equality saturation / EqSat | 等价饱和 / EqSat | 等价饱和（equality saturation, EqSat） | ISAMORE, EggMind; user corrected 2026-05-11 | 概念层面使用“等价饱和”；EggMind 策略和算法族语境可保留 EqSat。 | 等式饱和 |
+| EqSatL | EqSatL | EqSatL | EggMind; user confirmed 2026-05-07 | 专有 DSL 名称，不翻译；不能写作“等价饱和”。 | 等价饱和语言 |
+| motif | motif | motif | EggMind; user confirmed 2026-05-07 | EggMind 核心术语，保留英文以避免与 pattern/模式混淆。 | 模式、母题、证明派生模式 |
 | rewrite rule | 重写规则 | 重写规则（rewrite rule） | e-graph / EqSat sections | 编译和形式化领域中文稳定。 | 改写规则 |
 | anti-unification | 反合一 | 反合一（anti-unification） | ISAMORE reusable custom instruction discovery | 与程序综合和归纳泛化语境对应。 | 反统一 |
-| extraction | 提取 | 提取（extraction） | e-graph extraction and SkyEgg scheduling formulation | 正文以中文为主，首次出现保留英文对应等价图术语。 | 抽取（可解释但不作为主用词） |
+| extraction | 提取 | 提取（extraction） | e-graph extraction and SkyEgg scheduling formulation | 正文以中文为主，首次出现保留英文对应等价图术语。 | 抽取（不作为主用词） |
 | custom instruction | 定制指令 | 定制指令（custom instruction） | ASIP / ISAX / Clay sections | ASIP 语境自然，区别于一般 ISA extension。 | 自定义指令（可口语化，源文直译时谨慎使用） |
 | custom instruction extension / ISAX | 定制指令扩展 | 定制指令扩展（custom instruction extension, ISAX） | APS/Aquas/ISAMORE/Clay | 首次双语，后文按语境使用“定制指令扩展”或 ISAX。 | 指令集扩展（范围更宽） |
 | ASIP | 应用专用指令集处理器 | 应用专用指令集处理器（ASIP，Application-Specific Instruction-Set Processor） | Clay and ASIP sections | 首次中文展开，后文可用 ASIP。 | 专用指令集处理器 |
@@ -37,7 +39,7 @@ This table is a writing aid. It must not be inserted into the report unless expl
 | workload | 工作负载 | 工作负载（workload） | Evaluation sections | 中文自然，首次可保留英文。 | workload（正文中过多英文会破坏流畅性） |
 | benchmark | 基准测试 | 基准测试（benchmark） | Evaluation sections | 中文自然。 | benchmark（仅在专名或图表中保留） |
 | profiling | 性能剖析 | 性能剖析（profiling） | Runtime/compiler optimization sections | 用户要求中英文使用更严格；正文中文优先，必要处首次括注英文。 | profiling 单独使用、性能画像 |
-| runtime | 运行时 | 运行时（runtime） | Compilation-to-runtime sections | 中文自然，框架名可保留英文。 | 运行时系统（范围略宽） |
+| runtime | 运行时 / 执行系统 | 运行时（runtime，仅在框架名或源文语境中使用） | PyTorch/TensorRT-LLM/PTO Runtime 等框架语境 | 正文不再把“运行时”作为报告级结构概念；普通论述优先用“系统软件边界”“目标执行环境”“执行系统”“性能剖析与执行轨迹”。 | 运行时协同、运行时反馈 |
 | kernel | 内核 / 计算内核 | 计算内核（kernel） | Evaluation and runtime/compiler optimization sections | 普通技术对象在正文中中文优先；框架 API 或文件名中保留英文。 | kernel 单独泛用 |
 | speedup | 加速比 | 加速比（speedup） | Evaluation sections | 中文稳定，便于开题报告叙事。 | 加速率 |
 | area overhead | 面积开销 | 面积开销（area overhead） | ASIP/accelerator evaluation sections | 与 PPA 语境匹配。 | 面积负担 |
@@ -45,6 +47,9 @@ This table is a writing aid. It must not be inserted into the report unless expl
 | cache effect | 缓存效应 | 缓存效应（cache effect） | Aquas / memory-centric ISAX sections | 中文自然，可对应存储层次影响。 | cache 影响 |
 | offloading | 卸载 | 卸载（offloading） | ASIP/ISAX compiler sections | 指编译器把区域或操作交给定制硬件执行。 | 下放、外包 |
 | matching / matcher | 匹配 / 匹配器 | 匹配器（matcher） | Compiler and SkyEgg mapping-rule sections | 普通行为译为“匹配”；系统对象可首次括注英文。 | matching 单独泛用 |
+| intrinsic | 源语 | 源语（intrinsic） | APS compiler support; user confirmed 2026-05-07 | 编译器插入或程序员手写的 intrinsic 用“源语”表达，必要时首次括注英文。 | 内建函数、intrinsic 泛用 |
+| commit/recall, issue/response, issue/wait, transfer/fetch, tag, size, memory/config | 保留英文信号名/操作名 | `commit`/`recall` 等代码体或源文形式 | APS/Aquas protocol and IR operations; user confirmed 2026-05-07 | 这些是协议信号、IR 操作或固定接口名，不按普通英文词组翻译。 | 提交/撤回、发射/等待等全文硬译 |
+| executable oracle / oracle | 可执行判定基准 / 验证判定基准 | 可执行判定基准（executable oracle） | Spine/future validation workflow; user confirmed 2026-05-07 | “判定基准”强调可执行检查基准，不写作“判定器”；后文可按语境用“验证判定基准”。 | 可执行基准、验证判定器、oracle 泛用 |
 | applier | 应用器 | 应用器（applier） | SkyEgg mapping-rule sections | 与 e-graph rewrite rule 结构对应。 | 施加器 |
 | condition | 条件 | 条件（condition） | Mapping-rule sections | 普通术语中文化。 | condition 单独泛用 |
 | event layer | 事件层 | 事件层（event layer） | Cement | 用户审阅表已倾向中文；正文中文优先。 | 时间层 |

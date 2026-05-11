@@ -34,6 +34,8 @@
 ## Citation Placement
 
 - Place citations at the sentence or clause they support, not at the end of a long paragraph containing multiple claims.
+- When a sentence names a specific paper, system, standard, or project as the source of the claim, place the citation immediately after that name. Example: `SkyEgg @skyegg2026 将……` rather than delaying `@skyegg2026` to the end of a long sentence.
+- When a sentence synthesizes several works or supports a general claim rather than attributing a claim to one named work, place grouped citations immediately after the supported clause or sentence.
 - Do not use a citation as a substitute for explanation. The surrounding sentence must state what the source contributes.
 - For review sections, group related sources by question or method, not by a chronological list unless chronology is the argument.
 
