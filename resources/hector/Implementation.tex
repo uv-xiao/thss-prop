@@ -1,0 +1,53 @@
+\section{Transformation Pass}
+
+\tor and \hec IRs as well as transformation passes are built on top of the MLIR framework. To generate the final design, we implement the following passes in Hector: 
+\begin{enumerate*}
+\item Static scheduling pass: this pass performs static scheduling on input IR and generates raw \tor; \item Partition and re-scheduling pass: this pass transforms raw \tor to hybrid \tor by partitioning raw \tor into static and dynamic submodules. Users of Hector can implement their own partition algorithm with the scheduling information provided by raw \tor. Then each static submodule in hybrid \tor is re-scheduled independently; \item \tor lowering pass: this pass lowers the scheduled \tor to \hec; \item Chisel generation pass: this pass generates Chisel code from \hec description.
+\end{enumerate*}
+
+
+\textbf{Static scheduling pass}.
+%SDC-based scheduling\cite{sdc-06} is a static scheduling algorithm that can handle various kinds of constraints and perform optimization against diverse objectives. The same method is adopted in modulo scheduling for pipeline synthesis\cite{sdc-modulo-13}. 
+In our implementation, we use the SDC-based scheduling~\cite{sdc-modulo-13} as the default scheduling strategy to convert the front-end generated IR to static scheduled \dsir{}.
+
+\textbf{Partitioning and re-scheduling pass}.
+Section \ref{sec:algorithm} describes our algorithm to partition a raw \tor into static submodules. More sophisticated partition algorithms can be used in this pass as substitutions to our algorithm. After partitioning, each static submodule is re-scheduled using the same algorithm as static scheduling pass.
+
+\textbf{\tor lowering pass}. 
+Each submodule's \tor graph structure incorporates scheduling results and provides useful information such as the operation's live range and mutually exclusive operations. Such information is useful for subsequent transformations and optimizations like resource binding. It greatly eases the difficulty of designing \tor lowering pass. The \tor lowering pass allocates computation and storage units for each static submodule with the help of the \tor graph. For an unpipelined circuit, its control logic can be deduced directly from the time graph by simply making each node in the \tor graph as a control state and generating state transition logic based on the edges in the \tor graph. For pipelined circuits, the cycle number associated with each edge helps us divide the circuits into stages. As for dynamic submodules, its \tor graph inherently implies the corresponding elastic circuit. Elastic components can be inserted based on their explicit control statements. Each submodule is instantiated using \verb|hec.instance| and each allocated unit is instantiated using \verb|hec.primitive|. Their inputs and outputs are connected using \verb|hec.assign|, which forms a graph representation. A buffer insertion algorithm is then applied to avoid pipelining stall by traversing the graph in \hec. 
+
+%We leave a sophisticated buffer insertion algorithm as the future work.
+
+% The graph-based representation of handshake. Buffer insertion, we leave a sophisticated buffer insertion algorithm as the future work.
+
+% \hl{dynamic optimizations like buffer insertion}
+
+\textbf{Chisel generation pass}. 
+% \hl{this paragraph is not clear.}
+The allocate-assign mechanism of \hec is naturally close to HDLs at the register-transfer level (RTL). According to \hec IR, this pass generates Chisel descriptions to allocate resources and specifies the value delivery among ports and wires. 
+ The behavior of STG components is controlled by a finite state machine (fsm). A shift register along with a fsm are instantiated to construct a pipeline structure. Each port in handshake component is encapsulated in class \texttt{DecoupledIO}, which hides the valid and ready signals inside.
+
+
+% \fsm{} is closer to hardware, which explicitly defines all needed connections, registers and compute units. So it doesn't need many transformations that convert the components in \fsm{} to chisel program. All the primitives in \fsm{} are implemented as a chisel class, which includes arithmetic operations and elastic components. Chisel provides the support for handshake protocol, which is encapsulated in class \textbf{DecoupledIO}. Each \textbf{fsm.primitive} and \textbf{fsm.instance} is converted to a instance. Because the port name is stored in the result of operation, these port can be easily to access like \textbf{adder.result}. \textbf{stateset} region is translated to the finite state machine in Chisel which has the same functionality except the go insertion in the initial state. The multiplexer will be automatically inserted by Chisel, which makes it possible to multiple assignments with different conditions. This feature in Chisel simplify the conversion from \textbf{fsm.assign} to an assignment in Chisel. Pipeline style components need some extra register which indicates the control of pipeline structure.
+
+% \fsm dialect closely resembles actual circuit, so generating Chisel from \fsm{} is quite intuitive. The multiplexer is automatically inserted by Chisel, which makes it possible to multiple assignments with different conditions. In Chisel each signal in \fsm is a variable, while each component is converted to a class. The hybrid representation of \fsm can also be passed out to Chisel programs that the only difference of signal in handshake style is encapsulated in class \texttt{DecoupledIO}. This feature significantly remove handshake signals and improve the readability. 
+
+% All the primitives in \fsm are implemented as chisel templates including arithmetic operations and elastic units. The handshake protocol is encapsulated in class \textbf{DecoupledIO}
+
+\iffalse
+\subsection{Partition Pass}
+The time graph generated by Static Scheduling Pass can provide useful information for partition pass to explore different design trade-offs. Section \ref{sec:algorithm} describes our partition algorithm used in this pass.
+
+\subsection{Partition Pass}
+The time graph generated by Static Scheduling Pass provides 
+The time graph structure provide a flexible way to achieve mixed scheduling, in which the time edges represents most of the differences between dynamic and static scheduling. Because dynamic scheduling doesn't need the exact cycle information, the time graph that static scheduling generates can be easily converted to dynamic scheduling by explicitly cleaning up time information. In addition, appropriate time information can indicate the execution model of dynamic modules, and all the operations allocated to the same time state have a high probability to run at the same time. Therefore, these operations can be seen as a whole, which means the partition algorithm will dispute these operations into the same module. Based on this idea, we first use a static scheduling algorithm and then adopt a partition algorithm to convert some edges to dynamic ones. This partition algorithm can be easily applied on \dsir{} representation, which is implemented as transformation on time graph. The main idea of partition algorithm is to minimize the expectation initial interval with the choice of each time edge. The details of partition algorithm is beyond the scope of this paper.
+
+\subsection{Hybrid Scheduling Pass}
+After partition is done, we need to re-run static scheduling for each submodule
+\subsection{\dsir{} Lowering Pass}
+Mixed modules in \dsir{} are split into purely static or dynamic \dsir{} modules in split pass by outlining each connected static scheduling sub-graph as a individual function. Having done some transformations like re-scheduling and eliminating time graph, these static and dynamic modules which are then lowered to the \fsm{} components separately. The static \fsm{} generation pass converts each purely static \dsir{} function into a \fsm{} component, which allocates operations into multiple stages for loop/function pipelining behavior or describes a state transition graph in \fsm{} dialect's syntax otherwise. The conflict graph and live range are analyzed based on the time graph representation, which improves the sharing of resource and register in \fsm{}. To support pipeline structure, the register between register should also be explicitly defined. As for dynamic modules, elastic components are inserted to cope with handshake signal. Each inner sub-module is declared as a \emph{fsm.instance} operation in both static and dynamic modules, and the input of these modules is defined through \emph{fsm.assign}. After doing these transformations, \dsir{} is lowered to \fsm{}.
+
+\subsection{Chisel Generation Pass}
+\fsm{} is closer to hardware, which explicitly defines all needed connections, registers and compute units. So it doesn't need many transformations that convert the components in \fsm{} to chisel program. All the primitives in \fsm{} are implemented as a chisel class, which includes arithmetic operations and elastic components. Chisel provides the support for handshake protocol, which is encapsulated in class \textbf{DecoupledIO}. Each \textbf{fsm.primitive} and \textbf{fsm.instance} is converted to a instance. Because the port name is stored in the result of operation, these port can be easily to access like \textbf{adder.result}. \textbf{stateset} region is translated to the finite state machine in Chisel which has the same functionality except the go insertion in the initial state. The multiplexer will be automatically inserted by Chisel, which makes it possible to multiple assignments with different conditions. This feature in Chisel simplify the conversion from \textbf{fsm.assign} to an assignment in Chisel. Pipeline style components need some extra register which indicates the control of pipeline structure.
+
+\fi

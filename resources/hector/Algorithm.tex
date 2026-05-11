@@ -1,0 +1,62 @@
+\section{Algorithm} \label{sec:algorithm}
+Here, we develop a heuristic partitioning algorithm, which divides the original specification into submodules and determines each submodule to be scheduled, whether statically or dynamically. 
+The insight of our heuristic is to apply dynamic scheduling only when necessary and partition the origin specification into as large submodules as possible, each of which will be statically scheduled and then integrated into the whole dataflow circuit. 
+The algorithm is performed at the \dsir{} level, where the structure of the \tor graph facilitates the extraction of static submodules. 
+
+% \begin{algorithm}
+% \caption{2-step Partitioning}
+% \label{alg:partition}
+% \setstretch{0}
+% \KwIn{Raw \tor description $r$\tor}
+% \KwOut{Hybrid \tor description $h$\tor}
+% set $\chi(op)=\mbox{S}$ for every operation $op$ \\
+% \ForEach{inner-most loop $l$}{
+%   \ForEach{$if \in l$ which guards any computation of $l$'s inter-iteration dependencies}{
+%     set $\chi(if) = \mbox{D}$ \Comment{Rule \rom{1}}
+%   }
+%   \ForEach{memory op $y \in l$ with non-affine indices}{
+%     set $\chi(y) = \mbox{D}$ \Comment{Rule \rom{2}}
+%   }
+% }
+% \ForEach{loop/if $x$ which contains $y:\chi(y)=\mbox{D}$}{
+%     set $\chi(x) = \mbox{D}$ \Comment{Rule \rom{3}} \\
+% }
+
+% extract the static path set $P$, and set submodules\\
+% generate $h$\tor.
+% \end{algorithm}
+
+% Algorithm 1 consists of  two main steps: marking and partitioning, detailed as follows.
+\subsection{Marking}
+
+To determine the scheduling manner of operations, the marking step marks nodes and edges in \tor graph either static or dynamic. 
+We observe that the performance of the whole design is mainly determined by the inner-most loops, which contain the the most executed operations. 
+For these loops, dynamic scheduling has obvious performance advantages against the static one in the presence of undetermined inter-iteration dependencies, either irregular memory accesses or unpredictable control flows.
+
+We propose the following rules to select the operations need to be dynamically scheduled.
+
+\begin{rules}
+    \item \textbf{If operations} \textit{guarding any computation of an inner-most loop's inter-iteration dependencies.} Because dynamic scheduling may alleviate the negative effects of such guarded inter-iteration dependencies.
+    \item \textbf{Memory operations} \textit{with unresolvable indices inside an inner-most loop.} Because static scheduling has to assume worst-case dependencies among them, which limits performance.
+    \item \textbf{Loop/if operations} \textit{containing any dynamic operation.} Because it is impractical to embed any elastic component in a statically scheduled circuit.
+    % \item \textit{Set of memory operations which access the same memory but lie on distinct static paths.} Because it is not safe to schedule these memory operations locally without a global load-store queue (LSQ). Furthermore, the LSQ would stall the execution of static submodules, which effects their performance.
+\end{rules}
+
+% As depicted in \autoref{alg:partition}, Rule \rom{1}, \rom{2}, and \rom{3} are carried out at lines 3-4, 5-6, and 7-8, respectively.
+
+
+\begin{figure}[htb!]
+    \centering
+    \includegraphics[width=\linewidth]{figure/algorithm.pdf}
+    \caption{An example for the partitioning algorithm. In step 1, the elements of \tor graph get marked following Rules \rom{1}-\rom{3}, as depicted by code on the right. In step 2, the algorithm extracts static (blue) submodules from the \tor graph and generates corresponding tor.call operations in the dynamic submodule. The \tor prefix is omitted for simplicity.}
+    \label{fig:algorithm}
+\end{figure}
+
+
+\subsection{Partitioning}
+Our algorithm further partitions the design into submodules based on the marked \tor graph, which is shown as Step 2 in \autoref{fig:algorithm}. 
+The regular structure of the topology facilitates the step, which only needs to extract the static submodules composed of consecutive static nodes and edges on the \tor graph. The algorithm allocates submodules with corresponding operations placed inside, and generates the hybrid \tor. The produced hybrid \tor contains one dynamic submodule and several static submodules. The dynamic submodule includes all dynamic operations as well as generated function calls to static submodules.
+% After producing a hybrid scheduling solution, our proposed holistic framework synthesizes the design into an efficient circuit with good performance as well. We will demonstrate the algorithm's effectiveness in \autoref{sec:experiment}. \hl{we need to more details.}
+
+
+

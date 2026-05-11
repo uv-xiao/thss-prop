@@ -1,0 +1,58 @@
+\subsection{Shuffle Unit}
+\label{sec:spmv}
+%Some studies concentrate on architectural design and implement various optimizations to improve throughput. However, due to the usage of sophisticated cache and crossbar structures, only a few works are compatible with FPGA.
+
+%Sparse linear algebra is now widely used in various domains such as scientific computation and machine learning.  Implementing an accelerator for sparse linear algebra at the RTL level is extremely challenging~\cite{spaghetti}. Here, we select sparse matrix-vector multiplication (SPMV) as a case study to exhibit the extensibility of Hector. Due to the characteristics of SPMV like memory bound and high sparsity, a streaming accelerator fits well in the sparse computation. The dynamic behavior leads to complex control of stalling, which increases the difficulty of designing at the RTL level. An HLS implementation for SPMV has been proposed in some works. Alberto Parravicini et al.~\cite{topK} store a redundancy vector for each PE, which is unscalable for large-scale due to the limited on-board memory. To deal with the limited on-board memory, it's necessary to use a shared buffer between different PEs. 
+
+Shuffle unit is the key hardware component that solves bank conflicts between multiple PEs, which has been used in sparse matrix-vector multiplication (SPMV) design. Each pair of streams may access an arbitrary bank determined by the column index, resulting in traffic conflict. However, it is challenging to implement the shuffle unit with optimized throughput in HLS tools~\cite{HiSparse}. In static scheduling, the conservative assumption of traffic pattern results in a big II, and dynamic scheduling is not suited to generate efficient control logic. Therefore, it's better to implement the shuffle unit at the RTL level. %Designing important modules at the RTL level and quickly generating secondary modules is a better solution for SPMV.
+
+In Hector, the combination of RTL and other synthesis approaches is simple. Given a dummy representation with corresponding ports in \hec and \tor, other components can easily instantiate it ignoring the inner structure. All of the transformations only work on those real components, and the dummy component is eventually replaced with the Chisel program. RTL implementation can be easily integrated with other synthesis approaches using the Chisel implementation and dummy representations.
+
+% \definecolor{bg}{rgb}{0.95,0.95,0.95}
+% \begin{minted}[bgcolor=bg,fontsize=\footnotesize]{c}
+% tor.module Shuffle(in0, id0, in1, id1)->(out0, out1) {
+% }{"dynamic", "dummy"} //tor dummy representation
+% hec.component Shuffle(in0, id0, in1, id1, out0, out1) {
+% }{"dynamic", "dummy"} //hec dummy representation
+% class Shuffle extends MultiIOModule {
+% } //Hardware logic of Shuffle Unit
+% \end{minted}
+
+\begin{table}[htbp!]
+\footnotesize
+\renewcommand\arraystretch{1.5}
+% \setlength{\tabcolstep}{20mm}
+\begin{tabular}{lcc}
+\hline
+\multicolumn{1}{c}{} & Line of Codes & Initial Interval \\ \hline
+Hector (RTL)         & 35            & 1                \\ \hline
+Vitis HLS            & 111           & 1                \\ \hline
+\end{tabular}
+\caption{The comparison between Vitis HLS and Hector.}
+\label{tab:shuffle}
+\vspace{-9pt}
+\end{table}
+
+%The throughput of a streaming accelerator is governed by the weakest component, hence a poor component degrades overall performance. 
+%The shuffle unit, as a critical hardware module in SPMV, is compared against HLS and RTL implementation separately. 
+We use Hector to construct an RTL design and simplify a pipeline kernel~\cite{HiSparse} written in Vitis HLS. The RTL implementation takes only 35 lines to implement the control logic, while the optimal HLS implements uses 111 lines. As previously stated, the conservative assumption in HLS results in a large II. Due to explicit control logic in HLS implementation, it get the optimal II which matches the RTL implementation. The experiment demonstrates that HLS is not suitable for control logic. Therefore, combining HLS and RTL design is a superior option for achieving good performance while maintaining enough productivity.
+
+% \hl{let us include a table for result}
+
+% \begin{figure}[htbp!]
+%   \centering
+%   \begin{subfigure}[b]{0.45\linewidth}
+%   \centering
+%   \includegraphics[width=\linewidth]{figure/cycle_spmv.pdf}
+%   \caption{Cycle count}
+%   \end{subfigure}
+%   \hfill
+%   \begin{subfigure}[b]{0.45\linewidth}
+%   \centering
+%   \includegraphics[width=\linewidth]{figure/lut_spmv.pdf}
+%   \caption{LUT usage}
+%   \end{subfigure}
+
+%   \caption{Performance and resource comparison between HLS and RTL implementation in Hector.}
+%   \label{fig:spmv}
+% \end{figure}

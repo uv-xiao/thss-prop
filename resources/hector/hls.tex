@@ -1,0 +1,111 @@
+\begin{table*}[htbp!]
+    \centering
+    
+    \caption{Timing and Resource Comparison between Hector and Vitis HLS (Vitis), Dynamatic (DYN)}
+    \label{tab:static_dynamic}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{@{} l *{21}{r} @{}}
+    \toprule
+    \multirow{2}{*}{\textbf{Benchmark}} & \multicolumn{3}{c@{}}{\textbf{Slices}} & \multicolumn{3}{c@{}}{\textbf{LUTs}} & \multicolumn{3}{c@{}}{\textbf{FFs}} & \multicolumn{3}{c@{}}{\textbf{DSPs}} & \multicolumn{3}{c@{}}{\textbf{Cycles}}
+    & \multicolumn{3}{c@{}}{\textbf{Period (ns)}} & \multicolumn{3}{c@{}}{\textbf{Time (ms)}} \\
+    \cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13} \cmidrule(lr){14-16} \cmidrule(lr){17-19} \cmidrule(lr){20-22}
+    
+    & Vitis & ours & ratio & Vitis & ours & ratio & Vitis & ours & ratio & Vitis & ours & ratio & Vitis & ours & ratio & Vitis & ours & ratio & Vitis & ours & ratio \\
+    \midrule
+    \textbf{GEMM} & 486 & 441 & 0.846 & 852 & 890 & 1.045 & 1958	& 1600 & 0.817 & 14 & 13 & 0.929 & 3932.1k & 3752.1k & 0.954 & 5.073 & 4.14 & 0.816 & 19.948 & 15.533 & 0.779 \\
+    \textbf{Stencil2D} & 47 & 138 & 2.936 & 94 & 192 & 2.043 & 188 & 370 & 1.968 & 3 & 4 & 1.333 & 320.5k & 312.9k & 0.976 & 4.545 & 3.904 & 0.859 & 1.457 & 1.221 & 0.838 \\
+    \textbf{Stencil3D} & 204 & 245 & 1.201 & 454 & 372 & 0.817 & 668 & 890 & 1.332 & 6 & 8 & 1.333 & 102.5k & 103.7k & 1.011 & 5.692 & 4.672 & 0.821 & 0.583 & 0.484	& 0.30 \\
+    \textbf{SPMV (CSR)} & 502 & 438 & 0.873 & 881 & 932 & 1.058 & 1934 & 1625 & 0.840 & 14 & 13 & 0.929 & 37.1k & 34.2k & 0.920 & 5.299 & 4.848 & 0.915 & 0.197 & 0.165 & 0.842 \\
+    \midrule
+    \textbf{Normalized mean} & & & \textbf{1.388} & & & \textbf{1.189} & & & \textbf{1.177} & & & \textbf{0.964} & & & \textbf{0.966} & & & \textbf{0.876} & & & \textbf{0.845} \\
+    
+    \bottomrule
+    
+    & DYN & ours & ratio & DYN & ours & ratio & DYN & ours & ratio & DYN & ours & ratio & DYN & ours & ratio & DYN & ours & ratio & DYN & ours & ratio \\
+    \midrule
+    \textbf{AEloss Pull} & 115 & 99 & 0.860 & 331 & 280 & 0.846 & 265	& 212 & 0.800 & - & - & - & 12.5k & 14.7k & 1.175 & 6.1 & 5.569 & 0.913 & 0.076 & 0.082 & 1.073 \\
+    \textbf{AEloss Push} & 365 & 87 & 0.238 & 1118 & 250 & 0.224 & 900 & 199 & 0.221 & - & - & - & 326.1k & 293.7k & 0.901 & 6.2 & 5.5 & 0.887 & 2.022 & 1.616 & 0.799 \\
+    \textbf{Stencil2D} & 534 & 408 & 0.764 & 1626 & 1227 & 0.755 & 1379 & 891 & 0.646 & - & - & - & 429.8k & 398.6k & 0.928 & 7.277 & 6.590 & 0.906 & 3.128 & 2.627 & 0.840 \\
+    \midrule
+    \textbf{Normalized mean} & & & \textbf{0.621} & & & \textbf{0.680} & & & \textbf{0.556} & & & \textbf{-} & & & \textbf{1.001} & & & \textbf{0.901 } & & & \textbf{0.903} \\
+    \bottomrule
+    \end{tabular}
+    }
+\end{table*}
+
+\begin{table*}[htbp!]
+    \centering
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{@{} l *{21}{r} @{}}
+    \toprule
+    \multirow{2}{*}{\textbf{Benchmark}} & \multicolumn{3}{c@{}}{\textbf{Slices}} & \multicolumn{3}{c@{}}{\textbf{LUTs}} & \multicolumn{3}{c@{}}{\textbf{FFs}} & \multicolumn{3}{c@{}}{\textbf{DSPs}} & \multicolumn{3}{c@{}}{\textbf{Cycles}}
+    & \multicolumn{3}{c@{}}{\textbf{Period (ns)}} & \multicolumn{3}{c@{}}{\textbf{Time (ms)}} \\
+    \cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13} \cmidrule(lr){14-16} \cmidrule(lr){17-19} \cmidrule(lr){20-22}
+    
+     & S & D & H & S & D & H & S & D & H  & S & D & H &  S & D & H &S & D & H & S & D & H  \\
+    \midrule
+    \textbf{AELoss Pull} & 833 & 2001 & 1607 & 1844 & 5216 & 3447 & 3198	& 7193 & 7737 & 16 & 55 & 29 & 15.4k & 9.7k & 9.3k & 5.378 & 5.683 & 5.765 & 0.083 & 0.055 & 0.054 \\
+    \textbf{AELoss Push} & 2539 & 2429 & 3058 & 4471 & 7593 & 7339 & 11123 & 8445 & 11543 & 6 & 15 & 12 & 1506.2k & 970.9k & 723.6k & 6.004 & 6.058 & 6.14 & 9.043 & 5.882 & 4.443 \\
+    \textbf{Stencil2D} & 138 & 442 & 138 & 192 & 1219 & 192 & 370 & 924 & 370 & 4 & 4 & 4 & 312.9k & 304.9k & 312.9k & 3.904 & 6.4 & 3.904 & 1.221 & 1.951	& 1.221 \\
+    \midrule
+    \textbf{Normalized mean} & \textbf{1} & \textbf{2.139} & \textbf{1.378} & \textbf{1} & \textbf{3.625} & \textbf{1.503} & \textbf{1} & \textbf{1.835} & \textbf{1.486} & \textbf{1} & \textbf{2.313} & \textbf{1.6044} & \textbf{1} & \textbf{0.748} & \textbf{0.695} & \textbf{1} & \textbf{1.235} & \textbf{1.032} & \textbf{1} & \textbf{0.969} & \textbf{0.713} \\
+    
+    \bottomrule
+    \end{tabular}
+    }
+    \caption{Timing and Resource Comparison between Hector's static scheduling (S), dynamic scheduling (D) and hybrid scheduling (H)}
+    \label{tab:compare}
+\end{table*}
+
+\iffalse
+\begin{table*}[htbp!]
+    \centering
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{@{} l *{21}{r} @{}}
+    \toprule
+    \multirow{2}{*}{\textbf{Benchmark}} & \multicolumn{3}{c@{}}{\textbf{Slices}} & \multicolumn{3}{c@{}}{\textbf{LUTs}} & \multicolumn{3}{c@{}}{\textbf{FFs}} & \multicolumn{3}{c@{}}{\textbf{DSPs}} & \multicolumn{3}{c@{}}{\textbf{Cycles}}
+    & \multicolumn{3}{c@{}}{\textbf{Period (ns)}} & \multicolumn{3}{c@{}}{\textbf{Time (ms)}} \\
+    \cmidrule(lr){2-4} \cmidrule(lr){5-7} \cmidrule(lr){8-10} \cmidrule(lr){11-13} \cmidrule(lr){14-16} \cmidrule(lr){17-19} \cmidrule(lr){20-22}
+    
+    & Dynamatic & ours & ratio & Dynamatic & ours & ratio & Dynamatic & ours & ratio & Dynamatic & ours & ratio & Dynamatic & ours & ratio & Dynamatic & ours & ratio & Dynamatic & ours & ratio \\
+    \midrule
+    \textbf{AEloss Pull} & 115 & 99 & 0.860 & 331 & 280 & 0.846 & 265	& 212 & 0.800 & - & - & - & 12.5k & 14.7k & 1.175 & 6.1 & 5.569 & 0.913 & 0.076 & 0.082 & 1.073 \\
+    \textbf{AEloss Push} & 365 & 87 & 0.238 & 1118 & 250 & 0.224 & 900 & 199 & 0.8 & - & - & - & 326.1k & 293.7k & 0.901 & 6.2 & 5.5 & 0.887 & 2.022 & 1.616 & 0.799 \\
+    \textbf{Stencil2D} & 534 & 408 & 0.764 & 1626 & 1227 & 0.755 & 1379 & 891 & 0.646 & - & - & - & 429.8k & 398.6k & 0.928 & 7.277 & 6.590 & 0.906 & 3.128 & 2.627 & 0.840 \\
+    \midrule
+    \textbf{Normalized mean} & \textbf{1$\times$} & \textbf{2.313$\times$} & \textbf{1.604$\times$} & & & \textbf{0.680$\times$} & & & \textbf{0.556$\times$} & & & \textbf{-} & & & \textbf{1.001$\times$} & & & \textbf{0.901 $\times$} & & & \textbf{0.903$\times$} \\
+    \bottomrule
+    \end{tabular}
+    }
+    \caption{Timing and Resource Comparison between Hector and Dynamatic}
+    \label{tab:dynamic}
+\end{table*}
+\fi
+
+\subsection{High-level Synthesis}
+\label{sec:hls}
+% In this section, we show the convenience and extensibility of the proposed flow as well as the profits brought by hybrid scheduling method. 
+
+% To prove that Hector can generate comparable hardware, we first evaluate Hector on several benchmarks compared with static and dynamic HLS tools separately. Then We compare the quality of three kinds of scheduling strategies, fully static scheduling, fully dynamic scheduling, and a hybrid scheduling method in Hector, which demonstrates Hector provides flexibility to explore design trade-offs.
+
+
+
+Recently, \cite{cheng_dss} demonstrates the effectiveness of hybrid scheduling. Their approach manually partitions a program into static and dynamic regions and then synthesizes them using either static or dynamic scheduling HLS tools, respectively. Then, they glue different regions together at the register-transfer level. Their later work~\cite{find_islands} tries to avoid manual selection by implementing a simple partition algorithm in LLVM IR. However, LLVM IR is mainly a software compilation IR and lacks hardware semantics. Therefore, one central question is \textit{what are the intermediate abstractions suitable for both static and dynamic schedulings}?
+
+In this case study, we build an HLS tool based on Hector to demonstrate the generality of the proposed IR. MLIR provides several built-in Dialects, such as Affine, SCF, and Standard~\cite{mlir}. SCF Dialect describes static control flow in a higher-level abstraction which is selected as the input of HLS. To build a complete HLS flow, we additionally implement an SDC-based module scheduling~\cite{sdc-modulo-13} that converts SCF Dialect to \tor. The scheduling result can be easily represented by \tor because of the concise structure of the time graph. Hybrid scheduling is also supported as a hybrid time graph which contains multiple manners in the same graph. We use a naive partition strategy on \tor that converts the manners of some edges from static to dynamic. This demonstrates that Hector can flexibly support different scheduling strategies.
+
+\textbf{Benchmarks}. We evaluate using both regular and irregular applications. The regular kernels are selected from Machsuite\cite{machsuite} including GEMM, Stencil2D, Stencil3D, and Spmv(CSR). These four kernels do not have any branch, and thus are well suited for static scheduling. The irregular kernels are AELoss Pull and AELoss Push from the loss function of~\cite{aeloss}. For these two kernels, a loop-carried dependence resides inside the innermost loop. A considerable amount of computation is guarded by an unpredictable condition, which is seldom true.
+
+\textbf{Methodology}. Polygeist\cite{polygeist} is used as Hector's front-end to convert C programs into SCF dialect in MLIR, then Hector generates an RTL file in Verilog targeting FPGA part xc7z020clg484. We obtain cycle numbers using RTL level simulation. Timing and resource results are obtained from post implementation report from Vivado 2021.1.
+
+In the following, we first compare Hector with the state-of-the-art HLS frameworks. Specifically, we compare static scheduling in Hector with Vitis HLS~\cite{VivadoHls} and dynamic scheduling with Dynamatic~\cite{Dynamatic_Josipovi} \footnote{Dynamatic only provides one buffer insertion strategy based on a Mix ILP solver, which is time-consuming and unscalable. Buffer insertion is disabled in both tools for a fair comparison.}. For Vitis HLS, we apply pipeline directives on the inner-most loop. For comparison with Dynamatic, we convert the floating-point operations for benchmarks AELoss Pull and AELoss Push to their integer equivalent because the open-source Dynamatic with floating-point computation fails to run. Then, we evaluate the effect of our hybrid scheduling in Hector by comparing it with static and dynamic scheduling. In Hector, we can switch between static, dynamic, and hybrid scheduling by easily configuring the scheduling modes provided as an attribute of SCF functions.
+
+\textbf{Comparison with state-of-the-art HLS.} \autoref{tab:static_dynamic} demonstrates that Hector can achieve comparable performance with Vitis HLS and Dynamatic for the tested kernels. The number of DSP in Vitis HLS is different because we use a different IP configuration. For Stencil2D and Stencil3D benchmarks, we attribute the large consumption of resources to our resource binding algorithm compared with Vitis HLS. Hector generates smaller hardware than Dynamatic because of Chisel's internal optimizations, such as width analysis. For the AELossPush benchmark, the resource usage of Dynamatic is substantially higher because LLVM IR, the input language of Dynamatic, has too many basic blocks, which have a negative impact on Dynamatic's basic blocks based scheduling algorithm.
+
+\textbf{Hybrid scheduling.} For the AELossPull benchmark, the major bottleneck is caused by the loop-carried dependence guarded by a condition. The loop-carried dependence causes a conservative II in static scheduling, while dynamic scheduling yields better throughput. Our partition algorithm extracts out the operations except the ones associated with the loop-carried dependence into a static submodule. The submodule contains four floating-point multiplications and four floating-point additions, which can be implemented by only two multipliers and two adders in static scheduling. However, these operations can not share any resources in dynamic scheduling, leading to massive DSP consumption. The hybrid scheduling can retain the performance improvement of dynamic scheduling while reducing resource usage by enabling resource sharing inside static submodules. Static (dynamic) scheduling is effective for pure regular (irregular) applications, while hybrid scheduling is a promising solution for complex applications with a mixture of regular and irregular behaviors. Overall, the hybrid scheduling improves the performance by 29$\%$ compared to static on average. 
+
+AELoss Push contains a two-level loop nest with conditions. The comparison results between the three scheduling modes are similar to AELoss Pull except for the higher FF usage in static and hybrid scheduling. This is mainly because of our register allocation strategy. The complicated loop nest and conditions exacerbate the buffer insertion algorithm's effect, while the regular behavior mitigates this situation in static scheduling. As a result, hybrid scheduling preserves the irregular behavior and achieves a better throughput with the help of static submodules. As for the Stencil2D benchmark, the partitioning algorithm chooses the whole program as a static module because the computation has no branches and is very regular. In that case, dynamic scheduling can only get comparable performance while consuming a large number of resources.
+
+The comparison result against existing HLS tools demonstrates that Hector can fit well in HLS no matter with static, dynamic, or hybrid manners.~\cite{find_islands} implements a hybrid scheduling strategy by partitioning LLVM IR into multiple functions and synthesizing them with separate HLS tools. In contrast, Hector allows users to customize HLS algorithms (such as the partitioning algorithm) implemented as MLIR passes, which facilitates easy extension and allows more optimization opportunities.
+
+% \hl{the result looks good, but we do not discuss how the IRs are used for different scheduling.}

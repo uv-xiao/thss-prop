@@ -1,0 +1,677 @@
+
+% Journals
+
+% First the Full Name is given, then the abbreviation used in the AMS Math
+% Reviews, with an indication if it could not be found there.
+% Note the 2nd overwrites the 1st, so swap them if you want the full name.
+
+ %{AMS}
+ @String{AMSTrans = "American Mathematical Society Translations" }
+ @String{AMSTrans = "Amer. Math. Soc. Transl." }
+ @String{BullAMS = "Bulletin of the American Mathematical Society" }
+ @String{BullAMS = "Bull. Amer. Math. Soc." }
+ @String{ProcAMS = "Proceedings of the American Mathematical Society" }
+ @String{ProcAMS = "Proc. Amer. Math. Soc." }
+ @String{TransAMS = "Transactions of the American Mathematical Society" }
+ @String{TransAMS = "Trans. Amer. Math. Soc." }
+
+ %ACM
+ @String{CACM = "Communications of the {ACM}" }
+ @String{CACM = "Commun. {ACM}" }
+ @String{CompServ = "Comput. Surveys" }
+ @String{JACM = "J. ACM" }
+ @String{ACMMathSoft = "{ACM} Transactions on Mathematical Software" }
+ @String{ACMMathSoft = "{ACM} Trans. Math. Software" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newsletter" }
+ @String{SIGNUM = "{ACM} {SIGNUM} Newslett." }
+
+ @String{AmerSocio = "American Journal of Sociology" }
+ @String{AmerStatAssoc = "Journal of the American Statistical Association" }
+ @String{AmerStatAssoc = "J. Amer. Statist. Assoc." }
+ @String{ApplMathComp = "Applied Mathematics and Computation" }
+ @String{ApplMathComp = "Appl. Math. Comput." }
+ @String{AmerMathMonthly = "American Mathematical Monthly" }
+ @String{AmerMathMonthly = "Amer. Math. Monthly" }
+ @String{BIT = "{BIT}" }
+ @String{BritStatPsych = "British Journal of Mathematical and Statistical
+          Psychology" }
+ @String{BritStatPsych = "Brit. J. Math. Statist. Psych." }
+ @String{CanMathBull = "Canadian Mathematical Bulletin" }
+ @String{CanMathBull = "Canad. Math. Bull." }
+ @String{CompApplMath = "Journal of Computational and Applied Mathematics" }
+ @String{CompApplMath = "J. Comput. Appl. Math." }
+ @String{CompPhys = "Journal of Computational Physics" }
+ @String{CompPhys = "J. Comput. Phys." }
+ @String{CompStruct = "Computers and Structures" }
+ @String{CompStruct = "Comput. \& Structures" }
+ @String{CompJour = "The Computer Journal" }
+ @String{CompJour = "Comput. J." }
+ @String{CompSysSci = "Journal of Computer and System Sciences" }
+ @String{CompSysSci = "J. Comput. System Sci." }
+ @String{Computing = "Computing" }
+ @String{ContempMath = "Contemporary Mathematics" }
+ @String{ContempMath = "Contemp. Math." }
+ @String{Crelle = "Crelle's Journal" }
+ @String{GiornaleMath = "Giornale di Mathematiche" }
+ @String{GiornaleMath = "Giorn. Mat." } % didn't find in AMS MR., ibid.
+
+ %IEEE
+ @String{Computer = "{IEEE} Computer" }
+ @String{IEEETransComp = "{IEEE} Transactions on Computers" }
+ @String{IEEETransComp = "{IEEE} Trans. Comput." }
+ @String{IEEETransAC = "{IEEE} Transactions on Automatic Control" }
+ @String{IEEETransAC = "{IEEE} Trans. Automat. Control" }
+ @String{IEEESpec = "{IEEE} Spectrum" } % didn't find in AMS MR
+ @String{ProcIEEE = "Proceedings of the {IEEE}" }
+ @String{ProcIEEE = "Proc. {IEEE}" } % didn't find in AMS MR
+ @String{IEEETransAeroElec = "{IEEE} Transactions on Aerospace and Electronic
+     Systems" }
+ @String{IEEETransAeroElec = "{IEEE} Trans. Aerospace Electron. Systems" }
+
+ @String{IMANumerAna = "{IMA} Journal of Numerical Analysis" }
+ @String{IMANumerAna = "{IMA} J. Numer. Anal." }
+ @String{InfProcLet = "Information Processing Letters" }
+ @String{InfProcLet = "Inform. Process. Lett." }
+ @String{InstMathApp = "Journal of the Institute of Mathematics and
+     its Applications" }
+ @String{InstMathApp = "J. Inst. Math. Appl." }
+ @String{IntControl = "International Journal of Control" }
+ @String{IntControl = "Internat. J. Control" }
+ @String{IntNumerEng = "International Journal for Numerical Methods in
+     Engineering" }
+ @String{IntNumerEng = "Internat. J. Numer. Methods Engrg." }
+ @String{IntSuper = "International Journal of Supercomputing Applications" }
+ @String{IntSuper = "Internat. J. Supercomputing Applic." } % didn't find
+%% in AMS MR
+ @String{Kibernetika = "Kibernetika" }
+ @String{JResNatBurStand = "Journal of Research of the National Bureau
+     of Standards" }
+ @String{JResNatBurStand = "J. Res. Nat. Bur. Standards" }
+ @String{LinAlgApp = "Linear Algebra and its Applications" }
+ @String{LinAlgApp = "Linear Algebra Appl." }
+ @String{MathAnaAppl = "Journal of Mathematical Analysis and Applications" }
+ @String{MathAnaAppl = "J. Math. Anal. Appl." }
+ @String{MathAnnalen = "Mathematische Annalen" }
+ @String{MathAnnalen = "Math. Ann." }
+ @String{MathPhys = "Journal of Mathematical Physics" }
+ @String{MathPhys = "J. Math. Phys." }
+ @String{MathComp = "Mathematics of Computation" }
+ @String{MathComp = "Math. Comp." }
+ @String{MathScand = "Mathematica Scandinavica" }
+ @String{MathScand = "Math. Scand." }
+ @String{TablesAidsComp = "Mathematical Tables and Other Aids to Computation" }
+ @String{TablesAidsComp = "Math. Tables Aids Comput." }
+ @String{NumerMath = "Numerische Mathematik" }
+ @String{NumerMath = "Numer. Math." }
+ @String{PacificMath = "Pacific Journal of Mathematics" }
+ @String{PacificMath = "Pacific J. Math." }
+ @String{ParDistComp = "Journal of Parallel and Distributed Computing" }
+ @String{ParDistComp = "J. Parallel and Distrib. Comput." } % didn't find
+%% in AMS MR
+ @String{ParComputing = "Parallel Computing" }
+ @String{ParComputing = "Parallel Comput." }
+ @String{PhilMag = "Philosophical Magazine" }
+ @String{PhilMag = "Philos. Mag." }
+ @String{ProcNAS = "Proceedings of the National Academy of Sciences
+                    of the USA" }
+ @String{ProcNAS = "Proc. Nat. Acad. Sci. U. S. A." }
+ @String{Psychometrika = "Psychometrika" }
+ @String{QuartMath = "Quarterly Journal of Mathematics, Oxford, Series (2)" }
+ @String{QuartMath = "Quart. J. Math. Oxford Ser. (2)" }
+ @String{QuartApplMath = "Quarterly of Applied Mathematics" }
+ @String{QuartApplMath = "Quart. Appl. Math." }
+ @String{RevueInstStat = "Review of the International Statisical Institute" }
+ @String{RevueInstStat = "Rev. Inst. Internat. Statist." }
+
+ %SIAM
+ @String{JSIAM = "Journal of the Society for Industrial and Applied
+     Mathematics" }
+ @String{JSIAM = "J. Soc. Indust. Appl. Math." }
+ @String{JSIAMB = "Journal of the Society for Industrial and Applied
+     Mathematics, Series B, Numerical Analysis" }
+ @String{JSIAMB = "J. Soc. Indust. Appl. Math. Ser. B Numer. Anal." }
+ @String{SIAMAlgMeth = "{SIAM} Journal on Algebraic and Discrete Methods" }
+ @String{SIAMAlgMeth = "{SIAM} J. Algebraic Discrete Methods" }
+ @String{SIAMAppMath = "{SIAM} Journal on Applied Mathematics" }
+ @String{SIAMAppMath = "{SIAM} J. Appl. Math." }
+ @String{SIAMComp = "{SIAM} Journal on Computing" }
+ @String{SIAMComp = "{SIAM} J. Comput." }
+ @String{SIAMMatrix = "{SIAM} Journal on Matrix Analysis and Applications" }
+ @String{SIAMMatrix = "{SIAM} J. Matrix Anal. Appl." }
+ @String{SIAMNumAnal = "{SIAM} Journal on Numerical Analysis" }
+ @String{SIAMNumAnal = "{SIAM} J. Numer. Anal." }
+ @String{SIAMReview = "{SIAM} Review" }
+ @String{SIAMReview = "{SIAM} Rev." }
+ @String{SIAMSciStat = "{SIAM} Journal on Scientific and Statistical
+     Computing" }
+ @String{SIAMSciStat = "{SIAM} J. Sci. Statist. Comput." }
+
+ @String{SoftPracExp = "Software Practice and Experience" }
+ @String{SoftPracExp = "Software Prac. Experience" } % didn't find in AMS MR
+ @String{StatScience = "Statistical Science" }
+ @String{StatScience = "Statist. Sci." }
+ @String{Techno = "Technometrics" }
+ @String{USSRCompMathPhys = "{USSR} Computational Mathematics and Mathematical
+     Physics" }
+ @String{USSRCompMathPhys = "{U. S. S. R.} Comput. Math. and Math. Phys." }
+ @String{VLSICompSys = "Journal of {VLSI} and Computer Systems" }
+ @String{VLSICompSys = "J. {VLSI} Comput. Syst." }
+ @String{ZAngewMathMech = "Zeitschrift fur Angewandte Mathematik und
+     Mechanik" }
+ @String{ZAngewMathMech = "Z. Angew. Math. Mech." }
+ @String{ZAngewMathPhys = "Zeitschrift fur Angewandte Mathematik und Physik" }
+ @String{ZAngewMathPhys = "Z. Angew. Math. Phys." }
+
+% Publishers % ================================================= |
+
+ @String{Academic = "Academic Press" }
+ @String{ACMPress = "{ACM} Press" }
+ @String{AdamHilger = "Adam Hilger" }
+ @String{AddisonWesley = "Addison-Wesley" }
+ @String{AllynBacon = "Allyn and Bacon" }
+ @String{AMS = "American Mathematical Society" }
+ @String{Birkhauser = "Birkha{\"u}ser" }
+ @String{CambridgePress = "Cambridge University Press" }
+ @String{Chelsea = "Chelsea" }
+ @String{ClaredonPress = "Claredon Press" }
+ @String{DoverPub = "Dover Publications" }
+ @String{Eyolles = "Eyolles" }
+ @String{HoltRinehartWinston = "Holt, Rinehart and Winston" }
+ @String{Interscience = "Interscience" }
+ @String{JohnsHopkinsPress = "The Johns Hopkins University Press" }
+ @String{JohnWileySons = "John Wiley and Sons" }
+ @String{Macmillan = "Macmillan" }
+ @String{MathWorks = "The Math Works Inc." }
+ @String{McGrawHill = "McGraw-Hill" }
+ @String{NatBurStd = "National Bureau of Standards" }
+ @String{NorthHolland = "North-Holland" }
+ @String{OxfordPress = "Oxford University Press" }  %address Oxford or London?
+ @String{PergamonPress = "Pergamon Press" }
+ @String{PlenumPress = "Plenum Press" }
+ @String{PrenticeHall = "Prentice-Hall" }
+ @String{SIAMPub = "{SIAM} Publications" }
+ @String{Springer = "Springer-Verlag" }
+ @String{TexasPress = "University of Texas Press" }
+ @String{VanNostrand = "Van Nostrand" }
+ @String{WHFreeman = "W. H. Freeman and Co." }
+
+@INPROCEEDINGS{fpdnn,  author={Guan, Yijin and et al.},  booktitle={2017 IEEE 25th Annual International Symposium on Field-Programmable Custom Computing Machines (FCCM)},   title={FP-DNN: An Automated Framework for Mapping Deep Neural Networks onto FPGAs with RTL-HLS Hybrid Templates},   year={2017},  volume={},  number={}}
+
+@inproceedings{bigdata_fpga,
+author = {Liu, Xinheng and Chen, Yao and Nguyen, Tan and Gurumani, Swathi and Rupnow, Kyle and Chen, Deming},
+title = {High Level Synthesis of Complex Applications: An H.264 Video Decoder},
+year = {2016},
+isbn = {9781450338561},
+abstract = {High level synthesis (HLS) is gaining wider acceptance for hardware design due to its higher productivity and better design space exploration features. In recent years, HLS techniques and design flows have also advanced significantly, and as a result, many new FPGA designs are developed with HLS. However, despite many studies using HLS, the size and complexity of such applications remain generally small, and it is not well understood how to design and optimize for HLS with large, complex reference code. Typical HLS benchmark applications contain somewhere between 100 to 1400 lines of code and about 20 sub-functions, but typical input applications may contain many times more code and functions. To study such complex applications, we present a case study using HLS for a full H.264 decoder: an application with over 6000 lines of code and over 100 functions. We share our experience on code conversion for synthesizability, various HLS optimizations, HLS limitations while dealing with complex input code, and general design insights. Through our optimization process, we achieve 34 frames/s at 640x480 resolution (480p). To enable future study and benefit the research community, we open-source our synthe- sizable H.264 implementation.},
+booktitle = {Proceedings of the 2016 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
+keywords = {complex applications, high level synthesis},
+location = {Monterey, California, USA},
+series = {FPGA '16}
+}
+
+@INPROCEEDINGS{video_hls,  author={Neshatpour, Katayoun and Malik, Maria and Ghodrat, Mohammad Ali and Sasan, Avesta and Homayoun, Houman},  booktitle={2015 IEEE International Conference on Big Data (Big Data)},   title={Energy-efficient acceleration of big data analytics applications using FPGAs},   year={2015},  volume={},  number={}}
+
+@online{VivadoHls,
+  author = "Xilinx",
+  year = "2021",
+  title = "Vitis High-Level Synthesis",
+  url = "https://www.xilinx.com/products/design-tools/vivado/integration/esl-design.html",
+  lastaccessed = "March 7, 2021",
+}
+
+@inproceedings{Dynamatic_Josipovi,
+author = {Josipovi\'{c}, Lana and Ghosal, Radhika and Ienne, Paolo},
+title = {Dynamically Scheduled High-Level Synthesis},
+year = {2018},
+isbn = {9781450356145},
+abstract = {High-level synthesis (HLS) tools almost universally generate statically scheduled datapaths. Static scheduling implies that circuits out of HLS tools have a hard time exploiting parallelism in code with potential memory dependencies, with control-dependent dependencies in inner loops, or where performance is limited by long latency control decisions. The situation is essentially the same as in computer architecture between Very-Long Instruction Word (VLIW) processors and dynamically scheduled superscalar processors; the former display the best performance per cost in highly regular embedded applications, but general purpose, irregular, and control-dominated computing tasks require the runtime flexibility of dynamic scheduling. In this work, we show that high-level synthesis of dynamically scheduled circuits is perfectly feasible by describing the implementation of a prototype synthesizer which generates a particular form of latency-insensitive synchronous circuits. Compared to a commercial HLS tool, the result is a different trade-off between performance and circuit complexity, much as superscalar processors represent a different trade-off compared to VLIW processors: in demanding applications, the performance is very significantly improved at an affordable cost. We here demonstrate only the first steps towards more performant high-level synthesis tools adapted to emerging FPGA applications and the demands of computing in broader application domains.},
+booktitle = {Proceedings of the 2018 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
+keywords = {dynamically scheduled circuits, high-level synthesis, pipelining, compiler},
+location = {Monterey, CALIFORNIA, USA},
+series = {FPGA '18}
+}
+
+@inproceedings{find_islands,
+author = {Cheng, Jianyi and Wickerson, John and Constantinides, George A.},
+title = {Finding and Finessing Static Islands in Dynamically Scheduled Circuits},
+year = {2022},
+isbn = {9781450391498},
+abstract = {In high-level synthesis, scheduling is the process that determines the start time of each operation in hardware. A hardware design can be scheduled either at compile time (static), run time (dynamic), or both. Recent research has shown that combining dynamic and static scheduling can achieve high performance and small area. However, there is still a challenge to determine which part to schedule statically and which part dynamically. An inappropriate choice can lead to suboptimal design quality. This paper proposes a heuristic-driven approach to automatically determine 'static islands' - i.e., code regions that are amenable for static scheduling. Over a set of benchmarks where our approach is applicable, we show that our tool can achieve on average a 3.8-fold reduction in area combined with a 13% performance boost through automatic identification and synthesis of static islands from fully dynamically scheduled circuits. The performance of the resulting hardware is close to optimum (as determined by an exhaustive enumeration of all possible static islands).},
+booktitle = {Proceedings of the 2022 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
+keywords = {high-level synthesis, dynamic scheduling, static analysis},
+location = {Virtual Event, USA},
+series = {FPGA '22}
+}
+
+@inproceedings{cheng_dss,
+author = {Cheng, Jianyi and Josipovic, Lana and Constantinides, George A. and Ienne, Paolo and Wickerson, John},
+title = {Combining Dynamic \& Static Scheduling in High-Level Synthesis},
+year = {2020},
+isbn = {9781450370998},
+abstract = {A central task in high-level synthesis is scheduling: the allocation of operations to clock cycles. The classic approach to scheduling is static, in which each operation is mapped to a clock cycle at compile-time, but recent years have seen the emergence of dynamic scheduling, in which an operation's clock cycle is only determined at run-time. Both approaches have their merits: static scheduling can lead to simpler circuitry and more resource sharing, while dynamic scheduling can lead to faster hardware when the computation has non-trivial control flow.In this work, we seek a scheduling approach that combines the best of both worlds. Our idea is to identify the parts of the input program where dynamic scheduling does not bring any performance advantage and to use static scheduling on those parts. These statically-scheduled parts are then treated as black boxes when creating a dataflow circuit for the remainder of the program which can benefit from the flexibility of dynamic scheduling.An empirical evaluation on a range of applications suggests that by using this approach, we can obtain 74% of the area savings that would be made by switching from dynamic to static scheduling, and 135% of the performance benefits that would be made by switching from static to dynamic scheduling.},
+booktitle = {Proceedings of the 2020 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
+keywords = {static analysis, high-level synthesis, dynamic scheduling},
+location = {Seaside, CA, USA},
+series = {FPGA '20}
+}
+
+@inproceedings{sdc-modulo-13,
+author = {Zhang, Zhiru and Liu, Bin},
+title = {SDC-Based modulo Scheduling for Pipeline Synthesis},
+year = {2013},
+isbn = {9781479910694},
+abstract = {Modulo scheduling is a popular technique to enable pipelined execution of successive loop iterations for performance improvement. While a variety of modulo scheduling algorithms exist for software pipelining, they are not amenable to many complex design constraints and optimization goals that arise in the hardware synthesis context.In this paper we describe a modulo scheduling framework based on the formulation of system of difference constraints (SDC). Our framework can systematically model a rich set of performance constraints that are specific to the hardware design. The scheduler also exploits the unique mathematical properties of SDC to carry out efficient global optimization and fast incremental update on the constraint system to minimize the resource usage of the synthesized pipeline. Experiments demonstrate that our proposed technique provides efficient solutions for a set of real-life applications and compares favorably against a widely used lifetime-sensitive modulo scheduling algorithm.},
+booktitle = {Proceedings of the International Conference on Computer-Aided Design},
+location = {San Jose, California},
+series = {ICCAD '13}
+}
+
+@INPROCEEDINGS{polygeist,  author={Moses, William S. and Chelini, Lorenzo and Zhao, Ruizhe and Zinenko, Oleksandr},  booktitle={2021 30th International Conference on Parallel Architectures and Compilation Techniques (PACT)},   title={Polygeist: Raising C to Polyhedral MLIR},   year={2021},  volume={},  number={}}
+
+@INPROCEEDINGS{machsuite,  author={Reagen, Brandon and Adolf, Robert and Shao, Yakun Sophia and Wei, Gu-Yeon and Brooks, David},  booktitle={2014 IEEE International Symposium on Workload Characterization (IISWC)},   title={MachSuite: Benchmarks for accelerator design and customized architectures},   year={2014},  volume={},  number={}}
+
+@inproceedings{aeloss,
+author = {Newell, Alejandro and Huang, Zhiao and Deng, Jia},
+title = {Associative Embedding: End-to-End Learning for Joint Detection and Grouping},
+year = {2017},
+isbn = {9781510860964},
+abstract = {We introduce associative embedding, a novel method for supervising convolutional neural networks for the task of detection and grouping. A number of computer vision problems can be framed in this manner including multi-person pose estimation, instance segmentation, and multi-object tracking. Usually the grouping of detections is achieved with multi-stage pipelines, instead we propose an approach that teaches a network to simultaneously output detections and group assignments. This technique can be easily integrated into any state-of-the-art network architecture that produces pixel-wise predictions. We show how to apply this method to multi-person pose estimation and report state-of-the-art performance on the MPII and MS-COCO datasets.},
+booktitle = {Proceedings of the 31st International Conference on Neural Information Processing Systems},
+location = {Long Beach, California, USA},
+series = {NIPS'17}
+}
+
+@inproceedings{firrtl,
+author = {Izraelevitz, Adam and Koenig, Jack and Li, Patrick and Lin, Richard and Wang, Angie and Magyar, Albert and Kim, Donggyu and Schmidt, Colin and Markley, Chick and Lawson, Jim and Bachrach, Jonathan},
+title = {Reusability is FIRRTL Ground: Hardware Construction Languages, Compiler Frameworks, and Transformations},
+year = {2017},
+abstract = {Enabled by modern languages and retargetable compilers, software development is in a virtual "Cambrian explosion" driven by a critical mass of powerfully parameterized libraries; but hardware development practices lag far behind. We hypothesize that existing hardware construction languages (HCLs) and novel hardware compiler frameworks (HCFs) can put hardware development on a similar evolutionary path by enabling new hardware libraries to be independent of underlying process technologies including FPGA mappings. We support this claim by (1) evaluating the degree with which Chisel, an existing HCL, can support powerfully parameterized libraries, and (2) introducing the concept and implementation of an HCF that uses an open-source hardware intermediate representation, FIRRTL (Flexible Intermediate Representation for RTL), to transform target-independent RTL into technology-specific RTL. Finally, we evaluate many hardware compiler transformations, including simplifying transformations, analyses, optimizations, instrumentations, and specializations, which demonstrate the power of a combined HCL and HCF approach.},
+booktitle = {Proceedings of the 36th International Conference on Computer-Aided Design},
+keywords = {compiler, modeling, RTL, hardware design language, FIRRTL, reusability, chisel, hardware, intermediate representation, FPGA, hardware construction language, ASIC, transformations},
+location = {Irvine, California},
+series = {ICCAD '17}
+}
+
+@inproceedings{LLHD_Schuiki,
+author = {Schuiki, Fabian and Kurth, Andreas and Grosser, Tobias and Benini, Luca},
+title = {LLHD: A Multi-Level Intermediate Representation for Hardware Description Languages},
+year = {2020},
+isbn = {9781450376136},
+abstract = {Modern Hardware Description Languages (HDLs) such as SystemVerilog or VHDL are, due to their sheer complexity, insufficient to transport designs through modern circuit design flows. Instead, each design automation tool lowers HDLs to its own Intermediate Representation (IR). These tools are monolithic and mostly proprietary, disagree in their implementation of HDLs, and while many redundant IRs exists, no IR today can be used through the entire circuit design flow. To solve this problem, we propose the LLHD multi-level IR. LLHD is designed as simple, unambiguous reference description of a digital circuit, yet fully captures existing HDLs. We show this with our reference compiler on designs as complex as full CPU cores. LLHD comes with lowering passes to a hardware-near structural IR, which readily integrates with existing tools. LLHD establishes the basis for innovation in HDLs and tools without redundant compilers or disjoint IRs. For instance, we implement an LLHD simulator that runs up to 2.4\texttimes{} faster than commercial simulators but produces equivalent, cycle-accurate results. An initial vertically-integrated research prototype is capable of representing all levels of the IR, implements lowering from the behavioural to the structural IR, and covers a sufficient subset of SystemVerilog to support a full CPU design.},
+booktitle = {Proceedings of the 41st ACM SIGPLAN Conference on Programming Language Design and Implementation},
+keywords = {transformation passes, hardware description languages, intermediate representations},
+location = {London, UK},
+series = {PLDI 2020}
+}
+
+@inproceedings{uIR_Sharifian,
+author = {Sharifian, Amirali and et al.},
+title = {μIR -An Intermediate Representation for Transforming and Optimizing the Microarchitecture of Application Accelerators},
+year = {2019},
+isbn = {9781450369381},
+abstract = {Creating high quality application-specific accelerators requires us to make iterative changes to both algorithm behavior and microarchitecture, and this is a tedious and error-prone process. High-Level Synthesis (HLS) tools [5, 10] generate RTL for application accelerators from annotated software. Unfortunately, the generated RTL is challenging to change and optimize. The primary limitation of HLS is that the functionality and microarchitecture are conflated together in a single language (such as C++). Making changes to the accelerator design may require code restructuring, and microarchitecture optimizations are tied with program correctness.We propose a generalized intermediate representation for describing accelerator microarchitecture, μIR, and an associated pass framework, μopt. μIR represents the accelerator as a concurrent structural graph in which the components roughly correspond to microarchitecture level hardware blocks (e.g., function units, network, memory banks). There are two important benefits i) it decouples microarchitecture optimizations from algorithm/program optimizations. ii) it decouples microarchitecture optimizations from the RTL generation. Computer architects express their ideas as a set of iterative transformations of the μIR graph that successively refine the accelerator architecture. The μIR graph is then translated to Chisel, while maintaining the execution model and cycle-level performance characteristics. In this paper, we study three broad classes of optimizations: Timing (e.g., Pipeline re-timing), Spatial (e.g., Compute tiling), and Higher-order Ops (e.g., Tensor function units) that deliver between 1.5 --- 8\texttimes{} improvement in performance; overall 5---20\texttimes{} speedup compared to an ARM A9 1Ghz. We evaluate the quality of the autogenerated accelerators on an Arria 10 FPGA and under ASIC UMC 28nm technology.},
+booktitle = {Proceedings of the 52nd Annual IEEE/ACM International Symposium on Microarchitecture},
+location = {Columbus, OH, USA},
+series = {MICRO '52}
+}
+
+@article{parallel_pattern,
+author = {Prabhakar, Raghu and Koeplinger, David and Brown, Kevin J. and Lee, HyoukJoong and De Sa, Christopher and Kozyrakis, Christos and Olukotun, Kunle},
+title = {Generating Configurable Hardware from Parallel Patterns},
+year = {2016},
+issue_date = {April 2016},
+volume = {51},
+number = {4},
+issn = {0362-1340},
+abstract = {In recent years the computing landscape has seen an increasing shift towards specialized accelerators. Field programmable gate arrays (FPGAs) are particularly promising for the implementation of these accelerators, as they offer significant performance and energy improvements over CPUs for a wide class of applications and are far more flexible than fixed-function ASICs. However, FPGAs are difficult to program. Traditional programming models for reconfigurable logic use low-level hardware description languages like Verilog and VHDL, which have none of the productivity features of modern software languages but produce very efficient designs, and low-level software languages like C and OpenCL coupled with high-level synthesis (HLS) tools that typically produce designs that are far less efficient. Functional languages with parallel patterns are a better fit for hardware generation because they provide high-level abstractions to programmers with little experience in hardware design and avoid many of the problems faced when generating hardware from imperative languages. In this paper, we identify two important optimizations for using parallel patterns to generate efficient hardware: tiling and metapipelining. We present a general representation of tiled parallel patterns, and provide rules for automatically tiling patterns and generating metapipelines. We demonstrate experimentally that these optimizations result in speedups up to 39.4\texttimes{} on a set of benchmarks from the data analytics domain.},
+journal = {SIGPLAN Not.},
+month = {mar},
+keywords = {reconfigurable hardware, metapipelining, hardware generation, tiling, parallel patterns, FPGAs}
+}
+
+@inproceedings{Calyx_Rachit,
+author = {Nigam, Rachit and Thomas, Samuel and Li, Zhijing and Sampson, Adrian},
+title = {A Compiler Infrastructure for Accelerator Generators},
+year = {2021},
+isbn = {9781450383172},
+abstract = {We present Calyx, a new intermediate language (IL) for compiling high-level programs into hardware designs. Calyx combines a hardware-like structural language with a software-like control flow representation with loops and conditionals. This split representation enables a new class of hardware-focused optimizations that require both structural and control flow information which are crucial for high-level programming models for hardware design. The Calyx compiler lowers control flow constructs using finite-state machines and generates synthesizable hardware descriptions. We have implemented Calyx in an optimizing compiler that translates high-level programs to hardware. We demonstrate Calyx using two DSL-to-RTL compilers, a systolic array generator and one for a recent imperative accelerator language, and compare them to equivalent designs generated using high-level synthesis (HLS). The systolic arrays are 4.6\texttimes{} faster and 1.11\texttimes{} larger on average than HLS implementations, and the HLS-like imperative language compiler is within a few factors of a highly optimized commercial HLS toolchain. We also describe three optimizations implemented in the Calyx compiler.},
+booktitle = {Proceedings of the 26th ACM International Conference on Architectural Support for Programming Languages and Operating Systems},
+keywords = {Accelerator Design, Intermediate Language},
+location = {Virtual, USA},
+series = {ASPLOS 2021}
+}
+
+@inproceedings{aetherling,
+author = {Durst, David and Feldman, Matthew and Huff, Dillon and Akeley, David and Daly, Ross and Bernstein, Gilbert Louis and Patrignani, Marco and Fatahalian, Kayvon and Hanrahan, Pat},
+title = {Type-Directed Scheduling of Streaming Accelerators},
+year = {2020},
+isbn = {9781450376136},
+abstract = {Designing efficient, application-specialized hardware accelerators requires assessing trade-offs between a hardware module’s performance and resource requirements. To facilitate hardware design space exploration, we describe Aetherling, a system for automatically compiling data-parallel programs into statically scheduled, streaming hardware circuits. Aetherling contributes a space- and time-aware intermediate language featuring data-parallel operators that represent parallel or sequential hardware modules, and sequence data types that encode a module’s throughput by specifying when sequence elements are produced or consumed. As a result, well-typed operator composition in the space-time language corresponds to connecting hardware modules via statically scheduled, streaming interfaces. We provide rules for transforming programs written in a standard data-parallel language (that carries no information about hardware implementation) into equivalent space-time language programs. We then provide a scheduling algorithm that searches over the space of transformations to quickly generate area-efficient hardware designs that achieve a programmer-specified throughput. Using benchmarks from the image processing domain, we demonstrate that Aetherling enables rapid exploration of hardware designs with different throughput and area characteristics, and yields results that require 1.8-7.9\texttimes{} fewer FPGA slices than those of prior hardware generation systems.},
+booktitle = {Proceedings of the 41st ACM SIGPLAN Conference on Programming Language Design and Implementation},
+keywords = {scheduling, image processing, space-time types, FPGAs, hardware description languages},
+location = {London, UK},
+series = {PLDI 2020}
+}
+
+@inproceedings{legup,
+author = {Canis, Andrew and Choi, Jongsok and Aldham, Mark and Zhang, Victor and Kammoona, Ahmed and Anderson, Jason H. and Brown, Stephen and Czajkowski, Tomasz},
+title = {LegUp: High-Level Synthesis for FPGA-Based Processor/Accelerator Systems},
+year = {2011},
+isbn = {9781450305549},
+abstract = {In this paper, we introduce a new open source high-level synthesis tool called LegUp that allows software techniques to be used for hardware design. LegUp accepts a standard C program as input and automatically compiles the program to a hybrid architecture containing an FPGA-based MIPS soft processor and custom hardware accelerators that communicate through a standard bus interface. Results show that the tool produces hardware solutions of comparable quality to a commercial high-level synthesis tool.},
+booktitle = {Proceedings of the 19th ACM/SIGDA International Symposium on Field Programmable Gate Arrays},
+keywords = {hardware/software co-design, field-programmable gate arrays, fpgas, high-level synthesis},
+location = {Monterey, CA, USA},
+series = {FPGA '11}
+}
+
+@INPROCEEDINGS{hierarchy_cdfg,  author={Qiang Wu and et al.},  booktitle={IEEE 2002 International Conference on Communications, Circuits and Systems and West Sino Expositions},   title={A hierarchical CDFG as intermediate representation for hardware/software codesign},   year={2002},  volume={2},  number={}}
+
+@ARTICLE{synASM,  author={Sinha, Rohit and Patel, Hiren D.},  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},   title={synASM: A High-Level Synthesis Framework With Support for Parallel and Timed Constructs},   year={2012},  volume={31},  number={10}}
+
+@INPROCEEDINGS{ahir,  author={Sahasrabuddhe, Sameer D. and Raja, Hakim and Arya, Kavi and Desai, Madhav P.},  booktitle={20th International Conference on VLSI Design held jointly with 6th International Conference on Embedded Systems (VLSID'07)},   title={AHIR: A Hardware Intermediate Representation for Hardware Generation from High-level Programs},   year={2007},  volume={},  number={}}
+
+@online{circt,
+  author = "CIRCT Community",
+  year = "2021",
+  title = "CIRCT: Circuit IR Compilers and Tools",
+  url = "https://github.com/llvm/circt",
+  lastaccessed = "March 7, 2021",
+}
+
+@inproceedings{mlir,
+  author={Lattner, Chris and Amini, Mehdi and Bondhugula, Uday and Cohen, Albert and Davis, Andy and Pienaar, Jacques and Riddle, River and Shpeisman, Tatiana and Vasilache, Nicolas and Zinenko, Oleksandr},
+  booktitle={2021 {{IEEE/ACM}} International Symposium on Code Generation and Optimization (CGO)},
+  title={{{MLIR}}: Scaling Compiler Infrastructure for Domain Specific Computation},
+  year={2021},
+  volume={},
+  number={}
+}
+
+@article{StaticSingleAssignment,
+author = {Cytron, Ron and Ferrante, Jeanne and Rosen, Barry K. and Wegman, Mark N. and Zadeck, F. Kenneth},
+title = {Efficiently Computing Static Single Assignment Form and the Control Dependence Graph},
+year = {1991},
+issue_date = {Oct. 1991},
+volume = {13},
+number = {4},
+issn = {0164-0925},
+journal = {ACM Trans. Program. Lang. Syst.},
+month = oct,
+keywords = {optimizing compilers, def-use chain, dominator, control dependence, control flow graph}
+}
+
+@INPROCEEDINGS{dai_modulo_scheduling,  author={Dai, Steve and Zhang, Zhiru},  booktitle={2019 56th ACM/IEEE Design Automation Conference (DAC)},   title={Improving Scalability of Exact Modulo Scheduling with Specialized Conflict-Driven Learning},   year={2019},  volume={},  number={}}
+
+@article{TPU,
+author = {Jouppi, Norman P. and et al.},
+title = {In-Datacenter Performance Analysis of a Tensor Processing Unit},
+year = {2017},
+issue_date = {May 2017},
+volume = {45},
+number = {2},
+issn = {0163-5964},
+abstract = {Many architects believe that major improvements in cost-energy-performance must now come from domain-specific hardware. This paper evaluates a custom ASIC---called a Tensor Processing Unit (TPU) --- deployed in datacenters since 2015 that accelerates the inference phase of neural networks (NN). The heart of the TPU is a 65,536 8-bit MAC matrix multiply unit that offers a peak throughput of 92 TeraOps/second (TOPS) and a large (28 MiB) software-managed on-chip memory. The TPU's deterministic execution model is a better match to the 99th-percentile response-time requirement of our NN applications than are the time-varying optimizations of CPUs and GPUs that help average throughput more than guaranteed latency. The lack of such features helps explain why, despite having myriad MACs and a big memory, the TPU is relatively small and low power. We compare the TPU to a server-class Intel Haswell CPU and an Nvidia K80 GPU, which are contemporaries deployed in the same datacenters. Our workload, written in the high-level TensorFlow framework, uses production NN applications (MLPs, CNNs, and LSTMs) that represent 95% of our datacenters' NN inference demand. Despite low utilization for some applications, the TPU is on average about 15X -- 30X faster than its contemporary GPU or CPU, with TOPS/Watt about 30X -- 80X higher. Moreover, using the CPU's GDDR5 memory in the TPU would triple achieved TOPS and raise TOPS/Watt to nearly 70X the GPU and 200X the CPU.},
+journal = {SIGARCH Comput. Archit. News},
+month = {jun},
+keywords = {RNN, domain-specific architecture, MLP, accelerator, deep learning, TPU, TensorFlow, DNN, neural network, CNN, GPU, LSTM}
+}
+
+@inproceedings{autoSA,
+  author    = {Jie Wang and
+               Licheng Guo and
+               Jason Cong},
+  editor    = {Lesley Shannon and
+               Michael Adler},
+  title     = {AutoSA: {A} Polyhedral Compiler for High-Performance Systolic Arrays
+               on {FPGA}},
+  booktitle = {{FPGA} '21: The 2021 {ACM/SIGDA} International Symposium on Field
+               Programmable Gate Arrays, Virtual Event, USA, February 28 - March
+               2, 2021},
+  year      = {2021},
+  timestamp = {Wed, 24 Feb 2021 16:52:39 +0100},
+  biburl    = {https://dblp.org/rec/conf/fpga/0022GC21.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@inproceedings{HiSparse,
+author = {Du, Yixiao and Hu, Yuwei and Zhou, Zhongchun and Zhang, Zhiru},
+title = {High-Performance Sparse Linear Algebra on HBM-Equipped FPGAs Using HLS: A Case Study on SpMV},
+year = {2022},
+isbn = {9781450391498},
+abstract = {Sparse linear algebra operators are memory bound due to low compute to memory access ratio and irregular data access patterns. The exceptional bandwidth improvement provided by the emerging high-bandwidth memory (HBM) technologies, coupled with the ability of FPGAs to customize the memory hierarchy and compute engines, brings the potential to significantly boost the performance of sparse linear algebra operators. In this paper we identify four challenges when developing high-performance sparse linear algebra accelerators on HBM-equipped FPGAs --- low HBM bandwidth utilization with conventional sparse storage, limited on-chip memory capacity being the bottleneck when scaling to multiple HBM channels, low compute occupancy due to bank conflicts and inter-iteration carried dependencies, and timing closure on multi-die heterogeneous fabrics. We conduct an in-depth case study on sparse matrix-vector multiplication (SpMV) to explore techniques that tackle the four challenges. These techniques include (1) a customized sparse matrix format tailored for HBMs, (2) a scalable on-chip buffer design that combines replication and banking, (3) best practices of using HLS to implement hardware modules that dynamically resolve bank conflicts and carried dependencies for achieving high compute occupancy, and (4) a split-kernel design methodology for frequency optimization. Using the techniques, we demonstrate HiSparse, a high-performance SpMV accelerator on a multi-die HBM-equipped FPGA device. We evaluated HiSparse on a variety of matrix datasets. The results show that HiSparse achieves a high frequency and delivers promising speedup with increased bandwidth efficiency when compared to prior arts on CPUs, GPUs, and FPGAs. HiSparse is available at https://github.com/cornell-zhang/HiSparse.},
+booktitle = {Proceedings of the 2022 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
+keywords = {hbm, hls, fpga acceleration, sparse matrix-vector multiplication},
+location = {Virtual Event, USA},
+series = {FPGA '22}
+}
+
+@INPROCEEDINGS{spaghetti,  author={Hojabr, Reza and Sedaghati, Ali and Sharifian, Amirali and Khonsari, Ahmad and Shriraman, Arrvindh},  booktitle={2021 IEEE International Symposium on High-Performance Computer Architecture (HPCA)},   title={SPAGHETTI: Streaming Accelerators for Highly Sparse GEMM on FPGAs},   year={2021},  volume={},  number={}}
+
+@inproceedings{topK,
+  author    = {Alberto Parravicini and
+               Luca Giuseppe Cellamare and
+               Marco Siracusa and
+               Marco D. Santambrogio},
+  title     = {Scaling up {HBM} Efficiency of Top-K SpMV for Approximate Embedding
+               Similarity on FPGAs},
+  booktitle = {58th {ACM/IEEE} Design Automation Conference, {DAC} 2021, San Francisco,
+               CA, USA, December 5-9, 2021},
+  year      = {2021},
+  timestamp = {Fri, 12 Nov 2021 12:32:28 +0100},
+  biburl    = {https://dblp.org/rec/conf/dac/ParraviciniCSS21.bib},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@INPROCEEDINGS{polySA,  author={Cong, Jason and Wang, Jie},  booktitle={2018 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)},   title={PolySA: Polyhedral-Based Systolic Array Auto-Compilation},   year={2018},  volume={},  number={}}
+
+@inproceedings{extensor,
+author = {Hegde, Kartik and et al.},
+title = {ExTensor: An Accelerator for Sparse Tensor Algebra},
+year = {2019},
+isbn = {9781450369381},
+abstract = {Generalized tensor algebra is a prime candidate for acceleration via customized ASICs. Modern tensors feature a wide range of data sparsity, with the density of non-zero elements ranging from 10-6% to 50%. This paper proposes a novel approach to accelerate tensor kernels based on the principle of hierarchical elimination of computation in the presence of sparsity. This approach relies on rapidly finding intersections---situations where both operands of a multiplication are non-zero---enabling new data fetching mechanisms and avoiding memory latency overheads associated with sparse kernels implemented in software.We propose the ExTensor accelerator, which builds these novel ideas on handling sparsity into hardware to enable better bandwidth utilization and compute throughput. We evaluate ExTensor on several kernels relative to industry libraries (Intel MKL) and state-of-the-art tensor algebra compilers (TACO). When bandwidth normalized, we demonstrate an average speedup of 3.4\texttimes{}, 1.3\texttimes{}, 2.8\texttimes{}, 24.9\texttimes{}, and 2.7\texttimes{} on SpMSpM, SpMM, TTV, TTM, and SDDMM kernels respectively over a server class CPU.},
+booktitle = {Proceedings of the 52nd Annual IEEE/ACM International Symposium on Microarchitecture},
+keywords = {Tensor Algebra, Sparse Computation, Hardware Acceleration},
+location = {Columbus, OH, USA},
+series = {MICRO '52}
+}
+
+@INPROCEEDINGS{bambu,  author={Ferrandi, Fabrizio and Castellana, Vito Giovanni and Curzel, Serena and Fezzardi, Pietro and Fiorito, Michele and Lattuada, Marco and Minutoli, Marco and Pilato, Christian and Tumeo, Antonino},  booktitle={2021 58th ACM/IEEE Design Automation Conference (DAC)},   title={Invited: Bambu: an Open-Source Research Framework for the High-Level Synthesis of Complex Applications},   year={2021},  volume={},  number={}}
+
+@inproceedings{soda,
+author = {Minutoli, Marco and Castellana, Vito Giovanni and Tan, Cheng and Manzano, Joseph and Amatya, Vinay and Tumeo, Antonino and Brooks, David and Wei, Gu-Yeon},
+title = {SODA: A New Synthesis Infrastructure for Agile Hardware Design of Machine Learning Accelerators},
+year = {2020},
+isbn = {9781450380263},
+abstract = {Next-generation systems, such as edge devices, will have to provide efficient processing of machine learning (ML) algorithms, along with several metrics, including energy, performance, area, and latency. However, the quickly evolving field of ML makes it extremely difficult to generate accelerators able to support a wide variety of algorithms. Simultaneously, designing accelerators in hardware description languages (HDLs) by hand is laborious and time-consuming, and does not allow quick exploration of the design space. This paper discusses the SODA synthesizer, an automated open-source high-level ML framework-to-Verilog compiler targeting ML Application-Specific Integrated Circuits (ASICs) chiplets based on the LLVM infrastructure. The SODA synthesizers will allow implementing optimal designs by combining templated and fully tunable IPs and macros, and fully custom components generated through high-level synthesis. All these components will be provided through an extendable resource library, characterized by commercial and open-source logic design flows. Through a closed-loop design space exploration engine, developers will quickly explore their hardware designs along different dimensions.},
+booktitle = {Proceedings of the 39th International Conference on Computer-Aided Design},
+keywords = {opensource, design automation, high-level synthesis, agile hardware design},
+location = {Virtual Event, USA},
+series = {ICCAD '20}
+}
+
+@online{verilog,
+  author = "IEEE",
+  year = "1364-2005",
+  title = "Standard for Verilog Hardware Description Language",
+}
+
+@online{vhdl,
+  author = "IEEE",
+  year = "1076-2008",
+  title = "VHDL Language Reference Manual.",
+}
+
+@ARTICLE{intro-hls,  author={Coussy, Philippe and Gajski, Daniel D. and Meredith, Michael and Takach, Andres},  journal={IEEE Design   Test of Computers},   title={An Introduction to High-Level Synthesis},   year={2009},  volume={26},  number={4}}
+
+@INPROCEEDINGS{elastic_circuit,  author={Cortadella, J. and Kishinevsky, M. and Grundmann, B.},  booktitle={2006 43rd ACM/IEEE Design Automation Conference},   title={Synthesis of synchronous elastic architectures},   year={2006},  volume={},  number={}}
+
+@INPROCEEDINGS{chisel,  author={Bachrach, Jonathan and Vo, Huy and Richards, Brian and Lee, Yunsup and Waterman, Andrew and Avizienis, Rimas and Wawrzynek, John and Asanovic, Krste},  booktitle={DAC Design Automation Conference 2012},   title={Chisel: Constructing hardware in a Scala embedded language},   year={2012},  volume={},  number={}}
+
+@INPROCEEDINGS{rl_hls,  author={Chen, Hongzheng and Shen, Minghua},  booktitle={2019 IEEE/ACM International Conference on Computer-Aided Design (ICCAD)},   title={A Deep-Reinforcement-Learning-Based Scheduler for FPGA HLS},   year={2019},  volume={},  number={}}
+
+@inproceedings{cdl_hls,
+author = {Dai, Steve and Zhang, Zhiru},
+title = {Improving Scalability of Exact Modulo Scheduling with Specialized Conflict-Driven Learning},
+year = {2019},
+isbn = {9781450367257},
+abstract = {Loop pipelining is an important optimization in high-level synthesis to enable high-throughput pipelined execution of loop iterations. However, current pipeline scheduling approach relies on fundamentally inexact heuristics based on ad hoc priority functions and lacks guarantee on achieving the best throughput. To address this shortcoming, we propose a scheduling algorithm based on system of integer difference constraints (SDC) and Boolean satisfiability (SAT) to exactly handle various pipeline scheduling constraints. Our techniques take advantage of conflict-driven learning and problem-specific specialization to optimally yet efficiently derive pipelining solutions. Experiments demonstrate that our approach achieves notable speedup in comparison to integer linear programming based techniques.},
+booktitle = {Proceedings of the 56th Annual Design Automation Conference 2019},
+location = {Las Vegas, NV, USA},
+series = {DAC '19}
+}
+
+@INPROCEEDINGS{thread_weaving,  author={Hsiao, Hsuan and Anderson, Jason},  booktitle={2019 56th ACM/IEEE Design Automation Conference (DAC)},   title={Thread Weaving: Static Resource Scheduling for Multithreaded High-Level Synthesis},   year={2019},  volume={},  number={}}
+
+@INPROCEEDINGS{survey_dsl,  author={Kapre, Nachiket and Bayliss, Samuel},  booktitle={2016 26th International Conference on Field Programmable Logic and Applications (FPL)},   title={Survey of domain-specific languages for FPGA computing},   year={2016},  volume={},  number={}}
+
+@inproceedings{heterocl,
+author = {Lai, Yi-Hsiang and et al.},
+title = {HeteroCL: A Multi-Paradigm Programming Infrastructure for Software-Defined Reconfigurable Computing},
+year = {2019},
+isbn = {9781450361378},
+abstract = {With the pursuit of improving compute performance under strict power constraints, there is an increasing need for deploying applications to heterogeneous hardware architectures with accelerators, such as GPUs and FPGAs. However, although these heterogeneous computing platforms are becoming widely available, they are very difficult to program especially with FPGAs. As a result, the use of such platforms has been limited to a small subset of programmers with specialized hardware knowledge. To tackle this challenge, we introduce HeteroCL, a programming infrastructure composed of a Python-based domain-specific language (DSL) and an FPGA-targeted compilation flow. The HeteroCL DSL provides a clean programming abstraction that decouples algorithm specification from three important types of hardware customization in compute, data types, and memory architectures. HeteroCL further captures the interdependence among these different customization techniques, allowing programmers to explore various performance/area/accuracy trade-offs in a systematic and productive manner. In addition, our framework produces highly efficient hardware implementations for a variety of popular workloads by targeting spatial architecture templates such as systolic arrays and stencil with dataflow architectures. Experimental results show that HeteroCL allows programmers to explore the design space efficiently in both performance and accuracy by combining different types of hardware customization and targeting spatial architectures, while keeping the algorithm code intact.},
+booktitle = {Proceedings of the 2019 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays},
+keywords = {fpga, multi-paradigm programming, systolic array, reconfigurable computing, high-level synthesis, domain-specific language, hardware accelerator, python, stencil, compiler, spatial architecture},
+location = {Seaside, CA, USA},
+series = {FPGA '19}
+}
+
+@INPROCEEDINGS{system_dsl,  author={George, Nithin and Lee, HyoukJoong and Novo, David and Rompf, Tiark and Brown, Kevin J. and Sujeeth, Arvind K. and Odersky, Martin and Olukotun, Kunle and Ienne, Paolo},  booktitle={2014 24th International Conference on Field Programmable Logic and Applications (FPL)},   title={Hardware system synthesis from Domain-Specific Languages},   year={2014},  volume={},  number={}}
+
+@INPROCEEDINGS{tensorlib,  author={Jia, Liancheng and Luo, Zizhang and Lu, Liqiang and Liang, Yun},  booktitle={2021 58th ACM/IEEE Design Automation Conference (DAC)},   title={TensorLib: A Spatial Accelerator Generation Framework for Tensor Algebra},   year={2021},  volume={},  number={}}
+
+@INPROCEEDINGS{flexcl,  author={Wang, Shuo and Liang, Yun and Wei Zhang},  booktitle={2017 54th ACM/EDAC/IEEE Design Automation Conference (DAC)},   title={FlexCL: An analytical performance model for OpenCL workloads on flexible FPGAs},   year={2017},  volume={},  number={}}
+
+@inproceedings{ems,
+  author    = {Liancheng Jia and
+               Yuyue Wang and
+               Jingwen Leng and
+               Yun Liang},
+  title     = {EMS: Efficient Memory Subsystem Synthesis for Spatial Accelerators},
+  booktitle = {2022 59th ACM/IEEE Design Automation Conference (DAC)},
+  year      = {2022}
+}
+
+@INPROCEEDINGS{lattner2004llvm,  author={Lattner, C. and Adve, V.},  booktitle={International Symposium on Code Generation and Optimization, 2004. CGO 2004.},   title={LLVM: a compilation framework for lifelong program analysis \& transformation},   year={2004},  volume={},  number={},  pages={75-86},  doi={10.1109/CGO.2004.1281665}}
+
+@inproceedings{novillo2003tree,
+  title={Tree ssa—a new high-level optimization framework for the gnu compiler collection},
+  author={Novillo, Diego},
+  booktitle={Proceedings of the Nord/USENIX Users Conference},
+  year={2003},
+  organization={Citeseer}
+}
+
+@INPROCEEDINGS{scalehls,  author={Ye, Hanchen and Hao, Cong and Cheng, Jianyi and Jeong, Hyunmin and Huang, Jack and Neuendorffer, Stephen and Chen, Deming},  booktitle={2022 IEEE International Symposium on High-Performance Computer Architecture (HPCA)},   title={ScaleHLS: A New Scalable High-Level Synthesis Framework on Multi-Level Intermediate Representation},   year={2022},  volume={},  number={},  pages={741-755},  doi={10.1109/HPCA53966.2022.00060}}
+
+@inproceedings{relay,
+author = {Roesch, Jared and Lyubomirsky, Steven and Weber, Logan and Pollock, Josh and Kirisame, Marisa and Chen, Tianqi and Tatlock, Zachary},
+title = {Relay: A New IR for Machine Learning Frameworks},
+year = {2018},
+isbn = {9781450358347},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3211346.3211348},
+doi = {10.1145/3211346.3211348},
+abstract = {Machine learning powers diverse services in industry including search, translation, recommendation systems, and security. The scale and importance of these models require that they be efficient, expressive, and portable across an array of heterogeneous hardware devices. These constraints are often at odds; in order to better accommodate them we propose a new high-level intermediate representation (IR) called Relay. Relay is being designed as a purely-functional, statically-typed language with the goal of balancing efficient compilation, expressiveness, and portability. We discuss the goals of Relay and highlight its important design constraints. Our prototype is part of the open source NNVM compiler framework, which powers Amazon's deep learning framework MxNet.},
+booktitle = {Proceedings of the 2nd ACM SIGPLAN International Workshop on Machine Learning and Programming Languages},
+pages = {58–68},
+numpages = {11},
+keywords = {intermediate representation, compilers, machine learning, differentiable programming},
+location = {Philadelphia, PA, USA},
+series = {MAPL 2018}
+}
+
+@article{hls_liang,
+author = {Liang, Yun and Rupnow, Kyle and Li, Yinan and Min, Dongbo and Do, Minh N. and Chen, Deming},
+title = {High-Level Synthesis: Productivity, Performance, and Software Constraints},
+year = {2012},
+issue_date = {January 2012},
+publisher = {Hindawi Limited},
+address = {London, GBR},
+volume = {2012},
+issn = {2090-0147},
+url = {https://doi.org/10.1155/2012/649057},
+doi = {10.1155/2012/649057},
+abstract = {FPGAs are an attractive platform for applications with high computation demand and low energy consumption requirements. However, design effort for FPGA implementations remains high--often an order of magnitude larger than design effort using high-level languages. Instead of this time-consuming process, high-level synthesis (HLS) tools generate hardware implementations from algorithm descriptions in languages such as C/C++ and SystemC. Such tools reduce design effort: high-level descriptions are more compact and less error prone. HLS tools promise hardware development abstracted from software designer knowledge of the implementation platform. In this paper, we present an unbiased study of the performance, usability and productivity of HLS using AutoPilot (a state-of-the-art HLS tool). In particular, we first evaluate AutoPilot using the popular embedded benchmark kernels. Then, to evaluate the suitability of HLS on real-world applications, we perform a case study of stereo matching, an active area of computer vision research that uses techniques also common for image denoising, image retrieval, feature matching, and face recognition. Based on our study, we provide insights on current limitations of mapping general-purpose software to hardware using HLS and some future directions for HLS tool development. We also offer several guidelines for hardware-friendly software design. For popular embedded benchmark kernels, the designs produced by HLS achieve 4\texttimes{} to 126\texttimes{} speedup over the software version. The stereo matching algorithms achieve between 3.5\texttimes{} and 67.9\texttimes{} speedup over software (but still less than manual RTL design) with a fivefold reduction in design effort versus manual RTL design.},
+journal = {JECE},
+month = {jan},
+articleno = {1},
+numpages = {1}
+}
+
+@article{10.1145/390013.808479,
+author = {Allen, Frances E.},
+title = {Control Flow Analysis},
+year = {1970},
+issue_date = {July 1970},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {5},
+number = {7},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/390013.808479},
+doi = {10.1145/390013.808479},
+abstract = {Any static, global analysis of the expression and data relationships in a program requires a knowledge of the control flow of the program. Since one of the primary reasons for doing such a global analysis in a compiler is to produce optimized programs, control flow analysis has been embedded in many compilers and has been described in several papers. An early paper by Prosser [5] described the use of Boolean matrices (or, more particularly, connectivity matrices) in flow analysis. The use of “dominance” relationships in flow analysis was first introduced by Prosser and much expanded by Lowry and Medlock [6]. References [6,8,9] describe compilers which use various forms of control flow analysis for optimization. Some recent developments in the area are reported in [4] and in [7].The underlying motivation in all the different types of control flow analysis is the need to codify the flow relationships in the program. The codification may be in connectivity matrices, in predecessor-successor tables, in dominance lists, etc. Whatever the form, the purpose is to facilitate determining what the flow relationships are; in other words to facilitate answering such questions as: is this an inner loop?, if an expression is removed from the loop where can it be correctly and profitably placed?, which variable definitions can affect this use?In this paper the basic control flow relationships are expressed in a directed graph. Various graph constructs are then found and shown to codify interesting global relationships.},
+journal = {SIGPLAN Not.},
+month = {jul},
+pages = {1–19},
+numpages = {19}
+}
+
+@inproceedings{cdfg_allen,
+author = {Allen, Frances E.},
+title = {Control Flow Analysis},
+year = {1970},
+isbn = {9781450373869},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/800028.808479},
+doi = {10.1145/800028.808479},
+abstract = {Any static, global analysis of the expression and data relationships in a program requires a knowledge of the control flow of the program. Since one of the primary reasons for doing such a global analysis in a compiler is to produce optimized programs, control flow analysis has been embedded in many compilers and has been described in several papers. An early paper by Prosser [5] described the use of Boolean matrices (or, more particularly, connectivity matrices) in flow analysis. The use of “dominance” relationships in flow analysis was first introduced by Prosser and much expanded by Lowry and Medlock [6]. References [6,8,9] describe compilers which use various forms of control flow analysis for optimization. Some recent developments in the area are reported in [4] and in [7].The underlying motivation in all the different types of control flow analysis is the need to codify the flow relationships in the program. The codification may be in connectivity matrices, in predecessor-successor tables, in dominance lists, etc. Whatever the form, the purpose is to facilitate determining what the flow relationships are; in other words to facilitate answering such questions as: is this an inner loop?, if an expression is removed from the loop where can it be correctly and profitably placed?, which variable definitions can affect this use?In this paper the basic control flow relationships are expressed in a directed graph. Various graph constructs are then found and shown to codify interesting global relationships.},
+booktitle = {Proceedings of a Symposium on Compiler Optimization},
+pages = {1–19},
+numpages = {19},
+location = {Urbana-Champaign, Illinois}
+}
+
+@article{10.1145/2499370.2462176,
+author = {Ragan-Kelley, Jonathan and Barnes, Connelly and Adams, Andrew and Paris, Sylvain and Durand, Fr\'{e}do and Amarasinghe, Saman},
+title = {Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines},
+year = {2013},
+issue_date = {June 2013},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {48},
+number = {6},
+issn = {0362-1340},
+url = {https://doi.org/10.1145/2499370.2462176},
+doi = {10.1145/2499370.2462176},
+abstract = {Image processing pipelines combine the challenges of stencil computations and stream programs. They are composed of large graphs of different stencil stages, as well as complex reductions, and stages with global or data-dependent access patterns. Because of their complex structure, the performance difference between a naive implementation of a pipeline and an optimized one is often an order of magnitude. Efficient implementations require optimization of both parallelism and locality, but due to the nature of stencils, there is a fundamental tension between parallelism, locality, and introducing redundant recomputation of shared values.We present a systematic model of the tradeoff space fundamental to stencil pipelines, a schedule representation which describes concrete points in this space for each stage in an image processing pipeline, and an optimizing compiler for the Halide image processing language that synthesizes high performance implementations from a Halide algorithm and a schedule. Combining this compiler with stochastic search over the space of schedules enables terse, composable programs to achieve state-of-the-art performance on a wide range of real image processing pipelines, and across different hardware architectures, including multicores with SIMD, and heterogeneous CPU+GPU execution. From simple Halide programs written in a few hours, we demonstrate performance up to 5x faster than hand-tuned C, intrinsics, and CUDA implementations optimized by experts over weeks or months, for image processing applications beyond the reach of past automatic compilers.},
+journal = {SIGPLAN Not.},
+month = {jun},
+pages = {519–530},
+numpages = {12},
+keywords = {locality, image processing, gpu, domain specific language, compiler, autotuning, vectorization, redundant computation, optimization, parallelism}
+}
+
+@inproceedings{Halide,
+author = {Ragan-Kelley, Jonathan and Barnes, Connelly and Adams, Andrew and Paris, Sylvain and Durand, Fr\'{e}do and Amarasinghe, Saman},
+title = {Halide: A Language and Compiler for Optimizing Parallelism, Locality, and Recomputation in Image Processing Pipelines},
+year = {2013},
+isbn = {9781450320146},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2491956.2462176},
+doi = {10.1145/2491956.2462176},
+abstract = {Image processing pipelines combine the challenges of stencil computations and stream programs. They are composed of large graphs of different stencil stages, as well as complex reductions, and stages with global or data-dependent access patterns. Because of their complex structure, the performance difference between a naive implementation of a pipeline and an optimized one is often an order of magnitude. Efficient implementations require optimization of both parallelism and locality, but due to the nature of stencils, there is a fundamental tension between parallelism, locality, and introducing redundant recomputation of shared values.We present a systematic model of the tradeoff space fundamental to stencil pipelines, a schedule representation which describes concrete points in this space for each stage in an image processing pipeline, and an optimizing compiler for the Halide image processing language that synthesizes high performance implementations from a Halide algorithm and a schedule. Combining this compiler with stochastic search over the space of schedules enables terse, composable programs to achieve state-of-the-art performance on a wide range of real image processing pipelines, and across different hardware architectures, including multicores with SIMD, and heterogeneous CPU+GPU execution. From simple Halide programs written in a few hours, we demonstrate performance up to 5x faster than hand-tuned C, intrinsics, and CUDA implementations optimized by experts over weeks or months, for image processing applications beyond the reach of past automatic compilers.},
+booktitle = {Proceedings of the 34th ACM SIGPLAN Conference on Programming Language Design and Implementation},
+pages = {519–530},
+numpages = {12},
+keywords = {domain specific language, gpu, autotuning, locality, vectorization, redundant computation, parallelism, image processing, compiler, optimization},
+location = {Seattle, Washington, USA},
+series = {PLDI '13}
+}
+

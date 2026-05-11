@@ -1,0 +1,62 @@
+\begin{figure*}[htbp!]
+  \centering
+  \includegraphics[width=\textwidth]{figure/tor.pdf}
+  \caption{The design of \tor IR. \tor IR consists of topology and functional operations. In (a), topology describes the time graph with supplementary information on edges, where all edges and nodes are set "static" as default. In (e), operations are bound on the graph according to the syntax in (d). The binding situation determines the types of nodes on the time graph, as shown in (b). (c) shows the restrictions the node types set on the graph structure.}
+  \label{fig:tor}
+  \vspace{-9pt}
+\end{figure*}
+
+\section{Intermediate Representation}\label{sec:ir}
+% \hl{let us first write a paragraph about the novelty of intermediate representation, then talks about its implementation and what are the proposed IRs used for? What are the relations between different IRs.}
+In this section, we present the details of the IRs , \tor (TOpological Representation) and \hec (Hierarchical Elastic Component). 
+
+\subsection{Overview}
+% \hl{it is not clear how these IRs can be used for different hardware synthesis approaches.}
+
+Hector is a two-level IR system, where \tor is at the high level and \hec IR is at the low level. \tor IR combines a software-like control flow and the schedule information of each operation. \hec IR proposes an allocate-assign mechanism to explicitly describe the relationship between computation and compute units. Both IRs provide a uniform representation of the control logic with various manners. The main difference between the two IRs is that \tor describes when the operation begins, while \hec describes where it takes place. Hector is built on a novel compiler infrastructure, MLIR~\cite{mlir}, that provides powerful scalability and modularity.
+
+Because of the two-level representation, it is possible to use multiple hardware synthesis methodologies. \tor is capable of providing a high-level abstraction of the schedule information. Both dynamic and static scheduling methods in HLS can be easily captured by \tor IR. The allocation of hardware resources and the binding of operations can then be described in \hec IR. The entire HLS procedure can be obtained from several lowering transformations based on Hector IR. Hector also can describe hardware at the architectural level, which is a necessary task for hardware generators. The allocate-assign method in \hec makes it easier to describe interconnection at the low level, while high-level scheduling transformations can be applied to \tor IR. %\hl{this paragraph is not sufficient, we need more details here.}
+
+
+
+\subsection{ToR IR} \label{sec:tor}
+The software IR such as LLVM IR lacks of hardware semantics. The idea of the high-level IR is to make it closer to hardware by providing a directed graph that carries control flow and timing information and binding software operations to elements of the graph. \tor is composed of two parts, topology and functional operations, both of which are introduced below. 
+
+Topology describes a time graph, which is a directed graph describing control flow and timing information. Topology includes a \verb|tor.topo (x to y)| operation, which indicates the source node and sink node numbered \verb|x| and \verb|y|, respectively. The \verb|tor.from| operations inside \verb|tor.topo| specify edges of the time graph. Attributes such as \verb|"seq:x"| add supplementary information to the time graph. There are four types of nodes in the time graph. Normal node leads a sequential edge, where \verb|"seq:2"| indicates that the bound operation occupies two cycles. Call node leads a call edge, where \verb|"call"| indicates a state that stalls until the callee finishes. If node leads two branches, and loop node leads a loop body and loop back edge. The type of each node on the time graph is determined by the operation binding. The combination of these four node types is capable of describing the schedule at a high-level.
+
+Three scheduling manners: \textbf{static}, \textbf{pipeline}, and \textbf{dynamic}, are supported in \tor. Pipelining is a key optimization technique to improve throughput, which serves as the determinant of the overall performance. \tor IR supports pipelining by aligning branches of all \verb|if| operations and adding \verb|pipeline| and \verb|II| attributes to submodules. Topology also supports dynamic behavior that resolves conflicts in run-time. Stalling occurs only when the conflict occurs, avoiding the conservative assumption of static behaviors. This unified representation makes it easier to transform among different behaviors. 
+
+Functional operations present the algorithmic specification with high-level control flow semantics (e.g., if, for, and while). It binds each operation to some element of the time graph, either a node or an edge. To be specific, general operations (computation, memory access, function call) are bound on edges, while if/loop operations are bound on nodes. Functional operations specify functionality and binding according to the syntax in \autoref{fig:tor}(d). 
+
+\autoref{fig:tor} illustrates an example of \tor IR. The time graph in (a) contains a loop, which is composed of two branches $1 \to 2 \to 3$ and $1 \to 4$. There is also a function call on the edge $2\to 3$, and the loop exits at the edge $0\to 7$. As shown in (b)(c), four types of node vary in the graph structure. (e) shows the functional operations which is bound on the time graph. For example, the \verb|tor.for| operation is bound on node \verb|0|, and the \verb|tor.muli| is bound on edge \verb|(1 to 2)|. As shown in \autoref{fig:compile}(a), there can be multiple manners in the same time graph,  which are attached to the time graph as attributes like \verb|"seq:2"| and \verb|"dynamic"|. The time graph with multiple manners is called a hybrid time graph. 
+
+\subsection{HEC IR} \label{sec:hec}
+Here, we propose \hec IR, which describes hardware with different manners in a unified allocate-assign mechanism, as depicted in \autoref{fig:hec}(a)(b). Allocation explicitly defines all function units and sub-modules on the datapath, and the signals of these units are determined through assignments in a specific situation. That allocate-assign mechanism omits the insertion of multiplexer, which simplifies the assignment of signals.
+
+Compared with \tor, \hec works at a level much closer to hardware. It explicitly describes the resource usage (including registers, on-chip memory, and computation units). Corresponding to the different behaviors in \tor: \textbf{static}, \textbf{pipeline} and \textbf{dynamic}, a \hec design is composed of three types of components matching their different manners as follows. 
+
+\begin{figure}[htbp!]
+  \centering
+  \includegraphics[width=\linewidth]{figure/hec.pdf}
+  \caption{Allocate-assign mechanism and three styles of components in \hec. 
+   (a) shows an example for unit allocation, where hec.primitive allocates a "muli" unit named "m" with three ports, and hec.wire declares a wire, which is commonly used in HDLs. (b) shows the usage of combinational operations and hec.assign for signal delivery among ports and wires. (c)-(e) presents three component styles. }
+  \label{fig:hec}
+  \vspace{-9pt}
+\end{figure}
+
+\textbf{STG-style component}. 
+\hec describes a static module in a state transition graph (STG) style. The \verb|hec.stateset| operation defines a set of states, as shown in \autoref{fig:hec}(c). Inside each state \verb|@sx|, \verb|hec.assign| operations specify the signal delivery situation among allocated resources. Such representation naturally supports fine-grained parallelism. There is also a \verb|tor.transition| operation in every state, specifying which state the control is transferred to, either unconditionally or based on guard signals. Based on the allocate-assign mechanism, it is convenient to describe resource sharing in an STG-style component by simply feeding signals into the shared resources (either registers or compute units) inside different states.
+
+\textbf{Pipeline-style component}.
+The component for a pipelined module is described in a multi-stage style. \hec explicitly presents all pipeline stages by \verb|hec.stage| operations inside the \verb|hec.stageset| operation, as shown in \autoref{fig:hec}(d). For each value, \hec allocates a register to carry it for each stage between its definition and the latest use. This is because there may be time overlap between the lifetimes of the same value in consecutive executions. Signal delivery description is similar to that of STG-style components, while resource sharing additionally needs to consider the initial interval (II) for conflict avoidance~\cite{sdc-modulo-13, dai_modulo_scheduling}. We also define operation \verb|hec.deliver| to specify inter-iteration data delivery.
+
+\textbf{Handshake-style component}.
+\hec describes the dynamic submodule in handshake style. In order to simplify the description, extra signals in the handshake protocol, such as valid and ready, are hidden in this kind of component. With elastic units, such as \verb|branch| and \verb|fork|, predefined as primitives in \hec, it is easy to describe the interconnections among components with the allocate-assign mechanism inside the \verb|hec.graph| operation, as shown in \autoref{fig:hec}(e). 
+
+\subsection{IR Implementation} 
+Both IRs are implemented as \emph{dialects} in MLIR infrastructure. MLIR provides a generic form of operations, which can be customized for new languages. Besides basic operands and results, operations may have \emph{attributes} and \emph{regions}. \autoref{fig:tor}(d) shows the functional syntax of operations in \tor. There are two \emph{regions} in \verb|tor.if| representing two branches separately. The nested region is naturally supported in MLIR, which enables the definition of \verb|stateset| and \verb|stageset| in \autoref{fig:hec}(c)(d). The different behaviors of schedule, the binding of operations and the instantiation of sub-module are all implemented as \emph{attributes} including literal and symbolic reference.
+
+The two-level representation makes it easy to implement different synthesis methods. \tor IR provide a high-level abstraction of schedule information, and different scheduling approach can be easily obtained by transforming on the time graph. The explicit representation of allocation in \hec IR brings the opportunity of resource sharing, which significantly reduces the resource consumption. The allocation of sub-modules forms a hierarchical representation of hardware, which is capable of describing architectural design. The allocate-assign mechanism also simplifies the definition of interconnection between different modules. Therefore, both HLS and hardware generators can be easily implemented in Hector IR.
+
+% 1. how to build hls and hardware generators using two IRs.
+% 2. how to use MLIR to build the two IRs is not clear.
