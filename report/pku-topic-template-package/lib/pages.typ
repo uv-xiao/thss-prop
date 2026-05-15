@@ -233,12 +233,6 @@
   front-heading("摘要", enter-front: true, header: "摘要")
   set par(first-line-indent: first-line-indent)
   cabstract
-  // 如果发现关键词和内容挤到一起，或者关键词在下一页顶部
-  // 可以插入 pagebreak() 手动分页
-  v(1fr)
-  [关键词：]
-  ckeywords.join("，")
-  v(1em)
 }
 
 // 英文摘要页
@@ -251,7 +245,7 @@
   blind: false,
   eabstract,
 ) = {
-  // 英文摘要标题，页眉为 ABSTRACT
+  // 选题报告模板只保留 ABSTRACT 标题，不显示英文题名、作者和关键词块。
   heading(
     numbering: none,
     outlined: false,
@@ -264,33 +258,14 @@
       linespacing: 2em,
       font: (size: 字号.小二, font: "Arial", weight: "regular"),
     ))],
-  )[#upper(etitle)]
+  )[ABSTRACT]
 
   // Word 模板中正文仍然是 20pt 行距
   // 对于纯英文字体，测试下来 12.5pt 的匹配效果较好
   set par(spacing: 12.5pt, leading: 12.5pt, justify: true)
-  if not blind {
-    [
-      #set align(center)
-      #eauthor \(#emajor\) \
-      Supervised by #esupervisor
-    ]
-  }
   // Word 模板中英文摘要的首行缩进固定为 0.74cm
   set par(first-line-indent: 0.74cm, justify: true)
-  v(8pt)
-  align(center)[#text(font: "Arial", weight: "bold")[ABSTRACT]]
-  v(6pt)
   eabstract
-  v(1fr)
-  let keyword-prefix = if ekeywords.len() == 1 {
-    "KEY WORD: "
-  } else {
-    "KEY WORDS: "
-  }
-  [#keyword-prefix]
-  ekeywords.join(", ")
-  v(1em)
 }
 
 // 致谢页
