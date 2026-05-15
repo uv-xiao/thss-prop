@@ -119,20 +119,20 @@ This file records evidence for bibliography entries and report claims. It is not
 - Supports: Chapter 1 and Chapter 5 claims about compiler infrastructure as the interface between hardware facts, program semantics, verification evidence, and intelligent-agent automation.
 - Metadata confidence: internal design memo; cite only as project rationale, not as external publication.
 
-### spine
+### spine2026
 
 - Source: `resources/spine/docs/story.md`, `resources/spine/docs/design/layer-01-delta-oracle-execution.md`, `resources/spine/docs/design/layer-04-gcd-validation-pipeline.md`
 - Accessed: 2026-05-06
 - Evidence inspected: semantic boundary, typed Delta actor/task surface, oracle execution, trace stream, alignment reports, and GCD Delta-to-RTL validation pipeline.
-- Supports: Chapter 5 future-work claims about verification-constrained architecture/hardware/compiler co-generation and staged executable evidence.
+- Supports: Chapter 5 future-work claims about verification-constrained architecture/hardware/compiler co-generation and staged executable evidence; cited when the report names the Spine internal prototype.
 - Metadata confidence: internal prototype documentation; keep clear distinction between implemented foundation and future vision.
 
-### intellic
+### intellic2026
 
 - Source: `resources/IntelliC/docs/design/compiler_framework.md`, `resources/IntelliC/docs/design/compiler_semantics.md`, `resources/IntelliC/docs/design/agent_harness.md`
 - Accessed: 2026-05-06
 - Evidence inspected: `IR := Sy + Se`, MLIR/xDSL-style syntax, first-class semantic definitions, TraceDB facts/events, compiler actions, fixed vs agent action boundaries, and repository harness design.
-- Supports: Chapter 5 future-work claims about explainable/auditable compiler infrastructure and intelligent-agent collaboration over compiler-native objects.
+- Supports: Chapter 5 future-work claims about intelligent-agent compiler infrastructure and collaboration over compiler-native objects; cited when the report names the IntelliC internal prototype.
 - Metadata confidence: internal design documentation; do not cite as external prior work.
 
 ### seed-proposal

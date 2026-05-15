@@ -62,7 +62,7 @@ The broad reservoir includes retargetable compilers, multi-level IR, e-graphs, e
 - Compiler and IR substrates: `mlir2021`, `polygeist2021`, `calyx2021`;
 - E-graph and equality saturation foundations: `tate2009eqsat`, `egg2021`;
 - EqSat and EDA/compiler optimization families: `diospyros2021`, `isaria2024`, `seer2024`, `esyn2024`, `emorphic2025`, `eqmap2025`, `lakeroad2024`;
-- Strategy, rule automation, and scalability: `nandi_rewrite_2021`, `cao_babble_2022`, `enumo2023`, `smith_scaling_2024`, `cai2025smoothe`, `aspen2025`, plus local work key `eggmind2026`.
+- Strategy, rule automation, and scalability: `nandi_rewrite_2021`, `cao_babble_2022`, `enumo2023` (same work as source key `pal_equality_2023`), `smith_scaling_2024`, `cai2025smoothe`, `aspen2025`, plus local work key `eggmind2026`.
 
 The source papers repeatedly frame compiler infrastructure as the layer that keeps software semantics available long enough for hardware-aware decisions. APS emphasizes compiler support for custom instructions through pattern matching and bitwidth-aware vectorization. Aquas moves this further by using MLIR to represent both hardware-side ISAX behavior and software programs at compatible abstraction levels, then using an e-graph-based matching mechanism to overcome syntactic divergence and premature lowering. ISAMORE treats e-graphs and anti-unification as the means to discover semantically reusable instruction patterns rather than only syntactically similar hotspots.
 

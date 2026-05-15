@@ -13,13 +13,22 @@ This table is a writing aid. It must not be inserted into the report unless expl
 | agent harness | 智能体协作框架 | 智能体协作框架（agent harness） | 本项目 `.agents` 机制、`docs/writing/terminology-decisions.md` | “harness”暂无稳定中文译名，但正文以中文为主，首次出现保留英文对应。 | 代理框架、智能体框架 |
 | bibliography | 参考文献 / 文献目录 | 参考文献 | 清华写作指南、Typst/BibTeX 语境 | 报告正文使用“参考文献”，审计文档可用“bibliography”。 | 书目 |
 | citation key | 引用键 | 引用键（citation key） | BibTeX/Typst 工作流 | 技术配置中需要区分文献条目和正文引用。 | 引文键 |
-| hardware-software co-design | 软硬件协同 | 软硬件协同（hardware-software co-design） | 报告主题与 APS/Aquas 等已有工作 | 与用户确定的报告主题一致，强调硬件设计、编译器、软件生态、运行时之间的共同设计。 | 软硬协同、硬件软件协同 |
-| agile chip design | 敏捷芯片设计 | 敏捷芯片设计（agile chip design） | 报告主题、APS 论文标题 | 强调芯片设计迭代速度、可复用工具链和生产力，不等同于单纯快速 RTL 生成。 | 敏捷芯片开发 |
-| innovative compilation techniques | 创新性编译技术 | 创新性编译技术（innovative compilation techniques） | 用户确定的报告主题 | 覆盖可重定向编译、e-graph、MLIR、多层 IR、编译证据与 agentic 编译基础设施。 | 创新编译技术 |
-| architecture interface | 架构接口 | 架构接口（architecture interface） | `report/main.typ` Chapter 1.3, APS/Aquas framing | 指硬件能力对软件和工具链暴露的边界，包括 ISA/ISAX、微架构机制、存储层次、互连、执行模型和运行时可见资源。 | 体系结构接口（过长且不如“架构接口”稳定） |
-| compilation interface / compiler interface | 编译接口 | 编译接口（compilation interface） | `report/main.typ` Chapter 1.3, `resources/compiler-infra-is-harness-medium.md` | 指软件语义进入 IR、lowering、rewrite、调度、代码生成、runtime API 和 profiling feedback 的边界。 | 编译器接口（容易误解为 API 层面） |
+| hardware-software co-design | 软硬件协同 | 软硬件协同（hardware-software co-design） | 报告主题与 APS/Aquas 等已有工作 | 与用户确定的报告主题一致，强调硬件设计、编译器、软件生态、系统软件边界和目标执行环境之间的共同设计。 | 软硬协同、硬件软件协同 |
+| agile chip design | 敏捷芯片设计 | 敏捷芯片设计（agile chip design） | 报告主题、APS 论文标题 | 强调芯片设计迭代速度、可复用工具链和生产力，不等同于单纯快速寄存器传输级代码生成。 | 敏捷芯片开发 |
+| innovative compilation techniques | 创新性编译技术 | 创新性编译技术（innovative compilation techniques） | 用户确定的报告主题 | 覆盖可重定向编译、等价图、MLIR、多层中间表示、编译检查记录与智能体编译基础设施。 | 创新编译技术 |
+| AI / artificial intelligence | 人工智能 | 人工智能（AI） | 本报告产业背景与应用压力 | 中文正文优先写“人工智能”；只有首次出现或英文摘要、专名语境保留 AI。 | AI 裸用 |
+| LLM / large language model | 大语言模型 | 大语言模型（LLM） | 本报告产业背景、智能体方法和 EggMind/OriGen 章节 | 中文正文优先写“大语言模型”；LLM 只在首次括注、英文摘要、系统名或标题原文中保留。 | LLM 裸用、大模型（正式正文中少用） |
+| intermediate representation / IR | 中间表示 | 中间表示（intermediate representation, IR） | LLVM/MLIR/Aquas-IR/硬件中间表示章节 | 普通叙述使用“中间表示”；系统名如 Aquas-IR、RapidStream IR 可保留英文缩写。 | IR 裸用 |
+| RTL | 寄存器传输级设计 / 寄存器传输级代码 | 寄存器传输级设计（RTL） | 硬件生成、OriGen、Clay、仿真语境 | 普通叙述按上下文写“寄存器传输级设计/代码/生成/仿真”；表格、源码、英文摘要和首次括注可保留 RTL。 | RTL 裸用 |
+| HLS | 高层综合 | 高层综合（HLS） | Cement/Clay/SkyEgg/FPGA 章节 | 普通叙述使用“高层综合”；Vitis HLS 等工具名和源文表格可保留 HLS。 | HLS 裸用 |
+| DSL | 领域专用语言 / 领域语言 | 领域专用语言（DSL） | ISAMORE/EqSatL/硬件语言章节 | 普通叙述使用“领域专用语言”或“领域语言”；EqSatL 等专有语言名不翻译。 | DSL 裸用 |
+| compiler pass / pass | 编译遍 / 编译过程 | 编译遍（compiler pass） | LLVM/MLIR/编译优化章节 | 普通优化单元写“编译遍”；当强调流程组合时可写“编译过程”。 | pass 裸用 |
+| API | 接口 | 接口（API） | 系统软件或工具接口语境 | 中文正文优先写“接口”；仅在专有英文名称、代码或应用二进制接口对比中保留 API。 | API 裸用 |
+| ABI | 应用二进制接口 | 应用二进制接口（ABI） | 系统边界、mailbox/blob、目标执行环境语境 | 中文正文优先写全称，避免读者误解为普通函数接口。 | ABI 裸用 |
+| architecture interface | 架构接口 | 架构接口（architecture interface） | `report/main.typ` Chapter 1.3, APS/Aquas framing | 指硬件能力对软件和工具链暴露的边界，包括 ISA/ISAX、微架构机制、存储层次、互连、执行模型和软件可见资源。 | 体系结构接口（过长且不如“架构接口”稳定） |
+| compilation interface / compiler interface | 编译接口 | 编译接口（compilation interface） | `report/main.typ` Chapter 1.3, `resources/compiler-infra-is-harness-medium.md` | 指软件语义进入中间表示、降低、重写、调度、代码生成、系统软件接口和性能剖析记录的边界。 | 编译器接口（容易误解为 API 层面） |
 | agentic method | 智能体方法 | 智能体（agentic）方法 | Chapter 1 agentic trend discussion, `docs/writing/terminology-decisions.md` | 正文以中文为主，首次出现保留 agentic 以对应工业报告和英文论文语境。 | 智能体式方法 |
-| evidence memory | 证据记忆 | 证据记忆（evidence memory） | IntelliC / compiler harness discussion | 指为后续编译或 agent action 保留的结构化事实、诊断、obligation、artifact 和运行反馈，不是自然语言聊天记忆。 | 记忆库、经验库 |
+| structured record / experience record | 结构化记录 / 经验记录 | 经验记录（experience record） | IntelliC / compiler harness discussion; user correction 2026-05-12 | 正文避免“证据记忆”“证据闭环”“运行时反馈”。按语境写结构化记录、经验记录、执行记录、检查记录或性能剖析记录，用来表示智能体能力提升所需的可追踪材料。 | 证据记忆、证据闭环、运行时反馈 |
 | e-graph | 等价图 | 等价图（e-graph） | ISAMORE, SkyEgg, EggMind; user confirmed 2026-05-07 | 正文以中文为主，首次出现保留英文以对应数据结构，后文普通叙述使用“等价图”。 | e-graph 泛用、等价图（不括注的首次出现） |
 | equality saturation / EqSat | 等价饱和 / EqSat | 等价饱和（equality saturation, EqSat） | ISAMORE, EggMind; user corrected 2026-05-11 | 概念层面使用“等价饱和”；EggMind 策略和算法族语境可保留 EqSat。 | 等式饱和 |
 | EqSatL | EqSatL | EqSatL | EggMind; user confirmed 2026-05-07 | 专有 DSL 名称，不翻译；不能写作“等价饱和”。 | 等价饱和语言 |
@@ -38,9 +47,10 @@ This table is a writing aid. It must not be inserted into the report unless expl
 | initiation interval / II | 启动间隔 / II | 启动间隔（initiation interval, II） | Clay and HLS scheduling | HLS/流水调度常用。 | 初始间隔 |
 | workload | 工作负载 | 工作负载（workload） | Evaluation sections | 中文自然，首次可保留英文。 | workload（正文中过多英文会破坏流畅性） |
 | benchmark | 基准测试 | 基准测试（benchmark） | Evaluation sections | 中文自然。 | benchmark（仅在专名或图表中保留） |
-| profiling | 性能剖析 | 性能剖析（profiling） | Runtime/compiler optimization sections | 用户要求中英文使用更严格；正文中文优先，必要处首次括注英文。 | profiling 单独使用、性能画像 |
+| profiling | 性能剖析 | 性能剖析（profiling） | 执行系统/编译优化章节 | 用户要求中英文使用更严格；正文中文优先，必要处首次括注英文。 | profiling 单独使用、性能画像 |
 | runtime | 运行时 / 执行系统 | 运行时（runtime，仅在框架名或源文语境中使用） | PyTorch/TensorRT-LLM/PTO Runtime 等框架语境 | 正文不再把“运行时”作为报告级结构概念；普通论述优先用“系统软件边界”“目标执行环境”“执行系统”“性能剖析与执行轨迹”。 | 运行时协同、运行时反馈 |
-| kernel | 内核 / 计算内核 | 计算内核（kernel） | Evaluation and runtime/compiler optimization sections | 普通技术对象在正文中中文优先；框架 API 或文件名中保留英文。 | kernel 单独泛用 |
+| feedback | 结果 / 记录 / 评价信号 | 评价结果（feedback，仅必要时括注） | 大语言模型、工具检查、性能剖析和智能体方法语境 | 正文避免泛用“反馈”。按上下文写“编译错误信息”“测试结果”“执行结果”“执行轨迹”“评价信号”“性能剖析记录”。 | feedback 裸用、运行时反馈、验证反馈 |
+| kernel | 内核 / 计算内核 | 计算内核（kernel） | 评估、执行系统和编译优化章节 | 普通技术对象在正文中中文优先；框架 API 或文件名中保留英文。 | kernel 单独泛用 |
 | speedup | 加速比 | 加速比（speedup） | Evaluation sections | 中文稳定，便于开题报告叙事。 | 加速率 |
 | area overhead | 面积开销 | 面积开销（area overhead） | ASIP/accelerator evaluation sections | 与 PPA 语境匹配。 | 面积负担 |
 | cost model | 代价模型 | 代价模型（cost model） | Compiler/e-graph optimization sections | 编译优化常用译法。 | 成本模型 |
