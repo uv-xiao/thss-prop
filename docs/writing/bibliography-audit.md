@@ -49,6 +49,16 @@ This file records evidence for bibliography entries and report claims. It is not
 - Metadata confidence: provisional; `report/refs.bib` entry still uses manuscript/local repository metadata and should be finalized later.
 - Open gaps: final venue and exact publication metadata need confirmation.
 
+### cement2_2025
+
+- Source: https://arxiv.org/abs/2511.15073v1
+- Local sources: `resources/cement2/main.tex`, `resources/cement2/doc/1_introduction.tex`, `resources/cement2/doc/2_background_motivation.tex`, `resources/cement2/doc/3_lang_abstraction.tex`, `resources/cement2/doc/4_compiler.tex`, `resources/cement2/doc/5_evaluation.tex`, `resources/cement2/doc/6_related_work.tex`, `resources/cement2/fig/overview-p1.pdf`, `resources/cement2/fig/ir-trans-p1.pdf`
+- Accessed: 2026-05-15
+- Evidence inspected: arXiv metadata and abstract; local LaTeX source describing temporal hardware transactions, temporal relationships, multi-cycle rules, temporal rule graph analysis, timing inference, rule coordination checking, false-static detection, temporal scheduling, temporal partitioning, temporal implementation, and evaluation on a RISC-V soft core, custom CPU instructions, PolyBench kernels, and systolic arrays.
+- Supports: Chapter 3 detailed extension after Cement. The report uses Cement2 as the continuation of Cement's cycle-deterministic frontend line, showing how temporal hardware transactions raise the abstraction from explicit cycle control to rule-level temporal behavior with compiler analysis and efficient FPGA synthesis.
+- Metadata confidence: high for arXiv metadata and local source text; publication venue is currently preprint only.
+- Open gaps: update venue and DOI metadata if the preprint is later published.
+
 ### hector2022
 
 - Source: `resources/cement/refs.bib` entry `HECTOR`
@@ -495,6 +505,15 @@ This batch was added to support the expanded Chapter 1 related-work survey. Entr
 - Metadata confidence: medium to high. Entries were copied from local source-paper `.bib` files and checked against the sections that cite them. Some preprint and workshop entries have intentionally incomplete DOI or venue metadata because the local source entry is incomplete.
 - Open gaps: before final submission, verify metadata for preprint/workshop entries that remain cited centrally; unresolved source keys remain listed in `docs/writing/related-work-bibliography.md`.
 
+### assassyn2025
+
+- Source: https://were.github.io/pdfs/isca25-18.pdf
+- Accessed: 2026-05-15
+- Evidence inspected: PDF title page, abstract, related-work section, conclusion, and evaluation summary. The paper presents Assassyn as a unified high-level programming framework for architectural simulation and hardware implementation; it uses asynchronous event handling to align high-level performance modeling, cycle-accurate simulation, and RTL generation; the generated simulators align with generated RTL behavior; evaluation covers architecture components, accelerators, and CPU designs, reporting 2.2-8.1x simulation speedup, 70% lines of code relative to handcrafted RTL, comparable performance/area to handcrafted RTL, and 6x performance/area compared with HLS-generated RTL under the reported setting.
+- Supports: Chapter 1 architecture-to-hardware related-work discussion and Chapter 5 future-work analysis. The report uses it as an external related work showing that unified architectural simulation and implementation is an important prerequisite, while also identifying its limitation relative to agent-oriented architecture-chip co-generation.
+- Metadata confidence: high. Metadata was taken from the ACM reference block in the PDF, including title, authors, venue, page count, ISBN, DOI, and conference location/date.
+- Open gaps: none for current survey claim.
+
 ### rightcapitalhq-chinese-style-guide
 
 - Source: https://github.com/RightCapitalHQ/chinese-style-guide
@@ -531,3 +550,39 @@ This batch was added to support the expanded Chapter 1 related-work survey. Entr
 - Supports: Chapter 1.4's expanded related-work survey. The batch supplements compiler-native equality saturation and tensor rewrite verification, composable accelerator/AI-kernel programming abstractions, industrial LLM serving and communication abstractions, and agentic GPU-kernel optimization evidence.
 - Metadata confidence: medium to high. Titles, authors, years, DOI/URL fields came from Zotero metadata and were cross-checked against local PDFs where available. Some `@misc` preprint and future conference entries may need final venue normalization before submission.
 - Open gaps: if any promoted source becomes central evidence rather than survey support, revisit its publisher/arXiv page or DOI page to normalize venue, pages, and final publication year.
+
+### taidl2025
+
+- Source: https://dl.acm.org/doi/10.1145/3725843.3756075, https://act-compiler.github.io/assets/pdf/taidl-micro25.pdf, and artifact metadata at https://zenodo.org/records/16934755.
+- Accessed: 2026-05-16.
+- Evidence inspected: ACM DOI metadata and public artifact description. TAIDL is a tensor accelerator ISA definition language; it captures accelerator metadata, state, memory models, instruction definitions, constraints, and semantics, and uses those definitions to auto-generate scalable test oracles / functional simulators. The MICRO 2025 metadata gives pages 1316-1333 and DOI 10.1145/3725843.3756075.
+- Supports: Chapter 1 architecture-constrained compilation survey and Chapter 5 first future-work direction. The report uses TAIDL as external evidence that target hardware facts can be represented as ISA definitions and consumed by generated software tools, while noting that the definition is still hand-written.
+- Metadata confidence: high. Author list, title, venue, pages, DOI, and URL were checked against primary/public metadata.
+- Open gaps: none for current survey and future-work claims.
+
+### act2025
+
+- Source: https://arxiv.org/abs/2510.09932.
+- Accessed: 2026-05-16.
+- Evidence inspected: arXiv title, author list, abstract, DOI, and subject metadata. ACT is described as a compiler backend generator for tensor accelerators from ISA descriptions; it uses parameterized equality-saturation instruction selection and constraint-programming memory allocation, and reports generated backends for three accelerator platforms.
+- Supports: Chapter 1 architecture-constrained compilation survey and Chapter 5 future-work discussion. The report uses ACT as evidence that compiler backend generation can be driven by structured tensor accelerator ISA descriptions, while distinguishing this from open-intent agentic co-generation and from full compiler-infrastructure evolution.
+- Metadata confidence: high for arXiv preprint metadata.
+- Open gaps: update venue metadata if the paper later receives final proceedings information.
+
+### accelopt2026
+
+- Source: https://arxiv.org/abs/2511.15915.
+- Accessed: 2026-05-16.
+- Evidence inspected: arXiv title, author list, abstract, DOI, and revision metadata. AccelOpt is a self-improving LLM agentic system for AI accelerator kernel optimization; it uses optimization memory over slow-fast kernel pairs and evaluates AWS Trainium kernels from real LLM workloads.
+- Supports: Chapter 1 agentic-method survey and Chapter 5 second future-work direction. The report uses AccelOpt as background for agentic kernel optimization, while explicitly distinguishing accelerator-kernel generation/optimization from complete compiler generation.
+- Metadata confidence: high for arXiv preprint metadata.
+- Open gaps: update venue metadata if the paper later receives final proceedings information.
+
+### autocomp2025
+
+- Source: https://arxiv.org/abs/2505.18574.
+- Accessed: 2026-05-16.
+- Evidence inspected: arXiv title, author list, abstract, DOI, and revision metadata. Autocomp is a code optimizer for tensor accelerators using automated LLM-driven search, structured planning/code-generation prompts, domain knowledge, correctness metrics, and hardware performance metrics.
+- Supports: Chapter 1 agentic-method survey and Chapter 5 second future-work direction. The report uses Autocomp as background for automated tensor-accelerator code/kernel optimization, while explicitly noting that it generates optimized code or schedules rather than a complete compiler.
+- Metadata confidence: high for arXiv preprint metadata.
+- Open gaps: update venue metadata if the paper later receives final proceedings information.

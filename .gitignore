@@ -7,3 +7,20 @@
 /tools/TOSS/tmp/
 /resources/**/*.docx
 /resources/**/*.pdf
+
+# Local source repositories and tools are kept on disk but not tracked here.
+/resources/IntelliC/
+/resources/aps/
+/resources/aquas/
+/resources/arknife/
+/resources/cement/
+/resources/cement2/
+/resources/cayman/
+/resources/clay/
+/resources/eggmind/
+/resources/isamore/
+/resources/origen/
+/resources/pto-runtime/
+/resources/skyegg/
+/resources/spine/
+/tools/TOSS/

@@ -14,6 +14,8 @@ This table is a writing aid. It must not be inserted into the report unless expl
 | bibliography | 参考文献 / 文献目录 | 参考文献 | 清华写作指南、Typst/BibTeX 语境 | 报告正文使用“参考文献”，审计文档可用“bibliography”。 | 书目 |
 | citation key | 引用键 | 引用键（citation key） | BibTeX/Typst 工作流 | 技术配置中需要区分文献条目和正文引用。 | 引文键 |
 | hardware-software co-design | 软硬件协同 | 软硬件协同（hardware-software co-design） | 报告主题与 APS/Aquas 等已有工作 | 与用户确定的报告主题一致，强调硬件设计、编译器、软件生态、系统软件边界和目标执行环境之间的共同设计。 | 软硬协同、硬件软件协同 |
+| architectural simulation | 架构仿真 | 架构仿真（architectural simulation） | Assassyn, architecture-to-hardware related work | 用于描述从架构设计意图到周期精确行为建模的仿真过程，区别于一般软件仿真和后端寄存器传输级仿真。 | 体系结构仿真（较长） |
+| cycle-accurate simulation | 周期精确仿真 | 周期精确仿真（cycle-accurate simulation） | Assassyn, architecture-chip co-generation future work | 强调仿真结果与硬件周期行为对应；正文首次出现可括注英文，后文使用中文。 | 周期准确仿真 |
 | agile chip design | 敏捷芯片设计 | 敏捷芯片设计（agile chip design） | 报告主题、APS 论文标题 | 强调芯片设计迭代速度、可复用工具链和生产力，不等同于单纯快速寄存器传输级代码生成。 | 敏捷芯片开发 |
 | innovative compilation techniques | 创新性编译技术 | 创新性编译技术（innovative compilation techniques） | 用户确定的报告主题 | 覆盖可重定向编译、等价图、MLIR、多层中间表示、编译检查记录与智能体编译基础设施。 | 创新编译技术 |
 | AI / artificial intelligence | 人工智能 | 人工智能（AI） | 本报告产业背景与应用压力 | 中文正文优先写“人工智能”；只有首次出现或英文摘要、专名语境保留 AI。 | AI 裸用 |
@@ -23,6 +25,7 @@ This table is a writing aid. It must not be inserted into the report unless expl
 | HLS | 高层综合 | 高层综合（HLS） | Cement/Clay/SkyEgg/FPGA 章节 | 普通叙述使用“高层综合”；Vitis HLS 等工具名和源文表格可保留 HLS。 | HLS 裸用 |
 | DSL | 领域专用语言 / 领域语言 | 领域专用语言（DSL） | ISAMORE/EqSatL/硬件语言章节 | 普通叙述使用“领域专用语言”或“领域语言”；EqSatL 等专有语言名不翻译。 | DSL 裸用 |
 | compiler pass / pass | 编译遍 / 编译过程 | 编译遍（compiler pass） | LLVM/MLIR/编译优化章节 | 普通优化单元写“编译遍”；当强调流程组合时可写“编译过程”。 | pass 裸用 |
+| compiler backend | 编译后端 | 编译后端（compiler backend） | ACT, compiler infrastructure and future-work sections | 指面向特定目标硬件的代码生成、指令选择、存储分配和后端产物生成部分；正文中文优先。 | backend 裸用 |
 | API | 接口 | 接口（API） | 系统软件或工具接口语境 | 中文正文优先写“接口”；仅在专有英文名称、代码或应用二进制接口对比中保留 API。 | API 裸用 |
 | ABI | 应用二进制接口 | 应用二进制接口（ABI） | 系统边界、mailbox/blob、目标执行环境语境 | 中文正文优先写全称，避免读者误解为普通函数接口。 | ABI 裸用 |
 | architecture interface | 架构接口 | 架构接口（architecture interface） | `report/main.typ` Chapter 1.3, APS/Aquas framing | 指硬件能力对软件和工具链暴露的边界，包括 ISA/ISAX、微架构机制、存储层次、互连、执行模型和软件可见资源。 | 体系结构接口（过长且不如“架构接口”稳定） |
@@ -60,6 +63,7 @@ This table is a writing aid. It must not be inserted into the report unless expl
 | intrinsic | 源语 | 源语（intrinsic） | APS compiler support; user confirmed 2026-05-07 | 编译器插入或程序员手写的 intrinsic 用“源语”表达，必要时首次括注英文。 | 内建函数、intrinsic 泛用 |
 | commit/recall, issue/response, issue/wait, transfer/fetch, tag, size, memory/config | 保留英文信号名/操作名 | `commit`/`recall` 等代码体或源文形式 | APS/Aquas protocol and IR operations; user confirmed 2026-05-07 | 这些是协议信号、IR 操作或固定接口名，不按普通英文词组翻译。 | 提交/撤回、发射/等待等全文硬译 |
 | executable oracle / oracle | 可执行判定基准 / 验证判定基准 | 可执行判定基准（executable oracle） | Spine/future validation workflow; user confirmed 2026-05-07 | “判定基准”强调可执行检查基准，不写作“判定器”；后文可按语境用“验证判定基准”。 | 可执行基准、验证判定器、oracle 泛用 |
+| test oracle | 测试判定基准 | 测试判定基准（test oracle） | TAIDL | 指为软件正确性测试提供预期行为的可执行或可扩展判定依据；TAIDL 语境中可写“可扩展测试判定基准”。 | 测试判定器、oracle 裸用 |
 | applier | 应用器 | 应用器（applier） | SkyEgg mapping-rule sections | 与 e-graph rewrite rule 结构对应。 | 施加器 |
 | condition | 条件 | 条件（condition） | Mapping-rule sections | 普通术语中文化。 | condition 单独泛用 |
 | event layer | 事件层 | 事件层（event layer） | Cement | 用户审阅表已倾向中文；正文中文优先。 | 时间层 |
@@ -69,6 +73,13 @@ This table is a writing aid. It must not be inserted into the report unless expl
 | static analysis | 静态分析 | 静态分析（static analysis） | Cement timing analysis | 中文稳定。 | 静态检查（范围略窄） |
 | dynamic monitoring | 动态监测 | 动态监测（dynamic monitoring） | Cement timing analysis | 已在术语决策表使用。 | 动态监听 |
 | timing violation | 时序违规 | 时序违规（timing violation） | Cement timing analysis | 硬件验证语境常用。 | 时序违例 |
+| temporal hardware transaction | 时间硬件事务 | 时间硬件事务（temporal hardware transaction） | Cement2 | 表示带周期级时间关系的事务式硬件行为；与 Cement 的周期确定事件相衔接。 | 时序硬件事务（易与 timing closure 混淆） |
+| temporal relationship | 时间关系 | 时间关系（temporal relationship） | Cement2 | 指规则之间由执行历史、延迟和通道传递构成的跨周期关系。 | 时序关系（可作一般形容，不作为主术语） |
+| temporal guard | 时间守卫条件 | 时间守卫条件（temporal guard） | Cement2 | 指由前驱规则执行历史和延迟算子决定的规则触发条件。 | 时序守卫 |
+| multi-cycle rule | 多周期规则 | 多周期规则（multi-cycle rule） | Cement2 | 指一次规则触发跨多个时钟周期执行的规则抽象。 | 多拍规则 |
+| latency-sensitive / latency-insensitive | 延迟敏感 / 延迟不敏感 | 延迟敏感 / 延迟不敏感 | Cement2 and hardware frontend chapters | 硬件设计和握手协议语境常用；正文优先中文。 | latency-sensitive 裸用 |
+| temporal rule graph | 时间规则图 | 时间规则图（temporal rule graph） | Cement2 compiler analysis | 表示规则、调用、固定延迟和动态延迟关系的编译器分析对象。 | 时序规则图 |
+| false-static pattern | 伪静态模式 | 伪静态模式（false-static pattern） | Cement2 compiler analysis | 指固定延迟守卫条件与其他守卫条件组合时可能导致消息过期和数据丢失的模式。 | false-static 裸用 |
 | hardware primitive | 硬件原语 | 硬件原语（hardware primitive） | SkyEgg mapping model | 中文自然，保留对象性。 | 硬件基元 |
 | parameterized IP core | 参数化 IP 核 | 参数化 IP 核（parameterized IP core） | SkyEgg mapping model | IP core 可保留英文缩写，整体中文化。 | 参数化 IP 内核 |
 | preset | 预设配置 | 预设配置（preset） | SkyEgg IP configuration | 避免英文泛用。 | preset 单独使用 |
